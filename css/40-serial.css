@@ -1,0 +1,436 @@
+.serial-toc {
+  margin: 18px 0 24px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.1), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.25);
+}
+
+.serial-toc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.serial-toc-head i {
+  color: #57f287;
+}
+
+.serial-toc-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.serial-toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.4;
+  transition: 0.2s ease;
+}
+
+.serial-toc-list a:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.serial-toc-list a span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .serial-toc-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* シリアルコード目次 */
+.serial-toc {
+  margin: 18px 0 24px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.1), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.25);
+}
+
+.serial-toc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.serial-toc-head i {
+  color: #57f287;
+}
+
+.serial-toc-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.serial-toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.4;
+  transition: 0.2s ease;
+}
+
+.serial-toc-list a:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.serial-toc-list a span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* シリアルコード コピー対応 */
+.serial-copy-note {
+  margin: 6px 0 12px;
+  color: #949ba4;
+  font-size: 0.9em;
+}
+
+.serial-item.copy-serial {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.18s ease;
+}
+
+.serial-item.copy-serial:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  background: rgba(87, 242, 135, 0.06);
+}
+
+.serial-code {
+  flex: 1;
+  min-width: 0;
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.serial-copy-label {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+}
+
+.serial-item.copy-serial.is-copied .serial-copy-label {
+  background: #57f287;
+  color: #111;
+}
+
+.serial-special-badge {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(255, 204, 102, 0.14);
+  border: 1px solid rgba(255, 204, 102, 0.45);
+  color: #ffcc66;
+  font-size: 0.76em;
+  font-weight: 900;
+}
+
+.serial-item.copy-serial.is-special {
+  border-color: rgba(255, 204, 102, 0.45);
+}
+
+@media (max-width: 768px) {
+  .serial-toc-list {
+    grid-template-columns: 1fr;
+  }
+
+  .serial-item.copy-serial {
+    flex-wrap: wrap;
+  }
+
+  .serial-code {
+    width: 100%;
+    flex: auto;
+  }
+}
+/* serial page layout */
+.serial-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+}
+
+.serial-main {
+  min-width: 0;
+}
+
+.serial-side-toc {
+  position: sticky;
+  top: 20px;
+}
+
+/* 右側目次 */
+.serial-toc {
+  padding: 16px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.1), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.25);
+}
+
+.serial-toc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.serial-toc-head i {
+  color: #57f287;
+}
+
+.serial-toc-list {
+  display: grid;
+  gap: 9px;
+}
+
+.serial-toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 11px;
+  border-radius: 10px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  text-decoration: none;
+  font-weight: 800;
+  line-height: 1.4;
+  transition: 0.2s ease;
+}
+
+.serial-toc-list a:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.serial-toc-list a span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+/* tap copy */
+.serial-copy-note {
+  margin: 6px 0 12px;
+  color: #949ba4;
+  font-size: 0.9em;
+}
+
+.serial-item.copy-serial {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  transition: 0.18s ease;
+}
+
+.serial-item.copy-serial:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  background: rgba(87, 242, 135, 0.06);
+}
+
+.serial-code {
+  font-weight: 900;
+  letter-spacing: 0.03em;
+}
+
+.serial-item.copy-serial.is-copied::after {
+  content: "保存しました";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #57f287;
+  color: #111;
+  font-size: 0.76em;
+  font-weight: 900;
+}
+
+.serial-item.copy-serial.is-special {
+  border-color: rgba(255, 204, 102, 0.55);
+  box-shadow: 0 0 0 1px rgba(255, 204, 102, 0.12) inset;
+}
+
+@media (max-width: 1024px) {
+  .serial-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .serial-side-toc {
+    position: static;
+    order: -1;
+  }
+}
+/* =========================
+  シリアルページ：右側目次を縦型に修正
+========================= */
+
+.serial-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.serial-side-toc {
+  position: sticky;
+  top: 20px;
+}
+
+.serial-side-toc .serial-toc {
+  padding: 16px;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.1), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.25);
+}
+
+.serial-side-toc .serial-toc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+.serial-side-toc .serial-toc-head i {
+  color: #57f287;
+}
+
+.serial-side-toc .serial-toc-list {
+  display: grid;
+  grid-template-columns: 1fr !important;
+  gap: 8px;
+}
+
+.serial-side-toc .serial-toc-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 9px 10px;
+  border-radius: 9px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  text-decoration: none;
+  font-size: 0.88em;
+  font-weight: 800;
+  line-height: 1.35;
+  transition: 0.2s ease;
+}
+
+.serial-side-toc .serial-toc-list a:hover {
+  border-color: rgba(87, 242, 135, 0.45);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.serial-side-toc .serial-toc-list a span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+  .serial-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .serial-side-toc {
+    position: static;
+    order: -1;
+  }
+}

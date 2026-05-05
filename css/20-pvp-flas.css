@@ -1,0 +1,914 @@
+/* =========================================
+   フェーズ番号：四角 → 丸に戻す
+   色味は今のまま維持
+========================================= */
+
+/* 枠側 */
+.growth-phase-group {
+  position: relative;
+  overflow: visible !important;
+}
+
+/* 番号バッジ本体 */
+.growth-phase-order {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff !important;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  z-index: 3;
+}
+
+/* ① 冒険核 */
+.phase-p1 .growth-phase-order {
+  background: linear-gradient(135deg, rgba(214, 178, 76, 0.98), rgba(214, 178, 76, 0.78));
+}
+
+/* ② 土台作り */
+.phase-p2 .growth-phase-order {
+  background: linear-gradient(135deg, rgba(82, 135, 185, 0.98), rgba(82, 135, 185, 0.78));
+}
+
+/* ③ ソニックス核 */
+.phase-p3 .growth-phase-order {
+  background: linear-gradient(135deg, rgba(74, 158, 112, 0.98), rgba(74, 158, 112, 0.78));
+}
+
+/* ④ 青瓷強化 */
+.phase-p4 .growth-phase-order {
+  background: linear-gradient(135deg, rgba(205, 132, 64, 0.98), rgba(205, 132, 64, 0.78));
+}
+
+/* 余裕枠 */
+.phase-extra .growth-phase-order {
+  background: linear-gradient(135deg, rgba(145, 151, 163, 0.95), rgba(145, 151, 163, 0.72));
+}
+
+/* 微課金分岐 */
+.phase-branch .growth-phase-order {
+  background: linear-gradient(135deg, rgba(132, 104, 196, 0.98), rgba(132, 104, 196, 0.78));
+}
+
+/* 未来枠 */
+.phase-future .growth-phase-order {
+  background: linear-gradient(135deg, rgba(196, 82, 112, 0.98), rgba(196, 82, 112, 0.78));
+}
+
+/* グループの内側余白を少しだけ確保 */
+.growth-phase-group {
+  padding-top: 20px !important;
+}
+
+/* SP用 */
+@media (max-width: 980px) {
+  .growth-phase-order {
+    width: 38px;
+    height: 38px;
+    top: -10px;
+    left: -10px;
+    font-size: 20px;
+  }
+
+  .growth-phase-group {
+    padding-top: 16px !important;
+  }
+}
+/* =========================================
+   フラス護衛隊ページ
+   style.css の末尾に追加
+   ========================================= */
+
+#page-pvp-teams {
+  padding-bottom: 76px;
+}
+
+#page-pvp-teams .flas-page-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1240px;
+}
+
+#page-pvp-teams .flas-main-column {
+  min-width: 0;
+}
+
+#page-pvp-teams .flas-section {
+  margin-top: 28px;
+}
+
+#page-pvp-teams .flas-section-title {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  margin: 0 0 14px;
+  padding: 0 0 0 14px;
+  border-left: 4px solid #00b0f4;
+  color: #fff;
+  font-size: 1.28em;
+  line-height: 1.35;
+}
+
+/* HERO */
+#page-pvp-teams .flas-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+  gap: 22px;
+  align-items: center;
+  min-height: 360px;
+  padding: 24px;
+  border-radius: 10px;
+  border: 1px solid #3f4147;
+  background: #2b2d31;
+}
+
+#page-pvp-teams .flas-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(30, 31, 34, 0.96) 0%, rgba(30, 31, 34, 0.72) 42%, rgba(30, 31, 34, 0.25) 100%),
+    url("image/banner/flas-banner.webp") center right / cover no-repeat;
+  opacity: 0.96;
+}
+
+#page-pvp-teams .flas-hero-content,
+#page-pvp-teams .flas-party-panel {
+  position: relative;
+  z-index: 1;
+}
+
+#page-pvp-teams .flas-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #b5bac1;
+  font-size: 0.84em;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+#page-pvp-teams .flas-kicker i {
+  color: #8ea1ff;
+}
+
+#page-pvp-teams .flas-hero h2 {
+  margin: 0 0 12px;
+  padding: 0;
+  border: none;
+  color: #fff;
+  font-size: clamp(2.25rem, 4vw, 3.55rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+#page-pvp-teams .flas-hero-lead {
+  max-width: 620px;
+  margin: 0;
+  color: #dcddde;
+  font-size: 1.03em;
+  line-height: 1.8;
+}
+
+#page-pvp-teams .flas-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+#page-pvp-teams .flas-hero-tags span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(35, 36, 40, 0.86);
+  border: 1px solid rgba(148, 155, 164, 0.26);
+  color: #f2f3f5;
+  font-size: 0.82em;
+  font-weight: 800;
+}
+
+#page-pvp-teams .flas-party-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(76px, 1fr));
+  gap: 10px;
+}
+
+#page-pvp-teams .flas-party-card {
+  padding: 10px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(79, 84, 92, 0.86);
+  background: rgba(35, 36, 40, 0.86);
+  text-align: center;
+}
+
+#page-pvp-teams .flas-party-card.is-main {
+  border-color: rgba(88, 101, 242, 0.9);
+  background: rgba(88, 101, 242, 0.18);
+}
+
+#page-pvp-teams .flas-party-card.is-key {
+  border-color: rgba(240, 184, 90, 0.5);
+}
+
+#page-pvp-teams .flas-party-card img {
+  width: 58px;
+  height: 58px;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto 6px;
+  border-radius: 10px;
+  border: 2px solid #1e1f22;
+  background: #444;
+}
+
+#page-pvp-teams .flas-party-card span {
+  display: block;
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 800;
+}
+
+/* COMMON CARDS */
+#page-pvp-teams .flas-summary-card,
+#page-pvp-teams .flas-score-card,
+#page-pvp-teams .flas-video-card,
+#page-pvp-teams .flas-focus-card,
+#page-pvp-teams .flas-build-card,
+#page-pvp-teams .flas-build-note,
+#page-pvp-teams .flas-text-card,
+#page-pvp-teams .flas-final-box,
+#page-pvp-teams .flas-matchup-card,
+#page-pvp-teams .flas-toc-box {
+  background: #2b2d31;
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+}
+
+/* SUMMARY */
+#page-pvp-teams .flas-summary-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 16px;
+  padding: 18px 20px;
+}
+
+#page-pvp-teams .flas-summary-main h3,
+#page-pvp-teams .flas-text-card h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #f2f3f5;
+  font-size: 1.08em;
+  line-height: 1.5;
+}
+
+#page-pvp-teams .flas-summary-main h3 i,
+#page-pvp-teams .flas-text-card h3 i {
+  color: #8ea1ff;
+}
+
+#page-pvp-teams .flas-summary-main p,
+#page-pvp-teams .flas-text-card p,
+#page-pvp-teams .flas-text-card li {
+  color: #dcddde;
+  line-height: 1.75;
+}
+
+#page-pvp-teams .flas-summary-main p {
+  margin: 0;
+}
+
+#page-pvp-teams .flas-summary-point {
+  padding: 14px;
+  border-radius: 8px;
+  background: #232428;
+  border: 1px solid #3f4147;
+}
+
+#page-pvp-teams .flas-summary-point span {
+  display: block;
+  color: #949ba4;
+  font-size: 0.82em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+#page-pvp-teams .flas-summary-point strong {
+  color: #f0b85a;
+  line-height: 1.55;
+}
+
+/* SCORE */
+#page-pvp-teams .flas-score-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+#page-pvp-teams .flas-score-card {
+  padding: 15px;
+}
+
+#page-pvp-teams .flas-score-card span {
+  display: block;
+  color: #949ba4;
+  font-size: 0.82em;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+#page-pvp-teams .flas-score-card strong {
+  display: block;
+  color: #fff;
+  font-size: 1.65em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+#page-pvp-teams .flas-score-card.is-warning strong {
+  color: #f0b85a;
+}
+
+#page-pvp-teams .flas-score-card.is-weak strong {
+  color: #ed6a5e;
+}
+
+#page-pvp-teams .flas-score-card p {
+  margin: 0;
+  color: #dcddde;
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+
+/* VIDEO */
+#page-pvp-teams .flas-video-card {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 18px;
+  padding: 16px;
+}
+
+#page-pvp-teams .flas-video-thumb {
+  aspect-ratio: 16 / 9;
+  border-radius: 7px;
+  border: 1px dashed rgba(148, 155, 164, 0.45);
+  background: #232428;
+  color: #949ba4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+#page-pvp-teams .flas-video-thumb i {
+  color: #ff4d4d;
+  font-size: 2em;
+}
+
+#page-pvp-teams .flas-video-body h3 {
+  margin: 0 0 8px;
+  color: #f2f3f5;
+  font-size: 1.08em;
+}
+
+#page-pvp-teams .flas-video-body p {
+  margin: 0;
+  color: #dcddde;
+  line-height: 1.75;
+}
+
+/* FOCUS */
+#page-pvp-teams .flas-focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pvp-teams .flas-focus-card {
+  padding: 16px;
+}
+
+#page-pvp-teams .flas-focus-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#page-pvp-teams .flas-focus-head img {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #1e1f22;
+  background: #444;
+}
+
+#page-pvp-teams .flas-focus-head span {
+  display: block;
+  color: #949ba4;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+#page-pvp-teams .flas-focus-head h3 {
+  margin: 2px 0 0;
+  color: #f2f3f5;
+  font-size: 1.08em;
+}
+
+#page-pvp-teams .flas-focus-card p {
+  margin: 0;
+  color: #dcddde;
+  line-height: 1.75;
+}
+
+#page-pvp-teams .flas-focus-card strong {
+  color: #f0b85a;
+}
+
+#page-pvp-teams .flas-note-box {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #3f4147;
+  background: #232428;
+  color: #b5bac1;
+  line-height: 1.7;
+}
+
+/* BUILD */
+#page-pvp-teams .flas-build-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pvp-teams .flas-build-card {
+  overflow: hidden;
+}
+
+#page-pvp-teams .flas-build-card.is-main {
+  border-color: rgba(88, 101, 242, 0.9);
+}
+
+#page-pvp-teams .flas-build-card.is-key {
+  border-color: rgba(240, 184, 90, 0.45);
+}
+
+#page-pvp-teams .flas-build-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-bottom: 1px solid #3f4147;
+  background: #232428;
+}
+
+#page-pvp-teams .flas-build-head img {
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #1e1f22;
+  background: #444;
+}
+
+#page-pvp-teams .flas-build-head span {
+  display: block;
+  color: #949ba4;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+#page-pvp-teams .flas-build-head h3 {
+  margin: 2px 0 2px;
+  color: #fff;
+  font-size: 1.12em;
+}
+
+#page-pvp-teams .flas-build-head p {
+  margin: 0;
+  color: #b5bac1;
+  font-size: 0.82em;
+  line-height: 1.4;
+}
+
+#page-pvp-teams .flas-build-card ul {
+  margin: 0;
+  padding: 12px 14px 14px;
+  list-style: none;
+}
+
+#page-pvp-teams .flas-build-card li {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 8px;
+  align-items: center;
+  color: #dcddde;
+  font-size: 0.92em;
+  line-height: 1.55;
+  padding: 7px 0;
+  border-bottom: 1px solid rgba(79, 84, 92, 0.55);
+}
+
+#page-pvp-teams .flas-build-card li:last-child {
+  border-bottom: none;
+}
+
+#page-pvp-teams .flas-build-card b {
+  color: #949ba4;
+  font-weight: 900;
+}
+
+#page-pvp-teams .flas-equip-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+#page-pvp-teams .flas-equip-line img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #3f4147;
+  background: #232428;
+  flex-shrink: 0;
+}
+
+#page-pvp-teams .flas-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#page-pvp-teams .flas-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 25px;
+  padding: 2px 8px 2px 4px;
+  border-radius: 6px;
+  border: 1px solid #3f4147;
+  background: #232428;
+  color: #dcddde;
+  font-size: 0.88em;
+  font-weight: 800;
+}
+
+#page-pvp-teams .flas-chip-list img {
+  width: 19px;
+  height: 19px;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #444;
+  flex-shrink: 0;
+}
+
+/* BUILD GUIDE */
+#page-pvp-teams .flas-build-note {
+  padding: 16px;
+}
+
+#page-pvp-teams .flas-build-note-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#page-pvp-teams .flas-build-note-grid > div {
+  background: #232428;
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+#page-pvp-teams .flas-build-note-grid h4 {
+  margin: 0 0 8px;
+  color: #f2f3f5;
+  font-size: 0.96em;
+}
+
+#page-pvp-teams .flas-build-note-grid ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+#page-pvp-teams .flas-build-note-grid li {
+  color: #dcddde;
+  font-size: 0.92em;
+  line-height: 1.7;
+}
+
+/* MATCHUP */
+#page-pvp-teams .flas-matchup-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pvp-teams .flas-matchup-card {
+  padding: 16px;
+}
+
+#page-pvp-teams .flas-matchup-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+#page-pvp-teams .flas-matchup-head > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 78px;
+  min-height: 26px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #232428;
+  border: 1px solid #3f4147;
+  color: #949ba4;
+  font-size: 0.72em;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+#page-pvp-teams .flas-matchup-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+#page-pvp-teams .flas-matchup-icons img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 9px;
+  border: 2px solid #1e1f22;
+  background: #444;
+}
+
+#page-pvp-teams .flas-matchup-icons b {
+  color: #949ba4;
+  font-size: 0.7em;
+  font-weight: 900;
+}
+
+#page-pvp-teams .flas-matchup-card h3 {
+  margin: 0 0 8px;
+  color: #f2f3f5;
+  font-size: 1.08em;
+}
+
+#page-pvp-teams .flas-matchup-card p {
+  margin: 0;
+  color: #dcddde;
+  font-size: 0.94em;
+  line-height: 1.7;
+}
+
+#page-pvp-teams .flas-matchup-card.is-good {
+  border-color: rgba(87, 242, 135, 0.35);
+}
+
+#page-pvp-teams .flas-matchup-card.is-good .flas-matchup-head > span {
+  color: #57f287;
+  border-color: rgba(87, 242, 135, 0.35);
+  background: rgba(87, 242, 135, 0.08);
+}
+
+#page-pvp-teams .flas-matchup-card.is-up {
+  border-color: rgba(88, 101, 242, 0.45);
+}
+
+#page-pvp-teams .flas-matchup-card.is-up .flas-matchup-head > span {
+  color: #8ea1ff;
+  border-color: rgba(88, 101, 242, 0.45);
+  background: rgba(88, 101, 242, 0.1);
+}
+
+#page-pvp-teams .flas-matchup-card.is-caution {
+  border-color: rgba(240, 184, 90, 0.4);
+}
+
+#page-pvp-teams .flas-matchup-card.is-caution .flas-matchup-head > span {
+  color: #f0b85a;
+  border-color: rgba(240, 184, 90, 0.4);
+  background: rgba(240, 184, 90, 0.09);
+}
+
+#page-pvp-teams .flas-matchup-card.is-future {
+  border-color: rgba(186, 133, 255, 0.42);
+}
+
+#page-pvp-teams .flas-matchup-card.is-future .flas-matchup-head > span {
+  color: #ba85ff;
+  border-color: rgba(186, 133, 255, 0.42);
+  background: rgba(186, 133, 255, 0.1);
+}
+
+/* TEXT CARD / PROS CONS */
+#page-pvp-teams .flas-text-card {
+  padding: 18px 20px;
+}
+
+#page-pvp-teams .flas-text-card p {
+  margin: 0;
+}
+
+#page-pvp-teams .flas-text-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+#page-pvp-teams .flas-text-card.is-good {
+  border-color: rgba(87, 242, 135, 0.35);
+}
+
+#page-pvp-teams .flas-text-card.is-good h3 i {
+  color: #57f287;
+}
+
+#page-pvp-teams .flas-text-card.is-bad {
+  border-color: rgba(237, 106, 94, 0.38);
+}
+
+#page-pvp-teams .flas-text-card.is-bad h3 i {
+  color: #ed6a5e;
+}
+
+#page-pvp-teams .flas-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+#page-pvp-teams .flas-final-box {
+  margin-top: 16px;
+  padding: 16px 18px;
+  color: #dcddde;
+  line-height: 1.75;
+  background: #232428;
+}
+
+#page-pvp-teams .flas-final-box strong {
+  color: #f0b85a;
+}
+
+/* TOC */
+#page-pvp-teams .flas-toc {
+  position: sticky;
+  top: 20px;
+}
+
+#page-pvp-teams .flas-toc-box {
+  padding: 16px;
+  background: #1e1f22;
+}
+
+#page-pvp-teams .flas-toc-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.02em;
+}
+
+#page-pvp-teams .flas-toc-box a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 11px;
+  margin-top: 7px;
+  border-radius: 6px;
+  background: #232428;
+  border: 1px solid transparent;
+  color: #dcddde;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 800;
+  line-height: 1.35;
+  transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+}
+
+#page-pvp-teams .flas-toc-box a:hover {
+  color: #fff;
+  background: #303338;
+  border-color: #3f4147;
+}
+
+#page-pvp-teams .flas-toc-box a i {
+  width: 18px;
+  text-align: center;
+  color: #949ba4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1180px) {
+  #page-pvp-teams .flas-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pvp-teams .flas-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  #page-pvp-teams .flas-hero,
+  #page-pvp-teams .flas-summary-card,
+  #page-pvp-teams .flas-video-card {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pvp-teams .flas-score-grid,
+  #page-pvp-teams .flas-focus-grid,
+  #page-pvp-teams .flas-matchup-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #page-pvp-teams .flas-build-grid,
+  #page-pvp-teams .flas-build-note-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #page-pvp-teams {
+    padding-bottom: 84px;
+  }
+
+  #page-pvp-teams .flas-hero {
+    padding: 18px;
+  }
+
+  #page-pvp-teams .flas-hero-bg {
+    background:
+      linear-gradient(180deg, rgba(30, 31, 34, 0.96), rgba(30, 31, 34, 0.78)),
+      url("image/banner/flas-banner.webp") center / cover no-repeat;
+  }
+
+  #page-pvp-teams .flas-party-panel {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  #page-pvp-teams .flas-party-card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #page-pvp-teams .flas-score-grid,
+  #page-pvp-teams .flas-focus-grid,
+  #page-pvp-teams .flas-build-grid,
+  #page-pvp-teams .flas-build-note-grid,
+  #page-pvp-teams .flas-matchup-grid,
+  #page-pvp-teams .flas-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pvp-teams .flas-build-card li {
+    grid-template-columns: 76px 1fr;
+  }
+
+  #page-pvp-teams .flas-matchup-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  #page-pvp-teams .flas-matchup-icons {
+    justify-content: flex-start;
+  }
+}

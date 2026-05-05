@@ -1,0 +1,952 @@
+/* =========================================
+   育成早見表：無課金〜微課金帯
+   既存Discord風 × 金紫ファンタジー
+========================================= */
+
+.channel-growth-quick .channel-icon {
+  color: #ffcc66;
+}
+
+.channel-growth-quick.active,
+.channel-growth-quick:hover {
+  background: linear-gradient(90deg, rgba(255, 204, 102, 0.13), rgba(255, 255, 255, 0.035));
+  color: #fff;
+  border-color: rgba(255, 204, 102, 0.24);
+}
+
+.growth-quick-page {
+  padding-bottom: 80px;
+}
+
+.gq-hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 204, 102, 0.25);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(163, 102, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 82% 10%, rgba(255, 204, 102, 0.13), transparent 32%),
+    linear-gradient(135deg, #202225 0%, #18191c 100%);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.gq-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.035), transparent 28%, transparent 72%, rgba(255,204,102,0.04));
+  pointer-events: none;
+}
+
+.gq-hero-inner {
+  position: relative;
+  padding: 28px 28px 30px;
+}
+
+.gq-kicker {
+  display: inline-flex;
+  margin: 0 0 10px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: rgba(255, 204, 102, 0.1);
+  border: 1px solid rgba(255, 204, 102, 0.32);
+  color: #ffdd88;
+  font-size: 0.78em;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.gq-hero h1 {
+  margin: 0 0 10px;
+  padding: 0;
+  border: none;
+  color: #fff;
+  font-size: clamp(1.75rem, 4vw, 2.65rem);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+.gq-hero p {
+  margin: 0;
+  color: #dcddde;
+  line-height: 1.8;
+  font-size: 1.02em;
+}
+
+.gq-phase-nav {
+  display: flex;
+  gap: 8px;
+  margin: 0 0 22px;
+  padding-bottom: 4px;
+  overflow-x: auto;
+}
+
+.gq-phase-nav a {
+  flex: 0 0 auto;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #202225;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  text-decoration: none;
+  font-size: 0.86em;
+  font-weight: 900;
+}
+
+.gq-phase-nav a:hover {
+  color: #ffcc66;
+  border-color: rgba(255, 204, 102, 0.48);
+  background: rgba(255, 204, 102, 0.08);
+}
+
+.gq-section-stack {
+  display: grid;
+  gap: 24px;
+}
+
+.gq-phase-card {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #3f4147;
+  background:
+    linear-gradient(180deg, rgba(47, 49, 54, 0.96), rgba(32, 34, 37, 0.98));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+}
+
+.gq-phase-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #3f4147;
+  background:
+    linear-gradient(90deg, rgba(163, 102, 255, 0.22), rgba(255, 204, 102, 0.08)),
+    #232428;
+}
+
+.gq-phase-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 96px;
+  min-height: 38px;
+  padding: 0 13px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(255, 204, 102, 0.95), rgba(163, 102, 255, 0.75));
+  color: #111;
+  font-size: 0.92em;
+  font-weight: 950;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.32);
+}
+
+.gq-phase-head h2 {
+  margin: 0 0 4px;
+  color: #fff;
+  font-size: 1.22em;
+  line-height: 1.35;
+}
+
+.gq-phase-head p {
+  margin: 0;
+  color: #b5bac1;
+  font-size: 0.92em;
+  line-height: 1.6;
+}
+
+.gq-table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gq-table {
+  width: 100%;
+  min-width: 1080px;
+  border-collapse: collapse;
+  font-size: 0.9em;
+}
+
+.gq-table th {
+  padding: 11px 10px;
+  background: #18191c;
+  color: #ffdd88;
+  border-bottom: 1px solid #3f4147;
+  border-right: 1px solid #2b2d31;
+  font-weight: 950;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.gq-table th:last-child,
+.gq-table td:last-child {
+  border-right: none;
+}
+
+.gq-table td {
+  padding: 11px 10px;
+  border-bottom: 1px solid rgba(79, 84, 92, 0.72);
+  border-right: 1px solid rgba(79, 84, 92, 0.46);
+  background: #202225;
+  vertical-align: middle;
+}
+
+.gq-table tbody tr:nth-child(even) td {
+  background: #25272c;
+}
+
+.gq-table tbody tr:hover td {
+  background: rgba(163, 102, 255, 0.12);
+}
+
+.gq-rank {
+  width: 54px;
+  color: #ffcc66;
+  font-size: 1.5em;
+  font-weight: 950;
+  text-align: center;
+}
+
+.gq-hero-cell {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 138px;
+}
+
+.gq-hero-cell img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #18191c;
+  background: #444;
+  box-shadow: 0 0 0 1px rgba(255, 204, 102, 0.25);
+}
+
+.gq-hero-cell strong {
+  color: #fff;
+  white-space: nowrap;
+  font-size: 1.02em;
+}
+
+.gq-icon-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-width: 128px;
+}
+
+.gq-icon-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 30px;
+  padding: 4px 8px 4px 4px;
+  border-radius: 999px;
+  background: #18191c;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  font-size: 0.84em;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.gq-icon-line img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  border-radius: 7px;
+  background: #444;
+}
+
+.gq-gems span {
+  padding-right: 7px;
+}
+
+.gq-code {
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 950;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.gq-t2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.84em;
+  font-weight: 950;
+  white-space: nowrap;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.18);
+}
+
+.gq-t2.is-atk {
+  background: linear-gradient(135deg, #e74c3c, #922b21);
+  border: 1px solid rgba(231, 76, 60, 0.7);
+}
+
+.gq-t2.is-def {
+  background: linear-gradient(135deg, #3498db, #1f4f8f);
+  border: 1px solid rgba(52, 152, 219, 0.72);
+}
+
+.gq-t2.is-speed {
+  background: linear-gradient(135deg, #57f287, #248f4d);
+  border: 1px solid rgba(87, 242, 135, 0.72);
+  color: #07140b;
+}
+
+.gq-note-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 14px 18px 18px;
+  list-style: none;
+  background: #18191c;
+}
+
+.gq-note-list li {
+  position: relative;
+  padding-left: 20px;
+  color: #dcddde;
+  line-height: 1.65;
+  font-size: 0.94em;
+}
+
+.gq-note-list li::before {
+  content: "\f0da";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: #ffcc66;
+}
+
+.sp-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .growth-quick-page {
+    padding-bottom: 64px;
+  }
+
+  .gq-hero-inner {
+    padding: 22px 18px;
+  }
+
+  .sp-only {
+    display: block;
+  }
+
+  .gq-phase-head {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .gq-phase-badge {
+    width: fit-content;
+    min-height: 34px;
+    font-size: 0.86em;
+  }
+
+  .gq-table {
+    min-width: 980px;
+    font-size: 0.82em;
+  }
+
+  .gq-hero-cell img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .gq-icon-line img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .gq-note-list {
+    padding: 13px 15px 16px;
+  }
+}
+/* 第5フェーズ：微課金 */
+.gq-phase-card.is-premium .gq-phase-head {
+  background:
+    linear-gradient(90deg, rgba(255, 204, 102, 0.22), rgba(163, 102, 255, 0.12)),
+    #232428;
+}
+
+.gq-phase-card.is-premium .gq-phase-badge {
+  background: linear-gradient(135deg, #ffcc66, #c9792f);
+  color: #171009;
+}
+
+/* 第6フェーズ：未来版 */
+.gq-phase-card.is-future .gq-phase-head {
+  background:
+    linear-gradient(90deg, rgba(0, 176, 244, 0.24), rgba(163, 102, 255, 0.12)),
+    #232428;
+}
+
+.gq-phase-card.is-future .gq-phase-badge {
+  background: linear-gradient(135deg, #00b0f4, #a366ff);
+  color: #061018;
+}
+
+/* 余裕枠 */
+.gq-phase-card.is-extra .gq-phase-head {
+  background:
+    linear-gradient(90deg, rgba(87, 242, 135, 0.20), rgba(255, 204, 102, 0.08)),
+    #232428;
+}
+
+.gq-phase-card.is-extra .gq-phase-badge {
+  background: linear-gradient(135deg, #57f287, #ffcc66);
+  color: #08140d;
+}
+
+/* =========================================
+   育成早見表：右サイド追従目次
+========================================= */
+
+.gq-page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.gq-main-column {
+  flex: 1;
+  min-width: 0;
+}
+
+.gq-side-toc {
+  width: 290px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+  align-self: flex-start;
+}
+
+.gq-side-toc-inner {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 80% 0%, rgba(255, 204, 102, 0.14), transparent 32%),
+    radial-gradient(circle at 10% 15%, rgba(163, 102, 255, 0.18), transparent 36%),
+    linear-gradient(180deg, #202225 0%, #18191c 100%);
+  border: 1px solid rgba(255, 204, 102, 0.22);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.34);
+}
+
+.gq-side-toc-inner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.04), transparent 34%, rgba(255,204,102,0.035));
+  pointer-events: none;
+}
+
+.gq-side-toc-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  color: #ffdd88;
+  font-size: 1.08em;
+  font-weight: 950;
+  border-bottom: 1px solid rgba(255, 204, 102, 0.18);
+}
+
+.gq-side-toc-title i {
+  color: #ffcc66;
+}
+
+.gq-side-toc a {
+  position: relative;
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  grid-template-areas:
+    "num title"
+    "num sub";
+  gap: 1px 10px;
+  padding: 11px 12px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #f3f4f7;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.055);
+  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+}
+
+.gq-side-toc a:hover {
+  transform: translateX(4px);
+  background: rgba(255, 204, 102, 0.095);
+  border-color: rgba(255, 204, 102, 0.26);
+}
+
+.gq-side-toc a span {
+  grid-area: num;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  border-radius: 10px;
+  color: #111;
+  font-size: 0.78em;
+  font-weight: 950;
+  background: linear-gradient(135deg, #ffcc66, #a366ff);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.22);
+}
+
+.gq-side-toc a small {
+  grid-area: sub;
+  display: block;
+  margin-top: 2px;
+  color: #9da3ad;
+  font-size: 0.78em;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.gq-side-toc a.is-premium span {
+  background: linear-gradient(135deg, #ffcc66, #c9792f);
+}
+
+.gq-side-toc a.is-future span {
+  background: linear-gradient(135deg, #00b0f4, #a366ff);
+  color: #061018;
+}
+
+.gq-side-toc a.is-extra span {
+  background: linear-gradient(135deg, #57f287, #ffcc66);
+  color: #08140d;
+}
+
+/* PC目次を入れる分、表の横幅を少し調整 */
+.gq-page-layout .gq-table {
+  min-width: 1040px;
+}
+
+/* 1024px以下は右目次を非表示 */
+@media (max-width: 1024px) {
+  .gq-page-layout {
+    display: block;
+  }
+
+  .gq-side-toc {
+    display: none;
+  }
+}
+/* =========================
+   育成早見表：画像大きめ調整
+========================= */
+
+/* ヒーロー画像を大きく */
+.gq-hero-cell {
+  gap: 12px;
+}
+
+.gq-hero-cell img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+}
+
+/* 神器・宝石などのチップも少し大きめ */
+.gq-icon-line {
+  gap: 8px;
+}
+
+.gq-icon-line span {
+  min-height: 38px;
+  padding: 5px 10px 5px 5px;
+  font-size: 0.9em;
+}
+
+.gq-icon-line img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+}
+
+/* ルーンは画像だけ表示 */
+.gq-runes span {
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+  padding: 5px;
+}
+
+.gq-runes img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+}
+
+.gq-runes span {
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 表の高さも少しゆったり */
+.gq-table td {
+  padding: 13px 10px;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .gq-hero-cell img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .gq-icon-line img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .gq-runes img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .gq-runes span {
+    min-width: 40px;
+    min-height: 40px;
+  }
+}
+/* =========================
+   外枠の丸枠を削除してスッキリ化
+========================= */
+
+/* 神器・ルーン・宝石のチップ枠をなくす */
+.gq-icon-line span {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  min-height: auto;
+}
+
+/* アイコン自体も背景を消す */
+.gq-icon-line img {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 10px; /* 完全な丸ではなく少し角丸 */
+  width: 34px;
+  height: 34px;
+}
+
+/* ルーンは画像だけ見せる */
+.gq-runes {
+  gap: 10px;
+}
+
+.gq-runes span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0;
+  line-height: 0;
+}
+
+/* 神器・宝石は文字ありでも見やすく */
+.gq-icon-line:not(.gq-runes) {
+  gap: 10px;
+}
+
+.gq-icon-line:not(.gq-runes) span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f3f4f7;
+  font-weight: 800;
+  font-size: 0.92em;
+}
+
+/* ヒーロー枠は残す */
+.gq-hero-cell img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+}
+
+/* 少しだけ表に余白 */
+.gq-table td {
+  padding: 16px 12px;
+}
+
+.gq-hero h1 span {
+  display: inline-block;
+  margin-top: 4px;
+  color: #ffdd88;
+  font-size: 0.58em;
+  letter-spacing: 0.06em;
+}
+
+.gq-lead-main {
+  margin: 0 0 10px;
+  color: #f3f4f7;
+  font-size: 1.05em;
+  font-weight: 800;
+  line-height: 1.8;
+}
+
+.gq-lead-sub {
+  margin: 0;
+  color: #bfc3ca;
+  font-size: 0.96em;
+  line-height: 1.8;
+}
+
+.gq-lead-sub strong {
+  color: #ffdd88;
+  font-weight: 950;
+}
+.gq-side-toc a.is-summary span {
+  background: linear-gradient(135deg, #ffcc66, #ff66aa);
+  color: #160b0f;
+}
+
+/* =========================================
+   育成早見表：ページレイアウト
+========================================= */
+
+.growth-quick-page .gq-page-layout {
+  display: block;
+}
+
+.growth-quick-page .gq-main-column {
+  width: 100%;
+  max-width: none;
+}
+
+.growth-quick-page .gq-phase-list {
+  display: grid;
+  gap: 24px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   育成早見表：総まとめTier
+========================================= */
+
+.growth-quick-page .gq-tier-final.growth-tier-full {
+  width: 100%;
+  max-width: 1360px;
+  margin: 40px auto 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.growth-quick-page .gq-tier-final-body {
+  padding: 18px 20px 22px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.growth-quick-page .gq-tier-final .growth-ranking-tier-wrap {
+  width: 100%;
+}
+
+/* =========================================
+   育成早見表：40〜50代向けの可読性調整
+========================================= */
+
+.growth-quick-page {
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.growth-quick-page .gq-hero {
+  border-radius: 10px;
+}
+
+.growth-quick-page .gq-hero-inner {
+  padding: 30px 32px 32px;
+}
+
+.growth-quick-page .gq-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.28;
+}
+
+.growth-quick-page .gq-lead-main,
+.growth-quick-page .gq-lead-sub {
+  max-width: 980px;
+  font-size: 1.06rem;
+  line-height: 1.9;
+}
+
+.growth-quick-page .gq-section-stack {
+  gap: 28px;
+}
+
+.growth-quick-page .gq-phase-card {
+  border-radius: 10px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.growth-quick-page .gq-phase-head {
+  padding: 20px 22px;
+}
+
+.growth-quick-page .gq-phase-badge {
+  min-width: 112px;
+  min-height: 42px;
+  border-radius: 10px;
+  font-size: 0.96rem;
+}
+
+.growth-quick-page .gq-phase-head h2 {
+  font-size: 1.35rem;
+  line-height: 1.45;
+}
+
+.growth-quick-page .gq-phase-head p {
+  color: #c9ced8;
+  font-size: 1rem;
+}
+
+.growth-quick-page .gq-table-scroll {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  scrollbar-width: thin;
+}
+
+.growth-quick-page .gq-table {
+  min-width: 1120px;
+  font-size: 1rem;
+}
+
+.growth-quick-page .gq-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 14px 12px;
+  color: #ffe6a6;
+  font-size: 0.95rem;
+  letter-spacing: 0;
+}
+
+.growth-quick-page .gq-table td {
+  padding: 18px 14px;
+}
+
+.growth-quick-page .gq-table tbody tr:nth-child(even) td {
+  background: #272a30;
+}
+
+.growth-quick-page .gq-table tbody tr:hover td {
+  background: rgba(255, 204, 102, 0.08);
+}
+
+.growth-quick-page .gq-rank {
+  width: 62px;
+  font-size: 1.65rem;
+}
+
+.growth-quick-page .gq-hero-cell {
+  min-width: 168px;
+  gap: 13px;
+}
+
+.growth-quick-page .gq-hero-cell img {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+}
+
+.growth-quick-page .gq-hero-cell strong {
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.growth-quick-page .gq-icon-line {
+  gap: 12px;
+  min-width: 150px;
+}
+
+.growth-quick-page .gq-icon-line img {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+}
+
+.growth-quick-page .gq-icon-line:not(.gq-runes) span {
+  gap: 8px;
+  color: #f6f7fa;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.growth-quick-page .gq-code {
+  font-size: 1.06rem;
+  letter-spacing: 0.02em;
+}
+
+.growth-quick-page .gq-t2 {
+  min-width: 72px;
+  padding: 8px 11px;
+  border-radius: 8px;
+  font-size: 0.96rem;
+}
+
+.growth-quick-page .gq-note-list {
+  gap: 10px;
+  padding: 18px 22px 20px;
+}
+
+.growth-quick-page .gq-note-list li {
+  color: #edf0f5;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .growth-quick-page {
+    font-size: 15px;
+  }
+
+  .growth-quick-page .gq-hero-inner {
+    padding: 24px 18px;
+  }
+
+  .growth-quick-page .gq-table {
+    min-width: 1040px;
+  }
+
+  .growth-quick-page .gq-hero-cell img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .growth-quick-page .gq-icon-line img {
+    width: 34px;
+    height: 34px;
+  }
+}

@@ -1,0 +1,981 @@
+/* =========================
+  ソニックス：動画解説
+========================= */
+#page-sonix-teams .sonix-video-card.is-published {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.9fr);
+  gap: 18px;
+  align-items: center;
+}
+
+#page-sonix-teams .sonix-video-embed {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  min-height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  cursor: pointer;
+}
+
+#page-sonix-teams .sonix-video-embed::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.48));
+  z-index: 1;
+}
+
+#page-sonix-teams .sonix-video-embed iframe {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#page-sonix-teams .sonix-video-play {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  color: #fff;
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.65);
+}
+
+#page-sonix-teams .sonix-video-play i {
+  font-size: 3.2rem;
+  color: #ff3b3b;
+  filter: drop-shadow(0 0 12px rgba(255, 59, 59, 0.45));
+}
+
+#page-sonix-teams .sonix-video-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.1);
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  color: #57f287;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+#page-sonix-teams .sonix-video-link:hover {
+  color: #fff;
+  border-color: rgba(87, 242, 135, 0.5);
+}
+
+@media (max-width: 900px) {
+  #page-sonix-teams .sonix-video-card.is-published {
+    grid-template-columns: 1fr;
+  }
+
+  #page-sonix-teams .sonix-video-embed {
+    min-height: auto;
+  }
+}
+
+/* =========================
+  ソニックス：動画カード修正版
+  YouTube iframeのUI崩れ対策
+========================= */
+
+#page-sonix-teams .sonix-video-card.is-link-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 20px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.09), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.24);
+}
+
+#page-sonix-teams .sonix-video-thumb-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(87, 242, 135, 0.28);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  text-decoration: none;
+}
+
+#page-sonix-teams .sonix-video-thumb-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.05), rgba(0,0,0,0.42));
+}
+
+#page-sonix-teams .sonix-video-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.65);
+}
+
+#page-sonix-teams .sonix-video-play i {
+  font-size: 3.2rem;
+  color: #ffffff;
+}
+
+#page-sonix-teams .sonix-video-play em {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 0.95em;
+}
+
+#page-sonix-teams .sonix-video-label {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  border: 1px solid rgba(87, 242, 135, 0.32);
+  color: #57f287;
+  font-size: 0.76em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+#page-sonix-teams .sonix-video-body h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.45em;
+  line-height: 1.35;
+}
+
+#page-sonix-teams .sonix-video-body p {
+  margin: 0 0 16px;
+  color: #dcddde;
+  font-size: 1em;
+  line-height: 1.75;
+}
+
+@media (max-width: 900px) {
+  #page-sonix-teams .sonix-video-card.is-link-card {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+  ソニックス：動画解説カード
+  サイト内再生 + 人間っぽいカードUI
+========================= */
+
+#page-sonix-teams .sonix-video-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+  gap: 22px;
+  align-items: stretch;
+  padding: 18px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(87, 242, 135, 0.08), rgba(88, 101, 242, 0.06)),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.24);
+}
+
+#page-sonix-teams .sonix-video-frame {
+  min-width: 0;
+}
+
+#page-sonix-teams .sonix-video-cover {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(87, 242, 135, 0.32);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
+}
+
+#page-sonix-teams .sonix-video-cover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.58), rgba(0, 0, 0, 0.08)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.38));
+}
+
+#page-sonix-teams .sonix-video-cover-badge {
+  position: absolute;
+  left: 18px;
+  top: 16px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.14);
+  border: 1px solid rgba(87, 242, 135, 0.38);
+  color: #57f287;
+  font-size: 0.78em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+#page-sonix-teams .sonix-video-cover-title {
+  position: absolute;
+  left: 18px;
+  bottom: 72px;
+  color: #ffffff;
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+  font-weight: 950;
+  line-height: 1.1;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
+}
+
+#page-sonix-teams .sonix-video-cover-sub {
+  position: absolute;
+  left: 18px;
+  bottom: 44px;
+  color: #dcddde;
+  font-size: 0.95em;
+  font-weight: 800;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.75);
+}
+
+#page-sonix-teams .sonix-video-cover-play {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-weight: 950;
+  font-size: 0.92em;
+}
+
+#page-sonix-teams .sonix-video-cover-play i {
+  color: #ff0033;
+  font-size: 1.2em;
+}
+
+#page-sonix-teams .sonix-video-feature iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  background: #111;
+}
+
+#page-sonix-teams .sonix-video-body {
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#page-sonix-teams .sonix-video-label {
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  color: #57f287;
+  font-size: 0.76em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+#page-sonix-teams .sonix-video-body h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.45em;
+  line-height: 1.35;
+}
+
+#page-sonix-teams .sonix-video-body p {
+  margin: 0 0 16px;
+  color: #dcddde;
+  font-size: 0.98em;
+  line-height: 1.75;
+}
+
+#page-sonix-teams .sonix-video-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#page-sonix-teams .sonix-video-points span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  font-size: 0.86em;
+  font-weight: 800;
+}
+
+#page-sonix-teams .sonix-video-points i {
+  color: #57f287;
+}
+
+@media (max-width: 900px) {
+  #page-sonix-teams .sonix-video-feature {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+  フラス護衛隊：装備カード圧縮版
+========================= */
+
+#page-pvp-teams .flas-build-card {
+  overflow: hidden;
+}
+
+#page-pvp-teams .flas-build-head {
+  gap: 14px;
+  padding: 18px 20px 16px;
+}
+
+#page-pvp-teams .flas-build-head img {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#page-pvp-teams .flas-build-head h3 {
+  font-size: 1.45em;
+}
+
+#page-pvp-teams .flas-build-head p {
+  font-size: 0.95em;
+}
+
+#page-pvp-teams .flas-build-card ul {
+  padding: 12px 14px 14px;
+}
+
+#page-pvp-teams .flas-build-card li {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 8px;
+  align-items: center;
+  padding: 7px 0;
+}
+
+#page-pvp-teams .flas-build-card li b {
+  font-size: 0.88em;
+  white-space: nowrap;
+}
+
+#page-pvp-teams .flas-equip-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  white-space: nowrap;
+  font-size: 0.92em;
+  font-weight: 800;
+}
+
+#page-pvp-teams .flas-equip-line img {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#page-pvp-teams .flas-chip-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  min-width: 0;
+}
+
+#page-pvp-teams .flas-chip-list span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 26px;
+  padding: 2px 6px 2px 4px;
+  border-radius: 7px;
+  background: #232428;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  font-size: 0.82em;
+  font-weight: 900;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+#page-pvp-teams .flas-chip-list.is-three span {
+  flex: 1;
+}
+
+#page-pvp-teams .flas-chip-list.is-two span {
+  flex: 0 1 auto;
+  min-width: 72px;
+}
+
+#page-pvp-teams .flas-chip-list img {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#page-pvp-teams .flas-talent-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+
+#page-pvp-teams .flas-talent-line span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 2px 8px;
+  border-radius: 7px;
+  background: #232428;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  font-size: 0.86em;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+#page-pvp-teams .flas-talent-line span:first-child {
+  border-color: rgba(87, 242, 135, 0.28);
+}
+
+/* 装備優先メモ */
+#page-pvp-teams .flas-equip-priority {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 12% 20%, rgba(87, 242, 135, 0.08), transparent 34%),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.24);
+}
+
+#page-pvp-teams .flas-equip-priority h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 1.1em;
+}
+
+#page-pvp-teams .flas-equip-priority h3 i {
+  color: #57f287;
+}
+
+#page-pvp-teams .flas-equip-priority-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#page-pvp-teams .flas-equip-priority-card {
+  padding: 14px;
+  border-radius: 12px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+}
+
+#page-pvp-teams .flas-equip-priority-card.is-main {
+  border-color: rgba(240, 184, 90, 0.42);
+}
+
+#page-pvp-teams .flas-equip-priority-card > span {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #57f287;
+  background: rgba(87, 242, 135, 0.1);
+  border: 1px solid rgba(87, 242, 135, 0.28);
+  font-size: 0.78em;
+  font-weight: 900;
+}
+
+#page-pvp-teams .flas-equip-priority-card.is-main > span {
+  color: #ffcc66;
+  background: rgba(255, 204, 102, 0.1);
+  border-color: rgba(255, 204, 102, 0.34);
+}
+
+#page-pvp-teams .flas-equip-priority-items {
+  display: grid;
+  gap: 8px;
+}
+
+#page-pvp-teams .flas-equip-priority-items p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  color: #dcddde;
+  font-size: 0.92em;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+#page-pvp-teams .flas-equip-priority-items img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  #page-pvp-teams .flas-build-head img {
+    width: 62px;
+    height: 62px;
+  }
+
+  #page-pvp-teams .flas-build-card li {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  #page-pvp-teams .flas-chip-list {
+    flex-wrap: wrap;
+  }
+
+  #page-pvp-teams .flas-equip-priority-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* =========================
+  フラス護衛隊：装備チップを自然な横並びに修正
+========================= */
+
+/* 行全体を少し広く使う */
+#page-pvp-teams .flas-build-card li {
+  grid-template-columns: 62px minmax(0, 1fr);
+  gap: 8px;
+  overflow: visible;
+}
+
+/* 右側エリアのはみ出し防止 */
+#page-pvp-teams .flas-build-card li > span {
+  min-width: 0;
+}
+
+/* 宝石・ルーン共通：固定グリッドをやめて自然な横並び */
+#page-pvp-teams .flas-chip-list,
+#page-pvp-teams .flas-chip-list.is-two,
+#page-pvp-teams .flas-chip-list.is-three {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+/* チップ本体 */
+#page-pvp-teams .flas-chip-list span,
+#page-pvp-teams .flas-chip-list.is-two span,
+#page-pvp-teams .flas-chip-list.is-three span {
+  flex: 0 0 auto;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 28px;
+  padding: 3px 8px 3px 5px;
+  border-radius: 8px;
+  background: #232428;
+  border: 1px solid #3f4147;
+  color: #f2f3f5;
+  font-size: 0.82em;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* アイコン */
+#page-pvp-teams .flas-chip-list img {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* 宝石は3つを1行に収めるため少しだけ短め */
+#page-pvp-teams .flas-chip-list.is-three span {
+  padding-inline: 5px 7px;
+}
+
+/* ルーンは2つなので少しゆったり */
+#page-pvp-teams .flas-chip-list.is-two span {
+  min-width: 82px;
+}
+
+/* フラス・心蕙・スカイリーなどの長い行でも右に詰まりすぎないように */
+#page-pvp-teams .flas-build-card li b {
+  font-size: 0.86em;
+  white-space: nowrap;
+}
+
+/* 天賦行も横幅を詰める */
+#page-pvp-teams .flas-talent-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+#page-pvp-teams .flas-talent-line span {
+  min-height: 28px;
+  padding: 3px 10px;
+  border-radius: 8px;
+  font-size: 0.88em;
+}
+/* スマホだけ折り返し許可 */
+@media (max-width: 768px) {
+  #page-pvp-teams .flas-build-card li {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  #page-pvp-teams .flas-chip-list,
+  #page-pvp-teams .flas-chip-list.is-two,
+  #page-pvp-teams .flas-chip-list.is-three {
+    flex-wrap: wrap;
+  }
+}
+
+/* =========================
+  フラス護衛隊：ルーン外枠を小さくする
+========================= */
+
+#page-pvp-teams .flas-build-card li .flas-chip-list.is-two {
+  display: flex !important;
+  flex-wrap: nowrap;
+  gap: 6px;
+  width: auto;
+  max-width: none;
+}
+
+#page-pvp-teams .flas-build-card li .flas-chip-list.is-two span {
+  min-width: 0 !important;
+  width: auto !important;
+  flex: 0 0 auto !important;
+  padding: 3px 9px 3px 6px;
+  border-radius: 8px;
+  font-size: 0.82em;
+  white-space: nowrap;
+}
+
+#page-pvp-teams .flas-build-card li .flas-chip-list.is-two img {
+  width: 18px;
+  height: 18px;
+  border-radius: 5px;
+}
+/* =========================
+  フラス護衛隊：召喚獣・星霊
+========================= */
+
+#page-pvp-teams .flas-support-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 0 0 18px;
+}
+
+#page-pvp-teams .flas-support-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #232428;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#page-pvp-teams .flas-support-item img {
+  width: 58px;
+  height: 58px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+#page-pvp-teams .flas-support-item span {
+  display: block;
+  margin-bottom: 4px;
+  color: #57f287;
+  font-size: 0.82em;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+#page-pvp-teams .flas-support-item strong {
+  display: block;
+  color: #ffffff;
+  font-size: 1.05em;
+  font-weight: 900;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  #page-pvp-teams .flas-support-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+  ソニックス：サムネ表示型動画カード
+========================= */
+
+#page-sonix-teams .sonix-video-card.is-published {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 22px;
+  align-items: center;
+  padding: 18px;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(87, 242, 135, 0.08), rgba(88, 101, 242, 0.06)),
+    #232428;
+  border: 1px solid rgba(87, 242, 135, 0.24);
+}
+
+#page-sonix-teams .sonix-video-thumb-wrap {
+  min-width: 0;
+}
+
+#page-sonix-teams .sonix-video-thumb-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #111;
+  cursor: pointer;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
+}
+
+#page-sonix-teams .sonix-video-thumb-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page-sonix-teams .sonix-video-thumb-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.28));
+}
+
+/* 再生ボタン：サムネを邪魔しない小さめ */
+#page-sonix-teams .sonix-video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding-left: 3px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.55rem;
+  font-weight: 900;
+  line-height: 1;
+  pointer-events: none;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.32);
+}
+
+#page-sonix-teams .sonix-video-thumb-button:hover .sonix-video-play {
+  background: rgba(0, 0, 0, 0.62);
+  border-color: rgba(87, 242, 135, 0.7);
+  color: #fff;
+}
+
+/* iframe再生後 */
+#page-sonix-teams .sonix-video-card iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 16px;
+  background: #111;
+}
+
+/* 右側テキスト */
+#page-sonix-teams .sonix-video-label {
+  display: inline-flex;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  border: 1px solid rgba(87, 242, 135, 0.3);
+  color: #57f287;
+  font-size: 0.76em;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+#page-sonix-teams .sonix-video-body h3 {
+  margin: 0 0 10px;
+  color: #ffffff;
+  font-size: 1.45em;
+  line-height: 1.35;
+}
+
+#page-sonix-teams .sonix-video-body p {
+  margin: 0 0 16px;
+  color: #dcddde;
+  font-size: 0.98em;
+  line-height: 1.75;
+}
+
+#page-sonix-teams .sonix-video-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#page-sonix-teams .sonix-video-points span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: #1e1f22;
+  border: 1px solid #3f4147;
+  color: #dcddde;
+  font-size: 0.86em;
+  font-weight: 800;
+}
+
+#page-sonix-teams .sonix-video-points i {
+  color: #57f287;
+}
+
+@media (max-width: 900px) {
+  #page-sonix-teams .sonix-video-card.is-published {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   Sidebar: readable unified navigation
+========================================= */
+
+.sidebar {
+  --nav-active: #ffcc66;
+  --nav-active-soft: rgba(255, 204, 102, 0.13);
+  --nav-active-line: rgba(255, 204, 102, 0.8);
+}
+
+.channel-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  color: #b9bec7;
+  line-height: 1.35;
+  letter-spacing: 0;
+}
+
+.channel-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.channel-item.active {
+  background: linear-gradient(90deg, var(--nav-active-soft), rgba(255, 255, 255, 0.035));
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 3px 0 0 var(--nav-active-line), 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.channel-icon {
+  flex: 0 0 22px;
+  width: 22px;
+  margin-right: 0;
+  color: var(--nav-active);
+  text-align: center;
+}
+
+.channel-text {
+  min-width: 0;
+}
+
+.channel-item.channel-sonix {
+  --nav-active: #57f287;
+  --nav-active-soft: rgba(87, 242, 135, 0.13);
+  --nav-active-line: #57f287;
+}
+
+.channel-item.channel-sonix.active,
+.channel-item.channel-sonix:hover {
+  background: linear-gradient(90deg, rgba(87, 242, 135, 0.13), rgba(255, 255, 255, 0.035));
+  border-color: rgba(87, 242, 135, 0.22);
+}
+
+.channel-item.channel-sonix.active .channel-icon,
+.channel-item.channel-sonix:hover .channel-icon {
+  color: #57f287;
+}
