@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://magiccard-momiko.com/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=260506-4">
+  <link rel="stylesheet" href="style.css?v=260506-5">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -256,7 +256,7 @@
             <h1 class="page-main-title">全ヒーロー最強Tier表（総合評価）</h1>
             <div class="update-info">最終更新日: 2026年4月23日 | 監修: もみこ</div>
 
-            <div class="tier-legend" style="font-size: 1.05em; padding: 20px; gap: 12px; line-height: 1.5;">
+            <div class="tier-legend" id="tier-summary" style="font-size: 1.05em; padding: 20px; gap: 12px; line-height: 1.5;">
               <div><span style="color:var(--t0p); font-weight:bold;">● T0+</span> : 環境を定義する最強格</div>
               <div><span style="color:var(--t0); font-weight:bold;">● T0</span> : 主力チームの核</div>
               <div><span style="color:var(--t1); font-weight:bold;">● T1</span> : 第一線で活躍</div>
@@ -266,9 +266,9 @@
               <div><span style="color:var(--t4); font-weight:bold;">● T4</span> : 現環境では採用が難しい</div>
             </div>
 
-            <div class="tier-container">
+            <div class="tier-container" id="hero-tier-table">
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t0-plus">
                 <div class="tier-label bg-t0p">T0+</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('スカイリー')">
@@ -282,7 +282,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t0">
                 <div class="tier-label bg-t0">T0</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('デシア')">
@@ -341,7 +341,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t1">
                 <div class="tier-label bg-t1">T1</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('サウール')">
@@ -400,7 +400,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t15">
                 <div class="tier-label bg-t15">T1.5</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('海洋の姫')">
@@ -442,7 +442,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t2">
                 <div class="tier-label bg-t2">T2</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('ナタリー')">
@@ -488,7 +488,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t3">
                 <div class="tier-label bg-t3">T3</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('輪廻の神')">
@@ -546,7 +546,7 @@
                 </div>
               </div>
 
-              <div class="tier-row">
+              <div class="tier-row" id="tier-t4">
                 <div class="tier-label bg-t4">T4</div>
                 <div class="tier-chars">
                   <div class="char-card" onclick="openModal('ジオ')">
@@ -585,7 +585,7 @@
               </div>
             </div>
 
-            <div class="strategy-article" style="margin-top: 40px; max-width: 100%;">
+            <div class="strategy-article" id="tier-strategy" style="margin-top: 40px; max-width: 100%;">
               <h2 class="article-title" style="border-left-color: var(--accent); font-size: 1.3em;">【2026年4月】Tier別
                 環境解説＆6チーム編成の答え
               </h2>
@@ -594,7 +594,7 @@
               </p>
 
               <div class="highlight-box" style="border-left: 5px solid #ff9900; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #ff9900; font-size: 1.2em; margin-bottom: 15px;">【T0】環境トップ：怒気</h3>
+                <h3 class="box-title" id="tier-team-rage" style="color: #ff9900; font-size: 1.2em; margin-bottom: 15px;">【T0】環境トップ：怒気</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
                   <div
                     style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/rexcer.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
@@ -623,7 +623,7 @@
               </div>
 
               <div class="highlight-box" style="border-left: 5px solid #9933ff; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #9933ff; font-size: 1.2em; margin-bottom: 15px;">【T1】環境2番手：フラス護衛隊
+                <h3 class="box-title" id="tier-team-flas" style="color: #9933ff; font-size: 1.2em; margin-bottom: 15px;">【T1】環境2番手：フラス護衛隊
                 </h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
                   <div
@@ -657,7 +657,7 @@
               </div>
 
               <div class="highlight-box" style="border-left: 5px solid #33cc66; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #33cc66; font-size: 1.2em; margin-bottom: 15px;">【T1】超火力型：ソニア＆ソラ軸
+                <h3 class="box-title" id="tier-team-sonia" style="color: #33cc66; font-size: 1.2em; margin-bottom: 15px;">【T1】超火力型：ソニア＆ソラ軸
                 </h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
                   <div
@@ -690,7 +690,7 @@
               </div>
 
               <div class="highlight-box" style="border-left: 5px solid #ff4d4d; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #ff4d4d; font-size: 1.2em; margin-bottom: 15px;">【T1.5】状態異常</h3>
+                <h3 class="box-title" id="tier-team-status" style="color: #ff4d4d; font-size: 1.2em; margin-bottom: 15px;">【T1.5】状態異常</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
                   <div
                     style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/banshin.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
@@ -723,7 +723,7 @@
               </div>
 
               <div class="highlight-box" style="border-left: 5px solid #33ccff; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #33ccff; font-size: 1.2em; margin-bottom: 15px;">【T2】協同攻撃</h3>
+                <h3 class="box-title" id="tier-team-coop" style="color: #33ccff; font-size: 1.2em; margin-bottom: 15px;">【T2】協同攻撃</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
                   <div
                     style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/avi.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
@@ -754,7 +754,7 @@
               </div>
 
               <div class="point-box" style="border-left-color: #888888; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #bbbbbb; font-size: 1.2em; margin-bottom: 15px;">
+                <h3 class="box-title" id="tier-team-pve" style="color: #bbbbbb; font-size: 1.2em; margin-bottom: 15px;">
                   【T3】PvE・ソニア狩り特化
                 </h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
@@ -786,7 +786,7 @@
 
             </div>
 
-            <div style="margin-top: 50px;">
+            <div id="tier-video-section" style="margin-top: 50px;">
               <h2 class="article-title"
                 style="border-left-color: #ffcc66; font-size: 1.3em; background: rgba(255, 204, 102, 0.1);">
                 絶対に見るべき解説動画
@@ -804,35 +804,29 @@
 
           </div>
 
-          <aside class="momiko-ad-stack" aria-label="広告枠">
-              <section class="momiko-ad momiko-ad-rectangle" aria-label="広告">
-                <span class="momiko-ad-label">スポンサーリンク</span>
-                <ins class="adsbygoogle"
-                  style="display:block"
-                  data-ad-client="ca-pub-9319517564080738"
-                  data-ad-slot=""
-                  data-ad-format="rectangle"
-                  data-full-width-responsive="true"></ins>
-                <div class="momiko-ad-fallback">
-                  <strong>スポンサー枠</strong>
-                  <small>300x250</small>
-                </div>
-              </section>
+          <aside class="tier-side-toc" aria-label="全ヒーロー最強Tier表の目次">
+            <div class="tier-side-toc-inner">
+              <p class="tier-side-toc-title">
+                <i class="fa-solid fa-list-ul"></i>
+                目次
+              </p>
 
-              <section class="momiko-ad momiko-ad-sticky" aria-label="広告">
-                <span class="momiko-ad-label">スポンサーリンク</span>
-                <ins class="adsbygoogle"
-                  style="display:block"
-                  data-ad-client="ca-pub-9319517564080738"
-                  data-ad-slot=""
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"></ins>
-                <div class="momiko-ad-fallback">
-                  <strong>スポンサー枠</strong>
-                  <small>スクロール追従型</small>
-                </div>
-              </section>
-            </aside>
+              <nav class="tier-side-toc-nav">
+                <a href="#tier-summary"><span>01</span> 評価基準</a>
+                <a href="#hero-tier-table"><span>02</span> 総合Tier表</a>
+                <a href="#tier-t0-plus"><span>T0+</span> 最上位</a>
+                <a href="#tier-t0"><span>T0</span> 環境核</a>
+                <a href="#tier-t1"><span>T1</span> 第一線</a>
+                <a href="#tier-t15"><span>T1.5</span> 選択枠</a>
+                <a href="#tier-t2"><span>T2</span> PvE向け</a>
+                <a href="#tier-strategy"><span>03</span> 環境解説</a>
+                <a href="#tier-team-rage"><span>怒気</span> 環境トップ</a>
+                <a href="#tier-team-flas"><span>フラス</span> 護衛隊</a>
+                <a href="#tier-team-sonia"><span>ソニア</span> ソラ軸</a>
+                <a href="#tier-video-section" class="is-video"><span>動画</span> 解説動画</a>
+              </nav>
+            </div>
+          </aside>
         </div>
       </div>
 
@@ -10922,7 +10916,7 @@
   </div>
   <!-- 大事なdiv -->
 
-  <script src="script.js?v=260506-4"></script>
+  <script src="script.js?v=260506-5"></script>
   <!-- コピペできる！ -->
   <script>
     function copySerialCode(el) {
