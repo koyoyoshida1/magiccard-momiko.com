@@ -979,3 +979,124 @@
 .channel-item.channel-sonix:hover .channel-icon {
   color: #57f287;
 }
+
+/* =========================================
+   Ad slots: marketer-friendly, low-friction placements
+========================================= */
+
+.momiko-ad {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 22px auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(32, 34, 44, 0.96), rgba(24, 26, 34, 0.98));
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
+}
+
+.momiko-ad-label {
+  display: block;
+  padding: 8px 10px 0;
+  color: #8e9297;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.momiko-ad-fallback {
+  min-height: inherit;
+  padding: 18px;
+  color: #9da3ad;
+  display: grid;
+  place-items: center;
+  align-content: center;
+  gap: 6px;
+  text-align: center;
+}
+
+.momiko-ad-fallback strong {
+  color: #dcddde;
+  font-size: 14px;
+}
+
+.momiko-ad-fallback small {
+  color: #8e9297;
+  font-size: 12px;
+}
+
+.momiko-ad .adsbygoogle {
+  min-height: inherit;
+}
+
+.momiko-ad:not(.is-configured) .adsbygoogle {
+  display: none !important;
+}
+
+.momiko-ad.is-configured .momiko-ad-fallback {
+  display: none;
+}
+
+.momiko-ad-global,
+.momiko-ad-bottom {
+  max-width: 1120px;
+  min-height: 96px;
+  margin: 0 auto 24px;
+}
+
+.momiko-ad-bottom {
+  margin: 36px auto 22px;
+}
+
+.momiko-ad-stack {
+  width: 300px;
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.momiko-ad-stack .momiko-ad {
+  margin: 0;
+}
+
+.momiko-ad-rectangle {
+  min-height: 250px;
+}
+
+.momiko-ad-sticky {
+  min-height: 600px;
+  position: sticky;
+  top: 20px;
+}
+
+@media (max-width: 980px) {
+  .momiko-ad-stack {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .momiko-ad-sticky {
+    position: static;
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .momiko-ad {
+    border-radius: 6px;
+    margin: 18px auto;
+  }
+
+  .momiko-ad-global,
+  .momiko-ad-bottom {
+    min-height: 88px;
+  }
+
+  .momiko-ad-rectangle,
+  .momiko-ad-sticky {
+    min-height: 240px;
+  }
+}

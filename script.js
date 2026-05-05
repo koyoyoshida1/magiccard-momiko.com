@@ -54,12 +54,58 @@ function switchPage(pageId, element) {
     sidebar.classList.remove('open');
     overlay.classList.remove('show');
   }
+
+  requestAnimationFrame(() => {
+    hydrateMomikoAds(targetPage || document);
+    loadVisibleMomikoAds();
+  });
+}
+
+// ==========================================
+// 2.5. 広告枠の初期化
+// ==========================================
+function hydrateMomikoAds(scope) {
+  const root = scope || document;
+  const slots = root.querySelectorAll('.momiko-ad');
+
+  slots.forEach((slot) => {
+    const ad = slot.querySelector('.adsbygoogle');
+    const adSlot = ad && ad.dataset.adSlot ? ad.dataset.adSlot.trim() : '';
+    slot.classList.toggle('is-configured', Boolean(adSlot));
+  });
+}
+
+function loadVisibleMomikoAds() {
+  if (!window.adsbygoogle) return;
+
+  const candidates = document.querySelectorAll(
+    '.momiko-ad.is-configured .adsbygoogle:not([data-momiko-loaded])'
+  );
+
+  candidates.forEach((ad) => {
+    const wrapper = ad.closest('.momiko-ad');
+    const page = ad.closest('.page-section');
+    const isVisiblePage = !page || page.classList.contains('active-page');
+    const hasSlot = ad.dataset.adSlot && ad.dataset.adSlot.trim();
+
+    if (!wrapper || !isVisiblePage || !hasSlot || wrapper.offsetParent === null) return;
+
+    try {
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+      ad.dataset.momikoLoaded = 'true';
+    } catch (error) {
+      wrapper.dataset.adError = 'true';
+    }
+  });
 }
 
 // ==========================================
 // 3. URLのハッシュ（#）による自動ページ切り替え（統合完全版）
 // ==========================================
 window.addEventListener('DOMContentLoaded', () => {
+  hydrateMomikoAds(document);
+  loadVisibleMomikoAds();
+
   let hash = window.location.hash;
   if (!hash) return;
 
