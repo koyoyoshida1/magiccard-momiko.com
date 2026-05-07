@@ -109,6 +109,20 @@
           </div>
         </div>
       </div>
+
+      <!-- PvE編成 -->
+      <div class="channel-group">
+        <div class="channel-header" onclick="toggleGroup(this)">
+          <span><i class="fa-solid fa-chevron-down"></i> PvE編成</span>
+        </div>
+        <div class="channel-list">
+          <div class="channel-item channel-pve" onclick="switchPage('page-pve-invincible', this)">
+            <span class="channel-icon"><i class="fa-solid fa-anchor" style="color:#57f287;"></i></span>
+            <span class="channel-text">無敵艦隊</span>
+            <span class="channel-badge">NEW</span>
+          </div>
+        </div>
+      </div>
     
       <!-- ルーン&神器&宝石 -->
       <div class="channel-group">
@@ -6571,6 +6585,147 @@
         </div>
       </div>
       
+      <!-- =========================================================
+            PvE：無敵艦隊
+          ========================================================= -->
+      <div id="page-pve-invincible" class="page-section pve-page">
+        <h1 class="page-main-title">PvE編成まとめ</h1>
+        <div class="update-info">最終更新日: 2026年5月8日 | 監修: もみこ</div>
+
+        <div class="pve-layout">
+          <main class="pve-main">
+            <section class="pve-hero" id="pve-invincible-overview">
+              <div class="pve-hero-copy">
+                <p class="pve-kicker"><i class="fa-solid fa-anchor"></i> PvE TEAM GUIDE</p>
+                <h2>無敵艦隊</h2>
+                <p>
+                  PvEだけで成立する、被ダメージ-100%を狙う耐久編成。
+                  蛮刻と後列がほぼダメージを喰らわないので、15ターンずっとダフネで殴れるのが偉いです。
+                </p>
+                <div class="pve-video-notice">
+                  <i class="fa-brands fa-youtube"></i>
+                  <span>無敵艦隊の動画は明日アップ予定！先に編成だけ置いておきます。</span>
+                </div>
+              </div>
+
+              <div class="pve-party-grid is-hero-only" aria-label="無敵艦隊の基本配置">
+                <div class="pve-party-card"><img src="image/hero/beril.webp" alt="ベリル"><span>ベリル</span></div>
+                <div class="pve-party-card is-core"><img src="image/hero/bankoku.webp" alt="蛮刻"><span>蛮刻</span></div>
+                <div class="pve-party-card"><img src="image/hero/mosey.webp" alt="モジー"><span>モジー</span></div>
+                <div class="pve-party-card"><img src="image/hero/nyx.webp" alt="ニックス"><span>ニックス</span></div>
+                <div class="pve-party-card is-core"><img src="image/hero/skylie.webp" alt="スカイリー"><span>スカイリー</span></div>
+                <div class="pve-party-card is-main"><img src="image/hero/dafne.webp" alt="ダフネ"><span>ダフネ</span></div>
+              </div>
+            </section>
+
+            <section class="pve-section" id="pve-invincible-support">
+              <h2 class="pve-section-title">召喚獣 & 星霊</h2>
+              <div class="pve-support-row">
+                <div class="pve-support-item"><img src="image/pet/Garuda.webp" alt="ガルーダ"><div><span>召喚獣</span><strong>ガルーダ</strong></div></div>
+                <div class="pve-support-item"><img src="image/protos/houou.webp" alt="鳳凰"><div><span>主戦</span><strong>鳳凰</strong></div></div>
+                <div class="pve-support-item"><img src="image/protos/ushi.webp" alt="牛"><div><span>サブ候補</span><strong>牛</strong></div></div>
+                <div class="pve-support-item"><img src="image/protos/kinkoma.webp" alt="金駒"><div><span>サブ候補</span><strong>金駒</strong></div></div>
+              </div>
+            </section>
+
+            <section class="pve-section" id="pve-invincible-point">
+              <h2 class="pve-section-title">結論ファースト</h2>
+              <div class="pve-belt-card">
+                <div class="pve-belt-image"><img src="image/shiho/belt.webp" alt="黄金土のベルト" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');"></div>
+                <div>
+                  <h3>黄金土のベルトで、蛮刻まで被ダメージ-100%に届く</h3>
+                  <p>
+                    この編成は、ヒト系の被ダメージ-10.8％を持つ至宝「黄金土のベルト」がかなり大事。
+                    これがあると蛮刻・ニックス・スカイリー・ダフネが、PvEで敵のダメージを"全く"喰らわない状態を作れます。
+                  </p>
+                  <p class="pve-small-note">品質は蛮刻が伝説+Lv20、スカイリーやモジーは卓越でOK。モジーは1枚でもOKです。</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-section" id="pve-invincible-lineups">
+              <h2 class="pve-section-title">3つの編成</h2>
+              <p class="pve-section-lead">天賦&宝石天賦、宝石、T2、ルーンは基本共通。見やすさ優先で、課金帯ごとに神器込みでそのまま置きます。</p>
+
+              <article class="pve-lineup-card">
+                <div class="pve-lineup-head"><span>① 無課金&微課金</span><strong>まずはこれでOK</strong></div>
+                <div class="pve-lineup-grid">
+                  <div class="pve-unit-card"><img src="image/hero/beril.webp" alt="ベリル"><div><h3>ベリル</h3><p><img src="image/artifact/abyss/big_wing.webp" alt="">聖羽の翼</p><small>救済&進化 / 3435&31 / 体力&防御</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/bankoku.webp" alt="蛮刻"><div><h3>蛮刻</h3><p><img src="image/artifact/esper/genrai.webp" alt="">玄雷護符</p><small>冥火&罪悪 / 3432&33 / 体力&防御</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/mosey.webp" alt="モジー"><div><h3>モジー</h3><p><img src="image/artifact/abyss/big_wing.webp" alt="">聖羽の翼</p><small>救済&進化 / 3435&33 / 体力&防御</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/nyx.webp" alt="ニックス"><div><h3>ニックス</h3><p><img src="image/artifact/esper/energy.webp" alt="">エネ護符</p><small>切傷&進化 / 3432&31 / 体力</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/skylie.webp" alt="スカイリー"><div><h3>スカイリー</h3><p><img src="image/artifact/holly/short_horn.webp" alt="">聖なる角笛</p><small>切傷&進化 / 3432&31 / 体力</small></div></div>
+                  <div class="pve-unit-card is-main"><img src="image/hero/dafne.webp" alt="ダフネ"><div><h3>ダフネ</h3><p><img src="image/artifact/holly/kiyou.webp" alt="">神聖輝耀</p><small>武士&マニア / 1331&31 / 会心&ダメ追</small></div></div>
+                </div>
+              </article>
+
+              <article class="pve-lineup-card">
+                <div class="pve-lineup-head"><span>② イルカ帯</span><strong>神器だけ強めに差し替え</strong></div>
+                <div class="pve-lineup-grid">
+                  <div class="pve-unit-card"><img src="image/hero/beril.webp" alt="ベリル"><div><h3>ベリル</h3><p><img src="image/artifact/abyss/big_wing.webp" alt="">聖羽の翼</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/bankoku.webp" alt="蛮刻"><div><h3>蛮刻</h3><p><img src="image/artifact/abyss/book.webp" alt="">呪いの書</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/mosey.webp" alt="モジー"><div><h3>モジー</h3><p><img src="image/artifact/abyss/big_wing.webp" alt="">聖羽の翼</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/nyx.webp" alt="ニックス"><div><h3>ニックス</h3><p><img src="image/artifact/abyss/uroko.webp" alt="">古代龍の逆鱗</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/skylie.webp" alt="スカイリー"><div><h3>スカイリー</h3><p><img src="image/artifact/holly/short_horn.webp" alt="">聖なる角笛</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-main"><img src="image/hero/dafne.webp" alt="ダフネ"><div><h3>ダフネ</h3><p><img src="image/artifact/abyss/lance.webp" alt="">魔王の槍</p><small>共通育成</small></div></div>
+                </div>
+                <p class="pve-lineup-note">最近「魔王の槍」の影が薄いが、PvEでは防御&攻撃面で安定するので個人的に持っておきたいところ。</p>
+              </article>
+
+              <article class="pve-lineup-card">
+                <div class="pve-lineup-head"><span>③ クジラ帯</span><strong>火力と安定をさらに上げる</strong></div>
+                <div class="pve-lineup-grid">
+                  <div class="pve-unit-card"><img src="image/hero/beril.webp" alt="ベリル"><div><h3>ベリル</h3><p><img src="image/artifact/abyss/big_wing.webp" alt="">聖羽の翼</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/bankoku.webp" alt="蛮刻"><div><h3>蛮刻</h3><p><img src="image/artifact/abyss/book.webp" alt="">呪いの書</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/mosey.webp" alt="モジー"><div><h3>モジー</h3><p><img src="image/artifact/abyss/gauntlet.webp" alt="">魔王のガントレット</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card"><img src="image/hero/nyx.webp" alt="ニックス"><div><h3>ニックス</h3><p><img src="image/artifact/abyss/uroko.webp" alt="">古代龍の逆鱗</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-core"><img src="image/hero/skylie.webp" alt="スカイリー"><div><h3>スカイリー</h3><p><img src="image/artifact/abyss/born_ring.webp" alt="">魔王の指輪</p><small>共通育成</small></div></div>
+                  <div class="pve-unit-card is-main"><img src="image/hero/dafne.webp" alt="ダフネ"><div><h3>ダフネ</h3><p><img src="image/artifact/abyss/lance.webp" alt="">魔王の槍</p><small>共通育成</small></div></div>
+                </div>
+                <p class="pve-lineup-note">神聖輝耀よりも魔王の槍の方がダメージ出やすいのはなんでだろう。</p>
+              </article>
+            </section>
+
+            <section class="pve-section" id="pve-invincible-notes">
+              <h2 class="pve-section-title">細かい注意点</h2>
+              <div class="pve-two-col">
+                <div class="pve-text-card"><h3><i class="fa-solid fa-circle-check"></i> 代用・育成ライン</h3><ul><li>ニックス超越+ & Lv40は、無課金でも今は必須。</li><li>ニックスの枠はデリゴールでもOK。</li><li>聖羽の翼が2個ない場合は、山嶺護符や時間護符で代用可能。</li><li>ダフネは神聖輝耀よりワンドや指輪の方が強い場合もある。そこは人による。</li><li>制御抵抗率を上げるとかなり安定。だからダフネ天賦は1-3-4-1より1-3-3-1が安定する。</li></ul></div>
+                <div class="pve-text-card"><h3><i class="fa-solid fa-gem"></i> 宝石と切傷の話</h3><ul><li>宝石はベリル・モジーが紫蛍石/月光石/輝龍石。</li><li>蛮刻・ニックス・スカイリー・ダフネは紫蛍石/孔雀石/紫蘭石。</li><li>無課金〜イルカ帯はPvP意識の人が多いので、防御力を上げる月光石は煙たがられがち。まぁいいか。</li><li>切傷は星6の2セットが理想。星4切傷なら3セット必要。</li></ul></div>
+              </div>
+            </section>
+
+            <section class="pve-section" id="pve-invincible-mechanism">
+              <h2 class="pve-section-title">被ダメージ減少のメカニズム</h2>
+              <div class="pve-mechanism-card">
+                <h3>結論：PvEだけ、被ダメージ減少は-100%まで届きます</h3>
+                <p>普通のディフェンス系バフは基本-70%が上限です。ただしPvEの「被ダメージ減少」は例外で、唯一-100%まで積めるディフェンスバフ。ここがこの編成の肝です。</p>
+                <ol>
+                  <li>蛮刻：後列の被ダメ-30%（聖物3で-40%）、自身は-20%。</li>
+                  <li>スカイリー：全員の被ダメ-30%。</li>
+                  <li>モジー：全員の被ダメ-25%。</li>
+                  <li>ベリル：全員の被ダメ-15%。</li>
+                </ol>
+                <p>後列はこれで-100%に到達。だからニックス・スカイリー・ダフネはダメージを喰らいません。</p>
+                <p>問題は蛮刻だけで、蛮刻自身は-90%止まり。そこでヒト系の被ダメ減少至宝「黄金土のベルト星5（-10.8%）」を足すと、蛮刻も-100%に届きます。</p>
+                <p>PvPでは防御系バフが-70%で止まるので、この無敵化は再現不可能。PvE専用のズルい強さです。</p>
+              </div>
+              <div class="pve-final-box">故にPvEだと蛮刻と後列が一切ダメージを喰らわないから、15ターン連続でダフネが攻撃し続けることができます！</div>
+            </section>
+          </main>
+
+          <aside class="pve-toc">
+            <div class="pve-toc-box">
+              <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+              <a href="#pve-invincible-overview"><i class="fa-solid fa-anchor"></i> 無敵艦隊とは</a>
+              <a href="#pve-invincible-support"><i class="fa-solid fa-dragon"></i> 召喚獣&星霊</a>
+              <a href="#pve-invincible-point"><i class="fa-solid fa-crown"></i> 結論</a>
+              <a href="#pve-invincible-lineups"><i class="fa-solid fa-table-cells-large"></i> 3つの編成</a>
+              <a href="#pve-invincible-notes"><i class="fa-solid fa-circle-info"></i> 注意点</a>
+              <a href="#pve-invincible-mechanism"><i class="fa-solid fa-shield-halved"></i> メカニズム</a>
+            </div>
+          </aside>
+        </div>
+      </div>
       <!-- =============================
               献祭：ソニックス 
             ============================= -->
