@@ -105,6 +105,24 @@
   font-weight: 900;
 }
 
+#page-pve-invincible .pve-inline-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #ffcc66;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+#page-pve-invincible .pve-inline-icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  border: 1px solid #3f4147;
+  border-radius: 6px;
+  background: #232428;
+}
+
 #page-pve-invincible .pve-tags {
   display: flex;
   flex-wrap: wrap;
