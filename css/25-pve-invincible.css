@@ -100,6 +100,11 @@
   line-height: 1.85;
 }
 
+#page-pve-invincible .pve-damage-word {
+  color: #ff5a66;
+  font-weight: 900;
+}
+
 #page-pve-invincible .pve-tags {
   display: flex;
   flex-wrap: wrap;
@@ -576,6 +581,186 @@
   line-height: 1.7;
 }
 
+#page-pve-invincible .pve-loadout-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#page-pve-invincible .pve-loadout-card {
+  min-width: 0;
+}
+
+#page-pve-invincible .pve-loadout-card h3 {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+
+#page-pve-invincible .pve-loadout-portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border: 2px solid #3f4147;
+  border-radius: 14px;
+  background: #1e1f22;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
+}
+
+#page-pve-invincible .pve-loadout-card.is-core .pve-loadout-portrait {
+  border-color: rgba(87, 242, 135, 0.62);
+}
+
+#page-pve-invincible .pve-loadout-card.is-main .pve-loadout-portrait {
+  border-color: rgba(240, 184, 90, 0.7);
+}
+
+#page-pve-invincible .pve-loadout-portrait > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#page-pve-invincible .pve-loadout-portrait::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.22), transparent 34%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent 42%);
+  pointer-events: none;
+}
+
+#page-pve-invincible .pve-overlay-icons,
+#page-pve-invincible .pve-talent-code {
+  position: absolute;
+  z-index: 1;
+}
+
+#page-pve-invincible .pve-overlay-icons {
+  display: flex;
+  gap: 4px;
+}
+
+#page-pve-invincible .pve-overlay-icons.is-top {
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  flex-wrap: wrap;
+}
+
+#page-pve-invincible .pve-overlay-icons.is-bottom {
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+#page-pve-invincible .pve-overlay-icons span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 32px;
+  height: 28px;
+  padding: 2px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 7px;
+  background: rgba(12, 14, 18, 0.76);
+  color: #fff;
+  font-size: 0.72em;
+  font-weight: 900;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+#page-pve-invincible .pve-overlay-icons span img {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+#page-pve-invincible .pve-overlay-icons .is-t2 {
+  min-width: 54px;
+  background: rgba(36, 68, 102, 0.86);
+}
+
+#page-pve-invincible .pve-talent-code {
+  right: 7px;
+  top: 46px;
+  display: grid;
+  justify-items: end;
+  color: #fff;
+  font-weight: 1000;
+  line-height: 0.96;
+  text-align: right;
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+#page-pve-invincible .pve-talent-code strong {
+  font-size: clamp(1.55rem, 2.35vw, 2.35rem);
+}
+
+#page-pve-invincible .pve-talent-code span {
+  font-size: clamp(1.15rem, 1.8vw, 1.7rem);
+}
+
+#page-pve-invincible .pve-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pve-invincible .pve-info-card {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+  background: #2b2d31;
+}
+
+#page-pve-invincible .pve-info-card > img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+}
+
+#page-pve-invincible .pve-info-card h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.02em;
+}
+
+#page-pve-invincible .pve-info-card p {
+  margin: 0;
+  color: #dcddde;
+  line-height: 1.7;
+}
+
+#page-pve-invincible .pve-info-card p img {
+  width: 26px;
+  height: 26px;
+  vertical-align: middle;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #3f4147;
+  background: #232428;
+}
+
 #page-pve-invincible .pve-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -690,7 +875,8 @@
 
   #page-pve-invincible .pve-build-grid,
   #page-pve-invincible .pve-artifact-plans,
-  #page-pve-invincible .pve-lineup-grid {
+  #page-pve-invincible .pve-lineup-grid,
+  #page-pve-invincible .pve-loadout-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -727,6 +913,8 @@
   #page-pve-invincible .pve-build-grid,
   #page-pve-invincible .pve-artifact-plans,
   #page-pve-invincible .pve-lineup-grid,
+  #page-pve-invincible .pve-loadout-grid,
+  #page-pve-invincible .pve-info-grid,
   #page-pve-invincible .pve-support-row,
   #page-pve-invincible .pve-two-col {
     grid-template-columns: 1fr;
@@ -739,6 +927,24 @@
   #page-pve-invincible .pve-unit-card > img {
     width: 86px;
     height: 86px;
+  }
+
+  #page-pve-invincible .pve-loadout-grid {
+    gap: 14px;
+  }
+
+  #page-pve-invincible .pve-loadout-portrait {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  #page-pve-invincible .pve-info-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+  }
+
+  #page-pve-invincible .pve-info-card > img {
+    width: 58px;
+    height: 58px;
   }
 
   #page-pve-invincible .pve-build-card li {
