@@ -57,9 +57,9 @@
 
 #page-pve-invincible .pve-hero {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr);
+  grid-template-columns: 1fr;
   gap: 22px;
-  align-items: center;
+  align-items: start;
   padding: 24px;
   border: 1px solid #3f4147;
   border-radius: 10px;
@@ -98,6 +98,12 @@
   color: #dcddde;
   font-size: 1.03em;
   line-height: 1.85;
+}
+
+#page-pve-invincible .pve-hero-note {
+  margin-top: 10px !important;
+  color: #f0b85a !important;
+  font-weight: 900;
 }
 
 #page-pve-invincible .pve-damage-word {
@@ -206,20 +212,30 @@
 
 #page-pve-invincible .pve-party-grid.is-hero-only {
   grid-template-columns: repeat(3, minmax(128px, 1fr));
+  gap: 18px;
 }
 
 #page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card {
-  padding: 14px 10px 12px;
+  padding: 22px 14px 18px;
+  border-radius: 14px;
 }
 
 #page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card img {
-  width: 118px;
-  height: 118px;
+  width: min(100%, 176px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin-bottom: 14px;
+  border-radius: 18px;
+}
+
+#page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card span {
+  font-size: 1.18em;
 }
 
 #page-pve-invincible .pve-belt-card,
 #page-pve-invincible .pve-score-grid article,
 #page-pve-invincible .pve-build-card,
+#page-pve-invincible .pve-build-detail-card,
 #page-pve-invincible .pve-artifact-plans article,
 #page-pve-invincible .pve-lineup-card,
 #page-pve-invincible .pve-unit-card,
@@ -269,6 +285,20 @@
   color: #f2f3f5;
   font-size: 1.08em;
   line-height: 1.45;
+}
+
+#page-pve-invincible .pve-belt-label {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  margin-bottom: 8px;
+  padding: 3px 10px;
+  border: 1px solid rgba(240, 184, 90, 0.45);
+  border-radius: 999px;
+  background: rgba(240, 184, 90, 0.1);
+  color: #f0b85a;
+  font-size: 0.84em;
+  font-weight: 900;
 }
 
 #page-pve-invincible .pve-belt-card p,
@@ -429,6 +459,7 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
+  margin-top: 16px;
 }
 
 #page-pve-invincible .pve-artifact-plans article {
@@ -499,6 +530,79 @@
 #page-pve-invincible .pve-support-item strong {
   color: #fff;
   font-size: 1.08em;
+}
+
+#page-pve-invincible .pve-build-detail-card {
+  padding: 18px 20px;
+  overflow: hidden;
+}
+
+#page-pve-invincible .pve-build-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) minmax(205px, max-content);
+  gap: 12px;
+  align-items: center;
+  min-height: 118px;
+  padding: 14px 0;
+  border-bottom: 1px dashed rgba(79, 84, 92, 0.7);
+}
+
+#page-pve-invincible .pve-build-row:first-child {
+  padding-top: 0;
+}
+
+#page-pve-invincible .pve-build-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+#page-pve-invincible .pve-build-row.is-core .pve-build-hero {
+  border-color: rgba(87, 242, 135, 0.72);
+}
+
+#page-pve-invincible .pve-build-row.is-main .pve-build-hero {
+  border-color: rgba(240, 184, 90, 0.82);
+}
+
+#page-pve-invincible .pve-build-hero {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+}
+
+#page-pve-invincible .pve-build-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+#page-pve-invincible .pve-build-icons img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border: 2px solid #3f4147;
+  border-radius: 12px;
+  background: #303338;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+#page-pve-invincible .pve-build-row strong {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 8px 14px;
+  border: 1px solid rgba(86, 128, 186, 0.55);
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(62, 81, 111, 0.9), rgba(38, 50, 70, 0.92));
+  color: #f2f3f5;
+  font-size: 0.98em;
+  line-height: 1.25;
+  white-space: nowrap;
 }
 
 #page-pve-invincible .pve-lineup-card {
@@ -752,6 +856,25 @@
   line-height: 1.45;
 }
 
+#page-pve-invincible .pve-mech-hero {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-right: 2px;
+  color: #fff;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+#page-pve-invincible .pve-mech-hero img {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+  background: #232428;
+}
+
 #page-pve-invincible .pve-mechanism-card p {
   margin-top: 12px;
 }
@@ -839,6 +962,25 @@
   #page-pve-invincible .pve-lineup-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  #page-pve-invincible .pve-build-row {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  #page-pve-invincible .pve-build-row strong {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  #page-pve-invincible .pve-build-icons {
+    flex-wrap: wrap;
+    gap: 9px;
+  }
+
+  #page-pve-invincible .pve-build-icons img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -865,8 +1007,16 @@
   }
 
   #page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card img {
-    width: 76px;
-    height: 76px;
+    width: min(100%, 102px);
+    height: auto;
+  }
+
+  #page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card {
+    padding: 12px 6px 10px;
+  }
+
+  #page-pve-invincible .pve-party-grid.is-hero-only .pve-party-card span {
+    font-size: 0.96em;
   }
 
   #page-pve-invincible .pve-score-grid,
@@ -899,5 +1049,33 @@
 
   #page-pve-invincible .pve-build-card li {
     grid-template-columns: 54px 1fr;
+  }
+
+  #page-pve-invincible .pve-build-detail-card {
+    padding: 14px;
+  }
+
+  #page-pve-invincible .pve-build-row {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 96px;
+  }
+
+  #page-pve-invincible .pve-build-hero {
+    width: 58px;
+    height: 58px;
+  }
+
+  #page-pve-invincible .pve-build-icons img {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+  }
+
+  #page-pve-invincible .pve-build-row strong {
+    min-height: 38px;
+    padding: 7px 12px;
+    font-size: 0.88em;
+    white-space: normal;
   }
 }
