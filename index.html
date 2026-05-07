@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://magiccard-momiko.com/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=260508-2">
+  <link rel="stylesheet" href="style.css?v=260508-3">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -7826,15 +7826,19 @@
       
               <div class="flas-video-card">
                 <div class="flas-video-thumb">
-                  <i class="fa-brands fa-youtube"></i>
-                  <span>COMING SOON</span>
+                  <iframe
+                    src="https://www.youtube.com/embed/tQfgXTIaDzY?start=34&rel=0&modestbranding=1"
+                    title="フラス護衛隊 解説動画"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                  </iframe>
                 </div>
       
                 <div class="flas-video-body">
-                  <h3>フラス護衛隊の動画を近日公開予定</h3>
+                  <h3>フラス護衛隊の実戦解説動画</h3>
                   <p>
-                    実戦での動き、ソニックス対面、ミラー対面、魔王の指輪2個目による変化などを動画で解説予定です。
-                    公開後はこの枠に動画を掲載します。
+                    実戦での動き、ソニックス対面、ミラー対面、魔王の指輪2個目による変化を動画で解説しています。
+                    編成表と合わせて、フラスがどう削り切るか確認してみてください。
                   </p>
                 </div>
               </div>
@@ -7868,14 +7872,14 @@
                     </div>
                   </div>
                   <p>
-                    心蕙・スカイリーを切傷ルーンに寄せることで、2〜3ターン目に前列敵へ
+                    モジー・心蕙・スカイリーを切傷ルーンに寄せることで、2〜3ターン目に前列敵へ
                     <strong>被ダメージ+42%</strong>を狙えるようになり、ミラー対面の勝率向上が期待できます。
                   </p>
                 </article>
               </div>
       
               <div class="flas-note-box">
-                以前は心蕙・スカイリーも守護者ルーン寄りでしたが、現在は切傷ルーンで攻め性能を補う形が注目ポイントです。
+                以前はモジー・心蕙・スカイリーも守護者ルーン寄りでしたが、現在は切傷ルーンで攻め性能を補う形が注目ポイントです。
               </div>
             </section>
       
@@ -7908,132 +7912,96 @@
                   </div>
                 </div>
               </div>
-              <div class="flas-build-grid">
-                <article class="flas-build-card">
-                  <div class="flas-build-head">
-                    <img src="image/hero/bankoku.webp" alt="蛮刻">
-                    <div>
-                      <span>TANK</span>
-                      <h3>蛮刻</h3>
-                      <p>前衛安定化担当</p>
-                    </div>
+              <div class="flas-build-detail-card" aria-label="フラス護衛隊の構築詳細">
+                <div class="flas-build-row">
+                  <img class="flas-build-hero" src="image/hero/bankoku.webp" alt="蛮刻">
+                  <strong>蛮刻</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/abyss/shield.webp" alt="魔王の盾">
+                    <img src="image/rune/shugosha.webp" alt="守護者">
+                    <img src="image/rune/seiketsu.webp" alt="聖潔">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/aobato.webp" alt="緑鳩石">
+                    <img src="image/gem/kiryu.webp" alt="輝龍石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/abyss/shield.webp" alt="">魔王の盾</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/kiryu.webp"
-                            alt="">速</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/shugosha.webp"
-                            alt="">守護者</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
-                    <li><b>T2装備</b><span>ダメ軽</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>3-4-3-2</span><span>1-2</span></span></li>
-                  </ul>
-                </article>
-              
-                <article class="flas-build-card">
-                  <div class="flas-build-head">
-                    <img src="image/hero/jodo.webp" alt="ジョード">
-                    <div>
-                      <span>GUARD</span>
-                      <h3>ジョード</h3>
-                      <p>護衛＋耐久支援</p>
-                    </div>
+                  <span class="flas-t2-badge">T2：ダメ軽</span>
+                  <span class="flas-talent-line"><span>天賦3-4-3-2</span><span>宝天1-2</span></span>
+                </div>
+
+                <div class="flas-build-row">
+                  <img class="flas-build-hero" src="image/hero/jodo.webp" alt="ジョード">
+                  <strong>ジョード</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/abyss/heart.webp" alt="魔王の心">
+                    <img src="image/rune/shugosha.webp" alt="守護者">
+                    <img src="image/rune/seiketsu.webp" alt="聖潔">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/aobato.webp" alt="緑鳩石">
+                    <img src="image/gem/shiran.webp" alt="紫蘭石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/abyss/heart.webp" alt="">魔王の心</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img
-                            src="image/gem/shiran.webp" alt="">会</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/shugosha.webp"
-                            alt="">守護者</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
-                    <li><b>T2装備</b><span>ダメ軽</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>3-4-5-2</span><span>3-1</span></span></li>
-                  </ul>
-                </article>
-              
-                <article class="flas-build-card">
-                  <div class="flas-build-head">
-                    <img src="image/hero/mosey.webp" alt="モジー">
-                    <div>
-                      <span>CORE</span>
-                      <h3>モジー</h3>
-                      <p>継続圧力の核</p>
-                    </div>
+                  <span class="flas-t2-badge">T2：ダメ軽</span>
+                  <span class="flas-talent-line"><span>天賦3-4-5-2</span><span>宝天3-1</span></span>
+                </div>
+
+                <div class="flas-build-row">
+                  <img class="flas-build-hero" src="image/hero/mosey.webp" alt="モジー">
+                  <strong>モジー</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/abyss/flag.webp" alt="魔王の旗">
+                    <img src="image/rune/kirikizu.webp" alt="切傷">
+                    <img src="image/rune/seiketsu.webp" alt="聖潔">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/aobato.webp" alt="緑鳩石">
+                    <img src="image/gem/kiryu.webp" alt="輝龍石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/abyss/flag.webp" alt="">魔王の旗</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/kiryu.webp"
-                            alt="">速</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/shugosha.webp"
-                            alt="">守護者</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
-                    <li><b>T2装備</b><span>ダメ軽</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>3-4-3-5</span><span>1-2</span></span></li>
-                  </ul>
-                </article>
-              
-                <article class="flas-build-card is-main">
-                  <div class="flas-build-head">
-                    <img src="image/hero/flas.webp" alt="フラス">
-                    <div>
-                      <span>MAIN DAMAGE</span>
-                      <h3>フラス</h3>
-                      <p>冥火で削り切る</p>
-                    </div>
+                  <span class="flas-t2-badge">T2：ダメ軽</span>
+                  <span class="flas-talent-line"><span>天賦3-4-3-5</span><span>宝天1-2</span></span>
+                </div>
+
+                <div class="flas-build-row is-main">
+                  <img class="flas-build-hero" src="image/hero/flas.webp" alt="フラス">
+                  <strong>フラス</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/abyss/nail.webp" alt="魔王の爪">
+                    <img src="image/rune/meika.webp" alt="冥火">
+                    <img src="image/rune/mania.webp" alt="マニア">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/kujaku.webp" alt="孔雀石">
+                    <img src="image/gem/shiran.webp" alt="紫蘭石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/abyss/nail.webp" alt="">魔王の爪</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/kujaku.webp" alt="">追</span><span><img
-                            src="image/gem/shiran.webp" alt="">会</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/meika.webp"
-                            alt="">冥火</span><span><img src="image/rune/mania.webp" alt="">マニア</span></span></li>
-                    <li><b>T2装備</b><span>会心率</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>1-3-4-2</span><span>3-1</span></span></li>
-                  </ul>
-                </article>
-              
-                <article class="flas-build-card is-key">
-                  <div class="flas-build-head">
-                    <img src="image/hero/shinfi.webp" alt="心蕙">
-                    <div>
-                      <span>SUPPORT</span>
-                      <h3>心蕙</h3>
-                      <p>シールド破壊</p>
-                    </div>
+                  <span class="flas-t2-badge is-crit">T2：会心率</span>
+                  <span class="flas-talent-line"><span>天賦1-3-4-2</span><span>宝天3-1</span></span>
+                </div>
+
+                <div class="flas-build-row is-key">
+                  <img class="flas-build-hero" src="image/hero/shinfi.webp" alt="心蕙">
+                  <strong>心蕙</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/holly/tenshi.webp" alt="天使の額冠">
+                    <img src="image/rune/kirikizu.webp" alt="切傷">
+                    <img src="image/rune/mania.webp" alt="マニア">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/aobato.webp" alt="緑鳩石">
+                    <img src="image/gem/kiryu.webp" alt="輝龍石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/holly/tenshi.webp" alt="">天使の額冠</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/kiryu.webp"
-                            alt="">速</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/kirikizu.webp"
-                            alt="">切傷</span><span><img src="image/rune/mania.webp" alt="">マニア</span></span></li>
-                    <li><b>T2装備</b><span>ダメ軽</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>3-4-5-2</span><span>3-1</span></span></li>
-                  </ul>
-                </article>
-              
-                <article class="flas-build-card is-key">
-                  <div class="flas-build-head">
-                    <img src="image/hero/skylie.webp" alt="スカイリー">
-                    <div>
-                      <span>HEAL</span>
-                      <h3>スカイリー</h3>
-                      <p>指輪+耐久up</p>
-                    </div>
+                  <span class="flas-t2-badge">T2：ダメ軽</span>
+                  <span class="flas-talent-line"><span>天賦3-4-5-2</span><span>宝天3-1</span></span>
+                </div>
+
+                <div class="flas-build-row is-key">
+                  <img class="flas-build-hero" src="image/hero/skylie.webp" alt="スカイリー">
+                  <strong>スカイリー</strong>
+                  <div class="flas-build-icons">
+                    <img src="image/artifact/abyss/born_ring.webp" alt="魔王の指輪">
+                    <img src="image/rune/seiei.webp" alt="聖衛">
+                    <img src="image/rune/mania.webp" alt="マニア">
+                    <img src="image/gem/murasakibortaru.webp" alt="紫蛍石">
+                    <img src="image/gem/aobato.webp" alt="緑鳩石">
+                    <img src="image/gem/shiran.webp" alt="紫蘭石">
                   </div>
-                  <ul>
-                    <li><b>神器</b><span class="flas-equip-line"><img src="image/artifact/abyss/born_ring.webp" alt="">魔王の指輪</span></li>
-                    <li><b>宝石</b><span class="flas-chip-list is-three"><span><img src="image/gem/murasakibortaru.webp"
-                            alt="">制</span><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img
-                            src="image/gem/shiran.webp" alt="">会</span></span></li>
-                    <li><b>ルーン</b><span class="flas-chip-list is-two"><span><img src="image/rune/kirikizu.webp"
-                            alt="">切傷</span><span><img src="image/rune/mania.webp" alt="">マニア</span></span></li>
-                    <li><b>T2装備</b><span>ダメ軽</span></li>
-                    <li><b>天賦</b><span class="flas-talent-line"><span>3-4-5-2</span><span>3-1</span></span></li>
-                  </ul>
-                </article>
+                  <span class="flas-t2-badge">T2：ダメ軽</span>
+                  <span class="flas-talent-line"><span>天賦3-4-5-2</span><span>宝天3-1</span></span>
+                </div>
               </div>
               
             </section>
@@ -8242,7 +8210,7 @@
             </section>
 
             <section class="pve-section" id="pve-invincible-point">
-              <h2 class="pve-section-title">結論</h2>
+              <h2 class="pve-section-title">重要</h2>
               <div class="pve-belt-card">
                 <div class="pve-belt-image"><img src="image/shiho/belt.webp" alt="黄金王のベルト" onerror="this.style.display='none'; this.parentElement.classList.add('is-missing');"></div>
                 <div>
