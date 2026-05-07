@@ -1168,3 +1168,78 @@
     font-size: 1.05em;
   }
 }
+
+/* =========================================
+   YouTube 高画質サムネ表示
+========================================= */
+
+#page-pvp-teams .flas-video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 155, 164, 0.55);
+  background: #111318;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+#page-pvp-teams .flas-youtube-lite {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #111318;
+  cursor: pointer;
+}
+
+#page-pvp-teams .flas-youtube-lite img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 軽く暗くして文字や再生ボタンを見やすく */
+#page-pvp-teams .flas-youtube-lite::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.08));
+  pointer-events: none;
+}
+
+#page-pvp-teams .flas-youtube-lite-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88px;
+  height: 62px;
+  transform: translate(-50%, -50%);
+  border-radius: 18px;
+  background: rgba(255, 0, 0, 0.92);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+}
+
+#page-pvp-teams .flas-youtube-lite-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 22px solid #fff;
+}
+
+#page-pvp-teams .flas-video-thumb iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

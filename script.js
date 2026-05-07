@@ -283,3 +283,19 @@ function playSonixVideo(button) {
     </iframe>
   `;
 }
+
+  document.addEventListener('click', function (e) {
+    const button = e.target.closest('.flas-youtube-lite');
+    if (!button) return;
+
+    const videoId = button.dataset.youtubeId;
+    const start = button.dataset.start || 0;
+
+    const iframe = document.createElement('iframe');
+    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&start=${start}&rel=0&modestbranding=1`;
+    iframe.title = 'フラス護衛隊 解説動画';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+
+    button.replaceWith(iframe);
+  });
