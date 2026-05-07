@@ -1047,3 +1047,124 @@
     justify-content: flex-start;
   }
 }
+
+/* =========================================
+   フラス護衛隊：おすすめ構成 1行固定 + 動画拡大
+   style.css の一番下に追加
+========================================= */
+
+/* PC時：右目次があってもメイン幅を少し広げる */
+@media (min-width: 1181px) {
+  #page-pvp-teams .flas-page-layout {
+    max-width: 1380px;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 20px;
+  }
+}
+
+/* おすすめ構成：1行で収める */
+@media (min-width: 1025px) {
+  #page-pvp-teams .flas-build-row {
+    grid-template-columns: 58px 84px minmax(246px, 1fr) 104px 142px;
+    gap: 10px;
+    min-height: 78px;
+    padding: 10px 12px;
+  }
+
+  #page-pvp-teams .flas-build-hero {
+    width: 58px;
+    height: 58px;
+  }
+
+  #page-pvp-teams .flas-build-row strong {
+    font-size: 1em;
+    white-space: nowrap;
+  }
+
+  #page-pvp-teams .flas-build-icons {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    align-items: center;
+    min-width: 0;
+  }
+
+  #page-pvp-teams .flas-build-icons img {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    border-radius: 8px;
+  }
+
+  #page-pvp-teams .flas-t2-badge {
+    min-height: 32px;
+    padding: 5px 10px;
+    font-size: 0.82em;
+    white-space: nowrap;
+  }
+
+  #page-pvp-teams .flas-build-detail-card .flas-talent-line {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 6px;
+    justify-content: flex-start;
+    white-space: nowrap;
+  }
+
+  #page-pvp-teams .flas-build-detail-card .flas-talent-line span {
+    white-space: nowrap;
+  }
+}
+
+/* 動画を大きくする */
+#page-pvp-teams .flas-video-card {
+  grid-template-columns: minmax(520px, 1.45fr) minmax(260px, 0.75fr);
+  gap: 22px;
+  padding: 18px;
+  align-items: center;
+}
+
+#page-pvp-teams .flas-video-thumb {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 155, 164, 0.55);
+  background: #111318;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+#page-pvp-teams .flas-video-thumb iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* 動画横の文章も少し強く */
+#page-pvp-teams .flas-video-body h3 {
+  font-size: 1.18em;
+  line-height: 1.45;
+}
+
+#page-pvp-teams .flas-video-body p {
+  font-size: 0.96em;
+  line-height: 1.85;
+}
+
+/* タブレット以下は縦積みで崩さない */
+@media (max-width: 1024px) {
+  #page-pvp-teams .flas-video-card {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pvp-teams .flas-build-icons {
+    flex-wrap: wrap;
+  }
+}
+
+/* スマホは詰めすぎない */
+@media (max-width: 768px) {
+  #page-pvp-teams .flas-video-card {
+    padding: 14px;
+  }
+
+  #page-pvp-teams .flas-video-body h3 {
+    font-size: 1.05em;
+  }
+}
