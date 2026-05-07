@@ -3,9 +3,18 @@
 ========================================= */
 
 .channel-pve .channel-badge {
-  background: rgba(87, 242, 135, 0.16);
-  color: #57f287;
-  border: 1px solid rgba(87, 242, 135, 0.35);
+  background: rgba(255, 90, 102, 0.16);
+  color: #ff8a5c;
+  border: 1px solid rgba(255, 90, 102, 0.38);
+}
+
+.channel-pve:hover {
+  background: rgba(255, 90, 102, 0.1);
+}
+
+.channel-pve.active {
+  background: linear-gradient(90deg, rgba(255, 90, 102, 0.2), rgba(240, 184, 90, 0.12));
+  border-left-color: #ff5a66;
 }
 
 #page-pve-invincible {
