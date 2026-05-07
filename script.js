@@ -224,3 +224,62 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// ==========================================
+// 4. シリアルコードのコピー
+// ==========================================
+function copySerialCode(el) {
+  const code = el.dataset.code;
+  if (!code) return;
+
+  function copiedUi() {
+    el.classList.add('is-copied');
+
+    setTimeout(function () {
+      el.classList.remove('is-copied');
+    }, 1200);
+  }
+
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(code).then(copiedUi).catch(function () {
+      fallbackCopy(code, copiedUi);
+    });
+  } else {
+    fallbackCopy(code, copiedUi);
+  }
+}
+
+function fallbackCopy(text, callback) {
+  const textarea = document.createElement('textarea');
+  textarea.value = text;
+  textarea.setAttribute('readonly', '');
+  textarea.style.position = 'fixed';
+  textarea.style.top = '-9999px';
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  try {
+    document.execCommand('copy');
+    if (typeof callback === 'function') callback();
+  } catch (e) {
+    alert('クリップボードに入れられませんでした。手動で選択してください。');
+  }
+
+  document.body.removeChild(textarea);
+}
+
+// ==========================================
+// 5. 動画サムネイルの再生
+// ==========================================
+function playSonixVideo(button) {
+  const wrapper = button.parentElement;
+
+  wrapper.innerHTML = `
+    <iframe
+      src="https://www.youtube.com/embed/PFd-nsqwu7E?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+      title="ソニックス編成 徹底解説"
+      allow="autoplay; encrypted-media; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  `;
+}

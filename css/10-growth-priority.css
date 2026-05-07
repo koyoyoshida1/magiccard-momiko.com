@@ -3528,6 +3528,127 @@
   margin-bottom: 0;
 }
 
+/* ==============================
+  Spend Guide
+============================== */
+
+.growth-spend-guide {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0 24px;
+}
+
+.growth-spend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  min-width: 0;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(23, 28, 40, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.growth-spend-card.is-free {
+  border-color: rgba(88, 183, 255, 0.26);
+}
+
+.growth-spend-card.is-dolphin {
+  border-color: rgba(157, 125, 255, 0.32);
+}
+
+.growth-spend-card.is-whale {
+  border-color: rgba(255, 201, 92, 0.32);
+}
+
+.growth-spend-head {
+  min-width: 0;
+}
+
+.growth-spend-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 0 11px;
+  border-radius: 999px;
+  background: rgba(88, 183, 255, 0.13);
+  border: 1px solid rgba(88, 183, 255, 0.22);
+  color: #dceeff;
+  font-size: 0.78rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.growth-spend-card.is-dolphin .growth-spend-badge {
+  background: rgba(157, 125, 255, 0.16);
+  border-color: rgba(157, 125, 255, 0.28);
+}
+
+.growth-spend-card.is-whale .growth-spend-badge {
+  background: rgba(255, 201, 92, 0.15);
+  border-color: rgba(255, 201, 92, 0.3);
+  color: #ffe8ad;
+}
+
+.growth-spend-head h3 {
+  margin: 10px 0 0;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 950;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.growth-spend-heroes,
+.growth-spend-artifacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.growth-spend-heroes img {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.growth-spend-card p {
+  margin: 0;
+  color: #d7deea;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.growth-spend-artifacts span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 34px;
+  padding: 4px 9px 4px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  color: #eef4ff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.growth-spend-artifacts img {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  object-fit: contain;
+}
+
 /* =========================================================
   育成優先表
 ========================================================= */
@@ -3760,6 +3881,10 @@
     padding: 0 18px;
   }
 
+  .growth-spend-guide {
+    grid-template-columns: 1fr;
+  }
+
   .growth-summary-box,
   .growth-step-boxes {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -3788,6 +3913,16 @@
 @media (max-width: 760px) {
   .growth-layout {
     padding: 0 14px;
+  }
+
+  .growth-spend-card {
+    padding: 14px;
+  }
+
+  .growth-spend-heroes img {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
   }
 
   .growth-hero {
