@@ -58,28 +58,28 @@
           <span><i class="fa-solid fa-chevron-down"></i> ヒーロー</span>
         </div>
         <div class="channel-list">
-          <div class="channel-item active" onclick="switchPage('page-tier', this)">
+          <a class="channel-item active" href="tier.html">
             <span class="channel-icon"><i class="fa-solid fa-ranking-star"></i></span>
             全キャラ最強ランキング
-          </div>
-          <div class="channel-item" onclick="switchPage('page-beauty-ranking', this)">
+          </a>
+          <a class="channel-item" href="beauty-ranking.html">
             <span class="channel-icon"><i class="fa-solid fa-heart" style="color:#ff77aa;"></i></span>
             美女ランキング
-          </div>
+          </a>
           <div class="channel-item" onclick="switchPage('page-ab-hero', this)">
             <span class="channel-icon"><i class="fa-solid fa-recycle"></i></span>
             A・Bヒーロー
           </div>
-          <div class="channel-item" onclick="switchPage('page-s-hero', this)">
+          <a class="channel-item" href="s-hero.html">
             <span class="channel-icon"><i class="fa-solid fa-medal"></i></span>
             Sヒーロー
-          </div>
-          <div class="channel-item channel-growth" onclick="switchPage('growth-priority', this)">
+          </a>
+          <a class="channel-item channel-growth" href="growth-priority.html">
             <span class="channel-icon">
               <i class="fas fa-seedling"></i>
             </span>
             S+育成順位
-          </div>
+          </a>
           <div class="channel-item channel-growth-quick" onclick="switchPage('growth-quick-guide', this)">
             <span class="channel-icon">
               <i class="fa-solid fa-list-check"></i>
@@ -128,10 +128,10 @@
           <span><i class="fa-solid fa-chevron-down"></i> 宝石&ルーン&神器</span>
         </div>
         <div class="channel-list">
-          <div class="channel-item" onclick="switchPage('page-rune-tier', this)">
+          <a class="channel-item" href="rune.html">
             <span class="channel-icon"><i class="fa-solid fa-gem"></i></span>
             ルーン
-          </div>
+          </a>
           <div class="channel-item" onclick="switchPage('page-t2-equip', this)">
             <span class="channel-icon"><i class="fa-solid fa-hammer"></i></span>
             T2装備
@@ -146,10 +146,10 @@
           <span><i class="fa-solid fa-chevron-down"></i> お役立ち情報</span>
         </div>
         <div class="channel-list">
-          <div class="channel-item" onclick="switchPage('page-serial', this)">
+          <a class="channel-item" href="serial.html">
             <span class="channel-icon"><i class="fa-solid fa-gift"></i></span>
             シリアルコード・動画
-          </div>
+          </a>
         </div>
       </div>
 
@@ -217,18 +217,6 @@
     <div class="main-content">
       <!-- 最強ランキング26年5月版 -->
       <div id="page-tier" class="page-section active-page">
-        <nav class="home-guide-links" aria-label="主要攻略記事">
-          <div class="home-guide-links__title">主要攻略記事</div>
-          <div class="home-guide-links__grid">
-            <a class="home-guide-link" href="tier.html"><strong>最強Tier表</strong><span>PvPとPvEを踏まえた総合評価</span></a>
-            <a class="home-guide-link" href="rune.html"><strong>ルーン攻略</strong><span>星6ルーンの優先度と使い道</span></a>
-            <a class="home-guide-link" href="s-hero.html"><strong>Sヒーロー</strong><span>序盤から使えるS英雄の整理</span></a>
-            <a class="home-guide-link" href="growth-priority.html"><strong>S+育成順位</strong><span>無課金・微課金向けの育成順</span></a>
-            <a class="home-guide-link" href="serial.html"><strong>シリアルコード</strong><span>最新コードと動画まとめ</span></a>
-            <a class="home-guide-link" href="beauty-ranking.html"><strong>美女ランキング</strong><span>読者投票による特別企画</span></a>
-          </div>
-        </nav>
-
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
 
           <div style="flex: 1; min-width: 320px;">

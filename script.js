@@ -143,7 +143,16 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // ページが存在する場合のみ処理
     if (targetPage) {
-      const targetMenu = document.querySelector(`[onclick*="${pageId}"]`);
+      const menuHrefByPage = {
+        'page-tier': 'tier.html',
+        'page-rune-tier': 'rune.html',
+        'page-s-hero': 's-hero.html',
+        'growth-priority': 'growth-priority.html',
+        'page-serial': 'serial.html',
+        'page-beauty-ranking': 'beauty-ranking.html'
+      };
+      const targetMenu = document.querySelector(`[onclick*="${pageId}"]`) ||
+        document.querySelector(`[href="${menuHrefByPage[pageId]}"]`);
       
       // ページ切り替え（switchPage関数が存在すれば実行、なければ予備処理）
       if (typeof switchPage === 'function') {

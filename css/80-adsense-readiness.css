@@ -10,6 +10,10 @@
   background: #2b2d31;
 }
 
+a.channel-item {
+  text-decoration: none;
+}
+
 .home-guide-links__title {
   margin: 0 0 12px;
   color: #fff;

@@ -6,13 +6,15 @@
   color: #dcddde;
 }
 
-.channel-item.active[onclick*="page-beauty-ranking"] {
+.channel-item.active[onclick*="page-beauty-ranking"],
+.channel-item.active[href="beauty-ranking.html"] {
   color: #ffffff;
   background: rgba(255, 119, 170, 0.2);
   border-left: 3px solid #ff77aa;
 }
 
-.channel-item.active[onclick*="page-beauty-ranking"] .channel-icon {
+.channel-item.active[onclick*="page-beauty-ranking"] .channel-icon,
+.channel-item.active[href="beauty-ranking.html"] .channel-icon {
   color: #ff77aa;
 }
 
