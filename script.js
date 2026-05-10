@@ -238,69 +238,88 @@ document.addEventListener('DOMContentLoaded', function () {
   const boards = document.querySelectorAll('.beauty-tier-board');
   if (!boards.length) return;
 
-  const heroes = [
-    { rank: 1, name: 'デシア', top10: 92, favorite: 22, score: 202, img: 'image/hero/decia.webp' },
-    { rank: 2, name: 'ニックス', top10: 98, favorite: 17, score: 183, img: 'image/hero/nyx.webp' },
-    { rank: 3, name: 'ダフネ', top10: 54, favorite: 12, score: 114, img: 'image/hero/dafne.webp' },
-    { rank: 4, name: '心蕙', top10: 51, favorite: 8, score: 91, img: 'image/hero/shinfi.webp' },
-    { rank: 5, name: 'ソニア', top10: 47, favorite: 8, score: 87, img: 'image/hero/sonia.webp' },
-    { rank: 6, name: 'ソフィア', top10: 31, favorite: 9, score: 76, img: 'image/hero/sofia.webp' },
-    { rank: 7, name: '青瓷', top10: 43, favorite: 6, score: 73, img: 'image/hero/seiji.webp' },
-    { rank: 8, name: 'ルビィ', top10: 19, favorite: 5, score: 44, img: 'image/hero/ruby.webp' },
-    { rank: 9, name: 'セリーナ', top10: 20, favorite: 4, score: 40, img: 'image/hero/serina.webp' },
-    { rank: 10, name: 'ナタリー', top10: 19, favorite: 4, score: 39, img: 'image/hero/natari.webp' },
-    { rank: 11, name: 'スカイリー', top10: 38, favorite: 0, score: 38, img: 'image/hero/skylie.webp' },
-    { rank: 12, name: 'ミラナ', top10: 19, favorite: 3, score: 34, img: 'image/hero/mirana.webp' },
-    { rank: 13, name: 'アルバレス', top10: 18, favorite: 3, score: 33, img: 'image/hero/alvares.webp' },
-    { rank: 14, name: 'フィリス', top10: 15, favorite: 2, score: 25, img: 'image/hero/fillis.webp' },
-    { rank: 15, name: 'オリラ', top10: 10, favorite: 3, score: 25, img: 'image/hero/olira.webp' },
-    { rank: 16, name: 'ロザリンド', top10: 22, favorite: 0, score: 22, img: 'image/hero/rozalind.webp' },
-    { rank: 17, name: 'フェアリー', top10: 16, favorite: 1, score: 21, img: 'image/hero/fairy.webp' },
-    { rank: 18, name: 'ソラ', top10: 19, favorite: 0, score: 19, img: 'image/hero/sora.webp' },
-    { rank: 19, name: 'テア', top10: 16, favorite: 0, score: 16, img: 'image/hero/tea.webp' },
-    { rank: 20, name: 'アリヤ', top10: 11, favorite: 1, score: 16, img: 'image/hero/ariya.webp' },
-    { rank: 21, name: 'ペディア', top10: 8, favorite: 1, score: 13, img: 'image/hero/pedhia.webp' },
-    { rank: 22, name: 'エルリニー', top10: 3, favorite: 2, score: 13, img: 'image/hero/elnriny.webp' },
-    { rank: 23, name: '蛍火', top10: 12, favorite: 0, score: 12, img: 'image/hero/hotarubi.webp' },
-    { rank: 24, name: '大荒蛮神', top10: 7, favorite: 1, score: 12, img: 'image/hero/banshin.webp' },
-    { rank: 25, name: 'イソルド', top10: 10, favorite: 0, score: 10, img: 'image/hero/isolde.webp' },
-    { rank: 26, name: 'アンタ', top10: 4, favorite: 1, score: 9, img: 'image/hero/anta.webp' },
-    { rank: 27, name: 'シルサ', top10: 8, favorite: 0, score: 8, img: 'image/hero/shirusa.webp' },
-    { rank: 28, name: 'カリスト', top10: 7, favorite: 0, score: 7, img: 'image/hero/karist.webp' },
-    { rank: 29, name: 'ヴァルキリー', top10: 7, favorite: 0, score: 7, img: 'image/hero/valkyrie.webp' },
-    { rank: 30, name: 'クティーラ', top10: 2, favorite: 1, score: 7, img: 'image/hero/kuthira.webp' },
-    { rank: 31, name: 'キーラ', top10: 6, favorite: 0, score: 6, img: 'image/hero/kira.webp' },
-    { rank: 32, name: 'デニス', top10: 6, favorite: 0, score: 6, img: 'image/hero/denis.webp' },
-    { rank: 33, name: 'モニカ', top10: 6, favorite: 0, score: 6, img: 'image/hero/monica.webp' },
-    { rank: 34, name: 'ライランドール', top10: 6, favorite: 0, score: 6, img: 'image/hero/rairandoll.webp' },
-    { rank: 35, name: 'アヴィリア', top10: 5, favorite: 0, score: 5, img: 'image/hero/aviria.webp' },
-    { rank: 36, name: 'ノエミ', top10: 5, favorite: 0, score: 5, img: 'image/hero/noemi.webp' },
-    { rank: 37, name: 'ケイン', top10: 0, favorite: 1, score: 5, img: 'image/hero/kein.webp', tag: 'ネタ枠' },
-    { rank: 38, name: '災厄', top10: 0, favorite: 1, score: 5, img: 'image/hero/saiyaku.webp', tag: 'ネタ枠' },
-    { rank: 39, name: 'カトリーヌ', top10: 4, favorite: 0, score: 4, img: 'image/hero/katorinu.webp' },
-    { rank: 40, name: 'ロンカカ', top10: 4, favorite: 0, score: 4, img: 'image/hero/ronkaka.webp' },
-    { rank: 41, name: 'マファータ', top10: 3, favorite: 0, score: 3, img: 'image/hero/mafata.webp' },
-    { rank: 42, name: 'マリッサ', top10: 3, favorite: 0, score: 3, img: 'image/hero/marissa.webp' },
-    { rank: 43, name: 'ミス', top10: 3, favorite: 0, score: 3, img: 'image/hero/miss.webp' },
-    { rank: 44, name: '生の女神', top10: 3, favorite: 0, score: 3, img: 'image/hero/seinomegami.webp' },
-    { rank: 45, name: 'アヴィ', top10: 2, favorite: 0, score: 2, img: 'image/hero/avi.webp' },
-    { rank: 46, name: 'クリスタ', top10: 2, favorite: 0, score: 2, img: 'image/hero/crista.webp' },
-    { rank: 47, name: 'サとミ', top10: 2, favorite: 0, score: 2, img: 'image/hero/satomi.webp' },
-    { rank: 48, name: 'イルビダ', top10: 1, favorite: 0, score: 1, img: 'image/hero/ilvida.webp' },
-    { rank: 49, name: 'ケリディア', top10: 1, favorite: 0, score: 1, img: 'image/hero/keridhia.webp' },
-    { rank: 50, name: 'セシーナ', top10: 1, favorite: 0, score: 1, img: 'image/hero/sesina.webp' },
-    { rank: 51, name: 'ニコル', top10: 1, favorite: 0, score: 1, img: 'image/hero/nicol.webp' },
-    { rank: 52, name: '海洋の姫', top10: 1, favorite: 0, score: 1, img: 'image/hero/kaiyounohime.webp' },
-    { rank: 58, name: 'フェニックス', top10: 0, favorite: 0, score: 0, img: 'image/hero/fenix.webp' },
-    { rank: 61, name: '輪廻の神', top10: 0, favorite: 0, score: 0, img: 'image/hero/rinne.webp' },
-    { rank: 53, name: 'オディナ', top10: 0, favorite: 0, score: 0, img: 'image/hero/odina.webp' },
-    { rank: 54, name: 'キャリー', top10: 0, favorite: 0, score: 0, img: 'image/hero/carry.webp' },
-    { rank: 55, name: 'キルメイン', top10: 0, favorite: 0, score: 0, img: 'image/hero/killmain.webp' },
-    { rank: 56, name: 'セリーナ2', top10: 0, favorite: 0, score: 0, img: 'image/hero/serina2.webp' },
-    { rank: 57, name: 'ファリネッリ', top10: 0, favorite: 0, score: 0, img: 'image/hero/farineri.webp' },
-    { rank: 59, name: 'レインボー', top10: 0, favorite: 0, score: 0, img: 'image/hero/rainbow.webp' },
-    { rank: 60, name: 'レニカ', top10: 0, favorite: 0, score: 0, img: 'image/hero/renica.webp' }
+  const baseHeroes = [
+    { name: 'デシア', top10: 93, favorite: 22, img: 'image/hero/decia.webp' },
+    { name: 'ニックス', top10: 99, favorite: 17, img: 'image/hero/nyx.webp' },
+    { name: 'ダフネ', top10: 54, favorite: 12, img: 'image/hero/dafne.webp' },
+    { name: '心蕙', top10: 52, favorite: 8, img: 'image/hero/shinfi.webp' },
+    { name: 'ソニア', top10: 48, favorite: 8, img: 'image/hero/sonia.webp' },
+    { name: 'ソフィア', top10: 31, favorite: 9, img: 'image/hero/sofia.webp' },
+    { name: '青瓷', top10: 43, favorite: 6, img: 'image/hero/seiji.webp' },
+    { name: 'ルビィ', top10: 19, favorite: 5, img: 'image/hero/ruby.webp' },
+    { name: 'セリーナ', top10: 20, favorite: 4, img: 'image/hero/serina.webp' },
+    { name: 'スカイリー', top10: 39, favorite: 0, img: 'image/hero/skylie.webp' },
+    { name: 'ナタリー', top10: 19, favorite: 4, img: 'image/hero/natari.webp' },
+    { name: 'ミラナ', top10: 19, favorite: 3, img: 'image/hero/mirana.webp' },
+    { name: 'アルバレス', top10: 18, favorite: 3, img: 'image/hero/alvares.webp' },
+    { name: 'フィリス', top10: 15, favorite: 2, img: 'image/hero/fillis.webp' },
+    { name: 'オリラ', top10: 10, favorite: 3, img: 'image/hero/olira.webp' },
+    { name: 'ソラ', top10: 19, favorite: 5, img: 'image/hero/sora.webp' },
+    { name: 'ロザリンド', top10: 22, favorite: 0, img: 'image/hero/rozalind.webp' },
+    { name: 'フェアリー', top10: 16, favorite: 1, img: 'image/hero/fairy.webp' },
+    { name: 'テア', top10: 16, favorite: 0, img: 'image/hero/tea.webp' },
+    { name: 'アリヤ', top10: 11, favorite: 1, img: 'image/hero/ariya.webp' },
+    { name: 'ペディア', top10: 9, favorite: 1, img: 'image/hero/pedhia.webp' },
+    { name: 'エルリニー', top10: 3, favorite: 2, img: 'image/hero/elnriny.webp' },
+    { name: '蛍火', top10: 12, favorite: 0, img: 'image/hero/hotarubi.webp' },
+    { name: '大荒蛮神', top10: 7, favorite: 1, img: 'image/hero/banshin.webp' },
+    { name: 'イソルド', top10: 10, favorite: 0, img: 'image/hero/isolde.webp' },
+    { name: 'アンタ', top10: 4, favorite: 1, img: 'image/hero/anta.webp' },
+    { name: 'シルサ', top10: 8, favorite: 0, img: 'image/hero/shirusa.webp' },
+    { name: 'ヴァルキリー', top10: 8, favorite: 0, img: 'image/hero/valkyrie.webp' },
+    { name: 'カリスト', top10: 7, favorite: 0, img: 'image/hero/karist.webp' },
+    { name: 'クティーラ', top10: 2, favorite: 1, img: 'image/hero/kuthira.webp' },
+    { name: 'キーラ', top10: 6, favorite: 0, img: 'image/hero/kira.webp' },
+    { name: 'デニス', top10: 6, favorite: 0, img: 'image/hero/denis.webp' },
+    { name: 'モニカ', top10: 6, favorite: 0, img: 'image/hero/monica.webp' },
+    { name: 'ライランドール', top10: 6, favorite: 0, img: 'image/hero/rairandoll.webp' },
+    { name: 'アヴィリア', top10: 5, favorite: 0, img: 'image/hero/aviria.webp' },
+    { name: 'ノエミ', top10: 5, favorite: 0, img: 'image/hero/noemi.webp' },
+    { name: 'ケイン', top10: 0, favorite: 1, img: 'image/hero/kein.webp', tag: 'ネタ枠' },
+    { name: '災厄', top10: 0, favorite: 1, img: 'image/hero/saiyaku.webp', tag: 'ネタ枠' },
+    { name: 'カトリーヌ', top10: 4, favorite: 0, img: 'image/hero/katorinu.webp' },
+    { name: 'ロンカカ', top10: 4, favorite: 0, img: 'image/hero/ronkaka.webp' },
+    { name: '生の女神', top10: 4, favorite: 0, img: 'image/hero/seinomegami.webp' },
+    { name: 'マファータ', top10: 3, favorite: 0, img: 'image/hero/mafata.webp' },
+    { name: 'マリッサ', top10: 3, favorite: 0, img: 'image/hero/marissa.webp' },
+    { name: 'ミス', top10: 3, favorite: 0, img: 'image/hero/miss.webp' },
+    { name: 'アヴィ', top10: 2, favorite: 0, img: 'image/hero/avi.webp' },
+    { name: 'クリスタ', top10: 2, favorite: 0, img: 'image/hero/crista.webp' },
+    { name: 'サとミ', top10: 2, favorite: 0, img: 'image/hero/satomi.webp' },
+    { name: 'イルビダ', top10: 1, favorite: 0, img: 'image/hero/ilvida.webp' },
+    { name: 'ケリディア', top10: 1, favorite: 0, img: 'image/hero/keridhia.webp' },
+    { name: 'セシーナ', top10: 1, favorite: 0, img: 'image/hero/sesina.webp' },
+    { name: 'ニコル', top10: 1, favorite: 0, img: 'image/hero/nicol.webp' },
+    { name: '海洋の姫', top10: 1, favorite: 0, img: 'image/hero/kaiyounohime.webp' },
+    { name: 'フェニックス', top10: 0, favorite: 0, img: 'image/hero/fenix.webp' },
+    { name: '輪廻の神', top10: 0, favorite: 0, img: 'image/hero/rinenokami.webp' },
+    { name: 'オディナ', top10: 0, favorite: 0, img: 'image/hero/odina.webp' },
+    { name: 'キャリー', top10: 0, favorite: 0, img: 'image/hero/carry.webp' },
+    { name: 'キルメイン', top10: 0, favorite: 0, img: 'image/hero/killmain.webp' },
+    { name: 'セリーナ2', top10: 0, favorite: 0, img: 'image/hero/serina2.webp' },
+    { name: 'ファリネッリ', top10: 0, favorite: 0, img: 'image/hero/farineri.webp' },
+    { name: 'レインボー', top10: 0, favorite: 0, img: 'image/hero/rainbow.webp' },
+    { name: 'レニカ', top10: 0, favorite: 0, img: 'image/hero/renica.webp' }
   ];
+
+  let previousScore = null;
+  let previousRank = 0;
+  const heroes = baseHeroes
+    .map(function (hero, index) {
+      return Object.assign({}, hero, {
+        order: index,
+        score: hero.top10 + hero.favorite * 5
+      });
+    })
+    .sort(function (a, b) {
+      return b.score - a.score || a.order - b.order;
+    })
+    .map(function (hero, index) {
+      const rank = previousScore === hero.score ? previousRank : index + 1;
+      previousScore = hero.score;
+      previousRank = rank;
+      return Object.assign(hero, { rank: rank });
+    });
 
   const tiers = [
     { key: 't0', label: 'T0', filter: (hero) => hero.rank <= 3 },
@@ -323,6 +342,37 @@ document.addEventListener('DOMContentLoaded', function () {
     `;
   }
 
+  function summaryCard(hero, index) {
+    const rankClass = index < 3 ? ` rank-${index + 1}` : '';
+    const pickup = hero.favorite > 0 ? `最推し${hero.favorite}票` : `TOP10票${hero.top10}票`;
+    return `
+      <article class="beauty-summary-card${rankClass}">
+        <span class="beauty-summary-img"><img src="${hero.img}" alt="${hero.name}" loading="lazy"></span>
+        <div>
+          <div class="beauty-summary-rank">第${hero.rank}位</div>
+          <div class="beauty-summary-name">${hero.name}</div>
+          <div class="beauty-summary-score">${hero.score}pt / ${pickup}</div>
+        </div>
+      </article>
+    `;
+  }
+
+  function tableRow(hero) {
+    const topClass = hero.rank <= 3 ? ' top' : '';
+    const top10Class = hero.top10 === 0 ? ' class="beauty-muted"' : '';
+    const favoriteClass = hero.favorite === 0 ? ' class="beauty-muted"' : '';
+    const tag = hero.tag ? `<span class="beauty-tag">${hero.tag}</span>` : '';
+    return `
+      <tr>
+        <td class="beauty-rank${topClass}">${hero.rank}</td>
+        <td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="${hero.img}" alt="${hero.name}" loading="lazy"></span><span class="beauty-hero-name">${hero.name}${tag}</span></div></td>
+        <td${top10Class}>${hero.top10}</td>
+        <td${favoriteClass}>${hero.favorite}</td>
+        <td class="beauty-score">${hero.score}</td>
+      </tr>
+    `;
+  }
+
   boards.forEach(function (board) {
     board.innerHTML = tiers.map(function (tier) {
       const tierHeroes = heroes.filter(tier.filter).map(heroCard).join('');
@@ -336,6 +386,15 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
     }).join('');
   });
+
+  document.querySelectorAll('.beauty-ranking-summary').forEach(function (summary) {
+    summary.innerHTML = heroes.slice(0, 3).map(summaryCard).join('');
+  });
+
+  document.querySelectorAll('.beauty-ranking-table tbody').forEach(function (tbody) {
+    tbody.innerHTML = heroes.map(tableRow).join('');
+  });
+
 });
 
 // ==========================================

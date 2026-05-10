@@ -921,9 +921,20 @@
 ========================================= */
 
 .sidebar {
-  --nav-active: #ffcc66;
-  --nav-active-soft: rgba(255, 204, 102, 0.13);
-  --nav-active-line: rgba(255, 204, 102, 0.8);
+  --nav-active: #c9ced8;
+  --nav-active-soft: rgba(255, 255, 255, 0.055);
+  --nav-active-line: rgba(255, 255, 255, 0.16);
+  background: #2b2d31;
+}
+
+.server-name {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+  color: #f2f3f5;
+}
+
+.channel-header {
+  color: #949ba4;
+  letter-spacing: 0;
 }
 
 .channel-item {
@@ -934,29 +945,47 @@
   padding: 8px 12px;
   border-radius: 8px;
   color: #b9bec7;
+  border: 1px solid transparent;
+  background: transparent;
   line-height: 1.35;
   letter-spacing: 0;
 }
 
+.sidebar .channel-item[style] {
+  padding-left: 12px !important;
+  border-left: 0 !important;
+  color: #b9bec7 !important;
+}
+
 .channel-item:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.045);
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: none;
 }
 
 .channel-item.active {
-  background: linear-gradient(90deg, var(--nav-active-soft), rgba(255, 255, 255, 0.035));
+  background: #34363d;
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: inset 3px 0 0 var(--nav-active-line), 0 8px 18px rgba(0, 0, 0, 0.14);
+  border-color: rgba(255, 255, 255, 0.13);
+  box-shadow: none;
 }
 
 .channel-icon {
   flex: 0 0 22px;
   width: 22px;
   margin-right: 0;
-  color: var(--nav-active);
+  color: #949ba4;
   text-align: center;
+}
+
+.sidebar .channel-icon i {
+  color: inherit !important;
+}
+
+.channel-item:hover .channel-icon,
+.channel-item.active .channel-icon {
+  color: #f2f3f5;
 }
 
 .channel-text {
@@ -964,20 +993,32 @@
 }
 
 .channel-item.channel-sonix {
-  --nav-active: #57f287;
-  --nav-active-soft: rgba(87, 242, 135, 0.13);
-  --nav-active-line: #57f287;
+  --nav-active: #c9ced8;
+  --nav-active-soft: rgba(255, 255, 255, 0.055);
+  --nav-active-line: rgba(255, 255, 255, 0.16);
 }
 
 .channel-item.channel-sonix.active,
 .channel-item.channel-sonix:hover {
-  background: linear-gradient(90deg, rgba(87, 242, 135, 0.13), rgba(255, 255, 255, 0.035));
-  border-color: rgba(87, 242, 135, 0.22);
+  background: #34363d;
+  border-color: rgba(255, 255, 255, 0.13);
 }
 
 .channel-item.channel-sonix.active .channel-icon,
 .channel-item.channel-sonix:hover .channel-icon {
-  color: #57f287;
+  color: #f2f3f5;
+}
+
+.channel-badge {
+  margin-left: auto;
+  padding: 2px 6px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.055);
+  color: #c9ced8;
+  font-size: 0.66rem;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 /* =========================================

@@ -2702,10 +2702,10 @@ h1 {
 }
 .channel-item:hover { transform: translateX(2px); }
 .channel-item.active {
-  background: linear-gradient(135deg, rgba(163,102,255,.22), rgba(255,204,102,.09));
+  background: #34363d;
   color: #fff;
-  border-color: rgba(163,102,255,.45);
-  box-shadow: inset 3px 0 0 var(--momiko-purple), 0 8px 18px rgba(0,0,0,.16);
+  border-color: rgba(255,255,255,.13);
+  box-shadow: none;
 }
 
 .tier-row {
@@ -3156,4 +3156,3 @@ h1 {
     width: 100%;
   }
 }
-
