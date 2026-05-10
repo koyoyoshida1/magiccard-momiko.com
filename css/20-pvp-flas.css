@@ -1243,3 +1243,120 @@
   height: 100%;
   border: 0;
 }
+
+/* =========================================
+   フラス護衛隊：動画解説レイアウト修正版
+   右テキストがはみ出ないように調整
+========================================= */
+
+#page-pvp-teams .flas-video-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 24px;
+  padding: 18px;
+  align-items: center;
+  overflow: hidden;
+}
+
+#page-pvp-teams .flas-video-thumb {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 155, 164, 0.55);
+  background: #111318;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+#page-pvp-teams .flas-video-body {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#page-pvp-teams .flas-video-body h3 {
+  margin: 0 0 12px;
+  color: #f2f3f5;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+#page-pvp-teams .flas-video-body p {
+  margin: 0;
+  color: #dcddde;
+  font-size: 1rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+
+/* YouTube高画質サムネ用 */
+#page-pvp-teams .flas-youtube-lite {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: #111318;
+  cursor: pointer;
+}
+
+#page-pvp-teams .flas-youtube-lite img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page-pvp-teams .flas-youtube-lite::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.02));
+  pointer-events: none;
+}
+
+#page-pvp-teams .flas-youtube-lite-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 82px;
+  height: 58px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  background: rgba(255, 0, 0, 0.88);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  z-index: 2;
+}
+
+#page-pvp-teams .flas-youtube-lite-play::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-left: 21px solid #fff;
+}
+
+#page-pvp-teams .flas-video-thumb iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 画面幅が狭い時は縦積み */
+@media (max-width: 1180px) {
+  #page-pvp-teams .flas-video-card {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pvp-teams .flas-video-thumb {
+    max-width: none;
+  }
+}

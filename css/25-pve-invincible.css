@@ -273,7 +273,7 @@
 }
 
 #page-pve-invincible .pve-belt-image.is-missing::after {
-  content: "画像準備中";
+  content: "画像なし";
   color: #f0b85a;
   font-size: 0.82em;
   font-weight: 900;

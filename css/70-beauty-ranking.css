@@ -1,0 +1,451 @@
+/* ==============================
+  美女ヒーローランキング
+============================== */
+
+.beauty-ranking-page {
+  color: #dcddde;
+}
+
+.channel-item.active[onclick*="page-beauty-ranking"] {
+  color: #ffffff;
+  background: rgba(255, 119, 170, 0.2);
+  border-left: 3px solid #ff77aa;
+}
+
+.channel-item.active[onclick*="page-beauty-ranking"] .channel-icon {
+  color: #ff77aa;
+}
+
+.beauty-ranking-hero {
+  padding: 22px;
+  border: 1px solid rgba(255, 119, 170, 0.26);
+  border-left: 4px solid #ff77aa;
+  border-radius: 8px;
+  background: rgba(255, 119, 170, 0.07);
+}
+
+.beauty-ranking-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  color: #ff9ac2;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.beauty-ranking-lead {
+  max-width: 920px;
+  margin: 12px 0 0;
+  color: #e7eaf0;
+  line-height: 1.8;
+}
+
+.beauty-tier-board {
+  display: grid;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.beauty-tier-row {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  min-height: 142px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 119, 170, 0.18);
+  border-radius: 8px;
+  background: #2b2d31;
+}
+
+.beauty-tier-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 8px;
+  color: #ffffff;
+  background: rgba(255, 119, 170, 0.1);
+  text-align: center;
+  border-right: 1px solid rgba(255, 119, 170, 0.18);
+}
+
+.beauty-tier-label strong {
+  color: #ff9ac2;
+  font-size: 1.24rem;
+  line-height: 1;
+}
+
+.beauty-tier-label span {
+  color: #b5bac1;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.beauty-tier-t0 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.15);
+}
+
+.beauty-tier-t1 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.1);
+}
+
+.beauty-tier-t15 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.08);
+}
+
+.beauty-tier-t2 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.06);
+}
+
+.beauty-tier-t3 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.05);
+}
+
+.beauty-tier-t4 .beauty-tier-label {
+  background: rgba(255, 119, 170, 0.04);
+}
+
+.beauty-tier-t0 .beauty-tier-label span,
+.beauty-tier-t1 .beauty-tier-label span {
+  color: #b5bac1;
+}
+
+.beauty-tier-list {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+}
+
+.beauty-tier-card {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 119, 170, 0.22);
+  border-radius: 8px;
+  background: rgba(32, 34, 37, 0.92);
+  padding: 0;
+}
+
+.beauty-tier-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center top;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.beauty-tier-rank {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: rgba(255, 119, 170, 0.95);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.beauty-tier-name {
+  min-height: 32px;
+  padding: 6px 7px 1px;
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.beauty-tier-score {
+  padding: 0 7px 7px;
+  color: #ff9ac2;
+  font-size: 1.05rem;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.beauty-tier-score span {
+  display: block;
+  color: #b5bac1;
+  font-size: 0.58rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.beauty-tier-tag {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  color: #ffb4d0;
+  background: rgba(255, 119, 170, 0.14);
+  font-size: 0.66rem;
+  white-space: nowrap;
+}
+
+.beauty-ranking-summary {
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.beauty-summary-card {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(32, 34, 37, 0.72);
+}
+
+.beauty-summary-card.rank-1 {
+  border-color: rgba(255, 204, 102, 0.52);
+  background: rgba(32, 34, 37, 0.82);
+}
+
+.beauty-summary-card.rank-2 {
+  border-color: rgba(192, 204, 218, 0.42);
+}
+
+.beauty-summary-card.rank-3 {
+  border-color: rgba(205, 127, 50, 0.46);
+}
+
+.beauty-summary-img,
+.beauty-table-img {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.beauty-summary-img {
+  width: 74px;
+  height: 74px;
+}
+
+.beauty-summary-img img,
+.beauty-table-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.beauty-summary-rank {
+  color: #ffcc66;
+  font-weight: 900;
+  font-size: 0.86rem;
+}
+
+.beauty-summary-name {
+  margin-top: 3px;
+  color: #fff;
+  font-size: 1.24rem;
+  font-weight: 900;
+}
+
+.beauty-summary-score {
+  margin-top: 4px;
+  color: #b5bac1;
+  font-size: 0.9rem;
+}
+
+.beauty-ranking-notes {
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 22px;
+}
+
+.beauty-author-comment {
+  margin: 0 0 22px;
+  border: 1px solid rgba(255, 119, 170, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 119, 170, 0.06);
+}
+
+.beauty-author-comment__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 119, 170, 0.18);
+  font-weight: 900;
+}
+
+.beauty-author-comment__head i {
+  color: #ff77aa;
+}
+
+.beauty-author-comment__body {
+  min-height: 96px;
+  padding: 16px;
+}
+
+.beauty-note {
+  padding: 12px 13px;
+  border-left: 3px solid #ffcc66;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.055);
+  line-height: 1.65;
+}
+
+.beauty-note strong {
+  color: #fff;
+}
+
+.beauty-table-wrap {
+  display: none;
+  overflow-x: auto;
+  border: 1px solid rgba(79, 84, 92, 0.95);
+  border-radius: 8px;
+  background: #2b2d31;
+}
+
+.beauty-ranking-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.beauty-ranking-table th,
+.beauty-ranking-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(79, 84, 92, 0.75);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.beauty-ranking-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: #ffffff;
+  background: #202225;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.beauty-ranking-table tbody tr:hover {
+  background: rgba(255, 119, 170, 0.07);
+}
+
+.beauty-rank {
+  width: 64px;
+  color: #ffcc66;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.beauty-rank.top {
+  font-size: 1.08rem;
+}
+
+.beauty-hero-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 210px;
+}
+
+.beauty-table-img {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+}
+
+.beauty-hero-name {
+  color: #fff;
+  font-weight: 800;
+}
+
+.beauty-tag {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  color: #ffcc66;
+  background: rgba(255, 204, 102, 0.12);
+  font-size: 0.75rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.beauty-score {
+  color: #fff;
+  font-weight: 900;
+}
+
+.beauty-muted {
+  color: #949ba4;
+}
+
+@media (max-width: 900px) {
+  .beauty-ranking-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .beauty-tier-row {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .beauty-tier-label strong {
+    font-size: 1.1rem;
+  }
+
+  .beauty-tier-list {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .beauty-ranking-hero {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 560px) {
+  .beauty-tier-row {
+    grid-template-columns: 1fr;
+  }
+
+  .beauty-tier-label {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-align: left;
+  }
+
+  .beauty-tier-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .beauty-tier-name {
+    font-size: 0.78rem;
+  }
+
+  .beauty-tier-score span {
+    display: none;
+  }
+}

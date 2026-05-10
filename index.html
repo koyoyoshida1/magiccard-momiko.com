@@ -14,7 +14,7 @@
   <link rel="canonical" href="https://magiccard-momiko.com/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=260508-3">
+  <link rel="stylesheet" href="style.css?v=260510-1">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -62,6 +62,10 @@
             <span class="channel-icon"><i class="fa-solid fa-ranking-star"></i></span>
             全キャラ最強ランキング
           </div>
+          <div class="channel-item" onclick="switchPage('page-beauty-ranking', this)">
+            <span class="channel-icon"><i class="fa-solid fa-heart" style="color:#ff77aa;"></i></span>
+            美女ランキング
+          </div>
           <div class="channel-item" onclick="switchPage('page-ab-hero', this)">
             <span class="channel-icon"><i class="fa-solid fa-recycle"></i></span>
             A・Bヒーロー
@@ -74,7 +78,7 @@
             <span class="channel-icon">
               <i class="fas fa-seedling"></i>
             </span>
-            S+ヒーロー育成順位
+            S+育成順位
           </div>
           <div class="channel-item channel-growth-quick" onclick="switchPage('growth-quick-guide', this)">
             <span class="channel-icon">
@@ -99,18 +103,6 @@
             <span class="channel-icon"><i class="fa-solid fa-leaf"></i></span>
             <span class="channel-text">献祭：ソニックス</span>
             <span class="channel-badge">NEW</span>
-          </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
-            怒気：デシア（準備中）
-          </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-handshake-angle"></i></span>
-            協同：青瓷（準備中）
-          </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
-            状態異常：フィリス（準備中）
           </div>
         </div>
       </div>
@@ -140,14 +132,6 @@
             <span class="channel-icon"><i class="fa-solid fa-gem"></i></span>
             ルーン
           </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-regular fa-gem"></i></span>
-            宝石 (準備中)
-          </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-shield-halved"></i></span>
-            神器 (準備中)
-          </div>
           <div class="channel-item" onclick="switchPage('page-t2-equip', this)">
             <span class="channel-icon"><i class="fa-solid fa-hammer"></i></span>
             T2装備
@@ -156,23 +140,6 @@
         </div>
       </div>
     
-      <!-- 召喚獣&星霊 -->
-      <div class="channel-group">
-        <div class="channel-header" onclick="toggleGroup(this)">
-          <span><i class="fa-solid fa-chevron-down"></i> 召喚獣&星霊</span>
-        </div>
-        <div class="channel-list">
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-paw"></i></span>
-            召喚獣 (準備中)
-          </div>
-          <div class="channel-item" style="opacity: 0.5;" onclick="alert('現在記事を作成中です！お楽しみに！')">
-            <span class="channel-icon"><i class="fa-solid fa-star"></i></span>
-            星霊 (準備中)
-          </div>
-        </div>
-      </div>
-
       <!-- シリアルコード -->
       <div class="channel-group">
         <div class="channel-header" onclick="toggleGroup(this)">
@@ -250,11 +217,26 @@
     <div class="main-content">
       <!-- 最強ランキング26年5月版 -->
       <div id="page-tier" class="page-section active-page">
+        <nav class="home-guide-links" aria-label="主要攻略記事">
+          <div class="home-guide-links__title">主要攻略記事</div>
+          <div class="home-guide-links__grid">
+            <a class="home-guide-link" href="tier.html"><strong>最強Tier表</strong><span>PvPとPvEを踏まえた総合評価</span></a>
+            <a class="home-guide-link" href="rune.html"><strong>ルーン攻略</strong><span>星6ルーンの優先度と使い道</span></a>
+            <a class="home-guide-link" href="s-hero.html"><strong>Sヒーロー</strong><span>序盤から使えるS英雄の整理</span></a>
+            <a class="home-guide-link" href="growth-priority.html"><strong>S+育成順位</strong><span>無課金・微課金向けの育成順</span></a>
+            <a class="home-guide-link" href="serial.html"><strong>シリアルコード</strong><span>最新コードと動画まとめ</span></a>
+            <a class="home-guide-link" href="beauty-ranking.html"><strong>美女ランキング</strong><span>読者投票による特別企画</span></a>
+          </div>
+        </nav>
+
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
 
           <div style="flex: 1; min-width: 320px;">
             <h1 class="page-main-title">全ヒーロー最強Tier表（総合評価）</h1>
             <div class="update-info">最終更新日: 2026年4月23日 | 監修: もみこ</div>
+            <div class="trust-note">
+              <strong>誰向け？</strong> PvP編成や育成優先度に迷っている方向けです。もみこの実戦検証、動画内での考察、コミュニティで集まった使用感をもとに、2026年5月環境として整理しています。
+            </div>
 
             <div class="tier-legend" id="tier-summary" style="font-size: 1.05em; padding: 20px; gap: 12px; line-height: 1.5;">
               <div><span style="color:var(--t0p); font-weight:bold;">● T0+</span> : 環境を定義する最強格</div>
@@ -813,6 +795,9 @@
           <div style="flex: 1; min-width: 320px;">
             <h1 class="page-main-title">全ルーン最強Tier表と運用解説</h1>
             <div class="update-info">最終更新日: 2026年4月10日 | 監修: もみこ</div>
+            <div class="trust-note">
+              <strong>誰向け？</strong> ルーンの取得優先度で迷っている方向けです。星6運用を前提に、PvP/PvEで実際に使いやすい組み合わせを中心に整理しています。
+            </div>
       
             <!-- 解説動画 -->
             <div id="rune-video" style="margin-top: 20px; margin-bottom: 40px;">
@@ -3304,6 +3289,9 @@
             <h1 class="page-main-title"><i class="fas fa-medal"
                 style="color: #ffcc66; margin-right: 8px;"></i>【永久保存版】最強Sヒーローランキング</h1>
             <div class="update-info"><i class="fas fa-microscope"></i> 最終更新: 2026年4月10日 | 監修: もみこ</div>
+            <div class="trust-note">
+              <strong>独自検証・考察：</strong> 序盤〜中盤で使うSヒーローを、育成コスト、聖物の価値、S+移行後の役割まで含めて評価しています。
+            </div>
       
             <div id="s-hero-video" style="margin-top: 20px; margin-bottom: 40px;">
               <h2 class="article-title"
@@ -4438,6 +4426,9 @@
         <header class="growth-hero" id="growth-top">
           <p class="growth-kicker">2026年5月〜2027年1月目安 / 初心者・無課金・微課金向け</p>
           <h1>S+ヒーロー育成順位</h1>
+          <div class="future-source-note">
+            一部は中国版などの先行情報を参考にした未来環境予想です。日本版での実装時期や性能は変更される可能性があります。
+          </div>
         
           <p class="growth-lead">
             このページは、<strong>今からマジカを始める人</strong>に向けて、
@@ -7834,7 +7825,7 @@
                 </div>
       
                 <div class="flas-video-body">
-                  <h3>フラス護衛隊の実戦解説動画</h3>
+                  <h3>フラス護衛隊の解説動画</h3>
                   <p>
                     実戦での動き、ソニックス対面、ミラー対面、魔王の指輪2個目による変化を動画で解説しています。
                     編成表と合わせて、フラスがどう削り切るか確認してみてください。
@@ -10977,6 +10968,9 @@
         <div class="update-info" style="color: #dcddde; font-size: 0.95em;">
           最終更新: 2026年5月
         </div>
+        <div class="trust-note">
+          <strong>更新履歴と確認方針：</strong> コードは判明次第更新します。期限や使用可否はゲーム側の変更で変わるため、入力できない場合は配布終了または地域差の可能性があります。
+        </div>
       
         <div class="serial-page-layout">
           <main class="serial-main">
@@ -10987,6 +10981,9 @@
               <span style="color: #ffcc66; font-weight: bold; font-size: 1.1em;">26年10月版 最強ランキング</span><br>
               2026年10月環境の最強ヒーロー・編成評価をまとめた動画です。ややバズっている動画なので、シリアルコード入力後にぜひ確認してみてください。
             </p>
+            <div class="future-source-note">
+              この動画は中国版などの先行情報を参考にした未来環境予想です。日本版の実装時期や性能は変更される可能性があります。
+            </div>
       
             <div class="youtube-lite" style="background-image: url('https://i.ytimg.com/vi/KIL3XtOCesE/maxresdefault.jpg');"
               onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/KIL3XtOCesE?start=1110&autoplay=1&vq=hd1080\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
@@ -11124,6 +11121,145 @@
         </div>
       </div>
 
+      <!-- 美女ヒーローランキング -->
+      <div id="page-beauty-ranking" class="page-section beauty-ranking-page">
+        <section class="beauty-ranking-hero">
+          <div class="beauty-ranking-kicker">
+            <i class="fa-solid fa-heart"></i>
+            2026年5月1日〜5月9日 投票結果
+          </div>
+          <h1 class="page-main-title">美女ヒーローランキング</h1>
+          <div class="update-info">集計期間: 2026年5月1日〜5月9日 | 最推し票は1票=5ptで集計</div>
+          <p class="beauty-ranking-lead">
+            TOP10票と最推し票を合算した、読者投票による美女ヒーローランキングです。
+            最推し票の重みがしっかり出る形式なので、単なる知名度だけでなく「刺さった強さ」も反映されています。
+            投票してくれたみなさん、本当にありがとうございました！
+          </p>
+        </section>
+        <div class="trust-note">
+          <strong>集計期間：</strong> 2026年5月1日〜5月9日。読者投票をもとに、TOP10票と最推し票を分けて集計しています。
+        </div>
+
+        <div class="beauty-tier-board" aria-label="美女ヒーローランキングTier表"></div>
+
+        <div class="beauty-ranking-summary">
+          <article class="beauty-summary-card rank-1">
+            <span class="beauty-summary-img"><img src="image/hero/decia.webp" alt="デシア" loading="lazy"></span>
+            <div>
+              <div class="beauty-summary-rank">第1位</div>
+              <div class="beauty-summary-name">デシア</div>
+              <div class="beauty-summary-score">202pt / 最推22票</div>
+            </div>
+          </article>
+          <article class="beauty-summary-card rank-2">
+            <span class="beauty-summary-img"><img src="image/hero/nyx.webp" alt="ニックス" loading="lazy"></span>
+            <div>
+              <div class="beauty-summary-rank">第2位</div>
+              <div class="beauty-summary-name">ニックス</div>
+              <div class="beauty-summary-score">183pt / TOP10票98票</div>
+            </div>
+          </article>
+          <article class="beauty-summary-card rank-3">
+            <span class="beauty-summary-img"><img src="image/hero/dafne.webp" alt="ダフネ" loading="lazy"></span>
+            <div>
+              <div class="beauty-summary-rank">第3位</div>
+              <div class="beauty-summary-name">ダフネ</div>
+              <div class="beauty-summary-score">114pt / 最推し12票</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="beauty-ranking-notes">
+          <div class="beauty-note"><strong>集計式</strong><br>総合pt = TOP10票 + 最推し票 × 5</div>
+          <div class="beauty-note"><strong>ネタ枠</strong><br>ケインと災厄は女性ではありませんが、投票の空気感込みで掲載しています。</div>
+        </div>
+
+        <section class="beauty-author-comment">
+          <div class="beauty-author-comment__head">
+            <i class="fa-solid fa-heart"></i>
+            もみこの推しコメント：心蕙
+          </div>
+          <div class="beauty-author-comment__body"></div>
+        </section>
+
+        <div class="beauty-table-wrap">
+          <table class="beauty-ranking-table">
+            <thead>
+              <tr>
+                <th>順位</th>
+                <th>ヒーロー</th>
+                <th>TOP10票</th>
+                <th>最推し票</th>
+                <th>総合pt</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="beauty-rank top">1</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/decia.webp" alt="デシア" loading="lazy"></span><span class="beauty-hero-name">デシア</span></div></td><td>92</td><td>22</td><td class="beauty-score">202</td></tr>
+              <tr><td class="beauty-rank top">2</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/nyx.webp" alt="ニックス" loading="lazy"></span><span class="beauty-hero-name">ニックス</span></div></td><td>98</td><td>17</td><td class="beauty-score">183</td></tr>
+              <tr><td class="beauty-rank top">3</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/dafne.webp" alt="ダフネ" loading="lazy"></span><span class="beauty-hero-name">ダフネ</span></div></td><td>54</td><td>12</td><td class="beauty-score">114</td></tr>
+              <tr><td class="beauty-rank">4</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/shinfi.webp" alt="心蕙" loading="lazy"></span><span class="beauty-hero-name">心蕙</span></div></td><td>51</td><td>8</td><td class="beauty-score">91</td></tr>
+              <tr><td class="beauty-rank">5</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/sonia.webp" alt="ソニア" loading="lazy"></span><span class="beauty-hero-name">ソニア</span></div></td><td>47</td><td>8</td><td class="beauty-score">87</td></tr>
+              <tr><td class="beauty-rank">6</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/sofia.webp" alt="ソフィア" loading="lazy"></span><span class="beauty-hero-name">ソフィア</span></div></td><td>31</td><td>9</td><td class="beauty-score">76</td></tr>
+              <tr><td class="beauty-rank">7</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/seiji.webp" alt="青瓷" loading="lazy"></span><span class="beauty-hero-name">青瓷</span></div></td><td>43</td><td>6</td><td class="beauty-score">73</td></tr>
+              <tr><td class="beauty-rank">8</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/ruby.webp" alt="ルビィ" loading="lazy"></span><span class="beauty-hero-name">ルビィ</span></div></td><td>19</td><td>5</td><td class="beauty-score">44</td></tr>
+              <tr><td class="beauty-rank">9</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/serina.webp" alt="セリーナ" loading="lazy"></span><span class="beauty-hero-name">セリーナ</span></div></td><td>20</td><td>4</td><td class="beauty-score">40</td></tr>
+              <tr><td class="beauty-rank">10</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/natari.webp" alt="ナタリー" loading="lazy"></span><span class="beauty-hero-name">ナタリー</span></div></td><td>19</td><td>4</td><td class="beauty-score">39</td></tr>
+              <tr><td class="beauty-rank">11</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/skylie.webp" alt="スカイリー" loading="lazy"></span><span class="beauty-hero-name">スカイリー</span></div></td><td>38</td><td>0</td><td class="beauty-score">38</td></tr>
+              <tr><td class="beauty-rank">12</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/mirana.webp" alt="ミラナ" loading="lazy"></span><span class="beauty-hero-name">ミラナ</span></div></td><td>19</td><td>3</td><td class="beauty-score">34</td></tr>
+              <tr><td class="beauty-rank">13</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/alvares.webp" alt="アルバレス" loading="lazy"></span><span class="beauty-hero-name">アルバレス</span></div></td><td>18</td><td>3</td><td class="beauty-score">33</td></tr>
+              <tr><td class="beauty-rank">14</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/fillis.webp" alt="フィリス" loading="lazy"></span><span class="beauty-hero-name">フィリス</span></div></td><td>15</td><td>2</td><td class="beauty-score">25</td></tr>
+              <tr><td class="beauty-rank">15</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/olira.webp" alt="オリラ" loading="lazy"></span><span class="beauty-hero-name">オリラ</span></div></td><td>10</td><td>3</td><td class="beauty-score">25</td></tr>
+              <tr><td class="beauty-rank">16</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/rozalind.webp" alt="ロザリンド" loading="lazy"></span><span class="beauty-hero-name">ロザリンド</span></div></td><td>22</td><td>0</td><td class="beauty-score">22</td></tr>
+              <tr><td class="beauty-rank">17</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/fairy.webp" alt="フェアリー" loading="lazy"></span><span class="beauty-hero-name">フェアリー</span></div></td><td>16</td><td>1</td><td class="beauty-score">21</td></tr>
+              <tr><td class="beauty-rank">18</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/sora.webp" alt="ソラ" loading="lazy"></span><span class="beauty-hero-name">ソラ</span></div></td><td>19</td><td>0</td><td class="beauty-score">19</td></tr>
+              <tr><td class="beauty-rank">19</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/tea.webp" alt="テア" loading="lazy"></span><span class="beauty-hero-name">テア</span></div></td><td>16</td><td>0</td><td class="beauty-score">16</td></tr>
+              <tr><td class="beauty-rank">20</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/ariya.webp" alt="アリヤ" loading="lazy"></span><span class="beauty-hero-name">アリヤ</span></div></td><td>11</td><td>1</td><td class="beauty-score">16</td></tr>
+              <tr><td class="beauty-rank">21</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/pedhia.webp" alt="ペディア" loading="lazy"></span><span class="beauty-hero-name">ペディア</span></div></td><td>8</td><td>1</td><td class="beauty-score">13</td></tr>
+              <tr><td class="beauty-rank">22</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/elnriny.webp" alt="エルリニー" loading="lazy"></span><span class="beauty-hero-name">エルリニー</span></div></td><td>3</td><td>2</td><td class="beauty-score">13</td></tr>
+              <tr><td class="beauty-rank">23</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/hotarubi.webp" alt="蛍火" loading="lazy"></span><span class="beauty-hero-name">蛍火</span></div></td><td>12</td><td>0</td><td class="beauty-score">12</td></tr>
+              <tr><td class="beauty-rank">24</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/banshin.webp" alt="大荒蛮神" loading="lazy"></span><span class="beauty-hero-name">大荒蛮神</span></div></td><td>7</td><td>1</td><td class="beauty-score">12</td></tr>
+              <tr><td class="beauty-rank">25</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/isolde.webp" alt="イソルド" loading="lazy"></span><span class="beauty-hero-name">イソルド</span></div></td><td>10</td><td>0</td><td class="beauty-score">10</td></tr>
+              <tr><td class="beauty-rank">26</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/anta.webp" alt="アンタ" loading="lazy"></span><span class="beauty-hero-name">アンタ</span></div></td><td>4</td><td>1</td><td class="beauty-score">9</td></tr>
+              <tr><td class="beauty-rank">27</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/shirusa.webp" alt="シルサ" loading="lazy"></span><span class="beauty-hero-name">シルサ</span></div></td><td>8</td><td>0</td><td class="beauty-score">8</td></tr>
+              <tr><td class="beauty-rank">28</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/karist.webp" alt="カリスト" loading="lazy"></span><span class="beauty-hero-name">カリスト</span></div></td><td>7</td><td>0</td><td class="beauty-score">7</td></tr>
+              <tr><td class="beauty-rank">29</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/valkyrie.webp" alt="ヴァルキリー" loading="lazy"></span><span class="beauty-hero-name">ヴァルキリー</span></div></td><td>7</td><td>0</td><td class="beauty-score">7</td></tr>
+              <tr><td class="beauty-rank">30</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/kuthira.webp" alt="クティーラ" loading="lazy"></span><span class="beauty-hero-name">クティーラ</span></div></td><td>2</td><td>1</td><td class="beauty-score">7</td></tr>
+              <tr><td class="beauty-rank">31</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/kira.webp" alt="キーラ" loading="lazy"></span><span class="beauty-hero-name">キーラ</span></div></td><td>6</td><td>0</td><td class="beauty-score">6</td></tr>
+              <tr><td class="beauty-rank">32</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/denis.webp" alt="デニス" loading="lazy"></span><span class="beauty-hero-name">デニス</span></div></td><td>6</td><td>0</td><td class="beauty-score">6</td></tr>
+              <tr><td class="beauty-rank">33</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/monica.webp" alt="モニカ" loading="lazy"></span><span class="beauty-hero-name">モニカ</span></div></td><td>6</td><td>0</td><td class="beauty-score">6</td></tr>
+              <tr><td class="beauty-rank">34</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/rairandoll.webp" alt="ライランドール" loading="lazy"></span><span class="beauty-hero-name">ライランドール</span></div></td><td>6</td><td>0</td><td class="beauty-score">6</td></tr>
+              <tr><td class="beauty-rank">35</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/aviria.webp" alt="アヴィリア" loading="lazy"></span><span class="beauty-hero-name">アヴィリア</span></div></td><td>5</td><td>0</td><td class="beauty-score">5</td></tr>
+              <tr><td class="beauty-rank">36</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/noemi.webp" alt="ノエミ" loading="lazy"></span><span class="beauty-hero-name">ノエミ</span></div></td><td>5</td><td>0</td><td class="beauty-score">5</td></tr>
+              <tr><td class="beauty-rank">37</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/kein.webp" alt="ケイン" loading="lazy"></span><span class="beauty-hero-name">ケイン<span class="beauty-tag">ネタ枠</span></span></div></td><td>0</td><td>1</td><td class="beauty-score">5</td></tr>
+              <tr><td class="beauty-rank">38</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/saiyaku.webp" alt="災厄" loading="lazy"></span><span class="beauty-hero-name">災厄<span class="beauty-tag">ネタ枠</span></span></div></td><td>0</td><td>1</td><td class="beauty-score">5</td></tr>
+              <tr><td class="beauty-rank">39</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/katorinu.webp" alt="カトリーヌ" loading="lazy"></span><span class="beauty-hero-name">カトリーヌ</span></div></td><td>4</td><td>0</td><td class="beauty-score">4</td></tr>
+              <tr><td class="beauty-rank">40</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/ronkaka.webp" alt="ロンカカ" loading="lazy"></span><span class="beauty-hero-name">ロンカカ</span></div></td><td>4</td><td>0</td><td class="beauty-score">4</td></tr>
+              <tr><td class="beauty-rank">41</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/mafata.webp" alt="マファータ" loading="lazy"></span><span class="beauty-hero-name">マファータ</span></div></td><td>3</td><td>0</td><td class="beauty-score">3</td></tr>
+              <tr><td class="beauty-rank">42</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/marissa.webp" alt="マリッサ" loading="lazy"></span><span class="beauty-hero-name">マリッサ</span></div></td><td>3</td><td>0</td><td class="beauty-score">3</td></tr>
+              <tr><td class="beauty-rank">43</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/miss.webp" alt="ミス" loading="lazy"></span><span class="beauty-hero-name">ミス</span></div></td><td>3</td><td>0</td><td class="beauty-score">3</td></tr>
+              <tr><td class="beauty-rank">44</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/seinomegami.webp" alt="生の女神" loading="lazy"></span><span class="beauty-hero-name">生の女神</span></div></td><td>3</td><td>0</td><td class="beauty-score">3</td></tr>
+              <tr><td class="beauty-rank">45</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/avi.webp" alt="アヴィ" loading="lazy"></span><span class="beauty-hero-name">アヴィ</span></div></td><td>2</td><td>0</td><td class="beauty-score">2</td></tr>
+              <tr><td class="beauty-rank">46</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/crista.webp" alt="クリスタ" loading="lazy"></span><span class="beauty-hero-name">クリスタ</span></div></td><td>2</td><td>0</td><td class="beauty-score">2</td></tr>
+              <tr><td class="beauty-rank">47</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/satomi.webp" alt="サとミ" loading="lazy"></span><span class="beauty-hero-name">サとミ</span></div></td><td>2</td><td>0</td><td class="beauty-score">2</td></tr>
+              <tr><td class="beauty-rank">48</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/ilvida.webp" alt="イルビダ" loading="lazy"></span><span class="beauty-hero-name">イルビダ</span></div></td><td>1</td><td>0</td><td class="beauty-score">1</td></tr>
+              <tr><td class="beauty-rank">49</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/keridhia.webp" alt="ケリディア" loading="lazy"></span><span class="beauty-hero-name">ケリディア</span></div></td><td>1</td><td>0</td><td class="beauty-score">1</td></tr>
+              <tr><td class="beauty-rank">50</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/sesina.webp" alt="セシーナ" loading="lazy"></span><span class="beauty-hero-name">セシーナ</span></div></td><td>1</td><td>0</td><td class="beauty-score">1</td></tr>
+              <tr><td class="beauty-rank">51</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/nicol.webp" alt="ニコル" loading="lazy"></span><span class="beauty-hero-name">ニコル</span></div></td><td>1</td><td>0</td><td class="beauty-score">1</td></tr>
+              <tr><td class="beauty-rank">52</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/kaiyounohime.webp" alt="海洋の姫" loading="lazy"></span><span class="beauty-hero-name">海洋の姫</span></div></td><td>1</td><td>0</td><td class="beauty-score">1</td></tr>
+              <tr><td class="beauty-rank">53</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/odina.webp" alt="オディナ" loading="lazy"></span><span class="beauty-hero-name">オディナ</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">54</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/carry.webp" alt="キャリー" loading="lazy"></span><span class="beauty-hero-name">キャリー</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">55</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/killmain.webp" alt="キルメイン" loading="lazy"></span><span class="beauty-hero-name">キルメイン</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">56</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/serina2.webp" alt="セリーナ2" loading="lazy"></span><span class="beauty-hero-name">セリーナ2</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">57</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/farineri.webp" alt="ファリネッリ" loading="lazy"></span><span class="beauty-hero-name">ファリネッリ</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">58</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/fenix.webp" alt="フェニックス" loading="lazy"></span><span class="beauty-hero-name">フェニックス</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">59</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/rainbow.webp" alt="レインボー" loading="lazy"></span><span class="beauty-hero-name">レインボー</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">60</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/renica.webp" alt="レニカ" loading="lazy"></span><span class="beauty-hero-name">レニカ</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+              <tr><td class="beauty-rank">61</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/rine.webp" alt="輪廻の神" loading="lazy"></span><span class="beauty-hero-name">輪廻の神</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- フッター -->
       <section class="momiko-ad momiko-ad-bottom" aria-label="広告">
         <span class="momiko-ad-label">スポンサーリンク</span>
@@ -11142,17 +11278,19 @@
       <footer class="site-footer"
         style="background: #36393f; padding: 40px 0 20px; text-align: center; border-top: 1px solid #4f545c; margin-top: auto;">
         <ul style="list-style: none; padding: 0; margin: 0 0 10px 0; display: flex; justify-content: center; gap: 20px;">
+          <li><a href="about.html" style="color: #8e9297; font-size: 0.8em; text-decoration: none;">運営者情報</a></li>
           <li><a href="policy.html" style="color: #8e9297; font-size: 0.8em; text-decoration: none;">プライバシーポリシー</a></li>
           <li><a href="contact.html" style="color: #8e9297; font-size: 0.8em; text-decoration: none;">お問い合わせ</a></li>
         </ul>
         <p style="color: #72767d; font-size: 0.8em; margin: 0;">&copy; 2026 もみこ マジックカード攻略</p>
+        <p class="site-disclaimer">当サイトは「マジックカード」の非公式ファンサイトです。ゲーム画像・キャラクター名・ゲーム名などの権利は各権利者に帰属します。</p>
       </footer>
     </div>
     <!-- これも大事 -->
   </div>
   <!-- 大事なdiv -->
 
-  <script src="script.js?v=260508-1"></script>
+  <script src="script.js?v=260510-2"></script>
 </body>
 
 </html>
