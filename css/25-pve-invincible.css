@@ -13,8 +13,8 @@
 }
 
 .channel-pve.active {
-  background: linear-gradient(90deg, rgba(255, 90, 102, 0.2), rgba(240, 184, 90, 0.12));
-  border-left-color: #ff5a66;
+  background: rgba(255, 90, 102, 0.11);
+  border-color: rgba(255, 90, 102, 0.22);
 }
 
 #page-pve-invincible {
@@ -166,6 +166,13 @@
 #page-pve-invincible .pve-video-notice i {
   color: #ff4d4d;
   font-size: 1.25em;
+}
+
+#page-pve-invincible .pve-youtube-lite {
+  margin-top: 14px;
+  border: 1px solid rgba(79, 84, 92, 0.95);
+  border-radius: 10px;
+  box-shadow: none;
 }
 
 #page-pve-invincible .pve-party-grid {

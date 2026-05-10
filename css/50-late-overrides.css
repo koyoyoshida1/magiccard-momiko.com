@@ -975,17 +975,8 @@
   flex: 0 0 22px;
   width: 22px;
   margin-right: 0;
-  color: #949ba4;
+  color: #c9ced8;
   text-align: center;
-}
-
-.sidebar .channel-icon i {
-  color: inherit !important;
-}
-
-.channel-item:hover .channel-icon,
-.channel-item.active .channel-icon {
-  color: #f2f3f5;
 }
 
 .channel-text {
@@ -1006,7 +997,7 @@
 
 .channel-item.channel-sonix.active .channel-icon,
 .channel-item.channel-sonix:hover .channel-icon {
-  color: #f2f3f5;
+  color: #57f287;
 }
 
 .channel-badge {
@@ -1019,6 +1010,108 @@
   font-size: 0.66rem;
   font-weight: 900;
   line-height: 1.2;
+}
+
+/* =========================================
+   Hero ranking: flat panel header
+========================================= */
+
+#page-tier .tier-hero-panel {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 22px;
+  padding: 24px;
+  border: 1px solid #3f4147;
+  border-radius: 10px;
+  background:
+    linear-gradient(90deg, rgba(30, 31, 34, 0.98) 0%, rgba(30, 31, 34, 0.82) 58%, rgba(30, 31, 34, 0.52) 100%),
+    url("../image/hero/skylie.webp") right 24px center / 162px no-repeat,
+    url("../image/hero/nyx.webp") right 170px center / 146px no-repeat,
+    url("../image/hero/decia.webp") right 296px center / 136px no-repeat,
+    #2b2d31;
+}
+
+#page-tier .tier-hero-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+#page-tier .tier-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #b5bac1;
+  font-size: 0.84em;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+#page-tier .tier-hero-kicker i {
+  color: #ffcc66;
+}
+
+#page-tier .page-main-title {
+  display: block;
+  margin: 0 0 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: 0;
+}
+
+#page-tier .update-info {
+  display: inline-flex;
+  max-width: 100%;
+  margin: 0 0 14px;
+  padding: 7px 11px;
+  border: 1px solid rgba(148, 155, 164, 0.24);
+  border-radius: 999px;
+  background: rgba(35, 36, 40, 0.82);
+  color: #f2f3f5;
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+#page-tier .tier-hero-panel .trust-note {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #dcddde;
+}
+
+#page-tier .tier-hero-panel .tier-legend {
+  margin: 0;
+  border: 1px solid rgba(79, 84, 92, 0.86);
+  background: rgba(35, 36, 40, 0.72);
+}
+
+@media (max-width: 900px) {
+  #page-tier .tier-hero-panel {
+    grid-template-columns: 1fr;
+    background:
+      linear-gradient(90deg, rgba(30, 31, 34, 0.98) 0%, rgba(30, 31, 34, 0.86) 100%),
+      url("../image/hero/skylie.webp") right 18px top 20px / 130px no-repeat,
+      #2b2d31;
+  }
+}
+
+@media (max-width: 560px) {
+  #page-tier .tier-hero-panel {
+    padding: 18px;
+    background: #2b2d31;
+  }
 }
 
 /* =========================================
