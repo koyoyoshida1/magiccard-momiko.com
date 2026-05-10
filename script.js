@@ -254,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { name: 'アルバレス', top10: 18, favorite: 3, img: 'image/hero/alvares.webp' },
     { name: 'フィリス', top10: 15, favorite: 2, img: 'image/hero/fillis.webp' },
     { name: 'オリラ', top10: 10, favorite: 3, img: 'image/hero/olira.webp' },
-    { name: 'ソラ', top10: 19, favorite: 5, img: 'image/hero/sora.webp' },
+    { name: 'ソラ', top10: 19, favorite: 1, img: 'image/hero/sora.webp' },
     { name: 'ロザリンド', top10: 22, favorite: 0, img: 'image/hero/rozalind.webp' },
     { name: 'フェアリー', top10: 16, favorite: 1, img: 'image/hero/fairy.webp' },
     { name: 'テア', top10: 16, favorite: 0, img: 'image/hero/tea.webp' },
