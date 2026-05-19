@@ -102,7 +102,6 @@
           <div class="channel-item channel-sonix" onclick="switchPage('page-sonix-teams', this)">
             <span class="channel-icon"><i class="fa-solid fa-leaf"></i></span>
             <span class="channel-text">献祭：ソニックス</span>
-            <span class="channel-badge">NEW</span>
           </div>
         </div>
       </div>
@@ -116,6 +115,10 @@
           <div class="channel-item channel-pve" onclick="switchPage('page-pve-invincible', this)">
             <span class="channel-icon"><i class="fa-solid fa-mountain-sun" style="color:#ff5a66;"></i></span>
             <span class="channel-text">訓練の地</span>
+          </div>
+          <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this)">
+            <span class="channel-icon"><i class="fa-solid fa-shield-halved" style="color:#8bd5ff;"></i></span>
+            <span class="channel-text">防御力とは</span>
             <span class="channel-badge">NEW</span>
           </div>
         </div>
@@ -8134,6 +8137,178 @@
               <a href="#flas-matchup"><i class="fa-solid fa-scale-balanced"></i> 対面評価</a>
               <a href="#flas-training"><i class="fa-solid fa-chart-line"></i> 育成ライン</a>
               <a href="#flas-good-bad"><i class="fa-solid fa-circle-info"></i> 強みと弱点</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- =========================================================
+            PvE：防御力調整
+          ========================================================= -->
+      <div id="page-pve-defense" class="page-section pve-defense-page">
+        <h1 class="page-main-title">上古の地：アヌビス編</h1>
+        <div class="update-info">最終更新日: 2026年5月19日 | 監修: もみこ</div>
+
+        <div class="pve-defense-layout">
+          <main class="pve-defense-main">
+            <section class="pve-defense-hero" id="pve-defense-overview">
+              <div class="pve-defense-copy">
+                <p class="pve-defense-kicker"><i class="fa-solid fa-shield-halved"></i> ANUBIS DEFENSE THEORY</p>
+                <h2><span>15ターン完走するための</span><span>防御力調整</span></h2>
+                <p>
+                  無敵艦隊ではなく、ダメージ軽減、防御力によるカット、被ダメージ軽減、抵抗を重ねて15ターン完走を狙う超上級者向け構築です。
+                  動画ではダフネ、ケイン、デリゴール、スカイリー、ニックス、モジーの編成を説明します。
+                  まずはイルカ勢以上を目指すデリゴール構築、その後にクジラ向けのエルリニー構築までまとめます。
+                </p>
+              </div>
+
+              <div class="pve-defense-party" aria-label="動画で説明するデリゴール編成">
+                <div class="pve-defense-slot is-front"><span>1</span><img src="image/hero/kein.webp" alt="ケイン"><b>ケイン</b></div>
+                <div class="pve-defense-slot is-front is-main"><span>2</span><img src="image/hero/dafne.webp" alt="ダフネ"><b>ダフネ</b></div>
+                <div class="pve-defense-slot is-front"><span>3</span><img src="image/hero/derigol.webp" alt="デリゴール"><b>デリゴール</b></div>
+                <div class="pve-defense-slot is-back"><span>4</span><img src="image/hero/nyx.webp" alt="ニックス"><b>ニックス</b></div>
+                <div class="pve-defense-slot is-back is-main"><span>5</span><img src="image/hero/skylie.webp" alt="スカイリー"><b>スカイリー</b></div>
+                <div class="pve-defense-slot is-back"><span>6</span><img src="image/hero/mosey.webp" alt="モジー"><b>モジー</b></div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-video">
+              <h2 class="pve-defense-title">動画解説</h2>
+              <div class="pve-video-notice">
+                <i class="fa-brands fa-youtube"></i>
+                <span>上古の地アヌビス編の防御力調整動画を準備中です。動画ではデリゴール構築から入り、エルリニー構築まで順番に解説します。</span>
+              </div>
+              <div class="youtube-lite pve-youtube-lite pve-defense-video-placeholder">
+                <div>
+                  <i class="fa-brands fa-youtube"></i>
+                  <strong>動画公開後にここへ掲載</strong>
+                  <span>防御力0.7ライン、モジー育成途中でも成立する理由、エルリニーへの発展まで解説予定</span>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-support">
+              <h2 class="pve-defense-title">召喚獣 & 星霊</h2>
+              <div class="pve-defense-support-grid">
+                <article><img src="image/pet/tiamat.webp" alt="ティアマト"><span>召喚獣</span><strong>ティアマト</strong><small>防御力+30%</small></article>
+                <article><img src="image/protos/akaiwa.webp" alt="赤岩"><span>主戦星霊</span><strong>赤岩</strong><small>アヌビス用の主戦枠</small></article>
+                <article><img src="image/protos/ushi.webp" alt="牛"><span>サブ星霊</span><strong>牛</strong><small>防御力を追加</small></article>
+                <article><i class="fa-solid fa-meteor"></i><span>陣営バフ</span><strong>虚空</strong><small>防御力+25%</small></article>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-concept">
+              <h2 class="pve-defense-title">防御力の考え方</h2>
+              <div class="pve-defense-card">
+                <h3>防御力によるダメージカットは最大0.7</h3>
+                <p>図鑑のLv340時の防御力をLv1相当に戻し、基礎カット率を出してから、戦闘前防御力と戦闘後防御力を掛け合わせます。</p>
+                <div class="pve-defense-formula-list">
+                  <article><span>1</span><div><strong>Lv1換算</strong><div class="pve-defense-fraction"><span>Lv1基礎防御力 = </span><span class="frac"><span>図鑑のLv340時の防御力</span><span>340 + 9</span></span><span> × 10</span></div><p>キャラごとの基礎防御力を計算します。詳しくは図鑑のLv340時の防御力を見てください。</p></div></article>
+                  <article><span>2</span><div><strong>基礎カット率</strong><code>基礎カット率 = Lv1基礎防御力 × 0.0025</code><p>素の硬さです。</p></div></article>
+                  <article><span>3</span><div><strong>最終カット率</strong><code>最終カット率 = 基礎カット率 × (1 + 戦闘前防御力%) × (1 + 戦闘後防御力%)</code><p>装備・ルーン・聖物・宝石・神器と、ティアマト・虚空・牛を掛け合わせます。</p></div></article>
+                  <article><span>4</span><div><strong>必要値</strong><div class="pve-defense-fraction"><span>必要戦闘前防御力 = </span><span class="frac"><span>0.7</span><span>基礎カット率 × (1 + 戦闘後防御力%)</span></span><span> - 1</span></div><p>切り上げた数値が要求値表です。</p></div></article>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-derigol-example">
+              <h2 class="pve-defense-title">デリゴールで計算してみる</h2>
+              <div class="pve-defense-card">
+                <h3>なぜデリゴールは49% / 44%で足りるのか</h3>
+                <p>図鑑のLv340時の防御力4250を代入すると、基礎カット率は約0.304になります。</p>
+                <div class="pve-defense-example-steps">
+                  <div><b>Lv1基礎防御力</b><code>4250 ÷ 349 × 10 = 約121.78</code></div>
+                  <div><b>基礎カット率</b><code>121.78 × 0.0025 = 約0.3044</code></div>
+                  <div><b>牛なし</b><code>0.7 ÷ (0.3044 × 1.55) - 1 = 約0.483 → 49%</code></div>
+                  <div><b>牛あり前列</b><code>0.7 ÷ (0.3044 × 1.60) - 1 = 約0.437 → 44%</code></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-lineup">
+              <h2 class="pve-defense-title">動画編成：デリゴール構築</h2>
+              <p class="pve-defense-lead">動画ではダフネ、ケイン、デリゴール、スカイリー、ニックス、モジーの6体で説明します。モジーが最終段階まで育っていなくても、防御力の必要ラインを守れば15ターン完走を狙えます。</p>
+              <div class="pve-defense-build-detail-card" aria-label="デリゴール構築の装備詳細">
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/kein.webp" alt="ケイン"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/born_ring.webp" alt="魔王の指輪"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kujaku.webp" alt="孔雀石"><span>HP4500万以上</span></div><strong><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>1-2</b></strong></div>
+                <div class="pve-defense-build-row is-main"><img class="pve-defense-build-hero" src="image/hero/dafne.webp" alt="ダフネ"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/lance.webp" alt="魔王の槍"><img src="image/rune/bushi.webp" alt="武士"><img src="image/rune/shinpan.webp" alt="審判"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kujaku.webp" alt="孔雀石"><span>ダメ追93%後に攻撃</span></div><strong><span>天賦</span><b>1-3-3-1</b><span>宝石天賦</span><b>3-3</b></strong></div>
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/derigol.webp" alt="デリゴール"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/book.webp" alt="呪いの書"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP5000万以上</span></div><strong><span>天賦</span><b>3-4-3-5</b><span>宝石天賦</span><b>1-1</b></strong></div>
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/nyx.webp" alt="ニックス"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/uroko.webp" alt="古代龍の逆鱗"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP4500万以上</span></div><strong><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>3-1</b></strong></div>
+                <div class="pve-defense-build-row is-main"><img class="pve-defense-build-hero" src="image/hero/skylie.webp" alt="スカイリー"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/shield.webp" alt="魔王の盾"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/shiran.webp" alt="紫蘭石"><span>HP4000万以上 / 会心率80%以上</span></div><strong><span>天賦</span><b>3-4-5-2</b><span>宝石天賦</span><b>3-1</b></strong></div>
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/mosey.webp" alt="モジー"><div class="pve-defense-build-icons"><img src="image/artifact/esper/sanrei.webp" alt="山嶺護符"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP2500万以上</span></div><strong><span>天賦</span><b>3-4-3-5</b><span>宝石天賦</span><b>1-1</b></strong></div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-table-derigol">
+              <h2 class="pve-defense-title">防御力要求値：デリゴール構築</h2>
+              <p class="pve-defense-lead">デリゴール構築は、イルカ勢以上を目指す現実ラインです。モジーが最終段階まで育っていなくても、防御力の必要ラインを守れば15ターン完走を狙えます。</p>
+              <div class="pve-defense-table-wrap">
+                <table class="pve-defense-table">
+                  <caption>聖物0の場合</caption>
+                  <thead><tr><th>キャラ</th><th>牛なし</th><th>牛星1</th><th>牛星3</th><th>牛星5</th></tr></thead>
+                  <tbody>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/kein.webp" alt="ケイン"><span>ケイン</span></span></th><td>64%</td><td>59%</td><td>59%</td><td>59%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/dafne.webp" alt="ダフネ"><span>ダフネ</span></span></th><td>不要</td><td>不要</td><td>不要</td><td>不要</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/derigol.webp" alt="デリゴール"><span>デリゴール</span></span></th><td>49%</td><td>44%</td><td>44%</td><td>44%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/nyx.webp" alt="ニックス"><span>ニックス</span></span></th><td>72%</td><td>67%</td><td>62%</td><td>53%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/skylie.webp" alt="スカイリー"><span>スカイリー</span></span></th><td>68%</td><td>62%</td><td>57%</td><td>48%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/mosey.webp" alt="モジー"><span>モジー</span></span></th><td>61%</td><td>56%</td><td>51%</td><td>42%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-lineup-elrini">
+              <h2 class="pve-defense-title">発展編成：エルリニー構築</h2>
+              <p class="pve-defense-lead">エルリニーは味方全体の与ダメージを伸ばせる理想バッファーです。こちらはクジラ向けの発展構築です。エルリニーの与ダメージバフまで使えると、15ターン完走時の総ダメージをさらに伸ばせます。</p>
+              <div class="pve-defense-party" aria-label="エルリニー構築">
+                <div class="pve-defense-slot is-front"><span>1</span><img src="image/hero/kein.webp" alt="ケイン"><b>ケイン</b></div>
+                <div class="pve-defense-slot is-front is-main"><span>2</span><img src="image/hero/dafne.webp" alt="ダフネ"><b>ダフネ</b></div>
+                <div class="pve-defense-slot is-front"><span>3</span><img src="image/hero/mosey.webp" alt="モジー"><b>モジー</b></div>
+                <div class="pve-defense-slot is-back"><span>4</span><img src="image/hero/nyx.webp" alt="ニックス"><b>ニックス</b></div>
+                <div class="pve-defense-slot is-back is-main"><span>5</span><img src="image/hero/skylie.webp" alt="スカイリー"><b>スカイリー</b></div>
+                <div class="pve-defense-slot is-buffer"><span>6</span><img src="image/hero/elnriny.webp" alt="エルリニー"><b>エルリニー</b></div>
+              </div>
+              <div class="pve-defense-build-detail-card" aria-label="エルリニー構築の装備詳細">
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/kein.webp" alt="ケイン"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/born_ring.webp" alt="魔王の指輪"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kujaku.webp" alt="孔雀石"><span>HP4500万以上</span></div><strong><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>1-2</b></strong></div>
+                <div class="pve-defense-build-row is-main"><img class="pve-defense-build-hero" src="image/hero/dafne.webp" alt="ダフネ"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/lance.webp" alt="魔王の槍"><img src="image/rune/bushi.webp" alt="武士"><img src="image/rune/shinpan.webp" alt="審判"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kujaku.webp" alt="孔雀石"><span>ダメ追93%後に攻撃</span></div><strong><span>天賦</span><b>1-3-3-1</b><span>宝石天賦</span><b>3-3</b></strong></div>
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/mosey.webp" alt="モジー"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/book.webp" alt="呪いの書"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP5000万以上</span></div><strong><span>天賦</span><b>3-4-3-5</b><span>宝石天賦</span><b>1-1</b></strong></div>
+                <div class="pve-defense-build-row"><img class="pve-defense-build-hero" src="image/hero/nyx.webp" alt="ニックス"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/uroko.webp" alt="古代龍の逆鱗"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP4500万以上</span></div><strong><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>3-1</b></strong></div>
+                <div class="pve-defense-build-row is-main"><img class="pve-defense-build-hero" src="image/hero/skylie.webp" alt="スカイリー"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/shield.webp" alt="魔王の盾"><img src="image/rune/shugosha.webp" alt="守護者"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/shiran.webp" alt="紫蘭石"><span>HP4000万以上 / 会心率80%以上</span></div><strong><span>天賦</span><b>3-4-5-2</b><span>宝石天賦</span><b>3-1</b></strong></div>
+                <div class="pve-defense-build-row is-buffer"><img class="pve-defense-build-hero" src="image/hero/elnriny.webp" alt="エルリニー"><div class="pve-defense-build-icons"><img src="image/artifact/abyss/flag.webp" alt="魔王の旗"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/shinka.webp" alt="進化"><img src="image/gem/gekkou.webp" alt="月光石"><img src="image/gem/murasakibortaru.webp" alt="紫蛍石"><img src="image/gem/kiryu.webp" alt="輝龍石"><span>HP4200万以上</span></div><strong><span>天賦</span><b>3-4-3-5</b><span>宝石天賦</span><b>1-1</b></strong></div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="pve-defense-table-elrini">
+              <h2 class="pve-defense-title">防御力要求値：エルリニー構築</h2>
+              <div class="pve-defense-table-wrap">
+                <table class="pve-defense-table">
+                  <caption>聖物0の場合</caption>
+                  <thead><tr><th>キャラ</th><th>牛なし</th><th>牛星1</th><th>牛星3</th><th>牛星5</th></tr></thead>
+                  <tbody>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/kein.webp" alt="ケイン"><span>ケイン</span></span></th><td>64%</td><td>59%</td><td>59%</td><td>59%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/dafne.webp" alt="ダフネ"><span>ダフネ</span></span></th><td>不要</td><td>不要</td><td>不要</td><td>不要</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/mosey.webp" alt="モジー"><span>モジー</span></span></th><td>61%</td><td>56%</td><td>56%</td><td>56%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/nyx.webp" alt="ニックス"><span>ニックス</span></span></th><td>72%</td><td>67%</td><td>62%</td><td>53%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/skylie.webp" alt="スカイリー"><span>スカイリー</span></span></th><td>68%</td><td>62%</td><td>57%</td><td>48%</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/elnriny.webp" alt="エルリニー"><span>エルリニー</span></span></th><td>63%</td><td>58%</td><td>53%</td><td>44%</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </main>
+
+          <aside class="pve-defense-toc">
+            <div class="pve-defense-toc-box">
+              <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+              <a href="#pve-defense-overview"><i class="fa-solid fa-shield-halved"></i> 概要</a>
+              <a href="#pve-defense-video"><i class="fa-brands fa-youtube"></i> 動画解説</a>
+              <a href="#pve-defense-support"><i class="fa-solid fa-dragon"></i> 召喚獣&星霊</a>
+              <a href="#pve-defense-concept"><i class="fa-solid fa-square-root-variable"></i> 防御理論</a>
+              <a href="#pve-defense-derigol-example"><i class="fa-solid fa-calculator"></i> デリゴール例</a>
+              <a href="#pve-defense-lineup"><i class="fa-solid fa-people-group"></i> デリゴール編成</a>
+              <a href="#pve-defense-table-derigol"><i class="fa-solid fa-table"></i> デリゴール表</a>
+              <a href="#pve-defense-lineup-elrini"><i class="fa-solid fa-wand-magic-sparkles"></i> エルリニー編成</a>
+              <a href="#pve-defense-table-elrini"><i class="fa-solid fa-table"></i> エルリニー表</a>
             </div>
           </aside>
         </div>

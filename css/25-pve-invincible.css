@@ -8,6 +8,23 @@
   border: 1px solid rgba(255, 90, 102, 0.38);
 }
 
+.channel-item.channel-pve {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 9px;
+}
+
+.channel-item.channel-pve .channel-text {
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+.channel-item.channel-pve .channel-badge {
+  margin-left: 0;
+  justify-self: end;
+}
+
 .channel-pve:hover {
   background: rgba(255, 90, 102, 0.1);
 }
@@ -15,6 +32,907 @@
 .channel-pve.active {
   background: rgba(255, 90, 102, 0.11);
   border-color: rgba(255, 90, 102, 0.22);
+}
+
+.channel-pve-defense .channel-badge {
+  background: rgba(139, 213, 255, 0.14);
+  color: #8bd5ff;
+  border: 1px solid rgba(139, 213, 255, 0.32);
+}
+
+.channel-item.channel-pve-defense {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: 9px;
+}
+
+.channel-item.channel-pve-defense .channel-icon {
+  margin-right: 0;
+}
+
+.channel-item.channel-pve-defense .channel-text {
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+
+.channel-item.channel-pve-defense .channel-badge {
+  margin-left: 0;
+  justify-self: end;
+}
+
+.channel-pve-defense:hover {
+  background: rgba(139, 213, 255, 0.08);
+}
+
+.channel-pve-defense.active {
+  background: rgba(139, 213, 255, 0.1);
+  border-color: rgba(139, 213, 255, 0.26);
+}
+
+/* =========================================
+   PvE：防御力調整
+========================================= */
+
+#page-pve-defense {
+  padding-bottom: 76px;
+}
+
+#page-pve-defense .pve-defense-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 24px;
+  align-items: start;
+  max-width: 1240px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#page-pve-defense .pve-defense-main {
+  min-width: 0;
+}
+
+#page-pve-defense .pve-defense-section {
+  margin-top: 28px;
+}
+
+#page-pve-defense .pve-defense-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 22px;
+  align-items: start;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid #3f4147;
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(35, 36, 40, 0.97), rgba(43, 45, 49, 0.92)),
+    radial-gradient(circle at 86% 12%, rgba(87, 242, 135, 0.13), transparent 34%);
+}
+
+#page-pve-defense .pve-defense-copy {
+  min-width: 0;
+}
+
+#page-pve-defense .pve-defense-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: #b5bac1;
+  font-size: 0.84em;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+#page-pve-defense .pve-defense-kicker i,
+#page-pve-defense .pve-defense-title i {
+  color: #57f287;
+}
+
+#page-pve-defense .pve-defense-hero h2 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: clamp(2.1rem, 4vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: 0;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-hero h2 span {
+  display: block;
+}
+
+#page-pve-defense .pve-defense-hero p,
+#page-pve-defense .pve-defense-lead,
+#page-pve-defense .pve-defense-card p,
+#page-pve-defense .pve-defense-alt-grid p {
+  color: #dcddde;
+  line-height: 1.75;
+}
+
+#page-pve-defense .pve-defense-hero p,
+#page-pve-defense .pve-defense-card p,
+#page-pve-defense .pve-defense-alt-grid p {
+  margin: 0;
+}
+
+#page-pve-defense .pve-defense-title {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+  margin: 0 0 14px;
+  padding-left: 14px;
+  border-left: 4px solid #57f287;
+  color: #fff;
+  font-size: 1.28em;
+  line-height: 1.35;
+}
+
+#page-pve-defense .pve-defense-lead {
+  margin: 0 0 14px;
+}
+
+#page-pve-defense .pve-video-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid rgba(240, 184, 90, 0.42);
+  border-radius: 8px;
+  background: rgba(240, 184, 90, 0.1);
+  color: #f2f3f5;
+  font-weight: 900;
+  line-height: 1.6;
+}
+
+#page-pve-defense .pve-video-notice span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-video-notice i {
+  color: #ff4d4d;
+  font-size: 1.25em;
+}
+
+#page-pve-defense .pve-youtube-lite {
+  margin-top: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(79, 84, 92, 0.95);
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+#page-pve-defense .pve-defense-video-placeholder {
+  display: grid;
+  min-height: 260px;
+  place-items: center;
+  padding: 24px;
+  background:
+    linear-gradient(135deg, rgba(30, 31, 34, 0.92), rgba(43, 45, 49, 0.88)),
+    radial-gradient(circle at 76% 20%, rgba(255, 77, 77, 0.16), transparent 36%);
+  text-align: center;
+}
+
+#page-pve-defense .pve-defense-video-placeholder div {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+}
+
+#page-pve-defense .pve-defense-video-placeholder i {
+  color: #ff4d4d;
+  font-size: 2.3em;
+}
+
+#page-pve-defense .pve-defense-video-placeholder strong {
+  color: #fff;
+  font-size: 1.25em;
+}
+
+#page-pve-defense .pve-defense-video-placeholder span {
+  color: #b5bac1;
+  font-weight: 900;
+  line-height: 1.65;
+}
+
+#page-pve-defense .pve-defense-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+#page-pve-defense .pve-defense-metrics article,
+#page-pve-defense .pve-defense-card,
+#page-pve-defense .pve-defense-support-grid article,
+#page-pve-defense .pve-defense-build,
+#page-pve-defense .pve-defense-build-detail-card,
+#page-pve-defense .pve-defense-table-wrap,
+#page-pve-defense .pve-defense-mechanism-grid article,
+#page-pve-defense .pve-defense-alt-grid article,
+#page-pve-defense .pve-defense-final,
+#page-pve-defense .pve-defense-toc-box {
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+  background: #2b2d31;
+}
+
+#page-pve-defense .pve-defense-metrics article {
+  padding: 13px;
+}
+
+#page-pve-defense .pve-defense-metrics span {
+  display: block;
+  margin-bottom: 6px;
+  color: #949ba4;
+  font-size: 0.78em;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-metrics strong {
+  display: block;
+  color: #fff;
+  font-size: 1.48em;
+  line-height: 1.1;
+}
+
+#page-pve-defense .pve-defense-metrics small {
+  display: block;
+  margin-top: 7px;
+  color: #b5bac1;
+  font-size: 0.82em;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+#page-pve-defense .pve-defense-party {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+
+#page-pve-defense .pve-defense-slot {
+  position: relative;
+  min-width: 0;
+  padding: 12px 8px 10px;
+  border: 1px solid rgba(79, 84, 92, 0.9);
+  border-radius: 8px;
+  background: #232428;
+  text-align: center;
+}
+
+#page-pve-defense .pve-defense-slot.is-front {
+  border-color: rgba(240, 184, 90, 0.45);
+}
+
+#page-pve-defense .pve-defense-slot.is-front.is-main {
+  border-color: rgba(240, 184, 90, 0.72);
+  background: rgba(240, 184, 90, 0.08);
+}
+
+#page-pve-defense .pve-defense-slot.is-back {
+  border-color: rgba(86, 128, 186, 0.55);
+}
+
+#page-pve-defense .pve-defense-slot.is-back.is-main {
+  border-color: rgba(86, 128, 186, 0.78);
+  background: rgba(86, 128, 186, 0.1);
+}
+
+#page-pve-defense .pve-defense-slot.is-buffer {
+  border-color: rgba(87, 242, 135, 0.58);
+  background: rgba(87, 242, 135, 0.08);
+}
+
+#page-pve-defense .pve-defense-slot span {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #1e1f22;
+  color: #f2f3f5;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-slot img {
+  display: block;
+  width: min(100%, 104px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto 9px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+}
+
+#page-pve-defense .pve-defense-slot b {
+  display: block;
+  color: #fff;
+  font-size: 0.96em;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-card,
+#page-pve-defense .pve-defense-final {
+  padding: 18px 20px;
+}
+
+#page-pve-defense .pve-defense-card h3,
+#page-pve-defense .pve-defense-alt-grid h3 {
+  margin: 0 0 10px;
+  color: #57f287;
+  font-size: 1.12em;
+  line-height: 1.45;
+}
+
+#page-pve-defense .pve-defense-formula {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+#page-pve-defense .pve-defense-formula code {
+  display: block;
+  padding: 12px 14px;
+  border: 1px solid rgba(87, 242, 135, 0.26);
+  border-radius: 8px;
+  background: #1e1f22;
+  color: #f2f3f5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-formula-list {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+#page-pve-defense .pve-defense-formula-list article {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(87, 242, 135, 0.26);
+  border-radius: 8px;
+  background: #1e1f22;
+}
+
+#page-pve-defense .pve-defense-formula-list article > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(87, 242, 135, 0.12);
+  color: #57f287;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-formula-list strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 1.02em;
+}
+
+#page-pve-defense .pve-defense-formula-list code {
+  display: block;
+  padding: 10px 12px;
+  border: 1px solid #3f4147;
+  border-radius: 7px;
+  background: #232428;
+  color: #f2f3f5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-fraction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid #3f4147;
+  border-radius: 7px;
+  background: #232428;
+  color: #f2f3f5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  font-weight: 900;
+  line-height: 1.45;
+}
+
+#page-pve-defense .pve-defense-fraction .frac {
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  min-width: 150px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#page-pve-defense .pve-defense-fraction .frac span:first-child {
+  padding: 0 8px 5px;
+  border-bottom: 2px solid #dcddde;
+}
+
+#page-pve-defense .pve-defense-fraction .frac span:last-child {
+  padding: 5px 8px 0;
+  color: #b5bac1;
+}
+
+#page-pve-defense .pve-defense-formula-list p {
+  margin-top: 8px;
+  color: #b5bac1;
+  font-size: 0.92em;
+  line-height: 1.65;
+}
+
+#page-pve-defense .pve-defense-mechanism-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pve-defense .pve-defense-mechanism-grid article {
+  padding: 18px;
+}
+
+#page-pve-defense .pve-defense-mechanism-grid h3 {
+  margin: 0 0 8px;
+  color: #57f287;
+  font-size: 1.08em;
+}
+
+#page-pve-defense .pve-defense-mechanism-grid p {
+  margin: 0;
+  color: #dcddde;
+  line-height: 1.75;
+}
+
+#page-pve-defense .pve-defense-support-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#page-pve-defense .pve-defense-support-grid article {
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+  padding: 14px 10px;
+  text-align: center;
+}
+
+#page-pve-defense .pve-defense-support-grid img,
+#page-pve-defense .pve-defense-support-grid i {
+  width: 58px;
+  height: 58px;
+  border: 2px solid #1e1f22;
+  border-radius: 10px;
+  background: #232428;
+}
+
+#page-pve-defense .pve-defense-support-grid img {
+  object-fit: cover;
+}
+
+#page-pve-defense .pve-defense-support-grid i {
+  display: grid;
+  place-items: center;
+  color: #57f287;
+  font-size: 1.55em;
+}
+
+#page-pve-defense .pve-defense-support-grid span {
+  color: #949ba4;
+  font-size: 0.78em;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-support-grid strong {
+  color: #fff;
+  font-size: 0.94em;
+  line-height: 1.35;
+}
+
+#page-pve-defense .pve-defense-support-grid small {
+  color: #b5bac1;
+  font-size: 0.8em;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+#page-pve-defense .pve-defense-example-steps {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+#page-pve-defense .pve-defense-example-steps div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.34fr) minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid rgba(87, 242, 135, 0.24);
+  border-radius: 8px;
+  background: #1e1f22;
+}
+
+#page-pve-defense .pve-defense-example-steps b {
+  color: #57f287;
+}
+
+#page-pve-defense .pve-defense-example-steps code {
+  color: #f2f3f5;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-weight: 900;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-builds {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pve-defense .pve-defense-build-detail-card {
+  padding: 18px 20px;
+  overflow: hidden;
+}
+
+#page-pve-defense .pve-defense-party + .pve-defense-build-detail-card {
+  margin-top: 14px;
+}
+
+#page-pve-defense .pve-defense-build-row {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) minmax(220px, max-content);
+  gap: 12px;
+  align-items: center;
+  min-height: 116px;
+  padding: 15px 0;
+  border-bottom: 1px dashed rgba(79, 84, 92, 0.7);
+}
+
+#page-pve-defense .pve-defense-build-row:first-child {
+  padding-top: 0;
+}
+
+#page-pve-defense .pve-defense-build-row:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+#page-pve-defense .pve-defense-build-row.is-main .pve-defense-build-hero {
+  border-color: rgba(240, 184, 90, 0.82);
+}
+
+#page-pve-defense .pve-defense-build-row.is-buffer .pve-defense-build-hero {
+  border-color: rgba(87, 242, 135, 0.72);
+}
+
+#page-pve-defense .pve-defense-build-hero {
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+}
+
+#page-pve-defense .pve-defense-build-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+#page-pve-defense .pve-defense-build-icons img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  border: 2px solid #3f4147;
+  border-radius: 12px;
+  background: #303338;
+}
+
+#page-pve-defense .pve-defense-build-icons span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 12px 7px 8px;
+  border: 1px solid rgba(210, 166, 88, 0.38);
+  border-radius: 11px;
+  background:
+    linear-gradient(90deg, rgba(210, 166, 88, 0.18), rgba(210, 166, 88, 0) 42%),
+    linear-gradient(180deg, rgba(35, 36, 40, 0.98), rgba(25, 26, 30, 0.98));
+  color: #f0ede7;
+  font-size: 0.86em;
+  font-weight: 900;
+  line-height: 1.25;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+#page-pve-defense .pve-defense-build-icons span::before {
+  content: "条件";
+  display: inline-flex;
+  align-items: center;
+  height: 19px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(210, 166, 88, 0.16);
+  color: #f4cf85;
+  font-size: 0.72em;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+
+#page-pve-defense .pve-defense-build-row strong {
+  justify-self: end;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 5px 11px;
+  min-width: 178px;
+  min-height: 54px;
+  padding: 9px 12px;
+  border: 1px solid rgba(148, 155, 164, 0.3);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(35, 36, 40, 0.98), rgba(27, 28, 31, 0.98));
+  color: #f2f3f5;
+  font-size: 0.88em;
+  line-height: 1.25;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+#page-pve-defense .pve-defense-build-row strong span {
+  color: #949ba4;
+  font-size: 0.78em;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-build-row strong b {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 950;
+}
+
+#page-pve-defense .pve-defense-build {
+  display: grid;
+  grid-template-columns: 74px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+}
+
+#page-pve-defense .pve-defense-build.is-main {
+  border-color: rgba(240, 184, 90, 0.5);
+}
+
+#page-pve-defense .pve-defense-build.is-buffer {
+  border-color: rgba(87, 242, 135, 0.45);
+}
+
+#page-pve-defense .pve-defense-build img {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+}
+
+#page-pve-defense .pve-defense-build h3 {
+  margin: 0 0 6px;
+  color: #fff;
+  font-size: 1.08em;
+}
+
+#page-pve-defense .pve-defense-build p {
+  margin: 0 0 6px;
+  color: #f2f3f5;
+  font-weight: 900;
+  line-height: 1.55;
+}
+
+#page-pve-defense .pve-defense-build small {
+  display: block;
+  color: #b5bac1;
+  font-size: 0.86em;
+  line-height: 1.55;
+}
+
+#page-pve-defense .pve-defense-table-wrap {
+  max-width: 100%;
+  margin-top: 14px;
+  overflow-x: auto;
+}
+
+#page-pve-defense .pve-defense-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+}
+
+#page-pve-defense .pve-defense-table caption {
+  padding: 13px 16px;
+  border-bottom: 1px solid #3f4147;
+  color: #fff;
+  font-size: 1.08em;
+  font-weight: 900;
+  text-align: left;
+}
+
+#page-pve-defense .pve-defense-table th,
+#page-pve-defense .pve-defense-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(79, 84, 92, 0.72);
+  color: #f2f3f5;
+  font-weight: 900;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#page-pve-defense .pve-defense-table thead th {
+  color: #b5bac1;
+  background: #232428;
+  font-size: 0.86em;
+}
+
+#page-pve-defense .pve-defense-table th:first-child,
+#page-pve-defense .pve-defense-table td:first-child {
+  text-align: left;
+}
+
+#page-pve-defense .pve-defense-table tbody th {
+  color: #fff;
+}
+
+#page-pve-defense .pve-defense-hero-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 132px;
+}
+
+#page-pve-defense .pve-defense-hero-cell img {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 9px;
+  background: #444;
+}
+
+#page-pve-defense .pve-defense-hero-cell span {
+  color: #fff;
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-table tbody tr:last-child th,
+#page-pve-defense .pve-defense-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+#page-pve-defense .pve-defense-table td {
+  color: #57f287;
+  font-size: 1.05em;
+}
+
+#page-pve-defense .pve-defense-table td:first-of-type {
+  color: #f0b85a;
+}
+
+#page-pve-defense .pve-defense-table.is-relic td {
+  color: #8bd5ff;
+}
+
+#page-pve-defense .pve-defense-table td {
+  font-variant-numeric: tabular-nums;
+}
+
+#page-pve-defense .pve-defense-final {
+  margin-top: 16px;
+  color: #f2f3f5;
+  line-height: 1.75;
+  background: rgba(87, 242, 135, 0.1);
+  border-color: rgba(87, 242, 135, 0.35);
+  font-weight: 900;
+}
+
+#page-pve-defense .pve-defense-alt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-pve-defense .pve-defense-alt-grid article {
+  padding: 18px;
+}
+
+#page-pve-defense .pve-defense-alt-grid img {
+  width: 74px;
+  height: 74px;
+  object-fit: cover;
+  border: 2px solid #1e1f22;
+  border-radius: 12px;
+  background: #444;
+  margin-bottom: 12px;
+}
+
+#page-pve-defense .pve-defense-toc {
+  position: sticky;
+  top: 20px;
+}
+
+#page-pve-defense .pve-defense-toc-box {
+  padding: 16px;
+  background: #1e1f22;
+}
+
+#page-pve-defense .pve-defense-toc-box h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1.02em;
+}
+
+#page-pve-defense .pve-defense-toc-box a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 11px;
+  margin-top: 7px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: #232428;
+  color: #dcddde;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+#page-pve-defense .pve-defense-toc-box a:hover {
+  color: #fff;
+  background: #303338;
+  border-color: #3f4147;
+}
+
+#page-pve-defense .pve-defense-toc-box a i {
+  width: 18px;
+  color: #949ba4;
+  text-align: center;
 }
 
 #page-pve-invincible {
@@ -27,6 +945,7 @@
   gap: 24px;
   align-items: start;
   max-width: 1240px;
+  min-width: 0;
 }
 
 #page-pve-invincible .pve-main {
@@ -57,15 +976,23 @@
 
 #page-pve-invincible .pve-hero {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 22px;
   align-items: start;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 24px;
   border: 1px solid #3f4147;
   border-radius: 10px;
   background:
     linear-gradient(135deg, rgba(35, 36, 40, 0.96), rgba(43, 45, 49, 0.9)),
     radial-gradient(circle at 80% 12%, rgba(87, 242, 135, 0.14), transparent 34%);
+}
+
+#page-pve-invincible .pve-hero-copy {
+  min-width: 0;
+  max-width: 100%;
 }
 
 #page-pve-invincible .pve-kicker {
@@ -91,6 +1018,7 @@
   font-size: clamp(2.25rem, 4vw, 3.55rem);
   line-height: 1.05;
   letter-spacing: 0;
+  overflow-wrap: anywhere;
 }
 
 #page-pve-invincible .pve-hero p {
@@ -98,6 +1026,7 @@
   color: #dcddde;
   font-size: 1.03em;
   line-height: 1.85;
+  overflow-wrap: anywhere;
 }
 
 #page-pve-invincible .pve-hero-note {
@@ -153,6 +1082,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  min-width: 0;
   margin-top: 18px;
   padding: 12px 14px;
   border: 1px solid rgba(240, 184, 90, 0.42);
@@ -163,6 +1093,11 @@
   line-height: 1.6;
 }
 
+#page-pve-invincible .pve-video-notice span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 #page-pve-invincible .pve-video-notice i {
   color: #ff4d4d;
   font-size: 1.25em;
@@ -170,6 +1105,8 @@
 
 #page-pve-invincible .pve-youtube-lite {
   margin-top: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
   border: 1px solid rgba(79, 84, 92, 0.95);
   border-radius: 10px;
   box-shadow: none;
@@ -968,6 +1905,14 @@
 }
 
 @media (max-width: 1180px) {
+  #page-pve-defense .pve-defense-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pve-defense .pve-defense-toc {
+    display: none;
+  }
+
   #page-pve-invincible .pve-layout {
     grid-template-columns: 1fr;
   }
@@ -978,9 +1923,17 @@
 }
 
 @media (max-width: 1024px) {
+  #page-pve-defense .pve-defense-hero {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  #page-pve-defense .pve-defense-support-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   #page-pve-invincible .pve-hero,
   #page-pve-invincible .pve-belt-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   #page-pve-invincible .pve-score-grid,
@@ -1016,6 +1969,132 @@
 }
 
 @media (max-width: 768px) {
+  #page-pve-defense {
+    padding-bottom: 84px;
+  }
+
+  #page-pve-defense .pve-defense-hero {
+    padding: 18px;
+  }
+
+  #page-pve-defense .pve-defense-hero h2 {
+    font-size: clamp(2rem, 9vw, 2.45rem);
+    line-height: 1.12;
+  }
+
+  #page-pve-defense .pve-defense-hero p {
+    font-size: 0.96em;
+    line-height: 1.72;
+  }
+
+  #page-pve-defense .pve-defense-metrics,
+  #page-pve-defense .pve-defense-builds,
+  #page-pve-defense .pve-defense-mechanism-grid,
+  #page-pve-defense .pve-defense-alt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pve-defense .pve-defense-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #page-pve-defense .pve-defense-party {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  #page-pve-defense .pve-defense-slot {
+    padding: 11px 5px 9px;
+  }
+
+  #page-pve-defense .pve-defense-slot img {
+    width: min(100%, 84px);
+    border-radius: 10px;
+  }
+
+  #page-pve-defense .pve-defense-slot b {
+    font-size: 0.88em;
+  }
+
+  #page-pve-defense .pve-defense-build {
+    grid-template-columns: 62px minmax(0, 1fr);
+    padding: 12px;
+  }
+
+  #page-pve-defense .pve-defense-build img {
+    width: 62px;
+    height: 62px;
+  }
+
+  #page-pve-defense .pve-defense-formula-list article {
+    grid-template-columns: 30px minmax(0, 1fr);
+    padding: 12px;
+  }
+
+  #page-pve-defense .pve-defense-formula-list article > span {
+    width: 28px;
+    height: 28px;
+  }
+
+  #page-pve-defense .pve-defense-fraction {
+    font-size: 0.82em;
+  }
+
+  #page-pve-defense .pve-defense-example-steps div {
+    grid-template-columns: 1fr;
+  }
+
+  #page-pve-defense .pve-defense-build-detail-card {
+    padding: 14px;
+  }
+
+  #page-pve-defense .pve-defense-build-row {
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 96px;
+  }
+
+  #page-pve-defense .pve-defense-build-hero {
+    width: 58px;
+    height: 58px;
+  }
+
+  #page-pve-defense .pve-defense-build-icons img {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+  }
+
+  #page-pve-defense .pve-defense-build-icons span {
+    min-height: 34px;
+    font-size: 0.82em;
+  }
+
+  #page-pve-defense .pve-defense-build-row strong {
+    grid-column: 2;
+    justify-self: start;
+    min-height: 38px;
+    padding: 7px 12px;
+    font-size: 0.88em;
+    white-space: normal;
+  }
+
+  #page-pve-defense .pve-defense-card,
+  #page-pve-defense .pve-defense-final,
+  #page-pve-defense .pve-defense-mechanism-grid article,
+  #page-pve-defense .pve-defense-alt-grid article {
+    padding: 15px;
+  }
+
+  #page-pve-defense .pve-defense-table {
+    min-width: 560px;
+  }
+
+  #page-pve-defense .pve-defense-table th,
+  #page-pve-defense .pve-defense-table td {
+    padding: 11px 12px;
+  }
+
   #page-pve-invincible {
     padding-bottom: 84px;
   }
@@ -1024,7 +2103,27 @@
     padding: 18px;
   }
 
+  #page-pve-invincible .pve-hero h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 1.12;
+  }
+
+  #page-pve-invincible .pve-hero p {
+    font-size: 0.96em;
+    line-height: 1.72;
+  }
+
+  #page-pve-invincible .pve-video-notice {
+    align-items: flex-start;
+    padding: 10px 12px;
+  }
+
   #page-pve-invincible .pve-party-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  #page-pve-invincible .pve-party-grid.is-hero-only {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 8px;
   }
