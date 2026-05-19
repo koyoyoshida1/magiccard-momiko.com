@@ -510,9 +510,16 @@
 
 #page-pve-defense .pve-defense-equation > div {
   display: grid;
-  grid-template-columns: minmax(9em, max-content) auto minmax(240px, 1fr) auto;
+  grid-template-columns: minmax(5.6em, max-content) auto minmax(240px, 1fr) auto;
   gap: 10px;
   align-items: center;
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+  white-space: nowrap;
+}
+
+#page-pve-defense .pve-defense-equation > div > * {
   min-width: 0;
 }
 
@@ -532,12 +539,11 @@
 #page-pve-defense .pve-defense-equation .frac > span:last-child {
   padding: 6px 10px 0;
   color: #b5bac1;
-  overflow-wrap: anywhere;
 }
 
 #page-pve-defense .pve-defense-equation .frac.is-mini {
   display: inline-grid;
-  min-width: 9em;
+  min-width: 4.2em;
   vertical-align: middle;
 }
 
@@ -2132,8 +2138,8 @@
   }
 
   #page-pve-defense .pve-defense-equation > div {
-    grid-template-columns: 1fr;
-    gap: 5px;
+    grid-template-columns: max-content max-content max-content max-content;
+    gap: 8px;
   }
 
   #page-pve-defense .pve-defense-equation > div > span:first-child {
@@ -2145,7 +2151,7 @@
   }
 
   #page-pve-defense .pve-defense-equation .frac {
-    width: 100%;
+    width: auto;
   }
 
   #page-pve-defense .pve-defense-example-steps div {
