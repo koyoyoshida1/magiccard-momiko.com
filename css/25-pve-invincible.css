@@ -331,21 +331,6 @@
   background: rgba(87, 242, 135, 0.08);
 }
 
-#page-pve-defense .pve-defense-slot span {
-  position: absolute;
-  top: 7px;
-  left: 7px;
-  display: grid;
-  place-items: center;
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-  background: #1e1f22;
-  color: #f2f3f5;
-  font-size: 0.8em;
-  font-weight: 900;
-}
-
 #page-pve-defense .pve-defense-slot img {
   display: block;
   width: min(100%, 104px);
