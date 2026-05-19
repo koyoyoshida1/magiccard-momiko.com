@@ -475,6 +475,11 @@
   vertical-align: middle;
 }
 
+#page-pve-defense .pve-defense-fraction.is-wide .frac {
+  flex: 1 1 360px;
+  min-width: min(100%, 260px);
+}
+
 #page-pve-defense .pve-defense-fraction .frac span:first-child {
   padding: 0 8px 5px;
   border-bottom: 2px solid #dcddde;
