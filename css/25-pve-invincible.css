@@ -492,6 +492,63 @@
   overflow-wrap: anywhere;
 }
 
+#page-pve-defense .pve-defense-equation {
+  display: grid;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #3f4147;
+  border-radius: 7px;
+  background: #232428;
+  color: #f2f3f5;
+  font-family: ui-serif, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  font-size: 1.04em;
+  font-weight: 900;
+  line-height: 1.45;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#page-pve-defense .pve-defense-equation > div {
+  display: grid;
+  grid-template-columns: minmax(9em, max-content) auto minmax(240px, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  min-width: 0;
+}
+
+#page-pve-defense .pve-defense-equation .frac {
+  display: inline-grid;
+  grid-template-rows: auto auto;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+#page-pve-defense .pve-defense-equation .frac > span:first-child {
+  padding: 0 10px 6px;
+  border-bottom: 2px solid #dcddde;
+}
+
+#page-pve-defense .pve-defense-equation .frac > span:last-child {
+  padding: 6px 10px 0;
+  color: #b5bac1;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-defense-equation .frac.is-mini {
+  display: inline-grid;
+  min-width: 9em;
+  vertical-align: middle;
+}
+
+#page-pve-defense .pve-defense-equation .frac.is-mini > span:first-child {
+  padding-bottom: 4px;
+}
+
+#page-pve-defense .pve-defense-equation .frac.is-mini > span:last-child {
+  padding-top: 4px;
+}
+
 #page-pve-defense .pve-defense-formula-list p {
   margin-top: 8px;
   color: #b5bac1;
@@ -2067,6 +2124,28 @@
 
   #page-pve-defense .pve-defense-fraction {
     font-size: 0.82em;
+  }
+
+  #page-pve-defense .pve-defense-equation {
+    padding: 12px;
+    font-size: 0.9em;
+  }
+
+  #page-pve-defense .pve-defense-equation > div {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  #page-pve-defense .pve-defense-equation > div > span:first-child {
+    color: #f2f3f5;
+  }
+
+  #page-pve-defense .pve-defense-equation > div > span:nth-child(2) {
+    color: #57f287;
+  }
+
+  #page-pve-defense .pve-defense-equation .frac {
+    width: 100%;
   }
 
   #page-pve-defense .pve-defense-example-steps div {
