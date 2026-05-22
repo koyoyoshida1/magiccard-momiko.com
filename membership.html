@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=260511-4">
   <link rel="stylesheet" href="css/25-pve-invincible.css?v=260519-1">
+  <link rel="stylesheet" href="css/26-member-decia-trial.css?v=260523-1">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -116,6 +117,20 @@
           <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this)">
             <span class="channel-icon"><i class="fa-solid fa-shield-halved" style="color:#8bd5ff;"></i></span>
             <span class="channel-text">防御力とは</span>
+            <span class="channel-badge">NEW</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 溶火関連 -->
+      <div class="channel-group">
+        <div class="channel-header" onclick="toggleGroup(this)">
+          <span><i class="fa-solid fa-chevron-down"></i> 溶火関連</span>
+        </div>
+        <div class="channel-list">
+          <div class="channel-item channel-member-decia-trial" onclick="switchPage('page-member-decia-trial', this)">
+            <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff7a3d;"></i></span>
+            <span class="channel-text">天域試練：デシア</span>
             <span class="channel-badge">NEW</span>
           </div>
         </div>
@@ -11821,6 +11836,175 @@
               <tr><td class="beauty-rank">61</td><td><div class="beauty-hero-cell"><span class="beauty-table-img"><img src="image/hero/rinenokami.webp" alt="輪廻の神" loading="lazy"></span><span class="beauty-hero-name">輪廻の神</span></div></td><td class="beauty-muted">0</td><td class="beauty-muted">0</td><td class="beauty-score">0</td></tr>
             </tbody>
           </table>
+        </div>
+      </div>
+
+      <!-- 溶火関連：天域試練-デシア編- -->
+      <div id="page-member-decia-trial" class="page-section decia-trial-page">
+        <h1 class="page-main-title">天域試練：デシア編</h1>
+        <div class="update-info">最終更新日: 2026年5月23日 | 監修: もみこ</div>
+
+        <div class="pve-defense-layout">
+          <main class="pve-defense-main">
+            <section class="pve-defense-hero" id="decia-trial-overview">
+              <div class="pve-defense-copy">
+                <p class="pve-defense-kicker"><i class="fa-solid fa-fire-flame-curved"></i> LAVA TRIAL DECIA</p>
+                <h2><span>溶火争覇：</span><span>天域試練</span></h2>
+                <p>
+                  30層NPCを想定した、デシア火力に全てを寄せる天域試練用の調整メモです。
+                  会心率とダメ追は戦闘中の必要値だけ満たし、余った枠を攻撃力と会心ダメージへ回すのが基本です。
+                  爪なしなら会心ダメージ、爪ありなら攻撃力を限界まで伸ばします。
+                </p>
+              </div>
+
+              <div class="pve-defense-party" aria-label="天域試練デシア編成">
+                <div class="pve-defense-slot is-front"><img src="image/hero/saul.webp" alt="サウール"><b>サウール</b></div>
+                <div class="pve-defense-slot is-front"><img src="image/hero/riddle.webp" alt="リドル"><b>リドル</b></div>
+                <div class="pve-defense-slot is-front"><img src="image/hero/skylie.webp" alt="スカイリー"><b>スカイリー</b></div>
+                <div class="pve-defense-slot is-back"><img src="image/hero/satomi.webp" alt="サとミ"><b>サとミ</b></div>
+                <div class="pve-defense-slot is-back"><img src="image/hero/karist.webp" alt="カリスト"><b>カリスト</b></div>
+                <div class="pve-defense-slot is-back is-main"><img src="image/hero/decia.webp" alt="デシア"><b>デシア</b></div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-target">
+              <h2 class="pve-defense-title">目標ライン</h2>
+              <div class="pve-defense-metrics">
+                <article><span>デシア戦闘中</span><strong>会心率160</strong><small>パネル目安 85</small></article>
+                <article><span>デシア戦闘中</span><strong>ダメ追300</strong><small>パネル目安 152</small></article>
+                <article><span>補助役の耐久</span><strong>ダメ軽280</strong><small>サウール・リドルなど</small></article>
+                <article><span>30層NPC</span><strong>ダメ軽200</strong><small>会心抵抗0 / 会心ダメ抵抗0</small></article>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-support">
+              <h2 class="pve-defense-title">召喚獣 & 星霊</h2>
+              <div class="pve-defense-support-grid">
+                <article><img src="image/pet/Garuda.webp" alt="ガルーダ"><span>召喚獣</span><strong>ガルーダ</strong><small>火力補助の主軸</small></article>
+                <article><img src="image/protos/raireki.webp" alt="雷靂"><span>星霊</span><strong>雷龍</strong><small>会心率+5 / ダメ追+18</small></article>
+                <article><i class="fa-solid fa-flag"></i><span>陣営</span><strong>虚空</strong><small>ダメ追+20</small></article>
+                <article><i class="fa-solid fa-bolt"></i><span>状態</span><strong>熛怒</strong><small>会心率+40 / ダメ追+40</small></article>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-lineup">
+              <h2 class="pve-defense-title">推奨編成：デシア構築</h2>
+              <p class="pve-defense-lead">
+                補助役はダメ軽280を目標に耐え、デシアだけ戦闘中会心率160・ダメ追300へ合わせます。
+                サウールなど一部パーツは日本版の入手状況によって再現が難しいため、完全コピーより必要値を満たすことを優先してください。
+              </p>
+
+              <div class="pve-defense-build-detail-card" aria-label="天域試練デシア構築の装備詳細">
+                <div class="pve-defense-build-row">
+                  <img class="pve-defense-build-hero" src="image/hero/saul.webp" alt="サウール">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/abyss/big_wing.webp" alt="羽"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/seiketsu.webp" alt="聖潔"><span>戦闘中ダメ軽280 / 聖物9</span></div>
+                  <strong><span>天賦</span><b>3-4-2-2</b><span>宝石天賦</span><b>2-3</b></strong>
+                </div>
+                <div class="pve-defense-build-row">
+                  <img class="pve-defense-build-hero" src="image/hero/riddle.webp" alt="リドル">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/abyss/shield.webp" alt="聖盾"><img src="image/rune/kirikizu.webp" alt="切傷"><img src="image/rune/seiketsu.webp" alt="聖潔"><span>戦闘中ダメ軽280 / 速度2 / 聖物9</span></div>
+                  <strong><span>天賦</span><b>3-4-2-2</b><span>宝石天賦</span><b>1-3</b></strong>
+                </div>
+                <div class="pve-defense-build-row">
+                  <img class="pve-defense-build-hero" src="image/hero/skylie.webp" alt="スカイリー">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/esper/sanrei.webp" alt="山嶺"><img src="image/rune/kussetsu.webp" alt="屈折"><img src="image/rune/seiketsu.webp" alt="聖潔"><span>戦闘中ダメ軽280 / 速度6</span></div>
+                  <strong><span>天賦</span><b>3-4-5-2</b><span>宝石天賦</span><b>1-2</b></strong>
+                </div>
+                <div class="pve-defense-build-row">
+                  <img class="pve-defense-build-hero" src="image/hero/satomi.webp" alt="サとミ">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/abyss/long_horn.webp" alt="角笛"><img src="image/rune/kussetsu.webp" alt="屈折"><img src="image/rune/seiketsu.webp" alt="聖潔"><span>戦闘中ダメ軽280 / 速度5</span></div>
+                  <strong><span>天賦</span><b>3-4-1-5</b><span>宝石天賦</span><b>3-1</b></strong>
+                </div>
+                <div class="pve-defense-build-row">
+                  <img class="pve-defense-build-hero" src="image/hero/karist.webp" alt="カリスト">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/esper/genrai.webp" alt="玄雷"><img src="image/rune/bushi.webp" alt="武士"><img src="image/rune/seiketsu.webp" alt="聖潔"><span>戦闘中ダメ軽280 / 最速 / 聖物9</span></div>
+                  <strong><span>天賦</span><b>3-4-2-2</b><span>宝石天賦</span><b>1-2</b></strong>
+                </div>
+                <div class="pve-defense-build-row is-main">
+                  <img class="pve-defense-build-hero" src="image/hero/decia.webp" alt="デシア">
+                  <div class="pve-defense-build-icons"><img src="image/artifact/holly/wando.webp" alt="ワンド"><img src="image/rune/kyosen.webp" alt="狂戦"><img src="image/rune/zaiaku.webp" alt="罪悪"><span>会心率160 / ダメ追300 / 聖物9</span></div>
+                  <strong><span>天賦</span><b>2-3-4-1</b><span>宝石天賦</span><b>3-1</b></strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-table">
+              <h2 class="pve-defense-title">調整表</h2>
+              <div class="pve-defense-table-wrap">
+                <table class="pve-defense-table decia-trial-table">
+                  <caption>天域試練：デシア構築</caption>
+                  <thead>
+                    <tr><th>キャラ</th><th>神器</th><th>符文</th><th>速度</th><th>戦闘中ダメ軽</th><th>戦闘中会心率</th><th>戦闘中ダメ追</th><th>聖物</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/saul.webp" alt="サウール"><span>サウール</span></span></th><td>羽</td><td>切傷・聖潔</td><td>3</td><td>280</td><td>/</td><td>/</td><td>9</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/riddle.webp" alt="リドル"><span>リドル</span></span></th><td>聖盾</td><td>切傷・聖潔</td><td>2</td><td>280</td><td>/</td><td>/</td><td>9</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/skylie.webp" alt="スカイリー"><span>スカイリー</span></span></th><td>山嶺</td><td>屈折・聖潔</td><td>6</td><td>280</td><td>/</td><td>/</td><td>/</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/satomi.webp" alt="サとミ"><span>サとミ</span></span></th><td>角笛</td><td>屈折・聖潔</td><td>5</td><td>280</td><td>/</td><td>/</td><td>/</td></tr>
+                    <tr><th><span class="pve-defense-hero-cell"><img src="image/hero/karist.webp" alt="カリスト"><span>カリスト</span></span></th><td>玄雷</td><td>武士・聖潔</td><td>1</td><td>280</td><td>/</td><td>/</td><td>9</td></tr>
+                    <tr class="is-decia-row"><th><span class="pve-defense-hero-cell"><img src="image/hero/decia.webp" alt="デシア"><span>デシア</span></span></th><td>ワンド</td><td>狂戦・罪悪</td><td>4</td><td>/</td><td>160</td><td>300</td><td>9</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-attribute">
+              <h2 class="pve-defense-title">デシア属性計算</h2>
+              <div class="decia-trial-calc-grid">
+                <div class="pve-defense-table-wrap">
+                  <table class="pve-defense-table">
+                    <caption>固定属性加算</caption>
+                    <thead><tr><th>項目</th><th>会心率</th><th>ダメ追</th></tr></thead>
+                    <tbody>
+                      <tr><th>共鳴祭壇</th><td>30</td><td>30</td></tr>
+                      <tr><th>角笛</th><td>/</td><td>10</td></tr>
+                      <tr><th>罪悪</th><td>/</td><td>30</td></tr>
+                      <tr><th>虚空陣営</th><td>/</td><td>20</td></tr>
+                      <tr><th>星霊・雷龍</th><td>5</td><td>18</td></tr>
+                      <tr><th>熛怒状態</th><td>40</td><td>40</td></tr>
+                      <tr class="is-decia-row"><th>固定加算合計</th><td>75</td><td>148</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="pve-defense-table-wrap">
+                  <table class="pve-defense-table">
+                    <caption>行動時の動的属性加算</caption>
+                    <thead><tr><th>項目</th><th>会心率</th><th>ダメ追</th></tr></thead>
+                    <tbody>
+                      <tr><th>覚醒技</th><td>0〜20</td><td>/</td></tr>
+                      <tr><th>サとミ九聖星雲</th><td>/</td><td>0〜15</td></tr>
+                      <tr><th>戦熊怒撃</th><td>/</td><td>5〜20</td></tr>
+                      <tr><th>戦熊九聖</th><td>/</td><td>0〜40</td></tr>
+                      <tr><th>戦闘中必要値</th><td>160</td><td>300</td></tr>
+                      <tr class="is-decia-row"><th>パネル属性</th><td>85</td><td>152</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+
+            <section class="pve-defense-section" id="decia-trial-notes">
+              <h2 class="pve-defense-title">調整メモ</h2>
+              <div class="pve-defense-mechanism-grid">
+                <article><h3>会心率を盛りすぎない</h3><p>戦闘中160を超える分は火力効率が落ちやすいです。パネル85前後を目安に、残りは攻撃力と会心ダメージへ寄せます。</p></article>
+                <article><h3>補助役はまず耐える</h3><p>補助役の戦闘中ダメ軽280が目標です。110未満だと厳しいため、聖潔や耐久宝石で底上げします。</p></article>
+                <article><h3>完全コピーより必要値</h3><p>サウールなど一部パーツは入手状況で再現が難しい場合があります。デシアの会心率160・ダメ追300を満たす方向で代替します。</p></article>
+              </div>
+            </section>
+          </main>
+
+          <aside class="pve-defense-toc">
+            <div class="pve-defense-toc-box">
+              <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+              <a href="#decia-trial-overview"><i class="fa-solid fa-fire-flame-curved"></i> 概要</a>
+              <a href="#decia-trial-target"><i class="fa-solid fa-bullseye"></i> 目標ライン</a>
+              <a href="#decia-trial-support"><i class="fa-solid fa-dragon"></i> 召喚獣&星霊</a>
+              <a href="#decia-trial-lineup"><i class="fa-solid fa-people-group"></i> 推奨編成</a>
+              <a href="#decia-trial-table"><i class="fa-solid fa-table"></i> 調整表</a>
+              <a href="#decia-trial-attribute"><i class="fa-solid fa-calculator"></i> 属性計算</a>
+              <a href="#decia-trial-notes"><i class="fa-solid fa-circle-info"></i> 調整メモ</a>
+            </div>
+          </aside>
         </div>
       </div>
 

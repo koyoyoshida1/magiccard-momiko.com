@@ -1,0 +1,507 @@
+.channel-member-decia-trial .channel-badge {
+  margin-left: auto;
+  background: #ff7a3d;
+  color: #202225;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1;
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+
+#page-member-decia-trial {
+  --pve-bg: #202225;
+  --pve-card: #2b2d31;
+  --pve-card-2: #25272d;
+  --pve-border: #3f4147;
+  --pve-text: #dcddde;
+  --pve-muted: #a7adb8;
+  --pve-gold: #ffcc66;
+  --pve-blue: #8bd5ff;
+  --pve-red: #ff5a66;
+  --pve-orange: #ff7a3d;
+  --pve-green: #4ade80;
+  color: var(--pve-text);
+}
+
+#page-member-decia-trial *,
+#page-member-decia-trial *::before,
+#page-member-decia-trial *::after {
+  box-sizing: border-box;
+}
+
+#page-member-decia-trial .pve-defense-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  gap: 24px;
+  align-items: start;
+}
+
+#page-member-decia-trial .pve-defense-main {
+  min-width: 0;
+}
+
+#page-member-decia-trial .pve-defense-section {
+  margin-top: 26px;
+}
+
+#page-member-decia-trial .pve-defense-hero {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+  gap: 20px;
+  align-items: stretch;
+  background: linear-gradient(135deg, #2b2d31 0%, #202225 100%);
+  border: 1px solid var(--pve-border);
+  border-radius: 8px;
+  padding: 22px;
+}
+
+#page-member-decia-trial .pve-defense-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 22px;
+  left: 22px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 122, 61, 0.85), transparent);
+}
+
+#page-member-decia-trial .pve-defense-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: var(--pve-gold);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+#page-member-decia-trial .pve-defense-kicker i,
+#page-member-decia-trial .pve-defense-title::before {
+  color: var(--pve-orange);
+}
+
+#page-member-decia-trial .pve-defense-hero h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.18;
+}
+
+#page-member-decia-trial .pve-defense-hero h2 span {
+  display: inline-block;
+}
+
+#page-member-decia-trial .pve-defense-hero p,
+#page-member-decia-trial .pve-defense-lead,
+#page-member-decia-trial .pve-defense-card p,
+#page-member-decia-trial .pve-defense-mechanism-grid p {
+  color: var(--pve-text);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+#page-member-decia-trial .pve-defense-hero p {
+  margin: 14px 0 0;
+}
+
+#page-member-decia-trial .pve-defense-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 1.28rem;
+  letter-spacing: 0;
+}
+
+#page-member-decia-trial .pve-defense-title::before {
+  content: "";
+  width: 6px;
+  height: 22px;
+  border-radius: 999px;
+  background: var(--pve-orange);
+  box-shadow: 0 0 14px rgba(255, 122, 61, 0.35);
+}
+
+#page-member-decia-trial .pve-defense-party {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  align-content: center;
+}
+
+#page-member-decia-trial .pve-defense-slot {
+  min-width: 0;
+  background: rgba(32, 34, 37, 0.88);
+  border: 1px solid var(--pve-border);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+#page-member-decia-trial .pve-defense-slot.is-front {
+  border-top: 3px solid var(--pve-blue);
+}
+
+#page-member-decia-trial .pve-defense-slot.is-back {
+  border-top: 3px solid var(--pve-green);
+}
+
+#page-member-decia-trial .pve-defense-slot.is-main {
+  border-color: var(--pve-orange);
+  box-shadow: 0 0 0 1px rgba(255, 122, 61, 0.35), 0 10px 22px rgba(0, 0, 0, 0.25);
+}
+
+#page-member-decia-trial .pve-defense-slot img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #4f545c;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+#page-member-decia-trial .pve-defense-slot b {
+  display: block;
+  color: #fff;
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+#page-member-decia-trial .pve-defense-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#page-member-decia-trial .pve-defense-metrics article,
+#page-member-decia-trial .pve-defense-card,
+#page-member-decia-trial .pve-defense-support-grid article,
+#page-member-decia-trial .pve-defense-build-detail-card,
+#page-member-decia-trial .pve-defense-table-wrap,
+#page-member-decia-trial .pve-defense-mechanism-grid article,
+#page-member-decia-trial .pve-defense-toc-box {
+  background: var(--pve-card);
+  border: 1px solid var(--pve-border);
+  border-radius: 8px;
+}
+
+#page-member-decia-trial .pve-defense-metrics article {
+  min-height: 112px;
+  padding: 16px;
+  border-top: 4px solid var(--pve-blue);
+}
+
+#page-member-decia-trial .pve-defense-metrics article:nth-child(2) {
+  border-top-color: var(--pve-orange);
+}
+
+#page-member-decia-trial .pve-defense-metrics article:nth-child(3) {
+  border-top-color: var(--pve-green);
+}
+
+#page-member-decia-trial .pve-defense-metrics article:nth-child(4) {
+  border-top-color: var(--pve-red);
+}
+
+#page-member-decia-trial .pve-defense-metrics span,
+#page-member-decia-trial .pve-defense-metrics small,
+#page-member-decia-trial .pve-defense-support-grid span,
+#page-member-decia-trial .pve-defense-support-grid small {
+  display: block;
+  color: var(--pve-muted);
+  font-size: 0.82rem;
+}
+
+#page-member-decia-trial .pve-defense-metrics strong {
+  display: block;
+  margin: 8px 0;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+#page-member-decia-trial .pve-defense-support-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#page-member-decia-trial .pve-defense-support-grid article {
+  padding: 16px;
+  min-height: 150px;
+}
+
+#page-member-decia-trial .pve-defense-support-grid img,
+#page-member-decia-trial .pve-defense-support-grid i {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--pve-orange);
+  margin-bottom: 12px;
+}
+
+#page-member-decia-trial .pve-defense-support-grid img {
+  object-fit: cover;
+}
+
+#page-member-decia-trial .pve-defense-support-grid i {
+  color: var(--pve-gold);
+  background: #202225;
+  font-size: 1.5rem;
+}
+
+#page-member-decia-trial .pve-defense-support-grid strong {
+  display: block;
+  color: #fff;
+  font-size: 1.05rem;
+  margin: 4px 0;
+}
+
+#page-member-decia-trial .pve-defense-build-detail-card {
+  overflow: hidden;
+}
+
+#page-member-decia-trial .pve-defense-build-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(170px, 0.42fr);
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border-bottom: 1px solid var(--pve-border);
+}
+
+#page-member-decia-trial .pve-defense-build-row:last-child {
+  border-bottom: 0;
+}
+
+#page-member-decia-trial .pve-defense-build-row.is-main {
+  background: rgba(255, 122, 61, 0.08);
+}
+
+#page-member-decia-trial .pve-defense-build-hero {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 2px solid #4f545c;
+  border-radius: 8px;
+}
+
+#page-member-decia-trial .pve-defense-build-row.is-main .pve-defense-build-hero {
+  border-color: var(--pve-orange);
+}
+
+#page-member-decia-trial .pve-defense-build-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+
+#page-member-decia-trial .pve-defense-build-icons img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border: 1px solid #4f545c;
+  border-radius: 6px;
+  background: #202225;
+}
+
+#page-member-decia-trial .pve-defense-build-icons span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  max-width: 100%;
+  padding: 7px 10px;
+  border-radius: 6px;
+  background: #202225;
+  color: var(--pve-text);
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+#page-member-decia-trial .pve-defense-build-row strong {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 8px;
+  align-items: center;
+  color: #fff;
+}
+
+#page-member-decia-trial .pve-defense-build-row strong span {
+  color: var(--pve-muted);
+  font-size: 0.76rem;
+}
+
+#page-member-decia-trial .pve-defense-build-row strong b {
+  color: var(--pve-gold);
+}
+
+#page-member-decia-trial .pve-defense-table-wrap {
+  overflow-x: auto;
+}
+
+#page-member-decia-trial .pve-defense-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  background: var(--pve-card);
+}
+
+#page-member-decia-trial .pve-defense-table caption {
+  padding: 12px 14px;
+  color: var(--pve-gold);
+  text-align: left;
+  font-weight: 800;
+  background: #202225;
+}
+
+#page-member-decia-trial .pve-defense-table th,
+#page-member-decia-trial .pve-defense-table td {
+  padding: 11px 10px;
+  border-top: 1px solid var(--pve-border);
+  color: var(--pve-text);
+  text-align: center;
+  white-space: nowrap;
+}
+
+#page-member-decia-trial .pve-defense-table thead th {
+  color: var(--pve-blue);
+  background: #202225;
+}
+
+#page-member-decia-trial .pve-defense-table tbody th {
+  text-align: left;
+}
+
+#page-member-decia-trial .pve-defense-hero-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#page-member-decia-trial .pve-defense-hero-cell img {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #4f545c;
+}
+
+#page-member-decia-trial .pve-defense-table .is-decia-row th,
+#page-member-decia-trial .pve-defense-table .is-decia-row td {
+  background: rgba(255, 122, 61, 0.1);
+  color: #fff;
+  font-weight: 800;
+}
+
+#page-member-decia-trial .decia-trial-calc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+#page-member-decia-trial .pve-defense-mechanism-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+#page-member-decia-trial .pve-defense-mechanism-grid article {
+  padding: 18px;
+}
+
+#page-member-decia-trial .pve-defense-mechanism-grid h3 {
+  margin: 0 0 8px;
+  color: #fff;
+  font-size: 1.04rem;
+}
+
+#page-member-decia-trial .pve-defense-mechanism-grid p {
+  margin: 0;
+}
+
+#page-member-decia-trial .pve-defense-toc {
+  position: sticky;
+  top: 18px;
+}
+
+#page-member-decia-trial .pve-defense-toc-box {
+  padding: 16px;
+}
+
+#page-member-decia-trial .pve-defense-toc-box h3 {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#page-member-decia-trial .pve-defense-toc-box a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 8px;
+  border-radius: 6px;
+  color: var(--pve-text);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+#page-member-decia-trial .pve-defense-toc-box a:hover {
+  background: rgba(255, 122, 61, 0.12);
+  color: #fff;
+}
+
+#page-member-decia-trial .pve-defense-toc-box a i {
+  width: 18px;
+  color: var(--pve-orange);
+}
+
+@media (max-width: 1100px) {
+  #page-member-decia-trial .pve-defense-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #page-member-decia-trial .pve-defense-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  #page-member-decia-trial .pve-defense-hero,
+  #page-member-decia-trial .decia-trial-calc-grid,
+  #page-member-decia-trial .pve-defense-mechanism-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #page-member-decia-trial .pve-defense-metrics,
+  #page-member-decia-trial .pve-defense-support-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  #page-member-decia-trial .pve-defense-build-row {
+    grid-template-columns: 64px minmax(0, 1fr);
+  }
+
+  #page-member-decia-trial .pve-defense-build-row strong {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  #page-member-decia-trial .pve-defense-hero {
+    padding: 16px;
+  }
+
+  #page-member-decia-trial .pve-defense-party,
+  #page-member-decia-trial .pve-defense-metrics,
+  #page-member-decia-trial .pve-defense-support-grid {
+    grid-template-columns: 1fr;
+  }
+}
