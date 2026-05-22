@@ -41,6 +41,11 @@ function switchPage(pageId, element) {
     targetPage.classList.add('active-page');
   }
 
+  const mainContent = document.querySelector('.main-content');
+  if (mainContent) {
+    mainContent.scrollTop = 0;
+  }
+
   // メニューのactive状態を更新
   const items = document.querySelectorAll('.channel-item');
   items.forEach(item => item.classList.remove('active'));
