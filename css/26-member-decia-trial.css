@@ -407,6 +407,33 @@
   gap: 16px;
 }
 
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table-wrap {
+  overflow-x: visible;
+}
+
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table {
+  min-width: 0;
+  table-layout: fixed;
+}
+
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table th,
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table td {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table th:first-child,
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table td:first-child {
+  width: 52%;
+}
+
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table th:nth-child(2),
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table td:nth-child(2),
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table th:nth-child(3),
+#page-member-decia-trial .decia-trial-calc-grid .pve-defense-table td:nth-child(3) {
+  width: 24%;
+}
+
 #page-member-decia-trial .pve-defense-mechanism-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
