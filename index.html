@@ -104,6 +104,11 @@
             <span class="channel-icon"><i class="fa-solid fa-leaf"></i></span>
             <span class="channel-text">献祭：ソニックス</span>
           </div>
+          <div class="channel-item channel-decia" onclick="switchPage('page-decia-teams', this)">
+            <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff8a3d;"></i></span>
+            <span class="channel-text">怒気：デシア</span>
+            <span class="channel-badge">NEW</span>
+          </div>
         </div>
       </div>
 
@@ -120,7 +125,6 @@
           <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this)">
             <span class="channel-icon"><i class="fa-solid fa-shield-halved" style="color:#8bd5ff;"></i></span>
             <span class="channel-text">防御力とは</span>
-            <span class="channel-badge">NEW</span>
           </div>
         </div>
       </div>
@@ -135,12 +139,10 @@
           <div class="channel-item" onclick="location.href='membership.html#page-member-decia-trial'">
             <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff7a3d;"></i></span>
             <span class="channel-text">天域試練：デシア</span>
-            <span class="channel-badge">NEW</span>
           </div>
           <div class="channel-item" onclick="location.href='membership.html#page-member-sonia-trial'">
             <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff7a3d;"></i></span>
             <span class="channel-text">天域試練：ソニア</span>
-            <span class="channel-badge">NEW</span>
           </div>
         </div>
       </div>
@@ -8195,15 +8197,21 @@
 
             <section class="pve-defense-section" id="pve-defense-video">
               <h2 class="pve-defense-title">動画解説</h2>
-              <div class="pve-video-notice">
-                <i class="fa-brands fa-youtube"></i>
-                <span>上古の地アヌビス編の防御力調整動画を準備中です。動画ではデリゴール構築から入り、エルリニー構築まで順番に解説します。</span>
-              </div>
-              <div class="youtube-lite pve-youtube-lite pve-defense-video-placeholder">
-                <div>
-                  <i class="fa-brands fa-youtube"></i>
-                  <strong>動画公開後にここへ掲載</strong>
-                  <span>防御力0.7ライン、モジー育成途中でも成立する理由、エルリニーへの発展まで解説予定</span>
+
+              <div class="pve-video-card">
+                <div class="pve-video-thumb">
+                  <div class="youtube-lite pve-youtube-lite" style="background-image: url('https://i.ytimg.com/vi/TerRQ_9COog/hqdefault.jpg');"
+                    onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/TerRQ_9COog?autoplay=1&start=1\' style=\'width:100%; height:100%; border:none; border-radius:8px;\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <div class="play-button"></div>
+                  </div>
+                </div>
+
+                <div class="pve-video-body">
+                  <h3>防御力調整の解説動画</h3>
+                  <p>
+                    デリゴール構築から入り、エルリニー構築まで順番に解説しています。
+                    防御力0.7ライン、モジー育成途中でも成立する理由、15ターン完走までの考え方を動画で確認してください。
+                  </p>
                 </div>
               </div>
             </section>
@@ -9712,6 +9720,259 @@
               <a href="#sonix-speed"><i class="fa-solid fa-gauge-high"></i> 速度順</a>
               <a href="#sonix-matchup"><i class="fa-solid fa-scale-balanced"></i> 対面評価</a>
               <a href="#sonix-good-bad"><i class="fa-solid fa-circle-info"></i> 強みと弱点</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- 怒気：デシア -->
+      <div id="page-decia-teams" class="page-section">
+        <div class="sonix-page-layout">
+          <main class="sonix-main-column">
+            <section class="sonix-hero" id="decia-overview">
+              <div class="sonix-hero-bg" aria-hidden="true"></div>
+              <div class="sonix-hero-content">
+                <p class="sonix-kicker"><i class="fa-solid fa-fire-flame-curved"></i> PVP TEAM GUIDE</p>
+                <h2>怒気：デシア編成</h2>
+                <p class="sonix-hero-lead">
+                  リドル・レクサー・デリゴールで前列を固め、デシアと青瓷で押し切る怒気軸。
+                  ジョード採用により、ペディア入りミラーへ強く出られるのが最大のポイントです。
+                </p>
+                <div class="sonix-hero-tags">
+                  <span>怒気軸</span>
+                  <span>デシア主砲</span>
+                  <span>ジョード採用</span>
+                  <span>ミラー対策</span>
+                </div>
+              </div>
+
+              <div class="sonix-party-area">
+                <div class="sonix-party-panel" aria-label="怒気デシア編成">
+                  <div class="sonix-party-card is-key"><img src="image/hero/riddle.webp" alt="リドル"><span>リドル</span></div>
+                  <div class="sonix-party-card"><img src="image/hero/rexcer.webp" alt="レクサー"><span>レクサー</span></div>
+                  <div class="sonix-party-card"><img src="image/hero/derigol.webp" alt="デリゴール"><span>デリゴール</span></div>
+                  <div class="sonix-party-card is-main"><img src="image/hero/decia.webp" alt="デシア"><span>デシア</span></div>
+                  <div class="sonix-party-card is-key"><img src="image/hero/seiji.webp" alt="青瓷"><span>青瓷</span></div>
+                  <div class="sonix-party-card is-key"><img src="image/hero/jodo.webp" alt="ジョード"><span>ジョード</span></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="sonix-section" id="decia-summary">
+              <h2 class="sonix-section-title">怒気デシアの結論</h2>
+              <div class="sonix-summary-card">
+                <p>
+                  この型は、前列3体で耐久と妨害を作り、後列のデシア・青瓷で一気に削る編成です。
+                  ジョードを入れることでミラー性能が上がり、特にペディア入りの怒気ミラーへ強くなります。
+                </p>
+              </div>
+            </section>
+
+            <section class="sonix-score-grid" aria-label="怒気デシアの評価">
+              <article class="sonix-score-card is-good"><span>火力</span><strong>S</strong><p>デシア・青瓷の2枚で突破</p></article>
+              <article class="sonix-score-card is-speed"><span>耐久</span><strong>A+</strong><p>前列の体力調整が重要</p></article>
+              <article class="sonix-score-card is-good"><span>ミラー</span><strong>S</strong><p>ジョード採用でペディア入りに強い</p></article>
+              <article class="sonix-score-card is-warning"><span>難度</span><strong>高</strong><p>速度と体力順の調整が要る</p></article>
+            </section>
+
+            <section class="sonix-section" id="decia-focus">
+              <h2 class="sonix-section-title">注目ポイント</h2>
+              <div class="sonix-focus-grid">
+                <article class="sonix-focus-card">
+                  <i class="fa-solid fa-crosshairs"></i>
+                  <strong>ジョード採用がミラー対策</strong>
+                  <p>ペディア入りミラーを意識するならジョードがかなり大事。切傷+マニアで会心率を整えます。</p>
+                </article>
+                <article class="sonix-focus-card">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                  <strong>前列の体力順を崩さない</strong>
+                  <p>リドルとデリゴールは体力1番目か2番目。レクサーは前列で最も低くして役割を明確にします。</p>
+                </article>
+                <article class="sonix-focus-card">
+                  <i class="fa-solid fa-gauge-high"></i>
+                  <strong>ミラーはタンク速度で先後が変わる</strong>
+                  <p>タンクが遅い方がデシア先制。タンクが早い方がデシア後攻になり、動きは早い反面、火力面は若干落ちます。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="sonix-section" id="decia-build">
+              <h2 class="sonix-section-title">おすすめ構成</h2>
+              <div class="sonix-tier-support" aria-label="怒気デシアの召喚獣と星霊">
+                <div class="sonix-support-item">
+                  <img src="image/pet/kujira.webp" alt="リヴァイアサン">
+                  <div><span>召喚獣</span><strong>リヴァイアサン</strong></div>
+                </div>
+                <div class="sonix-support-item">
+                  <img src="image/protos/houou.webp" alt="鳳凰">
+                  <div><span>主戦星霊</span><strong>鳳凰</strong></div>
+                </div>
+                <div class="sonix-support-item is-option">
+                  <img src="image/protos/Kerberos.webp" alt="ケルベロス">
+                  <div><span>サブ星霊</span><strong>ケルベロス or 牛</strong></div>
+                </div>
+                <div class="sonix-support-item is-option">
+                  <img src="image/protos/ushi.webp" alt="牛">
+                  <div><span>代替サブ</span><strong>牛も候補</strong></div>
+                </div>
+              </div>
+
+              <div class="sonix-build-grid">
+                <article class="sonix-build-card is-key">
+                  <div class="sonix-build-head"><img src="image/hero/riddle.webp" alt="リドル"><div><span>TANK</span><h4>リドル</h4><p>体力1か2番目に高く</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/abyss/heart.webp" alt="">魔王の心</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/murasakibortaru.webp" alt="">制</span><span><img src="image/gem/kiryu.webp" alt="">速</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kirikizu.webp" alt="">切傷</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
+                    <li><b>T2装備</b><span>ダメ軽</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>3-4-3-5</span><span>1-2</span></span></li>
+                  </ul>
+                </article>
+
+                <article class="sonix-build-card">
+                  <div class="sonix-build-head"><img src="image/hero/rexcer.webp" alt="レクサー"><div><span>LOW HP FRONT</span><h4>レクサー</h4><p>前列で最も体力を低く</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/holly/necklace.webp" alt="">霊詠のネックレス</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/murasakibortaru.webp" alt="">制</span><span><img src="image/gem/kiryu.webp" alt="">速</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kirikizu.webp" alt="">切傷</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
+                    <li><b>T2装備</b><span>ダメ軽</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>3-4-3-2</span><span>1-2</span></span></li>
+                  </ul>
+                </article>
+
+                <article class="sonix-build-card is-key">
+                  <div class="sonix-build-head"><img src="image/hero/derigol.webp" alt="デリゴール"><div><span>TANK</span><h4>デリゴール</h4><p>体力1か2番目に高く</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/abyss/book.webp" alt="">呪いの書</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/murasakibortaru.webp" alt="">制</span><span><img src="image/gem/kiryu.webp" alt="">速</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kirikizu.webp" alt="">切傷</span><span><img src="image/rune/seiketsu.webp" alt="">聖潔</span></span></li>
+                    <li><b>T2装備</b><span>ダメ軽</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>3-4-3-2</span><span>1-2</span></span></li>
+                  </ul>
+                </article>
+
+                <article class="sonix-build-card is-main">
+                  <div class="sonix-build-head"><img src="image/hero/decia.webp" alt="デシア"><div><span>MAIN DAMAGE</span><h4>デシア</h4><p>悪霊ハンマー型</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/abyss/hammer.webp" alt="">悪霊ハンマー</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/kujaku.webp" alt="">追</span><span><img src="image/gem/shiran.webp" alt="">会</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kyosen.webp" alt="">狂戦</span><span><img src="image/rune/zaiaku.webp" alt="">罪悪</span></span></li>
+                    <li><b>T2装備</b><span>ダメ追</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>1-3-4-1</span><span>3-1</span></span></li>
+                  </ul>
+                </article>
+
+                <article class="sonix-build-card is-main">
+                  <div class="sonix-build-head"><img src="image/hero/seiji.webp" alt="青瓷"><div><span>SUB DAMAGE</span><h4>青瓷</h4><p>骨剣で押し込む</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/abyss/sord.webp" alt="">魔王の骨剣</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/kujaku.webp" alt="">追</span><span><img src="image/gem/shiran.webp" alt="">会</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kyosen.webp" alt="">狂戦</span><span><img src="image/rune/zaiaku.webp" alt="">罪悪</span></span></li>
+                    <li><b>T2装備</b><span>ダメ追</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>1-3-4-1</span><span>3-3</span></span></li>
+                  </ul>
+                </article>
+
+                <article class="sonix-build-card is-key">
+                  <div class="sonix-build-head"><img src="image/hero/jodo.webp" alt="ジョード"><div><span>MIRROR TECH</span><h4>ジョード</h4><p>会心率70%後にダメ軽</p></div></div>
+                  <ul>
+                    <li><b>神器</b><span class="sonix-equip-line"><img src="image/artifact/abyss/born_ring.webp" alt="">魔王の指輪</span></li>
+                    <li><b>宝石</b><span class="sonix-chip-list is-three"><span><img src="image/gem/aobato.webp" alt="">軽</span><span><img src="image/gem/murasakibortaru.webp" alt="">制</span><span><img src="image/gem/kiryu.webp" alt="">速</span></span></li>
+                    <li><b>ルーン</b><span class="sonix-chip-list is-two"><span><img src="image/rune/kirikizu.webp" alt="">切傷</span><span><img src="image/rune/mania.webp" alt="">マニア</span></span></li>
+                    <li><b>T2装備</b><span>会心率70% → ダメ軽</span></li>
+                    <li><b>天賦</b><span class="sonix-talent-line"><span>3-4-5-2</span><span>3-1</span></span></li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="sonix-section" id="decia-speed">
+              <h2 class="sonix-section-title">速度順の考え方</h2>
+              <div class="sonix-speed-guide">
+                <div class="sonix-speed-lead">
+                  <h3><i class="fa-solid fa-gauge-high"></i> 速度は固定ではなく相手で変える</h3>
+                  <p>
+                    デシアミラーでは、前列タンクの速度でデシアの攻撃順が変わります。
+                    タンクが遅い方はデシアが先制し、タンクが早い方はデシアが後攻になります。
+                    後攻側は行動自体を早く回しやすい一方で、火力面は若干落ちる点に注意です。
+                  </p>
+                </div>
+                <div class="sonix-speed-patterns">
+                  <article class="sonix-speed-pattern is-offense">
+                    <div class="sonix-speed-pattern-head"><span>先制火力</span><h3>タンク後置き型</h3><p>デシアを先に攻撃させる並び。</p></div>
+                    <div class="sonix-speed-comment"><i class="fa-solid fa-fire-flame-curved"></i> デシアミラーでは、前列タンクが遅い方がデシア先制になります。先に火力を通したい場合はこちら。</div>
+                  </article>
+                  <article class="sonix-speed-pattern is-control">
+                    <div class="sonix-speed-pattern-head"><span>後攻調整</span><h3>タンク先行型</h3><p>デシアを後攻に回す並び。</p></div>
+                    <div class="sonix-speed-comment"><i class="fa-solid fa-scale-balanced"></i> 前列タンクが早い方はデシア後攻になります。行動は早く回しやすいですが、火力面は少し微妙になる可能性があります。</div>
+                  </article>
+                </div>
+              </div>
+            </section>
+
+            <section class="sonix-section" id="decia-matchup">
+              <h2 class="sonix-section-title">対面評価</h2>
+              <div class="sonix-matchup-board">
+                <article class="sonix-matchup-row is-good">
+                  <div class="sonix-matchup-label"><span>有利</span><strong>ジョード採用で見たい相手</strong></div>
+                  <div class="sonix-matchup-items">
+                    <div class="sonix-matchup-item">
+                      <div class="sonix-matchup-vs"><img src="image/hero/decia.webp" alt="デシア"><b>VS</b><img src="image/hero/jodo.webp" alt="ジョード"></div>
+                      <div><h3>ペディア入りミラー</h3><p>ジョード採用の主目的。ミラーの面倒な展開を崩しやすくなります。</p></div>
+                    </div>
+                  </div>
+                </article>
+                <article class="sonix-matchup-row is-even">
+                  <div class="sonix-matchup-label"><span>五分</span><strong>速度と耐久で変わる相手</strong></div>
+                  <div class="sonix-matchup-items">
+                    <div class="sonix-matchup-item">
+                      <div class="sonix-matchup-vs"><img src="image/hero/decia.webp" alt="デシア"><b>VS</b><img src="image/hero/decia.webp" alt="デシア"></div>
+                      <div><h3>怒気デシアミラー</h3><p>タンクが遅い方はデシア先制、タンクが早い方はデシア後攻。後攻側は早く動きやすい反面、火力面は若干落ちる可能性があります。</p></div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="sonix-section" id="decia-good-bad">
+              <h2 class="sonix-section-title">強みと弱点</h2>
+              <div class="sonix-two-col">
+                <div class="sonix-text-card is-good">
+                  <h3><i class="fa-solid fa-circle-check"></i> 強み</h3>
+                  <ul>
+                    <li>デシア・青瓷の2枚で火力を出せる</li>
+                    <li>ジョード採用でペディア入りミラーに強くなる</li>
+                    <li>ミラーでタンク速度を調整し、デシアの先制・後攻を選べる</li>
+                  </ul>
+                </div>
+                <div class="sonix-text-card is-bad">
+                  <h3><i class="fa-solid fa-circle-xmark"></i> 注意点</h3>
+                  <ul>
+                    <li>前列3体の体力順を間違えると役割が崩れやすい</li>
+                    <li>タンク速度を早くしすぎると、デシア後攻になり火力面が若干落ちる場合がある</li>
+                    <li>ジョードは会心率70%を作ってからダメ軽へ寄せたい</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="sonix-final-box">
+                <strong>結論：</strong>
+                怒気デシアは、ジョード採用でミラーを厚く見ながら、デシアと青瓷で押し切る現環境向けの実戦編成です。
+                速度は固定せず、デシアミラーで先制火力を取るか、後攻調整で行動を早く回すかを切り替えるのが大事です。
+              </div>
+            </section>
+          </main>
+
+          <aside class="sonix-toc" aria-label="怒気デシアページの目次">
+            <div class="sonix-toc-box">
+              <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+              <a href="#decia-overview"><i class="fa-solid fa-fire-flame-curved"></i> 怒気デシアとは</a>
+              <a href="#decia-summary"><i class="fa-solid fa-crown"></i> 結論</a>
+              <a href="#decia-focus"><i class="fa-solid fa-wand-magic-sparkles"></i> 注目ポイント</a>
+              <a href="#decia-build"><i class="fa-solid fa-screwdriver-wrench"></i> おすすめ構成</a>
+              <a href="#decia-build"><i class="fa-solid fa-dragon"></i> 召喚獣&星霊</a>
+              <a href="#decia-speed"><i class="fa-solid fa-gauge-high"></i> 速度順</a>
+              <a href="#decia-matchup"><i class="fa-solid fa-scale-balanced"></i> 対面評価</a>
+              <a href="#decia-good-bad"><i class="fa-solid fa-circle-info"></i> 強みと弱点</a>
             </div>
           </aside>
         </div>

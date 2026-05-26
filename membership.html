@@ -117,7 +117,6 @@
           <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this)">
             <span class="channel-icon"><i class="fa-solid fa-shield-halved" style="color:#8bd5ff;"></i></span>
             <span class="channel-text">防御力とは</span>
-            <span class="channel-badge">NEW</span>
           </div>
         </div>
       </div>
@@ -131,12 +130,10 @@
           <div class="channel-item channel-member-decia-trial" onclick="switchPage('page-member-decia-trial', this)">
             <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff7a3d;"></i></span>
             <span class="channel-text">天域試練：デシア</span>
-            <span class="channel-badge">NEW</span>
           </div>
           <div class="channel-item channel-member-sonia-trial" onclick="switchPage('page-member-sonia-trial', this)">
             <span class="channel-icon"><i class="fa-solid fa-fire-flame-curved" style="color:#ff7a3d;"></i></span>
             <span class="channel-text">天域試練：ソニア</span>
-            <span class="channel-badge">NEW</span>
           </div>
         </div>
       </div>
@@ -6616,15 +6613,21 @@
 
             <section class="pve-defense-section" id="pve-defense-video-member">
               <h2 class="pve-defense-title">動画解説</h2>
-              <div class="pve-video-notice">
-                <i class="fa-brands fa-youtube"></i>
-                <span>上古の地アヌビス編の防御力調整動画を準備中です。動画ではデリゴール構築から入り、エルリニー構築まで順番に解説します。</span>
-              </div>
-              <div class="youtube-lite pve-youtube-lite pve-defense-video-placeholder">
-                <div>
-                  <i class="fa-brands fa-youtube"></i>
-                  <strong>動画公開後にここへ掲載</strong>
-                  <span>防御力0.7ライン、モジー育成途中でも成立する理由、エルリニーへの発展まで解説予定</span>
+
+              <div class="pve-video-card">
+                <div class="pve-video-thumb">
+                  <div class="youtube-lite pve-youtube-lite" style="background-image: url('https://i.ytimg.com/vi/TerRQ_9COog/hqdefault.jpg');"
+                    onclick="this.innerHTML='<iframe src=\'https://www.youtube.com/embed/TerRQ_9COog?autoplay=1&start=1\' style=\'width:100%; height:100%; border:none; border-radius:8px;\' allow=\'autoplay; encrypted-media\' allowfullscreen></iframe>'">
+                    <div class="play-button"></div>
+                  </div>
+                </div>
+
+                <div class="pve-video-body">
+                  <h3>防御力調整の解説動画</h3>
+                  <p>
+                    デリゴール構築から入り、エルリニー構築まで順番に解説しています。
+                    防御力0.7ライン、モジー育成途中でも成立する理由、15ターン完走までの考え方を動画で確認してください。
+                  </p>
                 </div>
               </div>
             </section>

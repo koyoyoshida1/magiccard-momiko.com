@@ -213,12 +213,61 @@
 }
 
 #page-pve-defense .pve-youtube-lite {
-  margin-top: 14px;
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
   max-width: 100%;
   box-sizing: border-box;
   border: 1px solid rgba(79, 84, 92, 0.95);
   border-radius: 10px;
+  background-color: #050506;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   box-shadow: none;
+}
+
+#page-pve-defense .pve-video-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 24px;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid rgba(79, 84, 92, 0.95);
+  border-radius: 10px;
+  background: #2b2d31;
+  overflow: hidden;
+}
+
+#page-pve-defense .pve-video-thumb {
+  width: 100%;
+  max-width: 760px;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  background: #111318;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+}
+
+#page-pve-defense .pve-video-body {
+  min-width: 0;
+  max-width: 100%;
+}
+
+#page-pve-defense .pve-video-body h3 {
+  margin: 0 0 12px;
+  color: #f2f3f5;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+#page-pve-defense .pve-video-body p {
+  margin: 0;
+  color: #dcddde;
+  font-size: 1rem;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
 }
 
 #page-pve-defense .pve-defense-video-placeholder {
@@ -2007,7 +2056,8 @@
 }
 
 @media (max-width: 1024px) {
-  #page-pve-defense .pve-defense-hero {
+  #page-pve-defense .pve-defense-hero,
+  #page-pve-defense .pve-video-card {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -2061,6 +2111,20 @@
 
   #page-pve-defense .pve-defense-hero {
     padding: 18px;
+  }
+
+  #page-pve-defense .pve-video-card {
+    gap: 14px;
+    padding: 14px;
+  }
+
+  #page-pve-defense .pve-video-body h3 {
+    font-size: 1.08rem;
+  }
+
+  #page-pve-defense .pve-video-body p {
+    font-size: 0.94rem;
+    line-height: 1.75;
   }
 
   #page-pve-defense .pve-defense-hero h2 {
