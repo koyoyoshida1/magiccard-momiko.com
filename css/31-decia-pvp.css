@@ -2558,6 +2558,11 @@
   line-height: 0;
 }
 
+#page-member-thea .sonix-equip-line {
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
 #page-member-thea .sonix-talent-line {
   justify-content: flex-end;
   gap: 8px;
