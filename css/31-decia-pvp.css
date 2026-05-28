@@ -2503,12 +2503,12 @@
 
 #page-member-thea .sonix-build-card li {
   display: grid;
-  grid-template-columns: 68px minmax(0, 1fr);
+  grid-template-columns: 78px minmax(0, 1fr);
   align-items: center;
   justify-items: stretch;
-  gap: 6px;
-  min-height: 38px;
-  padding: 7px 0;
+  gap: 10px;
+  min-height: 42px;
+  padding: 8px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   color: var(--sonix-text);
   font-size: 0.86em;
@@ -2519,7 +2519,7 @@
 }
 
 #page-member-thea .sonix-build-card li:last-child {
-  grid-template-columns: 68px minmax(0, 1fr);
+  grid-template-columns: 78px minmax(0, 1fr);
 }
 
 #page-member-thea .sonix-build-card b {
@@ -2548,6 +2548,24 @@
   gap: 5px;
   text-align: right;
   min-width: 0;
+}
+
+#page-member-thea .sonix-build-card li > span:not(.sonix-equip-line):not(.sonix-chip-list):not(.sonix-talent-line) {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 58px;
+  min-height: 30px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  background: rgba(88, 183, 255, 0.12);
+  border: 1px solid rgba(88, 183, 255, 0.34);
+  color: #f4f8ff;
+  font-size: 0.92em;
+  font-weight: 900;
+  line-height: 1.1;
+  white-space: nowrap;
 }
 
 #page-member-thea .sonix-equip-line,
