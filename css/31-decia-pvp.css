@@ -2405,10 +2405,14 @@
 
 #page-member-thea .sonix-build-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
 }
 
 #page-member-thea .sonix-build-card {
-  padding: 14px;
+  padding: 12px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent 34%),
+    var(--sonix-panel);
 }
 
 #page-member-thea .sonix-build-card.is-main {
@@ -2427,21 +2431,24 @@
 
 #page-member-thea .sonix-build-head {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #page-member-thea .sonix-build-head img {
-  width: 58px;
-  height: 58px;
+  width: 74px;
+  height: 74px;
   border-radius: 10px;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.14);
 }
 
 #page-member-thea .sonix-build-head span {
-  display: block;
+  display: none;
   color: var(--sonix-green);
   font-size: 0.72em;
   font-weight: 900;
@@ -2449,12 +2456,14 @@
 }
 
 #page-member-thea .sonix-build-head h4 {
-  margin: 2px 0;
+  margin: 0;
   color: #fff;
-  font-size: 1.08em;
+  font-size: 1.22em;
+  line-height: 1.1;
 }
 
 #page-member-thea .sonix-build-head p {
+  display: none;
   margin: 0;
   color: var(--sonix-muted);
   font-size: 0.84em;
@@ -2467,17 +2476,27 @@
 }
 
 #page-member-thea .sonix-build-card li {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 9px 0;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 7px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   color: var(--sonix-text);
-  font-size: 0.9em;
+  font-size: 0.86em;
 }
 
 #page-member-thea .sonix-build-card b {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.07);
   color: #fff;
+  font-size: 0.78em;
   white-space: nowrap;
 }
 
@@ -2488,8 +2507,9 @@
   align-items: center;
   justify-content: flex-end;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 5px;
   text-align: right;
+  min-width: 0;
 }
 
 #page-member-thea .sonix-equip-line img,
@@ -2505,6 +2525,7 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  min-width: 0;
 }
 
 #page-member-thea .sonix-matchup-board {
