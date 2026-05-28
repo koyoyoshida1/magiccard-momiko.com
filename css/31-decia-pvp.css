@@ -2503,9 +2503,9 @@
 
 #page-member-thea .sonix-build-card li {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 68px minmax(0, 1fr);
   align-items: center;
-  justify-items: center;
+  justify-items: stretch;
   gap: 6px;
   min-height: 38px;
   padding: 7px 0;
@@ -2515,36 +2515,27 @@
 }
 
 #page-member-thea .sonix-build-card li:not(:last-child) {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
+  display: grid;
 }
 
 #page-member-thea .sonix-build-card li:last-child {
-  grid-template-columns: auto minmax(0, 1fr);
-  justify-items: stretch;
+  grid-template-columns: 68px minmax(0, 1fr);
 }
 
 #page-member-thea .sonix-build-card b {
-  display: none;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 22px;
-  padding: 3px 6px;
-  border-radius: 6px;
-  background: rgba(255, 255, 255, 0.07);
-  color: #fff;
-  font-size: 0.78em;
+  padding: 0;
+  background: transparent;
+  color: #dfe3ea;
+  font-size: 0.86em;
   white-space: nowrap;
 }
 
 #page-member-thea .sonix-build-card li:last-child b {
-  display: inline-flex;
-  justify-content: flex-start;
-  padding: 0;
-  background: transparent;
-  color: #dfe3ea;
-  font-size: 0.9em;
+  font-size: 0.86em;
 }
 
 #page-member-thea .sonix-equip-line,
@@ -2552,10 +2543,10 @@
 #page-member-thea .sonix-talent-line {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 5px;
-  text-align: center;
+  text-align: right;
   min-width: 0;
 }
 
@@ -2589,6 +2580,10 @@
 }
 
 #page-member-thea .sonix-build-card li:last-child b::after {
+  content: ":";
+}
+
+#page-member-thea .sonix-build-card li:not(:last-child) b::after {
   content: ":";
 }
 
