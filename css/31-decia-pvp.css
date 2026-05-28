@@ -2364,6 +2364,21 @@
   background: linear-gradient(135deg, var(--sonix-green), var(--sonix-leaf));
 }
 
+#page-member-thea .thea-compare-icons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+#page-member-thea .thea-compare-icons img {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
 #page-member-thea .sonix-focus-card strong,
 #page-member-thea .sonix-text-card h3 {
   display: block;
@@ -2499,6 +2514,12 @@
   font-size: 0.86em;
 }
 
+#page-member-thea .sonix-build-card li:not(:last-child) {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 #page-member-thea .sonix-build-card li:last-child {
   grid-template-columns: auto minmax(0, 1fr);
   justify-items: stretch;
@@ -2538,15 +2559,23 @@
   min-width: 0;
 }
 
+#page-member-thea .sonix-equip-line,
+#page-member-thea .sonix-chip-list span {
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
 #page-member-thea .sonix-talent-line {
   justify-content: flex-end;
-  gap: 12px;
+  gap: 8px;
 }
 
 #page-member-thea .sonix-equip-line img,
 #page-member-thea .sonix-chip-list img {
-  width: 22px;
-  height: 22px;
+  width: 30px;
+  height: 30px;
   border-radius: 5px;
   object-fit: cover;
 }
@@ -2564,10 +2593,11 @@
 }
 
 #page-member-thea .sonix-talent-line span:nth-child(2)::before {
-  content: "宝石天賦 ";
-  color: var(--sonix-muted);
-  font-size: 0.86em;
+  content: "/";
+  color: #949ba4;
+  font-size: 0.9em;
   font-weight: 800;
+  margin-right: 8px;
 }
 
 #page-member-thea .sonix-matchup-board {
