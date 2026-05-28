@@ -2447,6 +2447,17 @@
   border: 2px solid rgba(255, 255, 255, 0.14);
 }
 
+#page-member-thea .sonix-build-hero-pair {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+#page-member-thea .sonix-build-hero-pair img {
+  width: 66px;
+  height: 66px;
+}
+
 #page-member-thea .sonix-build-head span {
   display: none;
   color: var(--sonix-green);
@@ -2477,9 +2488,10 @@
 
 #page-member-thea .sonix-build-card li {
   display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 8px;
+  justify-items: center;
+  gap: 6px;
   min-height: 38px;
   padding: 7px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
@@ -2487,8 +2499,13 @@
   font-size: 0.86em;
 }
 
+#page-member-thea .sonix-build-card li:last-child {
+  grid-template-columns: auto minmax(0, 1fr);
+  justify-items: stretch;
+}
+
 #page-member-thea .sonix-build-card b {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
   min-height: 22px;
@@ -2500,16 +2517,30 @@
   white-space: nowrap;
 }
 
+#page-member-thea .sonix-build-card li:last-child b {
+  display: inline-flex;
+  justify-content: flex-start;
+  padding: 0;
+  background: transparent;
+  color: #dfe3ea;
+  font-size: 0.9em;
+}
+
 #page-member-thea .sonix-equip-line,
 #page-member-thea .sonix-chip-list,
 #page-member-thea .sonix-talent-line {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5px;
-  text-align: right;
+  text-align: center;
   min-width: 0;
+}
+
+#page-member-thea .sonix-talent-line {
+  justify-content: flex-end;
+  gap: 12px;
 }
 
 #page-member-thea .sonix-equip-line img,
@@ -2526,6 +2557,17 @@
   align-items: center;
   gap: 4px;
   min-width: 0;
+}
+
+#page-member-thea .sonix-build-card li:last-child b::after {
+  content: ":";
+}
+
+#page-member-thea .sonix-talent-line span:nth-child(2)::before {
+  content: "宝石天賦 ";
+  color: var(--sonix-muted);
+  font-size: 0.86em;
+  font-weight: 800;
 }
 
 #page-member-thea .sonix-matchup-board {
