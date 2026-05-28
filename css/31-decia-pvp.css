@@ -2449,8 +2449,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 9px;
+  min-height: 124px;
+  margin-bottom: 12px;
   text-align: center;
 }
 
@@ -2469,8 +2470,8 @@
 }
 
 #page-member-thea .sonix-build-hero-pair img {
-  width: 66px;
-  height: 66px;
+  width: 74px;
+  height: 74px;
 }
 
 #page-member-thea .sonix-build-head span {
@@ -2484,8 +2485,9 @@
 #page-member-thea .sonix-build-head h4 {
   margin: 0;
   color: #fff;
-  font-size: 1.22em;
-  line-height: 1.1;
+  font-size: 1.12em;
+  line-height: 1.14;
+  min-height: 1.15em;
 }
 
 #page-member-thea .sonix-build-head p {
@@ -2507,8 +2509,8 @@
   align-items: center;
   justify-items: stretch;
   gap: 10px;
-  min-height: 42px;
-  padding: 8px 0;
+  min-height: 40px;
+  padding: 7px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   color: var(--sonix-text);
   font-size: 0.86em;
@@ -2555,14 +2557,14 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 58px;
-  min-height: 30px;
-  padding: 4px 12px;
+  min-width: 54px;
+  min-height: 28px;
+  padding: 4px 11px;
   border-radius: 8px;
   background: rgba(88, 183, 255, 0.12);
   border: 1px solid rgba(88, 183, 255, 0.34);
   color: #f4f8ff;
-  font-size: 0.92em;
+  font-size: 0.88em;
   font-weight: 900;
   line-height: 1.1;
   white-space: nowrap;
