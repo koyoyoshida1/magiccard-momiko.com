@@ -356,16 +356,16 @@
   フラス護衛隊：装備カード圧縮版
 ========================= */
 
-#page-pvp-teams .flas-build-card {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card {
   overflow: hidden;
 }
 
-#page-pvp-teams .flas-build-head {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-head {
   gap: 14px;
   padding: 18px 20px 16px;
 }
 
-#page-pvp-teams .flas-build-head img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-head img {
   width: 72px;
   height: 72px;
   border-radius: 14px;
@@ -373,19 +373,19 @@
   flex-shrink: 0;
 }
 
-#page-pvp-teams .flas-build-head h3 {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-head h3 {
   font-size: 1.45em;
 }
 
-#page-pvp-teams .flas-build-head p {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-head p {
   font-size: 0.95em;
 }
 
-#page-pvp-teams .flas-build-card ul {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card ul {
   padding: 12px 14px 14px;
 }
 
-#page-pvp-teams .flas-build-card li {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li {
   display: grid;
   grid-template-columns: 70px minmax(0, 1fr);
   gap: 8px;
@@ -393,12 +393,12 @@
   padding: 7px 0;
 }
 
-#page-pvp-teams .flas-build-card li b {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li b {
   font-size: 0.88em;
   white-space: nowrap;
 }
 
-#page-pvp-teams .flas-equip-line {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-line {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -408,7 +408,7 @@
   font-weight: 800;
 }
 
-#page-pvp-teams .flas-equip-line img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-line img {
   width: 28px;
   height: 28px;
   border-radius: 7px;
@@ -416,14 +416,14 @@
   flex-shrink: 0;
 }
 
-#page-pvp-teams .flas-chip-list {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list {
   display: flex;
   flex-wrap: nowrap;
   gap: 5px;
   min-width: 0;
 }
 
-#page-pvp-teams .flas-chip-list span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -440,16 +440,16 @@
   min-width: 0;
 }
 
-#page-pvp-teams .flas-chip-list.is-three span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-three span {
   flex: 1;
 }
 
-#page-pvp-teams .flas-chip-list.is-two span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-two span {
   flex: 0 1 auto;
   min-width: 72px;
 }
 
-#page-pvp-teams .flas-chip-list img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list img {
   width: 18px;
   height: 18px;
   border-radius: 5px;
@@ -457,14 +457,14 @@
   flex-shrink: 0;
 }
 
-#page-pvp-teams .flas-talent-line {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-talent-line {
   display: flex;
   align-items: center;
   gap: 6px;
   flex-wrap: nowrap;
 }
 
-#page-pvp-teams .flas-talent-line span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-talent-line span {
   display: inline-flex;
   align-items: center;
   min-height: 26px;
@@ -478,12 +478,12 @@
   white-space: nowrap;
 }
 
-#page-pvp-teams .flas-talent-line span:first-child {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-talent-line span:first-child {
   border-color: rgba(87, 242, 135, 0.28);
 }
 
 /* 装備優先メモ */
-#page-pvp-teams .flas-equip-priority {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority {
   margin-top: 18px;
   padding: 18px;
   border-radius: 16px;
@@ -493,7 +493,7 @@
   border: 1px solid rgba(87, 242, 135, 0.24);
 }
 
-#page-pvp-teams .flas-equip-priority h3 {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority h3 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -502,28 +502,28 @@
   font-size: 1.1em;
 }
 
-#page-pvp-teams .flas-equip-priority h3 i {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority h3 i {
   color: #57f287;
 }
 
-#page-pvp-teams .flas-equip-priority-grid {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
 }
 
-#page-pvp-teams .flas-equip-priority-card {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-card {
   padding: 14px;
   border-radius: 12px;
   background: #1e1f22;
   border: 1px solid #3f4147;
 }
 
-#page-pvp-teams .flas-equip-priority-card.is-main {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-card.is-main {
   border-color: rgba(240, 184, 90, 0.42);
 }
 
-#page-pvp-teams .flas-equip-priority-card > span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-card > span {
   display: inline-flex;
   margin-bottom: 10px;
   padding: 4px 10px;
@@ -535,18 +535,18 @@
   font-weight: 900;
 }
 
-#page-pvp-teams .flas-equip-priority-card.is-main > span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-card.is-main > span {
   color: #ffcc66;
   background: rgba(255, 204, 102, 0.1);
   border-color: rgba(255, 204, 102, 0.34);
 }
 
-#page-pvp-teams .flas-equip-priority-items {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-items {
   display: grid;
   gap: 8px;
 }
 
-#page-pvp-teams .flas-equip-priority-items p {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-items p {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -557,7 +557,7 @@
   line-height: 1.45;
 }
 
-#page-pvp-teams .flas-equip-priority-items img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-items img {
   width: 30px;
   height: 30px;
   border-radius: 8px;
@@ -566,20 +566,20 @@
 }
 
 @media (max-width: 768px) {
-  #page-pvp-teams .flas-build-head img {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-build-head img {
     width: 62px;
     height: 62px;
   }
 
-  #page-pvp-teams .flas-build-card li {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li {
     grid-template-columns: 64px minmax(0, 1fr);
   }
 
-  #page-pvp-teams .flas-chip-list {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list {
     flex-wrap: wrap;
   }
 
-  #page-pvp-teams .flas-equip-priority-grid {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-equip-priority-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -588,21 +588,21 @@
 ========================= */
 
 /* 行全体を少し広く使う */
-#page-pvp-teams .flas-build-card li {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li {
   grid-template-columns: 62px minmax(0, 1fr);
   gap: 8px;
   overflow: visible;
 }
 
 /* 右側エリアのはみ出し防止 */
-#page-pvp-teams .flas-build-card li > span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li > span {
   min-width: 0;
 }
 
 /* 宝石・ルーン共通：固定グリッドをやめて自然な横並び */
-#page-pvp-teams .flas-chip-list,
-#page-pvp-teams .flas-chip-list.is-two,
-#page-pvp-teams .flas-chip-list.is-three {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list,
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-two,
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-three {
   display: flex !important;
   align-items: center;
   flex-wrap: nowrap;
@@ -613,9 +613,9 @@
 }
 
 /* チップ本体 */
-#page-pvp-teams .flas-chip-list span,
-#page-pvp-teams .flas-chip-list.is-two span,
-#page-pvp-teams .flas-chip-list.is-three span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list span,
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-two span,
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-three span {
   flex: 0 0 auto;
   width: auto;
   min-width: 0;
@@ -638,7 +638,7 @@
 }
 
 /* アイコン */
-#page-pvp-teams .flas-chip-list img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list img {
   width: 18px;
   height: 18px;
   border-radius: 5px;
@@ -647,30 +647,30 @@
 }
 
 /* 宝石は3つを1行に収めるため少しだけ短め */
-#page-pvp-teams .flas-chip-list.is-three span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-three span {
   padding-inline: 5px 7px;
 }
 
 /* ルーンは2つなので少しゆったり */
-#page-pvp-teams .flas-chip-list.is-two span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-two span {
   min-width: 82px;
 }
 
 /* フラス・心蕙・スカイリーなどの長い行でも右に詰まりすぎないように */
-#page-pvp-teams .flas-build-card li b {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li b {
   font-size: 0.86em;
   white-space: nowrap;
 }
 
 /* 天賦行も横幅を詰める */
-#page-pvp-teams .flas-talent-line {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-talent-line {
   display: flex;
   align-items: center;
   gap: 8px;
   flex-wrap: nowrap;
 }
 
-#page-pvp-teams .flas-talent-line span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-talent-line span {
   min-height: 28px;
   padding: 3px 10px;
   border-radius: 8px;
@@ -678,13 +678,13 @@
 }
 /* スマホだけ折り返し許可 */
 @media (max-width: 768px) {
-  #page-pvp-teams .flas-build-card li {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li {
     grid-template-columns: 58px minmax(0, 1fr);
   }
 
-  #page-pvp-teams .flas-chip-list,
-  #page-pvp-teams .flas-chip-list.is-two,
-  #page-pvp-teams .flas-chip-list.is-three {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list,
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-two,
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-chip-list.is-three {
     flex-wrap: wrap;
   }
 }
@@ -693,7 +693,7 @@
   フラス護衛隊：ルーン外枠を小さくする
 ========================= */
 
-#page-pvp-teams .flas-build-card li .flas-chip-list.is-two {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li .flas-chip-list.is-two {
   display: flex !important;
   flex-wrap: nowrap;
   gap: 6px;
@@ -701,7 +701,7 @@
   max-width: none;
 }
 
-#page-pvp-teams .flas-build-card li .flas-chip-list.is-two span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li .flas-chip-list.is-two span {
   min-width: 0 !important;
   width: auto !important;
   flex: 0 0 auto !important;
@@ -711,7 +711,7 @@
   white-space: nowrap;
 }
 
-#page-pvp-teams .flas-build-card li .flas-chip-list.is-two img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-build-card li .flas-chip-list.is-two img {
   width: 18px;
   height: 18px;
   border-radius: 5px;
@@ -720,14 +720,14 @@
   フラス護衛隊：召喚獣・星霊
 ========================= */
 
-#page-pvp-teams .flas-support-row {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-support-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin: 0 0 18px;
 }
 
-#page-pvp-teams .flas-support-item {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -737,7 +737,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-#page-pvp-teams .flas-support-item img {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item img {
   width: 58px;
   height: 58px;
   border-radius: 12px;
@@ -745,7 +745,7 @@
   flex-shrink: 0;
 }
 
-#page-pvp-teams .flas-support-item span {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item span {
   display: block;
   margin-bottom: 4px;
   color: #57f287;
@@ -754,7 +754,7 @@
   line-height: 1.2;
 }
 
-#page-pvp-teams .flas-support-item strong {
+:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item strong {
   display: block;
   color: #ffffff;
   font-size: 1.05em;
@@ -763,7 +763,7 @@
 }
 
 @media (max-width: 768px) {
-  #page-pvp-teams .flas-support-row {
+  :is(#page-pvp-teams, #page-natalie-teams) .flas-support-row {
     grid-template-columns: 1fr;
   }
 }
@@ -1230,5 +1230,39 @@
   .momiko-ad-rectangle,
   .momiko-ad-sticky {
     min-height: 240px;
+  }
+}
+
+/* =========================
+  ナタリー護衛隊
+========================= */
+
+#page-natalie-teams .natalie-hero .flas-hero-bg {
+  background:
+    linear-gradient(90deg, rgba(30, 31, 34, 0.96) 0%, rgba(30, 31, 34, 0.78) 44%, rgba(30, 31, 34, 0.36) 100%),
+    url("../image/hero/natari.webp") right 34px center / 178px no-repeat,
+    url("../image/hero/skylie.webp") right 188px center / 142px no-repeat,
+    url("../image/hero/nyx.webp") right 306px center / 134px no-repeat,
+    radial-gradient(circle at 78% 42%, rgba(96, 165, 250, 0.22), transparent 34%),
+    #1f2430;
+}
+
+#page-natalie-teams .flas-section-title {
+  border-left-color: #60a5fa;
+}
+
+#page-natalie-teams .flas-kicker i,
+#page-natalie-teams .flas-summary-main h3 i,
+#page-natalie-teams .flas-text-card h3 i {
+  color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  #page-natalie-teams .natalie-hero .flas-hero-bg {
+    background:
+      linear-gradient(180deg, rgba(30, 31, 34, 0.9) 0%, rgba(30, 31, 34, 0.98) 100%),
+      url("../image/hero/natari.webp") right 18px top 18px / 132px no-repeat,
+      radial-gradient(circle at 78% 18%, rgba(96, 165, 250, 0.2), transparent 32%),
+      #1f2430;
   }
 }

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /membership.html
 
 Sitemap: https://magiccard-momiko.com/sitemap.xml
