@@ -1267,7 +1267,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   align-content: start;
-  min-height: 314px;
+  min-height: 336px;
   padding: 13px 14px 14px;
   border-width: 1px;
   border-radius: 8px;
@@ -1298,7 +1298,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 104px;
+  min-height: 120px;
   margin-bottom: 4px;
   padding: 0;
   border-bottom: 0;
@@ -1307,8 +1307,8 @@
 }
 
 #page-natalie-teams .flas-build-head img {
-  width: 78px;
-  height: 78px;
+  width: 92px;
+  height: 92px;
   border-radius: 10px;
   object-fit: cover;
   border: 2px solid rgba(255, 255, 255, 0.14);
@@ -1377,20 +1377,22 @@
   color: transparent;
   font-size: 0;
   line-height: 0;
+  text-indent: -9999px;
 }
 
 #page-natalie-teams .flas-equip-line {
   flex-wrap: nowrap;
-  gap: 9px;
+  gap: 10px;
   white-space: normal;
 }
 
 #page-natalie-teams .flas-equip-line img,
 #page-natalie-teams .flas-chip-list img {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   object-fit: cover;
+  text-indent: 0;
 }
 
 #page-natalie-teams .flas-chip-list,
@@ -1412,6 +1414,19 @@
   padding: 0;
   border: 0;
   background: transparent;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-indent: 0;
+}
+
+#page-natalie-teams .flas-build-card li .flas-chip-list img,
+#page-natalie-teams .flas-build-card li .flas-chip-list.is-two img,
+#page-natalie-teams .flas-build-card li .flas-chip-list.is-three img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 #page-natalie-teams .flas-build-card li:nth-child(4) > span:not(.flas-equip-line):not(.flas-chip-list):not(.flas-talent-line) {
