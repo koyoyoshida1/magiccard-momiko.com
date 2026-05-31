@@ -1257,6 +1257,233 @@
   color: #60a5fa;
 }
 
+#page-natalie-teams .flas-build-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 18px;
+  row-gap: 16px;
+}
+
+#page-natalie-teams .flas-build-card {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  min-height: 314px;
+  padding: 13px 14px 14px;
+  border-width: 1px;
+  border-radius: 8px;
+  border-color: rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.032), transparent 46%),
+    #292d32;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+#page-natalie-teams .flas-build-card.is-key {
+  border-color: rgba(255, 204, 102, 0.4);
+}
+
+#page-natalie-teams .flas-build-card.is-main {
+  border-color: rgba(96, 165, 250, 0.86);
+  box-shadow:
+    0 0 0 1px rgba(96, 165, 250, 0.2),
+    0 12px 24px rgba(0, 0, 0, 0.18);
+  background:
+    radial-gradient(circle at 88% 8%, rgba(96, 165, 250, 0.16), transparent 38%),
+    #292d32;
+}
+
+#page-natalie-teams .flas-build-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 104px;
+  margin-bottom: 4px;
+  padding: 0;
+  border-bottom: 0;
+  background: transparent;
+  text-align: center;
+}
+
+#page-natalie-teams .flas-build-head img {
+  width: 78px;
+  height: 78px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  filter: drop-shadow(0 7px 8px rgba(0, 0, 0, 0.42));
+}
+
+#page-natalie-teams .flas-build-head span,
+#page-natalie-teams .flas-build-head p {
+  display: none;
+}
+
+#page-natalie-teams .flas-build-head h3 {
+  margin: 0;
+  color: #fff;
+  max-width: 100%;
+  font-size: clamp(1.12rem, 1.55vw, 1.26rem);
+  font-weight: 950;
+  line-height: 1.14;
+  min-height: 1.15em;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.42);
+  text-wrap: balance;
+}
+
+#page-natalie-teams .flas-build-card ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#page-natalie-teams .flas-build-card li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 0;
+  border-bottom: 0;
+  color: #dcddde;
+  font-size: 0.86em;
+  line-height: 1.35;
+}
+
+#page-natalie-teams .flas-build-card b {
+  display: none;
+}
+
+#page-natalie-teams .flas-equip-line,
+#page-natalie-teams .flas-chip-list,
+#page-natalie-teams .flas-talent-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  min-width: 0;
+  text-align: center;
+}
+
+#page-natalie-teams .flas-equip-line,
+#page-natalie-teams .flas-chip-list span {
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  line-height: 0;
+}
+
+#page-natalie-teams .flas-equip-line {
+  flex-wrap: nowrap;
+  gap: 9px;
+  white-space: normal;
+}
+
+#page-natalie-teams .flas-equip-line img,
+#page-natalie-teams .flas-chip-list img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+#page-natalie-teams .flas-chip-list,
+#page-natalie-teams .flas-chip-list.is-two,
+#page-natalie-teams .flas-chip-list.is-three {
+  width: auto;
+  max-width: 100%;
+}
+
+#page-natalie-teams .flas-chip-list span,
+#page-natalie-teams .flas-chip-list.is-two span,
+#page-natalie-teams .flas-chip-list.is-three span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 0 !important;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+#page-natalie-teams .flas-build-card li:nth-child(4) > span:not(.flas-equip-line):not(.flas-chip-list):not(.flas-talent-line) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 54px;
+  min-height: 28px;
+  padding: 4px 11px;
+  border-radius: 8px;
+  background: rgba(96, 165, 250, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.34);
+  color: #f4f8ff;
+  font-size: 0.88em;
+  font-weight: 900;
+  line-height: 1.1;
+  text-align: center;
+  white-space: normal;
+}
+
+#page-natalie-teams .flas-build-card li:last-child {
+  gap: 6px;
+  min-height: 22px;
+  margin-top: 0;
+  color: #d8dbe2;
+  font-size: 0.78em;
+  font-weight: 850;
+}
+
+#page-natalie-teams .flas-build-card li:last-child b {
+  display: inline-flex;
+  color: #9fa6b1;
+  font-size: 1em;
+}
+
+#page-natalie-teams .flas-build-card li:last-child b::after {
+  content: ":";
+}
+
+#page-natalie-teams .flas-talent-line {
+  flex-direction: row;
+  gap: 4px;
+  color: #d7dbe2;
+  font-size: 1em;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+#page-natalie-teams .flas-talent-line span {
+  display: inline-flex;
+  align-items: center;
+  min-height: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 1em;
+}
+
+#page-natalie-teams .flas-talent-line span:first-child {
+  color: #f5d76e;
+}
+
+#page-natalie-teams .flas-talent-line span:nth-child(2) {
+  color: #21c8ff;
+}
+
+#page-natalie-teams .flas-talent-line span:nth-child(2)::before {
+  content: "/";
+  color: #b9bec6;
+  margin: 0 2px 0 -2px;
+}
+
 @media (max-width: 768px) {
   #page-natalie-teams .natalie-hero .flas-hero-bg {
     background:
@@ -1264,5 +1491,15 @@
       url("../image/hero/natari.webp") right 18px top 18px / 132px no-repeat,
       radial-gradient(circle at 78% 18%, rgba(96, 165, 250, 0.2), transparent 32%),
       #1f2430;
+  }
+
+  #page-natalie-teams .flas-build-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  #page-natalie-teams .flas-build-grid {
+    grid-template-columns: 1fr;
   }
 }
