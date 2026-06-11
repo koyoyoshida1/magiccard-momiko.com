@@ -123,7 +123,8 @@ window.addEventListener('DOMContentLoaded', () => {
   const runeLinks = ['#page-rune-tier', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
   const abHeroLinks = ['#page-ab-hero', '#ab-hero-video'];
   const sHeroLinks = ['#page-s-hero', '#s-hero-video'];
-  const pveDefenseLinks = ['#page-pve-defense', '#pve-ancient-tier', '#pve-ancient-tier-member', '#pve-defense-overview', '#pve-defense-overview-member', '#pve-defense-video', '#pve-defense-video-member', '#pve-defense-support', '#pve-defense-support-member', '#pve-defense-concept', '#pve-defense-concept-member', '#pve-defense-derigol-example', '#pve-defense-derigol-example-member', '#pve-defense-lineup', '#pve-defense-lineup-member', '#pve-defense-table-derigol', '#pve-defense-table-derigol-member', '#pve-defense-lineup-elrini', '#pve-defense-lineup-elrini-member', '#pve-defense-table-elrini-real', '#pve-defense-table-elrini-real-member'];
+  const pveAncientLinks = ['#page-pve-ancient-tier', '#pve-ancient-tier'];
+  const pveDefenseLinks = ['#page-pve-defense', '#pve-defense-overview', '#pve-defense-overview-member', '#pve-defense-video', '#pve-defense-video-member', '#pve-defense-support', '#pve-defense-support-member', '#pve-defense-concept', '#pve-defense-concept-member', '#pve-defense-derigol-example', '#pve-defense-derigol-example-member', '#pve-defense-lineup', '#pve-defense-lineup-member', '#pve-defense-table-derigol', '#pve-defense-table-derigol-member', '#pve-defense-lineup-elrini', '#pve-defense-lineup-elrini-member', '#pve-defense-table-elrini-real', '#pve-defense-table-elrini-real-member'];
 
   if (runeLinks.includes(hash)) {
     pageId = 'page-rune-tier';
@@ -131,6 +132,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pageId = 'page-ab-hero';
   } else if (sHeroLinks.includes(hash)) {
     pageId = 'page-s-hero';
+  } else if (pveAncientLinks.includes(hash)) {
+    pageId = 'page-pve-ancient-tier';
   } else if (pveDefenseLinks.includes(hash)) {
     pageId = 'page-pve-defense';
   } else if (hash === '#page-tier') {
@@ -157,7 +160,8 @@ window.addEventListener('DOMContentLoaded', () => {
         'page-s-hero': 's-hero.html',
         'growth-priority': 'growth-priority.html',
         'page-serial': 'serial.html',
-        'page-beauty-ranking': 'beauty-ranking.html'
+        'page-beauty-ranking': 'beauty-ranking.html',
+        'page-pve-ancient-tier': 'ancient-tier.html'
       };
       const targetMenu = document.querySelector(`[onclick*="${pageId}"]`) ||
         document.querySelector(`[href="${menuHrefByPage[pageId]}"]`);
@@ -483,8 +487,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const tiers = [
     { label: 'T0+', className: 'bg-t0p', heroes: ['ダフネ', 'スカイリー', 'モジー'] },
-    { label: 'T0', className: 'bg-t0', heroes: ['ニックス', 'エルリニー', 'ライランドール', 'フィリス', 'デリゴール', 'リドル', 'セリーナ', '蛮刻', 'ベリル'] },
-    { label: 'T1', className: 'bg-t1', heroes: ['ゼフィ', '輪廻の神', '青瓷', 'アヴィ', 'スパルタ', 'サとミ', 'ケイン'] },
+    { label: 'T0', className: 'bg-t0', heroes: ['ニックス', 'エルリニー', 'ライランドール', 'フィリス', 'デリゴール', 'リドル', 'セリーナ', 'ベリル'] },
+    { label: 'T1', className: 'bg-t1', heroes: ['ゼフィ', '輪廻の神', '青瓷', '蛮刻', 'アヴィ', 'スパルタ', 'サとミ', 'ケイン'] },
     { label: 'T1.5', className: 'bg-t15', heroes: ['ルビィ', 'アンドレ', '心蕙', 'ドラゴニック', 'デニス', 'マリッサ', 'ペディア'] },
     { label: 'T2', className: 'bg-t2', heroes: ['伏羲', '災厄', 'ソニア', 'フェニックス', 'アヌビス', 'サウール', 'デシア', 'フラス', 'カトラス', 'イソルド', '司雷の神', '生の女神', 'カリスト', 'マファータ', 'フェアリー', 'アンダル'] },
     { label: 'T3', className: 'bg-t3', heroes: ['ソラ', 'ソフィア', 'シーア', 'エーベル', 'レクサー', 'ジョード', 'ファルゴン', 'クティーラ', '海洋の姫', 'クリスタ', 'シルサ', 'アヴィリア', 'ヴァルキリー', 'アルバレス'] },

@@ -686,11 +686,21 @@
   line-height: 1.35;
 }
 
-#page-pve-defense .pve-ancient-tier-section {
+#page-pve-ancient-tier {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#page-pve-ancient-tier .pve-ancient-tier-section {
+  padding: 18px;
+  border: 1px solid #3f4147;
+  border-radius: 8px;
+  background: #2b2d31;
   scroll-margin-top: 18px;
 }
 
-#page-pve-defense .pve-ancient-tier-head {
+#page-pve-ancient-tier .pve-ancient-tier-head {
   display: grid;
   grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1fr);
   gap: 18px;
@@ -698,27 +708,51 @@
   margin-bottom: 18px;
 }
 
-#page-pve-defense .pve-ancient-tier-head .pve-defense-title,
-#page-pve-defense .pve-ancient-tier-head .pve-defense-lead {
+#page-pve-ancient-tier .pve-ancient-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
+  color: #b5bac1;
+  font-size: 0.84em;
+  font-weight: 900;
 }
 
-#page-pve-defense .pve-ancient-tier-legend {
+#page-pve-ancient-tier .pve-ancient-kicker i {
+  color: #ffcc66;
+}
+
+#page-pve-ancient-tier .pve-ancient-tier-head h2 {
+  margin: 8px 0 0;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  line-height: 1.18;
+}
+
+#page-pve-ancient-tier .pve-ancient-lead {
+  margin: 0;
+  color: #dcddde;
+  font-size: 0.98em;
+  font-weight: 700;
+  line-height: 1.8;
+}
+
+#page-pve-ancient-tier .pve-ancient-tier-legend {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 18px;
 }
 
-#page-pve-defense .pve-ancient-tier-board {
+#page-pve-ancient-tier .pve-ancient-tier-board {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-#page-pve-defense .pve-ancient-tier-board .tier-row {
+#page-pve-ancient-tier .pve-ancient-tier-board .tier-row {
   margin-bottom: 0;
 }
 
-#page-pve-defense .pve-ancient-tier-board .char-name {
+#page-pve-ancient-tier .pve-ancient-tier-board .char-name {
   color: #f2f3f5;
   font-size: 0.78rem;
   font-weight: 800;
@@ -2142,7 +2176,8 @@
 }
 
 @media (max-width: 768px) {
-  #page-pve-defense {
+  #page-pve-defense,
+  #page-pve-ancient-tier {
     width: calc(100vw - 28px);
     max-width: calc(100vw - 28px);
     padding-bottom: 84px;
@@ -2187,8 +2222,8 @@
     grid-template-columns: 1fr;
   }
 
-  #page-pve-defense .pve-ancient-tier-head,
-  #page-pve-defense .pve-ancient-tier-legend {
+  #page-pve-ancient-tier .pve-ancient-tier-head,
+  #page-pve-ancient-tier .pve-ancient-tier-legend {
     grid-template-columns: 1fr;
   }
 

@@ -127,7 +127,7 @@
             <span class="channel-icon"><i class="fa-solid fa-mountain-sun" style="color:#ff5a66;"></i></span>
             <span class="channel-text">訓練の地</span>
           </div>
-          <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this); setTimeout(function(){ document.getElementById('pve-ancient-tier')?.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80);">
+          <div class="channel-item channel-pve-ancient" onclick="switchPage('page-pve-ancient-tier', this)">
             <span class="channel-icon"><i class="fa-solid fa-ranking-star" style="color:#ffcc66;"></i></span>
             <span class="channel-text">上古の地Tier表</span>
           </div>
@@ -329,10 +329,6 @@
                     <div class="char-img" style="background-image: url('image/hero/tea.webp');"></div>
                     <div class="char-name">シーア</div>
                   </div>
-                  <div class="char-card" onclick="openModal('蛮刻')">
-                    <div class="char-img" style="background-image: url('image/hero/bankoku.webp');"></div>
-                    <div class="char-name">蛮刻</div>
-                  </div>
                   <div class="char-card" onclick="openModal('ソニア')">
                     <div class="char-img" style="background-image: url('image/hero/sonia.webp');"></div>
                     <div class="char-name">ソニア</div>
@@ -362,6 +358,10 @@
                   <div class="char-card" onclick="openModal('青瓷')">
                     <div class="char-img" style="background-image: url('image/hero/seiji.webp');"></div>
                     <div class="char-name">青瓷</div>
+                  </div>
+                  <div class="char-card" onclick="openModal('蛮刻')">
+                    <div class="char-img" style="background-image: url('image/hero/bankoku.webp');"></div>
+                    <div class="char-name">蛮刻</div>
                   </div>
                   <div class="char-card" onclick="openModal('災厄')">
                     <div class="char-img" style="background-image: url('image/hero/saiyaku.webp');"></div>
@@ -8708,30 +8708,6 @@
               </div>
             </section>
 
-            <section class="pve-defense-section pve-ancient-tier-section" id="pve-ancient-tier">
-              <div class="pve-ancient-tier-head">
-                <div>
-                  <p class="pve-defense-kicker"><i class="fa-solid fa-ranking-star"></i> ANCIENT LAND TIER LIST</p>
-                  <h2 class="pve-defense-title">上古の地Tier表</h2>
-                </div>
-                <p class="pve-defense-lead">
-                  上古の地のダメージレース、15ターン完走、複数編成での採用価値を中心にしたPvE評価です。総合Tier表とは評価軸が違うため、PvPでの強さとは順位が入れ替わります。
-                </p>
-              </div>
-
-              <div class="tier-legend pve-ancient-tier-legend" aria-label="上古の地Tier説明">
-                <div><span style="color:var(--t0p); font-weight:bold;">● T0+</span> : 上古の地の最優先核</div>
-                <div><span style="color:var(--t0); font-weight:bold;">● T0</span> : 高火力・高耐久編成の主力</div>
-                <div><span style="color:var(--t1); font-weight:bold;">● T1</span> : 編成次第で第一線</div>
-                <div><span style="color:var(--t15); font-weight:bold;">● T1.5</span> : 優秀な代替・補助枠</div>
-                <div><span style="color:var(--t2); font-weight:bold;">● T2</span> : 特定編成や育成状況で採用</div>
-                <div><span style="color:var(--t3); font-weight:bold;">● T3</span> : 序盤・穴埋め・局所採用</div>
-                <div><span style="color:var(--t4); font-weight:bold;">● T4</span> : 上古目的では優先度低め</div>
-              </div>
-
-              <div class="tier-container pve-ancient-tier-board" aria-label="上古の地ヒーローTier表"></div>
-            </section>
-
             <section class="pve-defense-section" id="pve-defense-video">
               <h2 class="pve-defense-title">動画解説</h2>
 
@@ -9093,7 +9069,6 @@
             <div class="pve-defense-toc-box">
               <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
               <a href="#pve-defense-overview"><i class="fa-solid fa-shield-halved"></i> 概要</a>
-              <a href="#pve-ancient-tier"><i class="fa-solid fa-ranking-star"></i> 上古Tier表</a>
               <a href="#pve-defense-video"><i class="fa-brands fa-youtube"></i> 動画解説</a>
               <a href="#pve-defense-support"><i class="fa-solid fa-dragon"></i> 召喚獣&星霊</a>
               <a href="#pve-defense-concept"><i class="fa-solid fa-square-root-variable"></i> 防御理論</a>
@@ -9105,6 +9080,38 @@
             </div>
           </aside>
         </div>
+      </div>
+
+      <!-- =========================================================
+            PvE：上古の地Tier表
+          ========================================================= -->
+      <div id="page-pve-ancient-tier" class="page-section pve-ancient-page">
+        <h1 class="page-main-title">上古の地Tier表</h1>
+        <div class="update-info">最終更新日: 2026年6月12日 | 監修: もみこ</div>
+
+        <section class="pve-ancient-tier-section" id="pve-ancient-tier">
+          <div class="pve-ancient-tier-head">
+            <div>
+              <p class="pve-ancient-kicker"><i class="fa-solid fa-ranking-star"></i> ANCIENT LAND TIER LIST</p>
+              <h2>上古の地で使うヒーロー評価</h2>
+            </div>
+            <p class="pve-ancient-lead">
+              上古の地のダメージレース、15ターン完走、複数編成での採用価値を中心にしたPvE評価です。総合Tier表とは評価軸が違うため、PvPでの強さとは順位が入れ替わります。
+            </p>
+          </div>
+
+          <div class="tier-legend pve-ancient-tier-legend" aria-label="上古の地Tier説明">
+            <div><span style="color:var(--t0p); font-weight:bold;">● T0+</span> : 上古の地の最優先核</div>
+            <div><span style="color:var(--t0); font-weight:bold;">● T0</span> : 高火力・高耐久編成の主力</div>
+            <div><span style="color:var(--t1); font-weight:bold;">● T1</span> : 編成次第で第一線</div>
+            <div><span style="color:var(--t15); font-weight:bold;">● T1.5</span> : 優秀な代替・補助枠</div>
+            <div><span style="color:var(--t2); font-weight:bold;">● T2</span> : 特定編成や育成状況で採用</div>
+            <div><span style="color:var(--t3); font-weight:bold;">● T3</span> : 序盤・穴埋め・局所採用</div>
+            <div><span style="color:var(--t4); font-weight:bold;">● T4</span> : 上古目的では優先度低め</div>
+          </div>
+
+          <div class="tier-container pve-ancient-tier-board" aria-label="上古の地ヒーローTier表"></div>
+        </section>
       </div>
 
       <!-- =========================================================
