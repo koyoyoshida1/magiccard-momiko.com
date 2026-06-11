@@ -123,6 +123,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const runeLinks = ['#page-rune-tier', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
   const abHeroLinks = ['#page-ab-hero', '#ab-hero-video'];
   const sHeroLinks = ['#page-s-hero', '#s-hero-video'];
+  const pveDefenseLinks = ['#page-pve-defense', '#pve-ancient-tier', '#pve-ancient-tier-member', '#pve-defense-overview', '#pve-defense-overview-member', '#pve-defense-video', '#pve-defense-video-member', '#pve-defense-support', '#pve-defense-support-member', '#pve-defense-concept', '#pve-defense-concept-member', '#pve-defense-derigol-example', '#pve-defense-derigol-example-member', '#pve-defense-lineup', '#pve-defense-lineup-member', '#pve-defense-table-derigol', '#pve-defense-table-derigol-member', '#pve-defense-lineup-elrini', '#pve-defense-lineup-elrini-member', '#pve-defense-table-elrini-real', '#pve-defense-table-elrini-real-member'];
 
   if (runeLinks.includes(hash)) {
     pageId = 'page-rune-tier';
@@ -130,6 +131,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pageId = 'page-ab-hero';
   } else if (sHeroLinks.includes(hash)) {
     pageId = 'page-s-hero';
+  } else if (pveDefenseLinks.includes(hash)) {
+    pageId = 'page-pve-defense';
   } else if (hash === '#page-tier') {
     pageId = 'page-tier';
   } else if (hash === '#page-serial') {
@@ -400,6 +403,118 @@ document.addEventListener('DOMContentLoaded', function () {
     tbody.innerHTML = heroes.map(tableRow).join('');
   });
 
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const boards = document.querySelectorAll('.pve-ancient-tier-board');
+  if (!boards.length) return;
+
+  const heroImages = {
+    'ダフネ': 'image/hero/dafne.webp',
+    'スカイリー': 'image/hero/skylie.webp',
+    'モジー': 'image/hero/mosey.webp',
+    'ニックス': 'image/hero/nyx.webp',
+    'エルリニー': 'image/hero/elnriny.webp',
+    'ライランドール': 'image/hero/rairandoll.webp',
+    'フィリス': 'image/hero/fillis.webp',
+    'デリゴール': 'image/hero/derigol.webp',
+    'リドル': 'image/hero/riddle.webp',
+    'セリーナ': 'image/hero/serina.webp',
+    '蛮刻': 'image/hero/bankoku.webp',
+    'ベリル': 'image/hero/beril.webp',
+    'ゼフィ': 'image/hero/zefi.webp',
+    '輪廻の神': 'image/hero/rinenokami.webp',
+    '青瓷': 'image/hero/seiji.webp',
+    'アヴィ': 'image/hero/avi.webp',
+    'スパルタ': 'image/hero/spalta.webp',
+    'サとミ': 'image/hero/satomi.webp',
+    'ケイン': 'image/hero/kein.webp',
+    'ルビィ': 'image/hero/ruby.webp',
+    'アンドレ': 'image/hero/andore.webp',
+    '心蕙': 'image/hero/shinfi.webp',
+    'ドラゴニック': 'image/hero/dragonic.webp',
+    'デニス': 'image/hero/denis.webp',
+    'マリッサ': 'image/hero/marissa.webp',
+    'ペディア': 'image/hero/pedhia.webp',
+    '伏羲': 'image/hero/fuki.webp',
+    '災厄': 'image/hero/saiyaku.webp',
+    'ソニア': 'image/hero/sonia.webp',
+    'フェニックス': 'image/hero/fenix.webp',
+    'アヌビス': 'image/hero/anubis.webp',
+    'サウール': 'image/hero/saul.webp',
+    'デシア': 'image/hero/decia.webp',
+    'フラス': 'image/hero/flas.webp',
+    'カトラス': 'image/hero/katras.webp',
+    'イソルド': 'image/hero/isolde.webp',
+    '司雷の神': 'image/hero/sirai.webp',
+    '生の女神': 'image/hero/seinomegami.webp',
+    'カリスト': 'image/hero/karist.webp',
+    'マファータ': 'image/hero/mafata.webp',
+    'フェアリー': 'image/hero/fairy.webp',
+    'アンダル': 'image/hero/andal.webp',
+    'ソラ': 'image/hero/sora.webp',
+    'ソフィア': 'image/hero/sofia.webp',
+    'シーア': 'image/hero/tea.webp',
+    'エーベル': 'image/hero/abel.webp',
+    'レクサー': 'image/hero/rexcer.webp',
+    'ジョード': 'image/hero/jodo.webp',
+    'ファルゴン': 'image/hero/falgon.webp',
+    'クティーラ': 'image/hero/kuthira.webp',
+    '海洋の姫': 'image/hero/kaiyounohime.webp',
+    'クリスタ': 'image/hero/crista.webp',
+    'シルサ': 'image/hero/shirusa.webp',
+    'アヴィリア': 'image/hero/aviria.webp',
+    'ヴァルキリー': 'image/hero/valkyrie.webp',
+    'アルバレス': 'image/hero/alvares.webp',
+    '大荒蛮神': 'image/hero/banshin.webp',
+    'ナタリー': 'image/hero/natari.webp',
+    '霊魂の神': 'image/hero/reikon.webp',
+    'ファリネッリ': 'image/hero/farineri.webp',
+    'オリラ': 'image/hero/olira.webp',
+    'カトリーヌ': 'image/hero/katorinu.webp',
+    'セシーナ': 'image/hero/sesina.webp',
+    'ジオ': 'image/hero/jio.webp',
+    'ケリディア': 'image/hero/keridhia.webp',
+    'ミラナ': 'image/hero/mirana.webp',
+    '顔なき者': 'image/hero/kaonakimono.webp',
+    'ミス': 'image/hero/miss.webp',
+    'モニカ': 'image/hero/monica.webp'
+  };
+
+  const tiers = [
+    { label: 'T0+', className: 'bg-t0p', heroes: ['ダフネ', 'スカイリー', 'モジー'] },
+    { label: 'T0', className: 'bg-t0', heroes: ['ニックス', 'エルリニー', 'ライランドール', 'フィリス', 'デリゴール', 'リドル', 'セリーナ', '蛮刻', 'ベリル'] },
+    { label: 'T1', className: 'bg-t1', heroes: ['ゼフィ', '輪廻の神', '青瓷', 'アヴィ', 'スパルタ', 'サとミ', 'ケイン'] },
+    { label: 'T1.5', className: 'bg-t15', heroes: ['ルビィ', 'アンドレ', '心蕙', 'ドラゴニック', 'デニス', 'マリッサ', 'ペディア'] },
+    { label: 'T2', className: 'bg-t2', heroes: ['伏羲', '災厄', 'ソニア', 'フェニックス', 'アヌビス', 'サウール', 'デシア', 'フラス', 'カトラス', 'イソルド', '司雷の神', '生の女神', 'カリスト', 'マファータ', 'フェアリー', 'アンダル'] },
+    { label: 'T3', className: 'bg-t3', heroes: ['ソラ', 'ソフィア', 'シーア', 'エーベル', 'レクサー', 'ジョード', 'ファルゴン', 'クティーラ', '海洋の姫', 'クリスタ', 'シルサ', 'アヴィリア', 'ヴァルキリー', 'アルバレス'] },
+    { label: 'T4', className: 'bg-t4', heroes: ['大荒蛮神', 'ナタリー', '霊魂の神', 'ファリネッリ', 'オリラ', 'カトリーヌ', 'セシーナ', 'ジオ', 'ケリディア', 'ミラナ', '顔なき者', 'ミス', 'モニカ'] }
+  ];
+
+  function heroCard(name) {
+    const image = heroImages[name];
+    if (!image) return '';
+
+    return `
+      <div class="char-card" onclick="openModal('${name}')">
+        <div class="char-img" style="background-image: url('${image}');"></div>
+        <div class="char-name">${name}</div>
+      </div>
+    `;
+  }
+
+  boards.forEach(function (board) {
+    board.innerHTML = tiers.map(function (tier) {
+      return `
+        <div class="tier-row">
+          <div class="tier-label ${tier.className}">${tier.label}</div>
+          <div class="tier-chars">
+            ${tier.heroes.map(heroCard).join('')}
+          </div>
+        </div>
+      `;
+    }).join('');
+  });
 });
 
 // ==========================================
