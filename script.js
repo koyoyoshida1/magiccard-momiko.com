@@ -120,7 +120,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let pageId = '';
   
   // ▼ ルール1：ページ内の特定要素（動画など）への直リンク判定
-  const runeLinks = ['#page-rune-tier', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
+  const runeLinks = ['#page-rune-tier', '#abyss-priority', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
   const abHeroLinks = ['#page-ab-hero', '#ab-hero-video'];
   const sHeroLinks = ['#page-s-hero', '#s-hero-video'];
   const pveAncientLinks = ['#page-pve-ancient-tier', '#pve-ancient-tier'];

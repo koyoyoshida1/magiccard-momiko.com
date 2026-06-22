@@ -886,6 +886,10 @@ h1 {
   }
 
   /* 各項目のホバーアクションとカラー設定 */
+  .toc-link.abyss { border-left-color: #ff9966; color: #dcddde; }
+  .toc-link.abyss:hover { background: rgba(255, 153, 102, 0.1); color: #ff9966; transform: translateX(5px); }
+  .toc-link.abyss .toc-icon { color: #ff9966; }
+
   .toc-link.video { border-left-color: #ffcc66; color: #dcddde; }
   .toc-link.video:hover { background: rgba(255, 204, 102, 0.1); color: #ffcc66; transform: translateX(5px); }
   .toc-link.video .toc-icon { color: #ffcc66; }
@@ -905,6 +909,278 @@ h1 {
   .toc-link.explanation { border-left-color: #a366ff; color: #dcddde; }
   .toc-link.explanation:hover { background: rgba(163, 102, 255, 0.1); color: #a366ff; transform: translateX(5px); }
   .toc-link.explanation .toc-icon { color: #a366ff; }
+
+/* 魔王神器優先順位 */
+.abyss-priority-section {
+  margin: 22px 0 40px;
+  padding: 20px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(32, 34, 37, 0.98), rgba(28, 30, 36, 0.98));
+  border: 1px solid rgba(255, 153, 102, 0.28);
+  border-left: 4px solid #ff9966;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.abyss-priority-head {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.abyss-priority-kicker {
+  width: fit-content;
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(255, 153, 102, 0.13);
+  border: 1px solid rgba(255, 153, 102, 0.28);
+  color: #ffd6c2;
+  font-size: 0.82rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.abyss-priority-head h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.45rem;
+  font-weight: 950;
+  line-height: 1.35;
+}
+
+.abyss-priority-head p {
+  margin: 0;
+  color: #dcddde;
+  font-size: 1.04rem;
+  line-height: 1.8;
+}
+
+.abyss-priority-note {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+  margin: 0 0 16px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #ffe0b8;
+  background: rgba(255, 204, 102, 0.08);
+  border: 1px solid rgba(255, 204, 102, 0.16);
+  line-height: 1.65;
+}
+
+.abyss-priority-note i {
+  margin-top: 3px;
+  color: #ffcc66;
+}
+
+.abyss-priority-group {
+  display: grid;
+  grid-template-columns: 126px minmax(0, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.abyss-priority-label {
+  min-height: 100%;
+  padding: 12px 10px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.abyss-priority-label span {
+  color: #ffd6c2;
+  font-size: 0.72rem;
+  font-weight: 950;
+  line-height: 1;
+}
+
+.abyss-priority-label strong {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 950;
+  line-height: 1.3;
+}
+
+.abyss-priority-group.is-first .abyss-priority-label {
+  background: linear-gradient(180deg, rgba(74, 43, 37, 0.96), rgba(33, 35, 44, 0.96));
+  border-color: rgba(255, 153, 102, 0.34);
+}
+
+.abyss-priority-group.is-mid .abyss-priority-label {
+  background: linear-gradient(180deg, rgba(68, 57, 35, 0.96), rgba(33, 35, 44, 0.96));
+  border-color: rgba(255, 204, 102, 0.32);
+}
+
+.abyss-priority-group.is-late .abyss-priority-label {
+  background: linear-gradient(180deg, rgba(45, 45, 58, 0.96), rgba(33, 35, 44, 0.96));
+  border-color: rgba(163, 102, 255, 0.24);
+}
+
+.abyss-priority-items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.abyss-artifact-card {
+  position: relative;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 30px 54px minmax(0, 1fr);
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(43, 45, 49, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.abyss-artifact-card em {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #1f2128;
+  background: #ffcc66;
+  font-style: normal;
+  font-size: 0.86rem;
+  font-weight: 950;
+}
+
+.abyss-artifact-card img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+}
+
+.abyss-artifact-card strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 0.96rem;
+  font-weight: 950;
+  line-height: 1.25;
+}
+
+.abyss-artifact-card span {
+  display: block;
+  color: #dcddde;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+.abyss-artifact-card.is-resonance {
+  border-color: rgba(255, 204, 102, 0.24);
+}
+
+.abyss-artifact-card.is-resonance::after {
+  content: "反響";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 3px 7px;
+  border-radius: 999px;
+  color: #ffe0b8;
+  background: rgba(255, 204, 102, 0.14);
+  border: 1px solid rgba(255, 204, 102, 0.24);
+  font-size: 0.68rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.abyss-artifact-card.is-soft {
+  opacity: 0.86;
+}
+
+.abyss-skip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.abyss-skip-row > span {
+  color: #aeb6c6;
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.abyss-skip-row div {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 4px 10px 4px 6px;
+  border-radius: 999px;
+  color: #dcddde;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.84rem;
+  font-weight: 850;
+}
+
+.abyss-skip-row img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+@media (max-width: 980px) {
+  .abyss-priority-group {
+    grid-template-columns: 1fr;
+  }
+
+  .abyss-priority-label {
+    min-height: auto;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 680px) {
+  .abyss-priority-section {
+    padding: 16px;
+  }
+
+  .abyss-priority-head h2 {
+    font-size: 1.28rem;
+  }
+
+  .abyss-priority-items {
+    grid-template-columns: 1fr;
+  }
+
+  .abyss-artifact-card {
+    grid-template-columns: 28px 48px minmax(0, 1fr);
+  }
+
+  .abyss-artifact-card em {
+    width: 28px;
+    height: 28px;
+    font-size: 0.78rem;
+  }
+
+  .abyss-artifact-card img {
+    width: 48px;
+    height: 48px;
+  }
+}
 
   /* =========================================
    10. スマホ(SP)用レスポンシブ対応
