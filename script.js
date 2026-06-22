@@ -120,7 +120,8 @@ window.addEventListener('DOMContentLoaded', () => {
   let pageId = '';
   
   // ▼ ルール1：ページ内の特定要素（動画など）への直リンク判定
-  const runeLinks = ['#page-rune-tier', '#abyss-priority', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
+  const runeLinks = ['#page-rune-tier', '#rune-video', '#two-piece', '#attack-tier', '#defense-tier', '#explanation'];
+  const abyssArtifactLinks = ['#page-abyss-artifact', '#abyss-priority'];
   const abHeroLinks = ['#page-ab-hero', '#ab-hero-video'];
   const sHeroLinks = ['#page-s-hero', '#s-hero-video'];
   const pveAncientLinks = ['#page-pve-ancient-tier', '#pve-ancient-tier'];
@@ -128,6 +129,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (runeLinks.includes(hash)) {
     pageId = 'page-rune-tier';
+  } else if (abyssArtifactLinks.includes(hash)) {
+    pageId = 'page-abyss-artifact';
   } else if (abHeroLinks.includes(hash)) {
     pageId = 'page-ab-hero';
   } else if (sHeroLinks.includes(hash)) {
@@ -157,6 +160,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const menuHrefByPage = {
         'page-tier': 'tier.html',
         'page-rune-tier': 'rune.html',
+        'page-abyss-artifact': 'abyss-artifact.html',
         'page-s-hero': 's-hero.html',
         'growth-priority': 'growth-priority.html',
         'page-serial': 'serial.html',

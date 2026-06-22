@@ -911,6 +911,11 @@ h1 {
   .toc-link.explanation .toc-icon { color: #a366ff; }
 
 /* 魔王神器優先順位 */
+.abyss-page-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
 .abyss-priority-section {
   margin: 22px 0 40px;
   padding: 20px;
