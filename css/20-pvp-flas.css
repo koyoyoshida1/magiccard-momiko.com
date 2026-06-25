@@ -715,6 +715,26 @@
   line-height: 1.7;
 }
 
+:is(#page-pvp-teams, #page-natalie-teams) .flas-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+  vertical-align: middle;
+  font-weight: 800;
+  color: #f2f3f5;
+}
+
+:is(#page-pvp-teams, #page-natalie-teams) .flas-hero-chip img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #111214;
+  border: 1px solid #4b4d55;
+  flex-shrink: 0;
+}
+
 /* MATCHUP */
 :is(#page-pvp-teams, #page-natalie-teams) .flas-matchup-grid {
   display: grid;

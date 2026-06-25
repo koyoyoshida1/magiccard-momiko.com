@@ -2309,6 +2309,26 @@
   color: var(--sonix-gold);
 }
 
+#page-member-thea .sonix-hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 4px;
+  vertical-align: middle;
+  font-weight: 800;
+  color: #f2f3f5;
+}
+
+#page-member-thea .sonix-hero-chip img {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #111214;
+  border: 1px solid var(--sonix-line);
+  flex-shrink: 0;
+}
+
 #page-member-thea .sonix-score-grid,
 #page-member-thea .sonix-focus-grid,
 #page-member-thea .sonix-build-grid {
