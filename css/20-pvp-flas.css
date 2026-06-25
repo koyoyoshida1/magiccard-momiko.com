@@ -556,6 +556,36 @@
   justify-content: flex-start;
 }
 
+#page-saiyaku-teams .flas-build-detail-card .flas-talent-detail {
+  justify-self: start;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 4px 8px;
+  min-width: 150px;
+  min-height: 50px;
+  padding: 7px 10px;
+  border: 1px solid rgba(148, 155, 164, 0.3);
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(35, 36, 40, 0.98), rgba(27, 28, 31, 0.98));
+  color: #f2f3f5;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+#page-saiyaku-teams .flas-build-detail-card .flas-talent-detail span {
+  color: #949ba4;
+  font-size: 0.72em;
+  font-weight: 900;
+}
+
+#page-saiyaku-teams .flas-build-detail-card .flas-talent-detail b {
+  color: #fff;
+  font-size: 0.95em;
+  font-weight: 950;
+}
+
 :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-card {
   overflow: hidden;
 }
@@ -982,7 +1012,8 @@
   }
 
   :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-t2-badge,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-detail-card .flas-talent-line {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-detail-card .flas-talent-line,
+  #page-saiyaku-teams .flas-build-detail-card .flas-talent-detail {
     grid-column: 3;
     justify-self: start;
   }
@@ -1040,7 +1071,8 @@
 
   :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-icons,
   :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-t2-badge,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-detail-card .flas-talent-line {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-detail-card .flas-talent-line,
+  #page-saiyaku-teams .flas-build-detail-card .flas-talent-detail {
     grid-column: 2;
   }
 
@@ -1089,6 +1121,10 @@
     gap: 10px;
     min-height: 78px;
     padding: 10px 12px;
+  }
+
+  #page-saiyaku-teams .flas-build-row {
+    grid-template-columns: 58px 84px minmax(246px, 1fr) 104px 168px;
   }
 
   :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-build-hero {
