@@ -720,14 +720,14 @@
   フラス護衛隊：召喚獣・星霊
 ========================= */
 
-:is(#page-pvp-teams, #page-natalie-teams) .flas-support-row {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
   margin: 0 0 18px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -737,7 +737,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-item img {
   width: 58px;
   height: 58px;
   border-radius: 12px;
@@ -745,7 +745,7 @@
   flex-shrink: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-item span {
   display: block;
   margin-bottom: 4px;
   color: #57f287;
@@ -754,7 +754,7 @@
   line-height: 1.2;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams) .flas-support-item strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-item strong {
   display: block;
   color: #ffffff;
   font-size: 1.05em;
@@ -763,7 +763,7 @@
 }
 
 @media (max-width: 768px) {
-  :is(#page-pvp-teams, #page-natalie-teams) .flas-support-row {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams) .flas-support-row {
     grid-template-columns: 1fr;
   }
 }
