@@ -1001,7 +1001,7 @@ h1 {
   border-top: 1px solid rgba(255,204,102,.75);
   border-bottom: 1px solid rgba(255,255,255,.12);
   border-radius: 0;
-  background: #15151d url('../image/banner/nyx-tier-header.webp') right center / cover no-repeat;
+  background: #15151d url('../image/banner/nyx-tier-header-mythic.webp') right center / cover no-repeat;
 }
 #page-tier .tier-hero-panel::before {
   content: "";
