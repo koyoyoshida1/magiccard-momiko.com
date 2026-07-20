@@ -822,17 +822,16 @@ h1 {
 }
 
 .battle-board__guide p { margin: 0; }
-.battle-board__teams { border-bottom: 1px solid var(--battle-line); }
+.battle-board__teams { display: grid; gap: 18px; padding-top: 24px; }
 
 .battle-team {
   --team-color: #aeb3bb;
   display: grid;
   grid-template-columns: minmax(250px, 0.82fr) minmax(390px, 1.45fr);
   background: var(--battle-paper);
-  border-top: 1px solid var(--battle-line);
+  border: 1px solid var(--battle-line);
 }
 
-.battle-team:first-child { border-top: 0; }
 .battle-team--t0 { --team-color: #ffbd59; }
 .battle-team--t1 { --team-color: #65d38e; }
 .battle-team--t15 { --team-color: #ff858b; }
@@ -869,7 +868,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
+  padding: 26px 24px;
 }
 
 .battle-team__meta {
@@ -907,8 +906,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
   align-items: stretch;
-  padding: 18px;
-  gap: 7px;
+  padding: 26px 24px;
+  gap: 10px;
 }
 
 .battle-roster__hero {
@@ -968,7 +967,7 @@ h1 {
 @media (max-width: 820px) {
   .battle-team { grid-template-columns: 1fr; }
   .battle-team__head { border-right: 0; border-bottom: 1px solid var(--battle-line); }
-  .battle-roster { padding-left: 90px; }
+  .battle-roster { padding: 22px; }
 }
 
 @media (max-width: 560px) {
@@ -987,6 +986,95 @@ h1 {
   .battle-roster__hero figcaption { font-size: 0.7rem; }
   .battle-team__foot { grid-template-columns: 1fr; padding: 13px 16px; }
   .battle-team__tags { justify-content: flex-start; }
+}
+
+/* Tier表：6チームと共通のフィールドノートデザイン */
+#page-tier .hero-tier-board {
+  --tier-board-line: rgba(255,255,255,.12);
+  padding: 22px 0 2px;
+  border-top: 1px solid rgba(255,204,102,.75);
+  background: #202226;
+  box-shadow: none;
+}
+#page-tier .hero-tier-board .tier-row {
+  --tier-row-color: #aeb3bb;
+  margin: 0 18px 18px;
+  border: 1px solid var(--tier-board-line);
+  border-radius: 0;
+  background: #292b30;
+  box-shadow: none;
+}
+#page-tier .hero-tier-board .tier-row:has(.bg-t0p) { --tier-row-color: #ef6e70; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t0) { --tier-row-color: #ffbd59; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t1) { --tier-row-color: #65d38e; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t15) { --tier-row-color: #ff858b; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t2) { --tier-row-color: #77c8e8; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t3) { --tier-row-color: #e7dc72; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t4) { --tier-row-color: #9ba0a8; }
+#page-tier .hero-tier-board .tier-label {
+  position: relative;
+  min-width: 102px;
+  border-left: 9px solid var(--tier-row-color);
+  background: #202226;
+  color: var(--tier-row-color);
+  text-shadow: none;
+  font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
+  font-size: 1.45rem;
+}
+#page-tier .hero-tier-board .tier-label::before {
+  content: "HERO RANK";
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  color: #777b83;
+  font-size: .55rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+#page-tier .hero-tier-board .tier-chars {
+  gap: 10px;
+  padding: 24px;
+  border-left: 1px solid var(--tier-board-line);
+  background: #292b30;
+}
+#page-tier .hero-tier-board .char-card {
+  padding: 6px 6px 8px;
+  border: 0;
+  border-bottom: 2px solid var(--tier-row-color);
+  border-radius: 0;
+  background: #1e2024;
+  box-shadow: none;
+}
+#page-tier .hero-tier-board .char-card:hover { border-color: var(--tier-row-color); box-shadow: none; transform: translateY(-2px); }
+#page-tier .hero-tier-board .char-img { border: 0; border-radius: 2px; filter: saturate(.94) contrast(1.03); }
+#page-tier .hero-tier-board .char-name { height: auto; margin-top: 8px; color: #e7e8eb; text-shadow: none; }
+
+.tier-video-feature {
+  margin-top: 56px;
+  padding: 24px;
+  border-top: 1px solid rgba(255,204,102,.75);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  background: #202226;
+}
+.tier-video-feature__head { display: grid; grid-template-columns: 112px minmax(0,1fr); gap: 24px; align-items: stretch; margin-bottom: 18px; }
+.tier-video-feature__edition {
+  display: flex; flex-direction: column; justify-content: space-between; min-height: 78px; padding: 11px;
+  color: #18191c; background: #ffcc66; font-family: "Arial Narrow", "Helvetica Neue", sans-serif; font-weight: 800; letter-spacing: .08em;
+}
+.tier-video-feature__edition span { font-size: .65rem; }
+.tier-video-feature__edition strong { font-size: 1rem; }
+.tier-video-feature__head p { margin: 4px 0 6px; color: #ffcc66; font-size: .68rem; font-weight: 800; letter-spacing: .17em; }
+.tier-video-feature__head h2 { margin: 0; color: #fff; font-size: clamp(1.4rem,3vw,2.15rem); }
+.tier-video-feature__copy { margin: 0 0 20px; color: #c7c9ce; line-height: 1.75; }
+@media (max-width: 560px) {
+  #page-tier .hero-tier-board { padding-top: 14px; }
+  #page-tier .hero-tier-board .tier-row { margin: 0 10px 12px; }
+  #page-tier .hero-tier-board .tier-chars { padding: 18px; }
+  .tier-video-feature { margin-top: 40px; padding: 16px; }
+  .tier-video-feature__head { grid-template-columns: 78px minmax(0,1fr); gap: 14px; }
+  .tier-video-feature__edition { min-height: 68px; padding: 8px; }
+  .tier-video-feature__edition strong { font-size: .78rem; }
+  .tier-video-feature__copy { font-size: .88rem; }
 }
 
 .ad-container {
