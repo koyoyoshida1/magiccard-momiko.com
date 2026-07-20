@@ -1008,7 +1008,9 @@ h1 {
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(90deg, rgba(18,19,25,.98) 0%, rgba(18,19,25,.92) 44%, rgba(18,19,25,.62) 72%, rgba(18,19,25,.28) 100%);
+  background:
+    radial-gradient(circle at 82% 22%, rgba(255,238,178,.22) 0%, rgba(202,167,255,.12) 18%, transparent 38%),
+    linear-gradient(90deg, rgba(18,19,25,.94) 0%, rgba(18,19,25,.82) 43%, rgba(18,19,25,.38) 70%, rgba(18,19,25,.08) 100%);
 }
 #page-tier .tier-hero-copy {
   position: relative;
