@@ -1002,14 +1002,14 @@ h1 {
 }
 #page-tier .tier-hero-copy {
   position: relative;
-  padding: 6px 24px 6px 136px;
+  padding: 6px 24px 6px 0;
   border-right: 1px solid rgba(255,255,255,.12);
 }
 #page-tier .tier-hero-copy::before {
   content: "JUL.20\A2026";
   position: absolute;
   inset: 0 auto 0 0;
-  display: flex;
+  display: none;
   width: 108px;
   align-items: flex-end;
   padding: 12px;
@@ -1081,6 +1081,18 @@ h1 {
   background: rgba(255,79,163,.09);
 }
 #page-tier .tier-legend > div:first-child span { color: #ff4fa3 !important; text-shadow: 0 0 12px rgba(255,79,163,.45); }
+#page-tier .tier-legend > div:nth-child(2) { border-left-color: #ffbd59; }
+#page-tier .tier-legend > div:nth-child(2) span { color: #ffbd59 !important; }
+#page-tier .tier-legend > div:nth-child(3) { border-left-color: #65d38e; }
+#page-tier .tier-legend > div:nth-child(3) span { color: #65d38e !important; }
+#page-tier .tier-legend > div:nth-child(4) { border-left-color: #ff858b; }
+#page-tier .tier-legend > div:nth-child(4) span { color: #ff858b !important; }
+#page-tier .tier-legend > div:nth-child(5) { border-left-color: #77c8e8; }
+#page-tier .tier-legend > div:nth-child(5) span { color: #77c8e8 !important; }
+#page-tier .tier-legend > div:nth-child(6) { border-left-color: #e7dc72; }
+#page-tier .tier-legend > div:nth-child(6) span { color: #e7dc72 !important; }
+#page-tier .tier-legend > div:nth-child(7) { border-left-color: #9ba0a8; }
+#page-tier .tier-legend > div:nth-child(7) span { color: #9ba0a8 !important; }
 
 /* Tier表：6チームと共通のフィールドノートデザイン */
 #page-tier .hero-tier-board {
@@ -1170,8 +1182,7 @@ h1 {
 }
 @media (max-width: 560px) {
   #page-tier .tier-hero-panel { grid-template-columns: 1fr; gap: 18px; padding: 16px; }
-  #page-tier .tier-hero-copy { padding: 96px 0 0; border-right: 0; }
-  #page-tier .tier-hero-copy::before { inset: 0 auto auto 0; width: 82px; height: 78px; padding: 8px; font-size: .78rem; }
+  #page-tier .tier-hero-copy { padding: 0; border-right: 0; }
   #page-tier .tier-hero-copy .page-main-title { font-size: 1.55rem; }
   #page-tier .tier-legend { grid-template-columns: 1fr; }
   #page-tier .hero-tier-board { padding-top: 14px; }
