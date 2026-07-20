@@ -239,7 +239,7 @@
     <!-- メインコンテンツ -->
     <div class="main-content">
 
-      <!-- 最強ランキング26年4月版 -->
+      <!-- 最強ランキング26年7月版 -->
       <div id="page-tier" class="page-section active-page">
         <div style="display: flex; flex-wrap: wrap; gap: 24px;">
 
@@ -279,6 +279,10 @@
                     <div class="char-img" style="background-image: url('image/hero/nyx.webp');"></div>
                     <div class="char-name">ニックス</div>
                   </div>
+                  <div class="char-card" onclick="openModal('ヴォリアン')">
+                    <div class="char-img" style="background-image: url('image/hero/vorian.webp');"></div>
+                    <div class="char-name">ヴォリアン</div>
+                  </div>
                 </div>
               </div>
 
@@ -309,9 +313,9 @@
                     <div class="char-img" style="background-image: url('image/hero/flas.webp');"></div>
                     <div class="char-name">フラス</div>
                   </div>
-                  <div class="char-card" onclick="openModal('蛮刻')">
-                    <div class="char-img" style="background-image: url('image/hero/bankoku.webp');"></div>
-                    <div class="char-name">蛮刻</div>
+                  <div class="char-card" onclick="openModal('ロザリンド')">
+                    <div class="char-img" style="background-image: url('image/hero/rozalind.webp');"></div>
+                    <div class="char-name">ロザリンド</div>
                   </div>
                   <div class="char-card" onclick="openModal('心蕙')">
                     <div class="char-img" style="background-image: url('image/hero/shinfi.webp');"></div>
@@ -324,10 +328,6 @@
                   <div class="char-card" onclick="openModal('ゼフィ')">
                     <div class="char-img" style="background-image: url('image/hero/zefi.webp');"></div>
                     <div class="char-name">ゼフィ</div>
-                  </div>
-                  <div class="char-card" onclick="openModal('イソルド')">
-                    <div class="char-img" style="background-image: url('image/hero/isolde.webp');"></div>
-                    <div class="char-name">イソルド</div>
                   </div>
                   <div class="char-card" onclick="openModal('エーベル')">
                     <div class="char-img" style="background-image: url('image/hero/abel.webp');"></div>
@@ -379,6 +379,14 @@
                     <div class="char-img" style="background-image: url('image/hero/fillis.webp');"></div>
                     <div class="char-name">フィリス</div>
                   </div>
+                  <div class="char-card" onclick="openModal('イソルド')">
+                    <div class="char-img" style="background-image: url('image/hero/isolde.webp');"></div>
+                    <div class="char-name">イソルド</div>
+                  </div>
+                  <div class="char-card" onclick="openModal('蛮刻')">
+                    <div class="char-img" style="background-image: url('image/hero/bankoku.webp');"></div>
+                    <div class="char-name">蛮刻</div>
+                  </div>
                   <div class="char-card" onclick="openModal('ジョード')">
                     <div class="char-img" style="background-image: url('image/hero/jodo.webp');"></div>
                     <div class="char-name">ジョード</div>
@@ -400,10 +408,6 @@
                   <div class="char-card" onclick="openModal('大荒蛮神')">
                     <div class="char-img" style="background-image: url('image/hero/banshin.webp');"></div>
                     <div class="char-name">大荒蛮神</div>
-                  </div>
-                  <div class="char-card" onclick="openModal('ペディア')">
-                    <div class="char-img" style="background-image: url('image/hero/pedhia.webp');"></div>
-                    <div class="char-name">ペディア</div>
                   </div>
                   <div class="char-card" onclick="openModal('ダフネ')">
                     <div class="char-img" style="background-image: url('image/hero/dafne.webp');"></div>
@@ -446,6 +450,10 @@
                   <div class="char-card" onclick="openModal('海洋の姫')">
                     <div class="char-img" style="background-image: url('image/hero/kaiyounohime.webp');"></div>
                     <div class="char-name">海洋の姫</div>
+                  </div>
+                  <div class="char-card" onclick="openModal('ペディア')">
+                    <div class="char-img" style="background-image: url('image/hero/pedhia.webp');"></div>
+                    <div class="char-name">ペディア</div>
                   </div>
                   <div class="char-card" onclick="openModal('ファルゴン')">
                     <div class="char-img" style="background-image: url('image/hero/falgon.webp');"></div>
@@ -587,188 +595,151 @@
               </div>
             </div>
 
-            <div class="strategy-article" style="margin-top: 40px; max-width: 100%;">
-              <h2 class="article-title" style="border-left-color: var(--accent); font-size: 1.3em;">【2026年7月】Tier別
-                環境解説＆6チーム編成の答え
-              </h2>
-              <p style="color: #dcddde; font-size: 1.05em; line-height: 1.6; margin-bottom: 30px;">
-                永遠の戦いや特上対決など、<strong>「6チームで戦い、4勝した方が勝ち」</strong>となる現在の最前線PvP環境を前提とした解説です。どの構築がどこに有利・不利を取れるかを把握することが勝利への鍵となります。
-              </p>
-
-              <div class="highlight-box" style="border-left: 5px solid #ff9900; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #ff9900; font-size: 1.2em; margin-bottom: 15px;">【T0】最強：デシア</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/saul.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/riddle.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/derigol.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/decia.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/abel.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/jodo.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+            <section class="strategy-article battle-board">
+              <header class="battle-board__intro">
+                <div class="battle-board__edition"><span>2026</span><strong>JUL.20</strong></div>
+                <div>
+                  <p class="battle-board__kicker">MOMIKO'S PVP FIELD NOTES</p>
+                  <h2>最強の6チーム</h2>
+                  <p>永遠の戦い・特上対決を想定した、4勝を取りにいくための現環境ロスター。順位、狙う対面、6人の役割をひと目で追える形に整理しました。</p>
                 </div>
-                <ul style="padding-left: 20px; line-height: 1.6; color: #dcddde; margin-top: 0; font-size: 1.05em;">
-                  <li style="margin-bottom: 8px;">現環境の最強編成。負け筋は<span
-                      style="color:#ffcc66; font-weight:bold;">ミラー、または状態異常編成</span>くらいです。</li>
-                  <li>エーベルを採用することで、フラス護衛隊にも張り合える構成になります。</li>
-                </ul>
-              </div>
-
-              <div class="highlight-box" style="border-left: 5px solid #9933ff; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #9933ff; font-size: 1.2em; margin-bottom: 15px;">【T0】次点で最強：フラス護衛隊
-                </h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/mosey.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
+              </header>
+              <div class="battle-board__guide"><span>読み方</span><p>上から現在の優先順位。編成単体の強さだけでなく、6チーム全体で「どこから4勝を取るか」を基準にしています。</p></div>
+              <div class="battle-board__teams">
+              <article class="battle-team battle-team--t0">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>01</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T0</span><span>CURRENT LEADER</span></div>
+                    <h3>デシア</h3>
+                    <p>ミラーか状態異常が、ほぼ唯一の負け筋。</p>
                   </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/tea.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/skylie.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/shinfi.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/flas.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/renato.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+                </header>
+                <div class="battle-roster" aria-label="デシアの6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/saul.webp" alt="サウール" loading="lazy"><figcaption>サウール</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/riddle.webp" alt="リドル" loading="lazy"><figcaption>リドル</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/derigol.webp" alt="デリゴール" loading="lazy"><figcaption>デリゴール</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/decia.webp" alt="デシア" loading="lazy"><figcaption>デシア</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/abel.webp" alt="エーベル" loading="lazy"><figcaption>エーベル</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/jodo.webp" alt="ジョード" loading="lazy"><figcaption>ジョード</figcaption></figure>
                 </div>
-                <p style="font-size: 0.9em; color: #b9bbbe; margin-top: 0; margin-bottom: 15px;">※シーアの枠にカトリーヌを入れる編成もおすすめです。</p>
-                <ul style="padding-left: 20px; line-height: 1.6; color: #dcddde; margin-top: 0; font-size: 1.05em;">
-                  <li style="margin-bottom: 8px;">エーベルなしのデシア編成と状態異常編成を<span
-                      style="color:#ffcc66; font-weight:bold;">完封できる</span>ほどの強さがあります。</li>
-                  <li>ミラー以外にはほぼ負けないため、環境最強候補といえる編成です。</li>
-                </ul>
-              </div>
-
-              <div class="highlight-box" style="border-left: 5px solid #33cc66; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #33cc66; font-size: 1.2em; margin-bottom: 15px;">【T1】3番手：状態異常
-                </h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/katras.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
+                <footer class="battle-team__foot">
+                  <p>エーベルを採用することで、フラス護衛隊にも張り合える。現環境で最初に基準にしたい6人です。</p>
+                  <div class="battle-team__tags"><span>対フラスも視野</span><span>ミラー注意</span></div>
+                </footer>
+              </article>
+              <article class="battle-team battle-team--t0">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>02</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T0</span><span>SECOND SEED</span></div>
+                    <h3>フラス護衛隊</h3>
+                    <p>エーベルなしデシアと状態異常を完封。</p>
                   </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/nyx.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/zefi.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/fillis.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/anubis.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/beril.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+                </header>
+                <div class="battle-roster" aria-label="フラス護衛隊の6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/mosey.webp" alt="モジー" loading="lazy"><figcaption>モジー</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/tea.webp" alt="シーア" loading="lazy"><figcaption>シーア</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/skylie.webp" alt="スカイリー" loading="lazy"><figcaption>スカイリー</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/shinfi.webp" alt="心蕙" loading="lazy"><figcaption>心蕙</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/flas.webp" alt="フラス" loading="lazy"><figcaption>フラス</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/renato.webp" alt="レナート" loading="lazy"><figcaption>レナート</figcaption></figure>
                 </div>
-                <ul style="padding-left: 20px; line-height: 1.6; color: #dcddde; margin-top: 0; font-size: 1.05em;">
-                  <li>状態異常編成はデシア編成に割と勝てるため、相手のデシアへ当てられるかどうかが重要です。</li>
-                </ul>
-              </div>
-
-              <div class="highlight-box" style="border-left: 5px solid #ff4d4d; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #ff4d4d; font-size: 1.2em; margin-bottom: 15px;">【T1.5】4番手：ソニア＆サとミ</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/isolde.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
+                <footer class="battle-team__foot">
+                  <p>ミラー以外にはほぼ負けない最強候補。シーアの枠をカトリーヌに替える編成も強力です。</p>
+                  <div class="battle-team__tags"><span>受けの完成形</span><span>シーア→カトリーヌ可</span></div>
+                </footer>
+              </article>
+              <article class="battle-team battle-team--t1">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>03</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T1</span><span>COUNTER PICK</span></div>
+                    <h3>状態異常</h3>
+                    <p>デシアへ当てて勝ち筋を作る3番手。</p>
                   </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/reikon.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/bankoku.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/sonia.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/satomi.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/kein.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+                </header>
+                <div class="battle-roster" aria-label="状態異常の6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/katras.webp" alt="カトラス" loading="lazy"><figcaption>カトラス</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/nyx.webp" alt="ニックス" loading="lazy"><figcaption>ニックス</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/zefi.webp" alt="ゼフィ" loading="lazy"><figcaption>ゼフィ</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/fillis.webp" alt="フィリス" loading="lazy"><figcaption>フィリス</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/anubis.webp" alt="アヌビス" loading="lazy"><figcaption>アヌビス</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/beril.webp" alt="ベリル" loading="lazy"><figcaption>ベリル</figcaption></figure>
                 </div>
-                <ul style="padding-left: 20px; line-height: 1.6; color: #dcddde; margin-top: 0; font-size: 1.05em;">
-                  <li>状態異常以下の編成に勝つことを意識したチームです。</li>
-                </ul>
-              </div>
-
-              <div class="highlight-box" style="border-left: 5px solid #33ccff; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #33ccff; font-size: 1.2em; margin-bottom: 15px;">【T1.5】5番手：ソラ・災厄・フェニックス</h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/valkyrie.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
+                <footer class="battle-team__foot">
+                  <p>状態異常はデシアに割と勝てるため、6チーム戦では相手のデシアへ正しく当てられるかが重要です。</p>
+                  <div class="battle-team__tags"><span>デシア意識</span><span>対面選択が重要</span></div>
+                </footer>
+              </article>
+              <article class="battle-team battle-team--t15">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>04</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T1.5</span><span>LOWER BRACKET HUNTER</span></div>
+                    <h3>ソニア＆サとミ</h3>
+                    <p>状態異常以下を確実に拾う。</p>
                   </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/serina.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/avi.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/sora.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/saiyaku.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/fenix.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+                </header>
+                <div class="battle-roster" aria-label="ソニア＆サとミの6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/isolde.webp" alt="イソルド" loading="lazy"><figcaption>イソルド</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/reikon.webp" alt="霊魂の神" loading="lazy"><figcaption>霊魂の神</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/bankoku.webp" alt="蛮刻" loading="lazy"><figcaption>蛮刻</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/sonia.webp" alt="ソニア" loading="lazy"><figcaption>ソニア</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/satomi.webp" alt="サとミ" loading="lazy"><figcaption>サとミ</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/kein.webp" alt="ケイン" loading="lazy"><figcaption>ケイン</figcaption></figure>
                 </div>
-                <ul style="padding-left: 20px; line-height: 1.6; color: #dcddde; margin-top: 0; font-size: 1.05em;">
-                  <li>ソニア＋ニックス編成と、やや格下の状態異常編成を意識したチームです。</li>
-                </ul>
-              </div>
-
-              <div class="point-box" style="border-left-color: #888888; margin-bottom: 25px;">
-                <h3 class="box-title" style="color: #bbbbbb; font-size: 1.2em; margin-bottom: 15px;">
-                  【T2】6番手：青瓷×伏羲
-                </h3>
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/falgon.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
+                <footer class="battle-team__foot">
+                  <p>上位2編成との正面衝突を避け、状態異常以下の編成に勝つことを意識した4番手です。</p>
+                  <div class="battle-team__tags"><span>4勝目の土台</span><span>格下対面</span></div>
+                </footer>
+              </article>
+              <article class="battle-team battle-team--t15">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>05</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T1.5</span><span>MATCHUP SPECIALIST</span></div>
+                    <h3>ソラ・災厄・フェニックス</h3>
+                    <p>ソニア＋ニックスと格下状態異常を狙う。</p>
                   </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/banshin.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/rexcer.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/seiji.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/fuki.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 8px; background-image: url('image/hero/seinomegami.webp'); background-size: cover; background-position: center; border: 1px solid #4f545c;">
-                  </div>
+                </header>
+                <div class="battle-roster" aria-label="ソラ・災厄・フェニックスの6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/valkyrie.webp" alt="ヴァルキリー" loading="lazy"><figcaption>ヴァルキリー</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/serina.webp" alt="セリーナ" loading="lazy"><figcaption>セリーナ</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/avi.webp" alt="アヴィ" loading="lazy"><figcaption>アヴィ</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/sora.webp" alt="ソラ" loading="lazy"><figcaption>ソラ</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/saiyaku.webp" alt="災厄" loading="lazy"><figcaption>災厄</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/fenix.webp" alt="フェニックス" loading="lazy"><figcaption>フェニックス</figcaption></figure>
                 </div>
-                <p style="color: #dcddde; line-height: 1.6; margin-top: 0; font-size: 1.05em;">
-                  完全に環境外の編成ですが、ソニア編成へのワンチャンに期待したいところです。<br>
-                  新ヒーローのヴォリアンが実装されたら、出番がなくなる可能性もあります。
-                </p>
+                <footer class="battle-team__foot">
+                  <p>相手の中位チームへ狙いを絞った5番手。火力役を分散しながら、明確な有利対面を作ります。</p>
+                  <div class="battle-team__tags"><span>対ソニックス</span><span>格下状態異常</span></div>
+                </footer>
+              </article>
+              <article class="battle-team battle-team--t2">
+                <header class="battle-team__head">
+                  <div class="battle-team__rank"><span>RANK</span><strong>06</strong></div>
+                  <div class="battle-team__identity">
+                    <div class="battle-team__meta"><span class="battle-team__tier">T2</span><span>LAST CHANCE</span></div>
+                    <h3>青瓷×伏羲</h3>
+                    <p>環境外。ただしソニアへの一発に期待。</p>
+                  </div>
+                </header>
+                <div class="battle-roster" aria-label="青瓷×伏羲の6人編成">
+                    <figure class="battle-roster__hero"><img src="image/hero/falgon.webp" alt="ファルゴン" loading="lazy"><figcaption>ファルゴン</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/banshin.webp" alt="大荒蛮神" loading="lazy"><figcaption>大荒蛮神</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/rexcer.webp" alt="レクサー" loading="lazy"><figcaption>レクサー</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/seiji.webp" alt="青瓷" loading="lazy"><figcaption>青瓷</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/fuki.webp" alt="伏羲" loading="lazy"><figcaption>伏羲</figcaption></figure>
+                    <figure class="battle-roster__hero"><img src="image/hero/seinomegami.webp" alt="生の女神" loading="lazy"><figcaption>生の女神</figcaption></figure>
+                </div>
+                <footer class="battle-team__foot">
+                  <p>6番手としてワンチャンを拾う編成。ヴォリアンが舞い降りたら、出番がなくなる可能性もあります。</p>
+                  <div class="battle-team__tags"><span>ソニア狙い</span><span>将来は入替候補</span></div>
+                </footer>
+              </article>
               </div>
-
-            </div>
-
+            </section>
             <div style="margin-top: 50px;">
               <h2 class="article-title"
                 style="border-left-color: #ffcc66; font-size: 1.3em; background: rgba(255, 204, 102, 0.1);">
