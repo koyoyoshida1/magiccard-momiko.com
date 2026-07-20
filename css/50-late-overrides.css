@@ -1020,18 +1020,25 @@
   position: relative;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+  grid-template-columns: 1fr;
   gap: 22px;
   align-items: center;
+  min-height: 320px;
   margin-bottom: 22px;
   padding: 24px;
   border: 1px solid #3f4147;
   border-radius: 10px;
   background:
-    radial-gradient(circle at 78% 16%, rgba(255, 239, 184, 0.20) 0%, rgba(206, 175, 255, 0.10) 20%, transparent 40%),
-    linear-gradient(90deg, rgba(17, 18, 25, 0.94) 0%, rgba(17, 18, 25, 0.80) 42%, rgba(17, 18, 25, 0.25) 70%, rgba(17, 18, 25, 0.04) 100%),
-    url("../image/banner/nyx-tier-header.webp") right center / cover no-repeat,
+    radial-gradient(circle at 78% 16%, rgba(255, 239, 184, 0.24) 0%, rgba(206, 175, 255, 0.12) 20%, transparent 42%),
+    linear-gradient(90deg, rgba(17, 18, 25, 0.98) 0%, rgba(17, 18, 25, 0.88) 38%, rgba(17, 18, 25, 0.34) 60%, rgba(17, 18, 25, 0.05) 100%),
+    url("../image/banner/nyx-tier-header.webp") right center / auto 100% no-repeat,
     #171821;
+}
+
+#page-tier .tier-hero-copy {
+  max-width: 58%;
+  padding: 12px 24px 12px 16px;
+  border-right: 0;
 }
 
 #page-tier .tier-hero-panel > * {
@@ -1052,6 +1059,14 @@
 
 #page-tier .tier-hero-kicker i {
   color: #ffcc66;
+}
+
+#page-tier .tier-game-label {
+  margin: 0 0 8px;
+  color: #ffcc66;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
 }
 
 #page-tier .page-main-title {
@@ -1082,6 +1097,14 @@
   line-height: 1.4;
 }
 
+#page-tier .tier-hero-lead {
+  margin: 18px 0 0;
+  color: #e7e8ec;
+  font-size: clamp(0.9rem, 1.35vw, 1.05rem);
+  font-weight: 700;
+  line-height: 1.8;
+}
+
 #page-tier .tier-hero-panel .trust-note {
   margin: 0;
   padding: 0;
@@ -1103,18 +1126,27 @@
     background:
       radial-gradient(circle at 80% 12%, rgba(255, 239, 184, 0.18) 0%, transparent 34%),
       linear-gradient(90deg, rgba(17, 18, 25, 0.96) 0%, rgba(17, 18, 25, 0.72) 62%, rgba(17, 18, 25, 0.26) 100%),
-      url("../image/banner/nyx-tier-header.webp") 72% center / cover no-repeat,
+      url("../image/banner/nyx-tier-header.webp") right center / auto 100% no-repeat,
       #171821;
   }
+
+  #page-tier .tier-hero-copy { max-width: 68%; }
 }
 
 @media (max-width: 560px) {
   #page-tier .tier-hero-panel {
     padding: 18px;
+    min-height: 390px;
     background:
-      linear-gradient(180deg, rgba(17, 18, 25, 0.72) 0%, rgba(17, 18, 25, 0.92) 100%),
-      url("../image/banner/nyx-tier-header.webp") 70% center / cover no-repeat,
+      linear-gradient(180deg, rgba(17, 18, 25, 0.35) 0%, rgba(17, 18, 25, 0.92) 68%, rgba(17, 18, 25, 0.98) 100%),
+      url("../image/banner/nyx-tier-header.webp") 70% top / auto 72% no-repeat,
       #171821;
+  }
+
+  #page-tier .tier-hero-copy {
+    align-self: end;
+    max-width: 100%;
+    padding: 0;
   }
 }
 
