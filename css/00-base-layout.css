@@ -833,8 +833,8 @@ h1 {
 }
 
 .battle-team--t0 { --team-color: #ffbd59; }
-.battle-team--t1 { --team-color: #65d38e; }
-.battle-team--t15 { --team-color: #ff858b; }
+.battle-team--t1 { --team-color: #e64b57; }
+.battle-team--t15 { --team-color: #65d38e; }
 .battle-team--t2 { --team-color: #77c8e8; }
 
 .battle-team__head {
@@ -990,6 +990,9 @@ h1 {
 
 /* Tier表ヘッダー：フィールドノート共通デザイン */
 #page-tier .tier-hero-panel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr);
   gap: 24px;
@@ -998,30 +1001,19 @@ h1 {
   border-top: 1px solid rgba(255,204,102,.75);
   border-bottom: 1px solid rgba(255,255,255,.12);
   border-radius: 0;
-  background: #202226;
+  background: #15151d url('../image/banner/nyx-tier-header.webp') right center / cover no-repeat;
+}
+#page-tier .tier-hero-panel::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(18,19,25,.98) 0%, rgba(18,19,25,.92) 44%, rgba(18,19,25,.62) 72%, rgba(18,19,25,.28) 100%);
 }
 #page-tier .tier-hero-copy {
   position: relative;
   padding: 6px 24px 6px 0;
   border-right: 1px solid rgba(255,255,255,.12);
-}
-#page-tier .tier-hero-copy::before {
-  content: "JUL.20\A2026";
-  position: absolute;
-  inset: 0 auto 0 0;
-  display: none;
-  width: 108px;
-  align-items: flex-end;
-  padding: 12px;
-  box-sizing: border-box;
-  white-space: pre;
-  color: #18191c;
-  background: #ffcc66;
-  font-family: "Arial Narrow", "Helvetica Neue", sans-serif;
-  font-size: 1rem;
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: .08em;
 }
 #page-tier .tier-hero-kicker {
   margin: 0 0 8px;
@@ -1048,17 +1040,6 @@ h1 {
   box-shadow: none;
   font-size: .76rem;
 }
-#page-tier .tier-hero-copy .trust-note {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  box-shadow: none;
-  color: #bfc2c8;
-  font-size: .86rem;
-  line-height: 1.7;
-}
-#page-tier .tier-hero-copy .trust-note strong { color: #ffcc66; }
 #page-tier .tier-legend {
   align-content: center;
   margin: 0;
@@ -1083,10 +1064,10 @@ h1 {
 #page-tier .tier-legend > div:first-child span { color: #ff4fa3 !important; text-shadow: 0 0 12px rgba(255,79,163,.45); }
 #page-tier .tier-legend > div:nth-child(2) { border-left-color: #ffbd59; }
 #page-tier .tier-legend > div:nth-child(2) span { color: #ffbd59 !important; }
-#page-tier .tier-legend > div:nth-child(3) { border-left-color: #65d38e; }
-#page-tier .tier-legend > div:nth-child(3) span { color: #65d38e !important; }
-#page-tier .tier-legend > div:nth-child(4) { border-left-color: #ff858b; }
-#page-tier .tier-legend > div:nth-child(4) span { color: #ff858b !important; }
+#page-tier .tier-legend > div:nth-child(3) { border-left-color: #9a6bff; }
+#page-tier .tier-legend > div:nth-child(3) span { color: #9a6bff !important; }
+#page-tier .tier-legend > div:nth-child(4) { border-left-color: #65d38e; }
+#page-tier .tier-legend > div:nth-child(4) span { color: #65d38e !important; }
 #page-tier .tier-legend > div:nth-child(5) { border-left-color: #77c8e8; }
 #page-tier .tier-legend > div:nth-child(5) span { color: #77c8e8 !important; }
 #page-tier .tier-legend > div:nth-child(6) { border-left-color: #e7dc72; }
@@ -1116,8 +1097,8 @@ h1 {
   box-shadow: 0 0 24px rgba(255,79,163,.14);
 }
 #page-tier .hero-tier-board .tier-row:has(.bg-t0) { --tier-row-color: #ffbd59; }
-#page-tier .hero-tier-board .tier-row:has(.bg-t1) { --tier-row-color: #65d38e; }
-#page-tier .hero-tier-board .tier-row:has(.bg-t15) { --tier-row-color: #ff858b; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t1) { --tier-row-color: #9a6bff; }
+#page-tier .hero-tier-board .tier-row:has(.bg-t15) { --tier-row-color: #65d38e; }
 #page-tier .hero-tier-board .tier-row:has(.bg-t2) { --tier-row-color: #77c8e8; }
 #page-tier .hero-tier-board .tier-row:has(.bg-t3) { --tier-row-color: #e7dc72; }
 #page-tier .hero-tier-board .tier-row:has(.bg-t4) { --tier-row-color: #9ba0a8; }
