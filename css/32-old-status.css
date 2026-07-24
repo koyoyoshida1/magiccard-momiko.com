@@ -216,6 +216,13 @@
   font-weight: 950;
 }
 
+#page-old-status-teams .old-status-talents b .old-status-talent-alert {
+  color: #ff526f;
+  font-size: 1em;
+  font-weight: 950;
+  text-shadow: 0 0 10px rgba(255, 82, 111, 0.5);
+}
+
 #page-old-status-teams .old-status-warning {
   display: flex;
   align-items: flex-start;
