@@ -126,6 +126,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const sHeroLinks = ['#page-s-hero', '#s-hero-video'];
   const pveAncientLinks = ['#page-pve-ancient-tier', '#pve-ancient-tier'];
   const pveDefenseLinks = ['#page-pve-defense', '#pve-defense-overview', '#pve-defense-overview-member', '#pve-defense-video', '#pve-defense-video-member', '#pve-defense-support', '#pve-defense-support-member', '#pve-defense-concept', '#pve-defense-concept-member', '#pve-defense-derigol-example', '#pve-defense-derigol-example-member', '#pve-defense-lineup', '#pve-defense-lineup-member', '#pve-defense-table-derigol', '#pve-defense-table-derigol-member', '#pve-defense-lineup-elrini', '#pve-defense-lineup-elrini-member', '#pve-defense-table-elrini-real', '#pve-defense-table-elrini-real-member'];
+  const oldStatusLinks = ['#page-old-status-teams', '#old-status-overview', '#old-status-summary', '#old-status-no-nyx', '#old-status-no-nyx-build', '#old-status-with-nyx', '#old-status-with-nyx-build', '#old-status-usage'];
 
   if (runeLinks.includes(hash)) {
     pageId = 'page-rune-tier';
@@ -139,6 +140,8 @@ window.addEventListener('DOMContentLoaded', () => {
     pageId = 'page-pve-ancient-tier';
   } else if (pveDefenseLinks.includes(hash)) {
     pageId = 'page-pve-defense';
+  } else if (oldStatusLinks.includes(hash)) {
+    pageId = 'page-old-status-teams';
   } else if (hash === '#page-tier') {
     pageId = 'page-tier';
   } else if (hash === '#page-serial') {

@@ -15,7 +15,7 @@
   <link rel="canonical" href="https://magiccard-momiko.com/">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=260720-8">
+  <link rel="stylesheet" href="style.css?v=260724-1">
   <link rel="stylesheet" href="css/25-pve-invincible.css?v=260519-1">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
@@ -104,6 +104,11 @@
           <div class="channel-item" onclick="switchPage('page-natalie-teams', this)">
             <span class="channel-icon"><i class="fa-solid fa-shield-heart" style="color:#60a5fa;"></i></span>
             護衛隊：ナタリー
+          </div>
+          <div class="channel-item channel-old-status" onclick="switchPage('page-old-status-teams', this)">
+            <span class="channel-icon"><i class="fa-solid fa-flask-vial" style="color:#ff657d;"></i></span>
+            <span class="channel-text">状態異常：旧型</span>
+            <span class="channel-badge">NEW</span>
           </div>
           <div class="channel-item channel-sonix" onclick="switchPage('page-sonix-teams', this)">
             <span class="channel-icon"><i class="fa-solid fa-leaf"></i></span>
@@ -8323,6 +8328,393 @@
               <a href="#flas-matchup"><i class="fa-solid fa-scale-balanced"></i> 対面評価</a>
               <a href="#flas-training"><i class="fa-solid fa-chart-line"></i> 育成ライン</a>
               <a href="#flas-good-bad"><i class="fa-solid fa-circle-info"></i> 強みと弱点</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+
+      <!-- =========================================================
+            旧・状態異常編成
+          ========================================================= -->
+      <div id="page-old-status-teams" class="page-section">
+        <h1 class="page-main-title">PvP編成まとめ</h1>
+        <div class="update-info">最終更新日: 2026年7月24日 | 監修: もみこ</div>
+
+        <div class="flas-page-layout">
+          <main class="flas-main-column">
+            <section class="flas-hero old-status-hero" id="old-status-overview" aria-labelledby="old-status-title">
+              <div class="flas-hero-bg" aria-hidden="true"></div>
+
+              <div class="flas-hero-content">
+                <p class="flas-kicker">
+                  <i class="fa-solid fa-flask-vial"></i>
+                  PvP TEAM GUIDE
+                </p>
+                <h2 id="old-status-title">旧・状態異常編成</h2>
+                <p class="flas-hero-lead">
+                  ニックスなしのコスパ型と、ニックス入りの対スカイリー型を使い分けるデシア対策編成。
+                  状態異常の連携と耐久神器で相手の狂暴技を止め、自軍の再行動を伸ばします。
+                </p>
+                <div class="flas-hero-tags" aria-label="編成特徴">
+                  <span>デシア対策</span>
+                  <span>状態異常</span>
+                  <span>2パターン掲載</span>
+                  <span>ニックスなし対応</span>
+                </div>
+              </div>
+
+              <div class="flas-party-panel" aria-label="ニックスなし旧状態異常編成">
+                <div class="flas-party-card is-key"><img src="image/hero/katras.webp" alt="カトラス"><span>カトラス</span></div>
+                <div class="flas-party-card is-key"><img src="image/hero/beril.webp" alt="ベリル"><span>ベリル</span></div>
+                <div class="flas-party-card"><img src="image/hero/tea.webp" alt="シーア"><span>シーア</span></div>
+                <div class="flas-party-card is-main"><img src="image/hero/anubis.webp" alt="アヌビス"><span>アヌビス</span></div>
+                <div class="flas-party-card is-main"><img src="image/hero/fillis.webp" alt="フィリス"><span>フィリス</span></div>
+                <div class="flas-party-card is-key"><img src="image/hero/seinomegami.webp" alt="生の女神"><span>生の女神</span></div>
+              </div>
+            </section>
+
+            <section class="flas-section" id="old-status-summary">
+              <h2 class="flas-section-title">旧・状態異常編成の結論</h2>
+              <div class="flas-summary-card">
+                <div class="flas-summary-main">
+                  <h3><i class="fa-solid fa-bolt"></i> デシアの構成に合わせてニックスの有無を選ぶ</h3>
+                  <p>
+                    スカイリー不在のデシアにはニックスなし、スカイリー入りにはニックスありを選択。
+                    聖羽の翼・聖霊の盾・生の女神で耐え、シーアや状態異常で相手の攻め手を削ります。
+                  </p>
+                </div>
+                <div class="flas-summary-point">
+                  <span>使い分け</span>
+                  <strong>コスパ型 / 対スカイリー型</strong>
+                </div>
+              </div>
+            </section>
+
+            <section class="flas-score-grid" aria-label="旧状態異常編成の評価">
+              <article class="flas-score-card">
+                <span>対デシア</span>
+                <strong>◎</strong>
+                <p>同格以下を狙える対策編成</p>
+              </article>
+              <article class="flas-score-card">
+                <span>対スカイリー入り</span>
+                <strong>◎</strong>
+                <p>ニックス入りで対応範囲が広がる</p>
+              </article>
+              <article class="flas-score-card">
+                <span>ニックスなし</span>
+                <strong>高コスパ</strong>
+                <p>まず試したい基本ルート</p>
+              </article>
+              <article class="flas-score-card is-warning">
+                <span>ニックスあり</span>
+                <strong>高コスト</strong>
+                <p>強いが育成負担は重め</p>
+              </article>
+            </section>
+
+            <section class="old-status-route old-status-route--budget" id="old-status-no-nyx" aria-labelledby="old-status-no-nyx-title">
+              <div class="old-status-route-head">
+                <div class="old-status-route-copy">
+                  <span class="old-status-route-number">ROUTE 01 / NO NYX</span>
+                  <h2 id="old-status-no-nyx-title">まずはニックスなし</h2>
+                  <p>
+                    スカイリーがいないデシアなら、<strong>同格以下に勝てる</strong>コスパ型。
+                    耐久神器を重ねて、状態異常の主砲が動く時間を作ります。
+                  </p>
+                </div>
+                <div class="flas-party-panel" aria-label="ニックスなし編成の配置順">
+                  <div class="flas-party-card is-key"><img src="image/hero/katras.webp" alt="カトラス"><span>カトラス</span></div>
+                  <div class="flas-party-card is-key"><img src="image/hero/beril.webp" alt="ベリル"><span>ベリル</span></div>
+                  <div class="flas-party-card"><img src="image/hero/tea.webp" alt="シーア"><span>シーア</span></div>
+                  <div class="flas-party-card is-main"><img src="image/hero/anubis.webp" alt="アヌビス"><span>アヌビス</span></div>
+                  <div class="flas-party-card is-main"><img src="image/hero/fillis.webp" alt="フィリス"><span>フィリス</span></div>
+                  <div class="flas-party-card is-key"><img src="image/hero/seinomegami.webp" alt="生の女神"><span>生の女神</span></div>
+                </div>
+              </div>
+
+              <div id="old-status-no-nyx-build">
+                <div class="old-status-build-meta">
+                  <span><i class="fa-solid fa-arrow-right-long"></i> 左から 神器 / ルーン2種 / 宝石3種</span>
+                  <span>上段3体 → 下段3体の配置順</span>
+                </div>
+
+                <div class="flas-build-detail-card old-status-build-detail-card" aria-label="ニックスなし旧状態異常編成の構築詳細">
+                  <div class="flas-build-row is-key">
+                    <img class="flas-build-hero" src="image/hero/katras.webp" alt="カトラス">
+                    <strong>カトラス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/holly/short_wing.webp" alt="聖羽の翼" title="神器：聖羽の翼">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>1-2</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-key">
+                    <img class="flas-build-hero" src="image/hero/beril.webp" alt="ベリル">
+                    <strong>ベリル</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/holly/short_shield.webp" alt="聖霊の盾" title="神器：聖霊の盾">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+
+                  <div class="flas-build-row">
+                    <img class="flas-build-hero" src="image/hero/tea.webp" alt="シーア">
+                    <strong>シーア</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/flag.webp" alt="魔王の旗" title="神器：魔王の旗">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-5</b><span>宝石天賦</span><b>1-2</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-main">
+                    <img class="flas-build-hero" src="image/hero/anubis.webp" alt="アヌビス">
+                    <strong>アヌビス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/lance.webp" alt="魔王の槍" title="神器：魔王の槍">
+                      <img src="image/rune/bushi.webp" alt="武士" title="ルーン：武士">
+                      <img src="image/rune/zaiaku.webp" alt="罪悪" title="ルーン：罪悪">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kujaku.webp" alt="孔雀石" title="宝石：孔雀石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge is-crit">T2：ダメ追</span>
+                    <span class="old-status-talents"><span>天賦</span><b>1-3-2-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-main">
+                    <img class="flas-build-hero" src="image/hero/fillis.webp" alt="フィリス">
+                    <strong>フィリス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/hammer.webp" alt="悪霊ハンマー" title="神器：悪霊ハンマー">
+                      <img src="image/rune/kyomu.webp" alt="虚無" title="ルーン：虚無">
+                      <img src="image/rune/zaiaku.webp" alt="罪悪" title="ルーン：罪悪">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kujaku.webp" alt="孔雀石" title="宝石：孔雀石">
+                      <img src="image/gem/shiran.webp" alt="紫蘭石" title="宝石：紫蘭石">
+                    </div>
+                    <span class="flas-t2-badge is-crit">T2：ダメ追</span>
+                    <span class="old-status-talents"><span>天賦</span><b>1-3-2-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-key">
+                    <img class="flas-build-hero" src="image/hero/seinomegami.webp" alt="生の女神">
+                    <strong>生の女神</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/shield.webp" alt="魔王の盾" title="神器：魔王の盾">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/mania.webp" alt="マニア" title="ルーン：マニア">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-5-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flas-two-col old-status-notes">
+                <article class="flas-text-card is-good">
+                  <h3><i class="fa-solid fa-shield-heart"></i> 耐久の軸</h3>
+                  <p>聖羽の翼＋聖霊の盾＋生の女神で、デシアと青瓷に大きな負荷をかけます。</p>
+                </article>
+                <article class="flas-text-card">
+                  <h3><i class="fa-solid fa-ban"></i> 狂暴技を止める</h3>
+                  <p>シーアを採用することで、相手の狂暴技をほぼ無効化できます。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="old-status-route old-status-route--nyx" id="old-status-with-nyx" aria-labelledby="old-status-with-nyx-title">
+              <div class="old-status-route-head">
+                <div class="old-status-route-copy">
+                  <span class="old-status-route-number">ROUTE 02 / WITH NYX</span>
+                  <h2 id="old-status-with-nyx-title">ニックスあり</h2>
+                  <p>
+                    ニックスを入れると、<strong>スカイリー入りのデシアにも勝てる</strong>対応型。
+                    ただし、ニックスなしと比べてコスパは悪めです。
+                  </p>
+                </div>
+                <div class="flas-party-panel" aria-label="ニックスあり編成の配置順">
+                  <div class="flas-party-card is-main"><img src="image/hero/nyx.webp" alt="ニックス"><span>ニックス</span></div>
+                  <div class="flas-party-card is-key"><img src="image/hero/katras.webp" alt="カトラス"><span>カトラス</span></div>
+                  <div class="flas-party-card"><img src="image/hero/zefi.webp" alt="ゼフィ"><span>ゼフィ</span></div>
+                  <div class="flas-party-card is-main"><img src="image/hero/anubis.webp" alt="アヌビス"><span>アヌビス</span></div>
+                  <div class="flas-party-card is-main"><img src="image/hero/fillis.webp" alt="フィリス"><span>フィリス</span></div>
+                  <div class="flas-party-card is-key"><img src="image/hero/beril.webp" alt="ベリル"><span>ベリル</span></div>
+                </div>
+              </div>
+
+              <div id="old-status-with-nyx-build">
+                <div class="old-status-build-meta">
+                  <span><i class="fa-solid fa-arrow-right-long"></i> 左から 神器 / ルーン2種 / 宝石3種</span>
+                  <span>ニックスのダブル再行動を狙う構成</span>
+                </div>
+
+                <div class="flas-build-detail-card old-status-build-detail-card" aria-label="ニックスあり旧状態異常編成の構築詳細">
+                  <div class="flas-build-row is-main">
+                    <img class="flas-build-hero" src="image/hero/nyx.webp" alt="ニックス">
+                    <strong>ニックス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/uroko.webp" alt="古代龍の逆鱗" title="神器：古代龍の逆鱗">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-key">
+                    <img class="flas-build-hero" src="image/hero/katras.webp" alt="カトラス">
+                    <strong>カトラス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/holly/short_wing.webp" alt="聖羽の翼" title="神器：聖羽の翼">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>1-2</b></span>
+                  </div>
+
+                  <div class="flas-build-row">
+                    <img class="flas-build-hero" src="image/hero/zefi.webp" alt="ゼフィ">
+                    <strong>ゼフィ</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/book.webp" alt="呪いの書" title="神器：呪いの書">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/seiketsu.webp" alt="聖潔" title="ルーン：聖潔">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>1-2</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-main">
+                    <img class="flas-build-hero" src="image/hero/anubis.webp" alt="アヌビス">
+                    <strong>アヌビス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/lance.webp" alt="魔王の槍" title="神器：魔王の槍">
+                      <img src="image/rune/bushi.webp" alt="武士" title="ルーン：武士">
+                      <img src="image/rune/zaiaku.webp" alt="罪悪" title="ルーン：罪悪">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kujaku.webp" alt="孔雀石" title="宝石：孔雀石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge is-crit">T2：ダメ追 208〜223%</span>
+                    <span class="old-status-talents"><span>天賦</span><b>1-3-2-2</b><span>宝石天賦</span><b>3-3</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-main">
+                    <img class="flas-build-hero" src="image/hero/fillis.webp" alt="フィリス">
+                    <strong>フィリス</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/hammer.webp" alt="悪霊ハンマー" title="神器：悪霊ハンマー">
+                      <img src="image/rune/kyomu.webp" alt="虚無" title="ルーン：虚無">
+                      <img src="image/rune/zaiaku.webp" alt="罪悪" title="ルーン：罪悪">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/kujaku.webp" alt="孔雀石" title="宝石：孔雀石">
+                      <img src="image/gem/shiran.webp" alt="紫蘭石" title="宝石：紫蘭石">
+                    </div>
+                    <span class="flas-t2-badge is-crit">T2：ダメ追 200%</span>
+                    <span class="old-status-talents"><span>天賦</span><b>1-3-2-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+
+                  <div class="flas-build-row is-key">
+                    <img class="flas-build-hero" src="image/hero/beril.webp" alt="ベリル">
+                    <strong>ベリル</strong>
+                    <div class="flas-build-icons">
+                      <img src="image/artifact/abyss/born_ring.webp" alt="魔王の指輪" title="神器：魔王の指輪">
+                      <img src="image/rune/kirikizu.webp" alt="切傷" title="ルーン：切傷">
+                      <img src="image/rune/mania.webp" alt="マニア" title="ルーン：マニア">
+                      <img src="image/gem/murasakibortaru.webp" alt="紫蛍石" title="宝石：紫蛍石">
+                      <img src="image/gem/aobato.webp" alt="緑鳩石" title="宝石：緑鳩石">
+                      <img src="image/gem/kiryu.webp" alt="輝龍石" title="宝石：輝龍石">
+                    </div>
+                    <span class="flas-t2-badge">T2：ダメ軽</span>
+                    <span class="old-status-talents"><span>天賦</span><b>3-4-3-2</b><span>宝石天賦</span><b>3-1</b></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="old-status-warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div><strong>アヌビスは宝石天賦3-3。</strong> 宝石天賦3の鉄則として、ダメ追は上げないでください。</div>
+              </div>
+
+              <div class="flas-two-col old-status-notes">
+                <article class="flas-text-card is-good">
+                  <h3><i class="fa-solid fa-repeat"></i> 狙い</h3>
+                  <ul>
+                    <li>ニックスのダブル再行動を狙う</li>
+                    <li>魔王の指輪と呪いの書は必須ではない</li>
+                  </ul>
+                </article>
+                <article class="flas-text-card">
+                  <h3><i class="fa-solid fa-hammer"></i> 優先神器</h3>
+                  <ul>
+                    <li>悪霊ハンマーと魔王の槍で強さが大きく変わる</li>
+                    <li>特に反響すると、強さが一段階上がる</li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+
+            <section class="flas-section" id="old-status-usage">
+              <h2 class="flas-section-title">使い分け</h2>
+              <div class="flas-two-col">
+                <article class="flas-text-card is-good">
+                  <h3><i class="fa-solid fa-coins"></i> ニックスなし</h3>
+                  <p>スカイリーがいない同格以下のデシアに。まず組むならこちらです。</p>
+                </article>
+                <article class="flas-text-card">
+                  <h3><i class="fa-solid fa-moon"></i> ニックスあり</h3>
+                  <p>スカイリー入りのデシアに。コストをかけて対応範囲を広げます。</p>
+                </article>
+              </div>
+              <div class="flas-final-box">
+                <strong>最終評価：</strong>
+                ニックス入りなら、エーベルなし・格上ではないデシアのどんな編成にも勝てる想定です。
+              </div>
+            </section>
+          </main>
+
+          <aside class="flas-toc" aria-label="旧状態異常編成ページの目次">
+            <div class="flas-toc-box">
+              <h3><i class="fa-solid fa-list-ul"></i> 目次</h3>
+              <a href="#old-status-overview"><i class="fa-solid fa-flask-vial"></i> 編成概要</a>
+              <a href="#old-status-summary"><i class="fa-solid fa-crown"></i> 結論</a>
+              <a href="#old-status-no-nyx"><i class="fa-solid fa-coins"></i> ニックスなし</a>
+              <a href="#old-status-no-nyx-build"><i class="fa-solid fa-screwdriver-wrench"></i> なし：ビルド</a>
+              <a href="#old-status-with-nyx"><i class="fa-solid fa-moon"></i> ニックスあり</a>
+              <a href="#old-status-with-nyx-build"><i class="fa-solid fa-screwdriver-wrench"></i> あり：ビルド</a>
+              <a href="#old-status-usage"><i class="fa-solid fa-code-branch"></i> 使い分け</a>
             </div>
           </aside>
         </div>

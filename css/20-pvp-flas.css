@@ -90,11 +90,11 @@
    style.css の末尾に追加
    ========================================= */
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) {
   padding-bottom: 76px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-page-layout {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-page-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
   gap: 24px;
@@ -102,15 +102,15 @@
   max-width: 1240px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-main-column {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-main-column {
   min-width: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-section {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-section {
   margin-top: 28px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-section-title {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-section-title {
   display: flex;
   align-items: center;
   min-height: 46px;
@@ -123,7 +123,7 @@
 }
 
 /* HERO */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero {
   position: relative;
   overflow: hidden;
   display: grid;
@@ -137,7 +137,7 @@
   background: #2b2d31;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-bg {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-bg {
   position: absolute;
   inset: 0;
   background:
@@ -146,13 +146,13 @@
   opacity: 0.96;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-content,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-panel {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-content,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-panel {
   position: relative;
   z-index: 1;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-kicker {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-kicker {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -163,11 +163,11 @@
   letter-spacing: 0.04em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-kicker i {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-kicker i {
   color: #8ea1ff;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero h2 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero h2 {
   margin: 0 0 12px;
   padding: 0;
   border: none;
@@ -177,7 +177,7 @@
   letter-spacing: -0.04em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-lead {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-lead {
   max-width: 620px;
   margin: 0;
   color: #dcddde;
@@ -185,14 +185,14 @@
   line-height: 1.8;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-tags {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 18px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-tags span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-tags span {
   display: inline-flex;
   align-items: center;
   min-height: 28px;
@@ -205,13 +205,13 @@
   font-weight: 800;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-panel {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-panel {
   display: grid;
   grid-template-columns: repeat(3, minmax(76px, 1fr));
   gap: 10px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card {
   padding: 10px 6px;
   border-radius: 8px;
   border: 1px solid rgba(79, 84, 92, 0.86);
@@ -219,16 +219,16 @@
   text-align: center;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card.is-main {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card.is-main {
   border-color: rgba(88, 101, 242, 0.9);
   background: rgba(88, 101, 242, 0.18);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card.is-key {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card.is-key {
   border-color: rgba(240, 184, 90, 0.5);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card img {
   width: 58px;
   height: 58px;
   display: block;
@@ -239,7 +239,7 @@
   background: #444;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card span {
   display: block;
   color: #fff;
   font-size: 0.8em;
@@ -247,31 +247,31 @@
 }
 
 /* COMMON CARDS */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-final-box,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-final-box,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box {
   background: #2b2d31;
   border: 1px solid #3f4147;
   border-radius: 8px;
 }
 
 /* SUMMARY */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-card {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 240px;
   gap: 16px;
   padding: 18px 20px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-main h3,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-main h3,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card h3 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -281,30 +281,30 @@
   line-height: 1.5;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-main h3 i,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card h3 i {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-main h3 i,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card h3 i {
   color: #8ea1ff;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-main p,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card p,
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card li {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-main p,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card p,
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card li {
   color: #dcddde;
   line-height: 1.75;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-main p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-main p {
   margin: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-point {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-point {
   padding: 14px;
   border-radius: 8px;
   background: #232428;
   border: 1px solid #3f4147;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-point span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-point span {
   display: block;
   color: #949ba4;
   font-size: 0.82em;
@@ -312,24 +312,24 @@
   margin-bottom: 6px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-point strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-point strong {
   color: #f0b85a;
   line-height: 1.55;
 }
 
 /* SCORE */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-grid {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   margin-top: 18px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card {
   padding: 15px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card span {
   display: block;
   color: #949ba4;
   font-size: 0.82em;
@@ -337,7 +337,7 @@
   margin-bottom: 6px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card strong {
   display: block;
   color: #fff;
   font-size: 1.65em;
@@ -345,15 +345,15 @@
   margin-bottom: 8px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card.is-warning strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card.is-warning strong {
   color: #f0b85a;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card.is-weak strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card.is-weak strong {
   color: #ed6a5e;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-card p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-card p {
   margin: 0;
   color: #dcddde;
   font-size: 0.9em;
@@ -361,14 +361,14 @@
 }
 
 /* VIDEO */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr);
   gap: 18px;
   padding: 16px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb {
   aspect-ratio: 16 / 9;
   border-radius: 7px;
   border: 1px solid rgba(148, 155, 164, 0.45);
@@ -376,44 +376,44 @@
   overflow: hidden;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb iframe {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb iframe {
   display: block;
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body h3 {
   margin: 0 0 8px;
   color: #f2f3f5;
   font-size: 1.08em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body p {
   margin: 0;
   color: #dcddde;
   line-height: 1.75;
 }
 
 /* FOCUS */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-grid {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-card {
   padding: 16px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-head {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-head {
   display: flex;
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-head img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-head img {
   width: 48px;
   height: 48px;
   object-fit: cover;
@@ -422,7 +422,7 @@
   background: #444;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-head span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-head span {
   display: block;
   color: #949ba4;
   font-size: 0.72em;
@@ -430,23 +430,23 @@
   letter-spacing: 0.06em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-head h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-head h3 {
   margin: 2px 0 0;
   color: #f2f3f5;
   font-size: 1.08em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-card p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-card p {
   margin: 0;
   color: #dcddde;
   line-height: 1.75;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-card strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-card strong {
   color: #f0b85a;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-note-box {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-note-box {
   margin-top: 12px;
   padding: 12px 14px;
   border-radius: 8px;
@@ -457,13 +457,13 @@
 }
 
 /* BUILD */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-grid {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card {
   display: grid;
   gap: 0;
   border: 1px solid #3f4147;
@@ -472,7 +472,7 @@
   overflow: hidden;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row {
   display: grid;
   grid-template-columns: 62px 94px minmax(280px, 1fr) 112px 178px;
   gap: 12px;
@@ -482,19 +482,19 @@
   border-bottom: 1px solid rgba(79, 84, 92, 0.72);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row:last-child {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row:last-child {
   border-bottom: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row.is-main {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row.is-main {
   background: rgba(88, 101, 242, 0.1);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row.is-key {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row.is-key {
   background: rgba(240, 184, 90, 0.06);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-hero {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-hero {
   width: 62px;
   height: 62px;
   object-fit: cover;
@@ -503,13 +503,13 @@
   background: #444;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row strong {
   color: #fff;
   font-size: 1.02em;
   line-height: 1.3;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -517,7 +517,7 @@
   min-width: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons img {
   width: 42px;
   height: 42px;
   object-fit: contain;
@@ -526,11 +526,11 @@
   background: #232428;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons img[src*="/hero/"] {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons img[src*="/hero/"] {
   object-fit: cover;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-t2-badge {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-t2-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -546,13 +546,13 @@
   white-space: nowrap;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-t2-badge.is-crit {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-t2-badge.is-crit {
   background: rgba(240, 184, 90, 0.13);
   border-color: rgba(240, 184, 90, 0.34);
   color: #ffe6a9;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line {
   justify-content: flex-start;
 }
 
@@ -608,19 +608,19 @@
   text-align: center;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card {
   overflow: hidden;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card.is-main {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card.is-main {
   border-color: rgba(88, 101, 242, 0.9);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card.is-key {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card.is-key {
   border-color: rgba(240, 184, 90, 0.45);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-head {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-head {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -629,7 +629,7 @@
   background: #232428;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-head img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-head img {
   width: 54px;
   height: 54px;
   object-fit: cover;
@@ -638,7 +638,7 @@
   background: #444;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-head span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-head span {
   display: block;
   color: #949ba4;
   font-size: 0.72em;
@@ -646,26 +646,26 @@
   letter-spacing: 0.05em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-head h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-head h3 {
   margin: 2px 0 2px;
   color: #fff;
   font-size: 1.12em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-head p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-head p {
   margin: 0;
   color: #b5bac1;
   font-size: 0.82em;
   line-height: 1.4;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card ul {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card ul {
   margin: 0;
   padding: 12px 14px 14px;
   list-style: none;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card li {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card li {
   display: grid;
   grid-template-columns: 76px 1fr;
   gap: 8px;
@@ -677,23 +677,23 @@
   border-bottom: 1px solid rgba(79, 84, 92, 0.55);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card li:last-child {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card li:last-child {
   border-bottom: none;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card b {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card b {
   color: #949ba4;
   font-weight: 900;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-equip-line {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-equip-line {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   min-width: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-equip-line img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-equip-line img {
   width: 28px;
   height: 28px;
   object-fit: cover;
@@ -703,13 +703,13 @@
   flex-shrink: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-chip-list {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-chip-list {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-chip-list span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-chip-list span {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -723,7 +723,7 @@
   font-weight: 800;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-chip-list img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-chip-list img {
   width: 19px;
   height: 19px;
   object-fit: cover;
@@ -733,41 +733,41 @@
 }
 
 /* BUILD GUIDE */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note {
   padding: 16px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid > div {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid > div {
   background: #232428;
   border: 1px solid #3f4147;
   border-radius: 8px;
   padding: 14px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid h4 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid h4 {
   margin: 0 0 8px;
   color: #f2f3f5;
   font-size: 0.96em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid ul {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid ul {
   margin: 0;
   padding-left: 18px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid li {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid li {
   color: #dcddde;
   font-size: 0.92em;
   line-height: 1.7;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-chip {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -777,7 +777,7 @@
   color: #f2f3f5;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-chip img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-chip img {
   width: 26px;
   height: 26px;
   border-radius: 6px;
@@ -788,17 +788,17 @@
 }
 
 /* MATCHUP */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-grid {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card {
   padding: 16px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-head {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -806,7 +806,7 @@
   margin-bottom: 12px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-head > span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-head > span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -822,7 +822,7 @@
   letter-spacing: 0.08em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-icons {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-icons {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -830,7 +830,7 @@
   flex-wrap: wrap;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-icons img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-icons img {
   width: 38px;
   height: 38px;
   object-fit: cover;
@@ -839,102 +839,102 @@
   background: #444;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-icons b {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-icons b {
   color: #949ba4;
   font-size: 0.7em;
   font-weight: 900;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card h3 {
   margin: 0 0 8px;
   color: #f2f3f5;
   font-size: 1.08em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card p {
   margin: 0;
   color: #dcddde;
   font-size: 0.94em;
   line-height: 1.7;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-good {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-good {
   border-color: rgba(87, 242, 135, 0.35);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-good .flas-matchup-head > span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-good .flas-matchup-head > span {
   color: #57f287;
   border-color: rgba(87, 242, 135, 0.35);
   background: rgba(87, 242, 135, 0.08);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-up {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-up {
   border-color: rgba(88, 101, 242, 0.45);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-up .flas-matchup-head > span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-up .flas-matchup-head > span {
   color: #8ea1ff;
   border-color: rgba(88, 101, 242, 0.45);
   background: rgba(88, 101, 242, 0.1);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-caution {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-caution {
   border-color: rgba(240, 184, 90, 0.4);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-caution .flas-matchup-head > span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-caution .flas-matchup-head > span {
   color: #f0b85a;
   border-color: rgba(240, 184, 90, 0.4);
   background: rgba(240, 184, 90, 0.09);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-future {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-future {
   border-color: rgba(186, 133, 255, 0.42);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-card.is-future .flas-matchup-head > span {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-card.is-future .flas-matchup-head > span {
   color: #ba85ff;
   border-color: rgba(186, 133, 255, 0.42);
   background: rgba(186, 133, 255, 0.1);
 }
 
 /* TEXT CARD / PROS CONS */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card {
   padding: 18px 20px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card p {
   margin: 0;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card ul {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card ul {
   margin: 0;
   padding-left: 20px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card.is-good {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card.is-good {
   border-color: rgba(87, 242, 135, 0.35);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card.is-good h3 i {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card.is-good h3 i {
   color: #57f287;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card.is-bad {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card.is-bad {
   border-color: rgba(237, 106, 94, 0.38);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-text-card.is-bad h3 i {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-text-card.is-bad h3 i {
   color: #ed6a5e;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-two-col {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-final-box {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-final-box {
   margin-top: 16px;
   padding: 16px 18px;
   color: #dcddde;
@@ -942,22 +942,22 @@
   background: #232428;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-final-box strong {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-final-box strong {
   color: #f0b85a;
 }
 
 /* TOC */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc {
   position: sticky;
   top: 20px;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box {
   padding: 16px;
   background: #1e1f22;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box h3 {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -966,7 +966,7 @@
   font-size: 1.02em;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box a {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box a {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -983,13 +983,13 @@
   transition: background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box a:hover {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box a:hover {
   color: #fff;
   background: #303338;
   border-color: #3f4147;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc-box a i {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc-box a i {
   width: 18px;
   text-align: center;
   color: #949ba4;
@@ -997,44 +997,44 @@
 
 /* RESPONSIVE */
 @media (max-width: 1180px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-page-layout {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-page-layout {
     grid-template-columns: 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-toc {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-toc {
     display: none;
   }
 }
 
 @media (max-width: 1024px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-summary-card,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-summary-card,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
     grid-template-columns: 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-grid {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row {
     grid-template-columns: 58px minmax(88px, 0.5fr) minmax(0, 1fr);
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons {
     grid-column: 3;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-t2-badge,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-t2-badge,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line,
   #page-saiyaku-teams .flas-build-detail-card .flas-talent-detail,
   #page-sanctuary-teams .sanctuary-rule-note {
     grid-column: 3;
@@ -1043,83 +1043,83 @@
 }
 
 @media (max-width: 768px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) {
     padding-bottom: 84px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero {
     padding: 18px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-hero-bg {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-hero-bg {
     background:
       linear-gradient(180deg, rgba(30, 31, 34, 0.96), rgba(30, 31, 34, 0.78)),
       url("../image/banner/flas-banner.webp") center / cover no-repeat;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-panel {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-panel {
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-party-card img {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-party-card img {
     width: 50px;
     height: 50px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-score-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-focus-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-note-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-grid,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-two-col {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-score-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-focus-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-note-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-grid,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-two-col {
     grid-template-columns: 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-card li {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-card li {
     grid-template-columns: 76px 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row {
     grid-template-columns: 52px minmax(0, 1fr);
     gap: 10px;
     min-height: 0;
     padding: 11px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-hero {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-hero {
     width: 52px;
     height: 52px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-t2-badge,
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-t2-badge,
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line,
   #page-saiyaku-teams .flas-build-detail-card .flas-talent-detail,
   #page-sanctuary-teams .sanctuary-rule-note {
     grid-column: 2;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons {
     gap: 7px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons img {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons img {
     width: 34px;
     height: 34px;
     border-radius: 8px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line {
     flex-wrap: wrap;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-head {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-head {
     align-items: flex-start;
     flex-direction: column;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-matchup-icons {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-matchup-icons {
     justify-content: flex-start;
   }
 }
@@ -1131,7 +1131,7 @@
 
 /* PC時：右目次があってもメイン幅を少し広げる */
 @media (min-width: 1181px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-page-layout {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-page-layout {
     max-width: 1380px;
     grid-template-columns: minmax(0, 1fr) 260px;
     gap: 20px;
@@ -1140,7 +1140,7 @@
 
 /* おすすめ構成：1行で収める */
 @media (min-width: 1025px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row {
     grid-template-columns: 58px 84px minmax(246px, 1fr) 104px 142px;
     gap: 10px;
     min-height: 78px;
@@ -1155,17 +1155,17 @@
     grid-template-columns: 58px 84px minmax(180px, 1fr) 92px 174px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-hero {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-hero {
     width: 58px;
     height: 58px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-row strong {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-row strong {
     font-size: 1em;
     white-space: nowrap;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons {
     display: flex;
     flex-wrap: nowrap;
     gap: 6px;
@@ -1173,21 +1173,21 @@
     min-width: 0;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons img {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons img {
     width: 36px;
     height: 36px;
     flex: 0 0 36px;
     border-radius: 8px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-t2-badge {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-t2-badge {
     min-height: 32px;
     padding: 5px 10px;
     font-size: 0.82em;
     white-space: nowrap;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line {
     display: flex;
     flex-wrap: nowrap;
     gap: 6px;
@@ -1195,60 +1195,60 @@
     white-space: nowrap;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-detail-card .flas-talent-line span {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-detail-card .flas-talent-line span {
     white-space: nowrap;
   }
 }
 
 /* 動画を大きくする */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
   grid-template-columns: minmax(520px, 1.45fr) minmax(260px, 0.75fr);
   gap: 22px;
   padding: 18px;
   align-items: center;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb {
   border-radius: 10px;
   border: 1px solid rgba(148, 155, 164, 0.55);
   background: #111318;
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb iframe {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb iframe {
   width: 100%;
   height: 100%;
 }
 
 /* 動画横の文章も少し強く */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body h3 {
   font-size: 1.18em;
   line-height: 1.45;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body p {
   font-size: 0.96em;
   line-height: 1.85;
 }
 
 /* タブレット以下は縦積みで崩さない */
 @media (max-width: 1024px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
     grid-template-columns: 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-build-icons {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-build-icons {
     flex-wrap: wrap;
   }
 }
 
 /* スマホは詰めすぎない */
 @media (max-width: 768px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
     padding: 14px;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body h3 {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body h3 {
     font-size: 1.05em;
   }
 }
@@ -1257,7 +1257,7 @@
    YouTube 高画質サムネ表示
 ========================================= */
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb {
   position: relative;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
@@ -1267,7 +1267,7 @@
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite {
   position: relative;
   display: block;
   width: 100%;
@@ -1278,7 +1278,7 @@
   cursor: pointer;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite img {
   display: block;
   width: 100%;
   height: 100%;
@@ -1286,7 +1286,7 @@
 }
 
 /* 軽く暗くして文字や再生ボタンを見やすく */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite::after {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1295,7 +1295,7 @@
   pointer-events: none;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite-play {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite-play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1308,7 +1308,7 @@
   z-index: 2;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite-play::before {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite-play::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1321,7 +1321,7 @@
   border-left: 22px solid #fff;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb iframe {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb iframe {
   display: block;
   width: 100%;
   height: 100%;
@@ -1333,7 +1333,7 @@
    右テキストがはみ出ないように調整
 ========================================= */
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
   display: grid;
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
   gap: 24px;
@@ -1342,7 +1342,7 @@
   overflow: hidden;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb {
   width: 100%;
   max-width: 760px;
   aspect-ratio: 16 / 9;
@@ -1353,12 +1353,12 @@
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body {
   min-width: 0;
   max-width: 100%;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body h3 {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body h3 {
   margin: 0 0 12px;
   color: #f2f3f5;
   font-size: clamp(1.15rem, 1.8vw, 1.45rem);
@@ -1366,7 +1366,7 @@
   overflow-wrap: anywhere;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-body p {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-body p {
   margin: 0;
   color: #dcddde;
   font-size: 1rem;
@@ -1375,7 +1375,7 @@
 }
 
 /* YouTube高画質サムネ用 */
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite {
   position: relative;
   display: block;
   width: 100%;
@@ -1386,14 +1386,14 @@
   cursor: pointer;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite img {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite::after {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -1401,7 +1401,7 @@
   pointer-events: none;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite-play {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite-play {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1414,7 +1414,7 @@
   z-index: 2;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-youtube-lite-play::before {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-youtube-lite-play::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1427,7 +1427,7 @@
   border-left: 21px solid #fff;
 }
 
-:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb iframe {
+:is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb iframe {
   display: block;
   width: 100%;
   height: 100%;
@@ -1436,11 +1436,11 @@
 
 /* 画面幅が狭い時は縦積み */
 @media (max-width: 1180px) {
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-card {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-card {
     grid-template-columns: 1fr;
   }
 
-  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams) .flas-video-thumb {
+  :is(#page-pvp-teams, #page-natalie-teams, #page-saiyaku-teams, #page-sanctuary-teams, #page-old-status-teams) .flas-video-thumb {
     max-width: none;
   }
 }
