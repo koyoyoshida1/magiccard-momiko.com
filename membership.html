@@ -11,7 +11,7 @@
   <link rel="canonical" href="https://magiccard-momiko.com/membership.html">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=260724-2">
+  <link rel="stylesheet" href="style.css?v=260725-2">
   <link rel="stylesheet" href="css/25-pve-invincible.css?v=260519-1">
   <link rel="stylesheet" href="css/26-member-decia-trial.css?v=260523-2">
 
@@ -84,6 +84,21 @@
             </span>
             S+ヒーロー育成順位
           </div>
+        </div>
+      </div>
+
+      <!-- 一覧表 -->
+      <div class="channel-group">
+        <div class="channel-header" onclick="toggleGroup(this)">
+          <span><i class="fa-solid fa-chevron-down"></i> 一覧表</span>
+        </div>
+        <div class="channel-list">
+          <a class="channel-item channel-hero-build" href="#hero-build-guide"
+            onclick="switchPage('hero-build-guide', this); return false;">
+            <span class="channel-icon"><i class="fa-solid fa-table-list"></i></span>
+            <span class="channel-text">陣営別ヒーロー育成表</span>
+            <span class="channel-badge">限定</span>
+          </a>
         </div>
       </div>
 
@@ -6032,6 +6047,875 @@
 
       </section>
       <!-- 育成順位ページ END -->
+
+
+      <!-- 陣営別ヒーロー育成表 -->
+      <div id="hero-build-guide" class="page-section growth-quick-page hero-build-page">
+
+        <section class="gq-hero">
+          <div class="gq-hero-inner">
+            <p class="gq-kicker">HERO BUILD DATABASE</p>
+
+            <h1>
+              陣営別ヒーロー育成表
+            </h1>
+
+            <p class="gq-lead-main">
+              闇夜・ヒト・獣族・精霊・虚空・神話の6陣営から、
+              ヒーローごとのおすすめ育成構成を確認できる一覧表です。
+            </p>
+
+            <p class="gq-lead-sub">
+              まずは<strong>闇夜系15体</strong>を公開。神器・ルーン・T2・宝石・天賦をまとめています。
+            </p>
+          </div>
+        </section>
+
+        <section class="gq-build-db" id="gq-faction-builds" data-gq-build-db data-gq-faction="dark">
+          <div class="gq-db-topline">
+            <div>
+              <span class="gq-db-eyebrow">FACTION BUILD ARCHIVE</span>
+              <h2>陣営を選んで育成構成を確認</h2>
+            </div>
+            <span class="gq-db-release">
+              <span class="gq-db-release-dot" aria-hidden="true"></span>
+              <span data-gq-release-text>闇夜 公開中</span>
+            </span>
+          </div>
+
+          <div class="gq-db-controls">
+            <div class="gq-faction-tabs" role="tablist" aria-label="陣営を選択">
+              <button type="button" class="gq-faction-tab is-active" role="tab" aria-selected="true" data-gq-faction-button="dark">
+                <span class="gq-faction-mark" aria-hidden="true">01</span>
+                <span>闇夜</span>
+                <small>15体</small>
+              </button>
+              <button type="button" class="gq-faction-tab" role="tab" aria-selected="false" data-gq-faction-button="human">
+                <span class="gq-faction-mark" aria-hidden="true">02</span>
+                <span>ヒト</span>
+                <small>準備中</small>
+              </button>
+              <button type="button" class="gq-faction-tab" role="tab" aria-selected="false" data-gq-faction-button="beast">
+                <span class="gq-faction-mark" aria-hidden="true">03</span>
+                <span>獣族</span>
+                <small>準備中</small>
+              </button>
+              <button type="button" class="gq-faction-tab" role="tab" aria-selected="false" data-gq-faction-button="spirit">
+                <span class="gq-faction-mark" aria-hidden="true">04</span>
+                <span>精霊</span>
+                <small>準備中</small>
+              </button>
+              <button type="button" class="gq-faction-tab" role="tab" aria-selected="false" data-gq-faction-button="void">
+                <span class="gq-faction-mark" aria-hidden="true">05</span>
+                <span>虚空</span>
+                <small>準備中</small>
+              </button>
+              <button type="button" class="gq-faction-tab" role="tab" aria-selected="false" data-gq-faction-button="myth">
+                <span class="gq-faction-mark" aria-hidden="true">06</span>
+                <span>神話</span>
+                <small>準備中</small>
+              </button>
+            </div>
+
+          </div>
+
+          <div class="gq-db-view-head" aria-live="polite">
+            <div>
+              <span class="gq-db-view-kicker">CURRENT SELECTION</span>
+              <strong data-gq-current-title>闇夜系</strong>
+            </div>
+            <span class="gq-db-count" data-gq-current-count>15体</span>
+          </div>
+
+          <div class="gq-db-panel" data-gq-panel="dark-builds" role="tabpanel">
+            <div class="gq-mode-note">
+              <strong>BUILD NOTE</strong>
+              <span>基本構成はPvP・PvE共通。ダフネとスパルタのみPvE専用です。</span>
+            </div>
+            <section class="gq-build-tier tier-t0plus">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T0+</span>
+                <div>
+                  <h3>環境最強</h3>
+                  <p>闇夜系で最初に基準にしたい最上位ビルド。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid is-single">
+                <article class="gq-build-card" id="gq-dark-vorian">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/vorian.webp" alt="ヴォリアン">
+                    <div>
+                      <span class="gq-build-card-rank">T0+</span>
+                      <h4>ヴォリアン</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/hammer.webp" alt="">悪霊ハンマー</span>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/thorn.webp" alt="">魔王の棘刃</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/ring.webp" alt="">秘術指輪</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd class="gq-build-rune-options">
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kyomu.webp" alt="">虚無</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/zaiaku.webp" alt="">罪悪</span>
+                        </span>
+                        <span class="gq-build-or">OR</span>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/bushi.webp" alt="">武士</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/zaiaku.webp" alt="">罪悪</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ追200%／会心率160%（ハンマー所持時）／体力</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/kujaku.webp" alt="">孔雀石</span>
+                        <span class="gq-build-item"><img src="image/gem/shiran.webp" alt="">紫蘭石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>1-3-2-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t0">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T0</span>
+                <div>
+                  <h3>主力の核</h3>
+                  <p>耐久の土台として優先したい2体。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid">
+                <article class="gq-build-card" id="gq-dark-banko">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/banko.webp" alt="蛮古">
+                    <div>
+                      <span class="gq-build-card-rank">T0</span>
+                      <h4>蛮古</h4>
+                      <p>2026年9月ごろ実装予定。内容は変更される場合があります。</p>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/rengoku_yoroi.webp" alt="">魔王の鎧（煉獄鎧）</span>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/flag.webp" alt="">魔王の旗</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/necklace.webp" alt="">ネックレス</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/koshu.webp" alt="">固守</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/seiketsu.webp" alt="">聖潔</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-1-5</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-katras">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/katras.webp" alt="カトラス">
+                    <div>
+                      <span class="gq-build-card-rank">T0</span>
+                      <h4>カトラス</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/holly/short_wing.webp" alt="">聖羽の翼</span>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/shield.webp" alt="">魔王の盾</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/koshu.webp" alt="">固守</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/seiketsu.webp" alt="">聖潔</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-1-2</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t1">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T1</span>
+                <div>
+                  <h3>第一線</h3>
+                  <p>主力編成を支える有力候補。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid is-single">
+                <article class="gq-build-card" id="gq-dark-rozalind">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/rozalind.webp" alt="ロザリンド">
+                    <div>
+                      <span class="gq-build-card-rank">T1</span>
+                      <h4>ロザリンド</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/shield.webp" alt="">魔王の盾</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/tenshi.webp" alt="">天使の額冠</span>
+                        <span class="gq-build-item"><img src="image/artifact/esper/jikan.webp" alt="">時間護符</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kirikizu.webp" alt="">切傷</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/mania.webp" alt="">マニア</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-5-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t15">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T1.5</span>
+                <div>
+                  <h3>有力候補</h3>
+                  <p>役割に合わせて採用したい優秀な選択枠。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid">
+                <article class="gq-build-card" id="gq-dark-kein">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/kein.webp" alt="ケイン">
+                    <div>
+                      <span class="gq-build-card-rank">T1.5</span>
+                      <h4>ケイン</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/big_wing.webp" alt="">魔王の翼</span>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/born_ring.webp" alt="">魔王の指輪</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/short_horn.webp" alt="">聖なる角笛</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/seiei.webp" alt="">聖衛</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/seiketsu.webp" alt="">聖潔</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">スピード</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-3-2</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-fillis">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/fillis.webp" alt="フィリス">
+                    <div>
+                      <span class="gq-build-card-rank">T1.5</span>
+                      <h4>フィリス</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/hammer.webp" alt="">悪霊ハンマー</span>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/thorn.webp" alt="">魔王の棘刃</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/ring.webp" alt="">秘術指輪</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd class="gq-build-rune-options">
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kyomu.webp" alt="">虚無</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/zaiaku.webp" alt="">罪悪</span>
+                        </span>
+                        <span class="gq-build-or">OR</span>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/bushi.webp" alt="">武士</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/zaiaku.webp" alt="">罪悪</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ追200%／会心率160%（ハンマー所持時）</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/kujaku.webp" alt="">孔雀石</span>
+                        <span class="gq-build-item"><img src="image/gem/shiran.webp" alt="">紫蘭石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>1-3-2-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-beril">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/beril.webp" alt="ベリル">
+                    <div>
+                      <span class="gq-build-card-rank">T1.5</span>
+                      <h4>ベリル</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/flag.webp" alt="">魔王の旗</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/short_shield.webp" alt="">聖霊の盾</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/tenshi.webp" alt="">天使の額冠</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kirikizu.webp" alt="">切傷</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/seiketsu.webp" alt="">聖潔</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-1-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-serina">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/serina.webp" alt="セリーナ">
+                    <div>
+                      <span class="gq-build-card-rank">T1.5</span>
+                      <h4>セリーナ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/uroko.webp" alt="">古代龍の逆鱗</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/short_shield.webp" alt="">聖霊の盾</span>
+                        <span class="gq-build-item"><img src="image/artifact/esper/jikan.webp" alt="">時間護符</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kirikizu.webp" alt="">切傷</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/mania.webp" alt="">マニア</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-5-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t2">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T2</span>
+                <div>
+                  <h3>PvE専用</h3>
+                  <p>攻略コンテンツで採用したい闇夜系の2体。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid">
+                <article class="gq-build-card" id="gq-dark-dafne">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/dafne.webp" alt="ダフネ">
+                    <div>
+                      <span class="gq-build-card-rank">T2 · PVE ONLY</span>
+                      <h4>ダフネ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/lance.webp" alt="">魔王の槍</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/kiyou.webp" alt="">神聖輝耀</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/bushi.webp" alt="">武士</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/shinpan.webp" alt="">審判</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">原則、攻撃力</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/gekkou.webp" alt="">月光石</span>
+                        <span class="gq-build-item"><img src="image/gem/kujaku.webp" alt="">孔雀石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>1-3-4-1</strong></span>
+                    <span>宝石天賦<strong>2-1</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-spalta">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/spalta.webp" alt="スパルタ">
+                    <div>
+                      <span class="gq-build-card-rank">T2 · PVE ONLY</span>
+                      <h4>スパルタ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/uroko.webp" alt="">古代龍の逆鱗</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kyoshu.webp" alt="">強襲</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/mania.webp" alt="">マニア</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">会心率83%、その後攻撃力</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/kyusei.webp" alt="">窮星石</span>
+                        <span class="gq-build-item"><img src="image/gem/kessei.webp" alt="">血精石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>2-2-4-2</strong></span>
+                    <span>宝石天賦<strong>3-3</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t4">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T4</span>
+                <div>
+                  <h3>現環境では採用難</h3>
+                  <p>使いこなすのは現時点で非常に難しい。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid">
+                <article class="gq-build-card" id="gq-dark-sesina">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/sesina.webp" alt="セシーナ">
+                    <div>
+                      <span class="gq-build-card-rank">T4</span>
+                      <h4>セシーナ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/fang.webp" alt="">魔王の牙</span>
+                        <span class="gq-build-item"><img src="image/artifact/esper/umi.webp" alt="">海の護符</span>
+                        <span class="gq-build-item"><img src="image/artifact/esper/shinen.webp" alt="">深淵護符</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/sakyupasu.webp" alt="">サキュパス</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/mania.webp" alt="">マニア</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ軽／制御成功率</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/nikkou.webp" alt="">日皓石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-5-2</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-mirana">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/mirana.webp" alt="ミラナ">
+                    <div>
+                      <span class="gq-build-card-rank">T4</span>
+                      <h4>ミラナ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/nail.webp" alt="">魔王の爪</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/wando.webp" alt="">墓光のワンド</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/meika.webp" alt="">冥火</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/mania.webp" alt="">マニア</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">会心率</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/kujaku.webp" alt="">孔雀石</span>
+                        <span class="gq-build-item"><img src="image/gem/shiran.webp" alt="">紫蘭石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>1-3-2-2</strong></span>
+                    <span>宝石天賦<strong>3-1</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-keridhia">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/keridhia.webp" alt="ケリディア">
+                    <div>
+                      <span class="gq-build-card-rank">T4</span>
+                      <h4>ケリディア</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/abyss/thorn.webp" alt="">魔王の棘刃</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/ring.webp" alt="">秘術指輪</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/ansatsu.webp" alt="">暗殺</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/zaiaku.webp" alt="">罪悪</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">ダメ追</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/kujaku.webp" alt="">孔雀石</span>
+                        <span class="gq-build-item"><img src="image/gem/shiran.webp" alt="">紫蘭石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>1-3-2-2</strong></span>
+                    <span>宝石天賦<strong>3-3</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+
+            <section class="gq-build-tier tier-t5">
+              <header class="gq-build-tier-head">
+                <span class="gq-build-tier-rank">T5</span>
+                <div>
+                  <h3>序盤〜中盤向けSヒーロー</h3>
+                  <p>序盤〜中盤で活躍が見込めるSヒーロー。</p>
+                </div>
+              </header>
+              <div class="gq-build-grid">
+                <article class="gq-build-card" id="gq-dark-kuthira">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/kuthira.webp" alt="クティーラ">
+                    <div>
+                      <span class="gq-build-card-rank">T5</span>
+                      <h4>クティーラ</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/esper/umi.webp" alt="">海の護符</span>
+                        <span class="gq-build-item"><img src="image/artifact/holly/robe.webp" alt="">永生ローブ</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/bushi.webp" alt="">武士</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/shinka.webp" alt="">進化</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">体力</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/nikkou.webp" alt="">日皓石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-2-2</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+
+                <article class="gq-build-card" id="gq-dark-rainer">
+                  <header class="gq-build-card-head">
+                    <img src="image/hero/rainer.webp" alt="ライナー">
+                    <div>
+                      <span class="gq-build-card-rank">T5</span>
+                      <h4>ライナー</h4>
+                    </div>
+                  </header>
+                  <dl class="gq-build-specs">
+                    <div>
+                      <dt>神器</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/artifact/holly/robe.webp" alt="">永生ローブ</span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>ルーン</dt>
+                      <dd>
+                        <span class="gq-build-pair">
+                          <span class="gq-build-item"><img src="image/rune/kirikizu.webp" alt="">切傷</span>
+                          <span class="gq-build-plus">+</span>
+                          <span class="gq-build-item"><img src="image/rune/shinka.webp" alt="">進化</span>
+                        </span>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>T2</dt>
+                      <dd class="gq-build-text">体力</dd>
+                    </div>
+                    <div>
+                      <dt>宝石</dt>
+                      <dd>
+                        <span class="gq-build-item"><img src="image/gem/murasakibortaru.webp" alt="">紫蛍石</span>
+                        <span class="gq-build-item"><img src="image/gem/aobato.webp" alt="">緑鳩石</span>
+                        <span class="gq-build-item"><img src="image/gem/kiryu.webp" alt="">輝龍石</span>
+                      </dd>
+                    </div>
+                  </dl>
+                  <footer class="gq-build-talents">
+                    <span>天賦<strong>3-4-1-2</strong></span>
+                    <span>宝石天賦<strong>1-2</strong></span>
+                  </footer>
+                </article>
+              </div>
+            </section>
+          </div>
+
+          <div class="gq-db-panel gq-db-empty" data-gq-panel="coming" role="tabpanel" hidden>
+            <span class="gq-db-empty-index" data-gq-coming-index>02</span>
+            <div>
+              <p class="gq-db-empty-kicker">FACTION SLOT</p>
+              <h3><span data-gq-coming-faction>ヒト</span>系ビルドは準備中</h3>
+              <p>陣営ごとのデータを順番に追加していきます。次はヒト系を更新予定です。</p>
+            </div>
+          </div>
+        </section>
+
+      </div>
+      <!-- 陣営別ヒーロー育成表 END -->
 
       <!-- =========================================================
                   フラス護衛隊
@@ -13324,7 +14208,7 @@
   </div>
   <!-- 大事なdiv -->
 
-  <script src="script.js?v=260523-1"></script>
+  <script src="script.js?v=260725-2"></script>
   <script>
     function copySerialCode(el) {
       const code = el.dataset.code;

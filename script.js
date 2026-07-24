@@ -634,6 +634,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const comingIndex = database.querySelector('[data-gq-coming-index]');
     const releaseText = database.querySelector('[data-gq-release-text]');
 
+    database.querySelectorAll('.gq-build-item').forEach(function (item) {
+      const itemName = item.textContent.trim();
+      if (!itemName) return;
+      item.title = itemName;
+      item.setAttribute('aria-label', itemName);
+    });
+
     function renderBuildDatabase() {
       const faction = database.dataset.gqFaction || 'dark';
 
@@ -656,7 +663,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (currentCount) {
-        currentCount.textContent = faction === 'dark' ? '12 HEROES' : 'COMING SOON';
+        currentCount.textContent = faction === 'dark' ? '15体' : 'COMING SOON';
       }
 
       if (comingFaction) comingFaction.textContent = factionNames[faction];
