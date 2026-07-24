@@ -602,3 +602,79 @@ function playSonixVideo(button) {
 
     button.replaceWith(iframe);
   });
+
+// ==========================================
+// 6. 陣営別ヒーロー育成表
+// ==========================================
+document.addEventListener('DOMContentLoaded', function () {
+  const factionNames = {
+    dark: '闇夜',
+    human: 'ヒト',
+    beast: '獣族',
+    spirit: '精霊',
+    void: '虚空',
+    myth: '神話'
+  };
+
+  const factionIndexes = {
+    dark: '01',
+    human: '02',
+    beast: '03',
+    spirit: '04',
+    void: '05',
+    myth: '06'
+  };
+
+  document.querySelectorAll('[data-gq-build-db]').forEach(function (database) {
+    const factionButtons = database.querySelectorAll('[data-gq-faction-button]');
+    const panels = database.querySelectorAll('[data-gq-panel]');
+    const currentTitle = database.querySelector('[data-gq-current-title]');
+    const currentCount = database.querySelector('[data-gq-current-count]');
+    const comingFaction = database.querySelector('[data-gq-coming-faction]');
+    const comingIndex = database.querySelector('[data-gq-coming-index]');
+    const releaseText = database.querySelector('[data-gq-release-text]');
+
+    function renderBuildDatabase() {
+      const faction = database.dataset.gqFaction || 'dark';
+
+      factionButtons.forEach(function (button) {
+        const isActive = button.dataset.gqFactionButton === faction;
+        button.classList.toggle('is-active', isActive);
+        button.setAttribute('aria-selected', String(isActive));
+      });
+
+      const requestedPanel = faction === 'dark'
+        ? database.querySelector('[data-gq-panel="dark-builds"]')
+        : database.querySelector('[data-gq-panel="coming"]');
+
+      panels.forEach(function (panel) {
+        panel.hidden = panel !== requestedPanel;
+      });
+
+      if (currentTitle) {
+        currentTitle.textContent = factionNames[faction] + '系';
+      }
+
+      if (currentCount) {
+        currentCount.textContent = faction === 'dark' ? '12 HEROES' : 'COMING SOON';
+      }
+
+      if (comingFaction) comingFaction.textContent = factionNames[faction];
+      if (comingIndex) comingIndex.textContent = factionIndexes[faction];
+      if (releaseText) {
+        releaseText.textContent = faction === 'dark'
+          ? '闇夜 公開中'
+          : factionNames[faction] + ' 準備中';
+      }
+    }
+
+    factionButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        database.dataset.gqFaction = button.dataset.gqFactionButton;
+        renderBuildDatabase();
+      });
+    });
+
+    renderBuildDatabase();
+  });
+});
