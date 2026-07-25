@@ -1957,25 +1957,34 @@
   gap: 4px;
 }
 
-.hero-build-page .gq-build-specs > div:nth-child(1) dd {
+.hero-build-page .gq-build-specs > div:nth-child(1) dd,
+.hero-build-page .gq-build-specs > div:nth-child(2) dd {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 3px;
+  align-self: stretch;
+  box-sizing: border-box;
   width: 100%;
-  margin-inline: auto;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-build-page .gq-build-specs > div:nth-child(1) dd {
+  gap: 3px;
 }
 
 .hero-build-page .gq-build-specs > div:nth-child(2) dd {
-  width: 100%;
-  margin-inline: auto;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center !important;
 }
 
 .hero-build-page .gq-build-specs > div:nth-child(2) .gq-build-pair {
+  display: flex;
+  flex: 0 0 auto;
+  width: max-content;
   justify-content: center;
-  margin-inline: auto;
+  margin: 0 auto;
 }
 
 .hero-build-page .gq-build-specs > div:nth-child(4) dd {
