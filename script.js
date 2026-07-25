@@ -201,7 +201,7 @@ window.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function () {
   const womenHeroes = [
     // 闇夜系
-    { name: 'ロザリンド', faction: 'darknight', img: 'image/woman/darknight/rosalind_w.webp' },
+    { name: 'ロザリンデ', faction: 'darknight', img: 'image/woman/darknight/rosalind_w.webp' },
 
     // 人系
     { name: '青瓷', faction: 'human', img: 'image/woman/human/seiji_w.webp' },
@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
     { name: 'フィリス', top10: 15, favorite: 2, img: 'image/hero/fillis.webp' },
     { name: 'オリラ', top10: 10, favorite: 3, img: 'image/hero/olira.webp' },
     { name: 'ソラ', top10: 19, favorite: 1, img: 'image/hero/sora.webp' },
-    { name: 'ロザリンド', top10: 22, favorite: 0, img: 'image/hero/rozalind.webp' },
+    { name: 'ロザリンデ', top10: 22, favorite: 0, img: 'image/hero/rozalind.webp' },
     { name: 'フェアリー', top10: 16, favorite: 1, img: 'image/hero/fairy.webp' },
     { name: 'テア', top10: 16, favorite: 0, img: 'image/hero/tea.webp' },
     { name: 'アリヤ', top10: 11, favorite: 1, img: 'image/hero/ariya.webp' },
