@@ -1786,6 +1786,10 @@
   border: 0;
 }
 
+.hero-build-page .gq-build-tier.tier-t3 {
+  --gq-tier-color: var(--t3, #ffff66);
+}
+
 .hero-build-page .gq-build-tier.tier-t5 {
   --gq-tier-color: #b88b5a;
 }

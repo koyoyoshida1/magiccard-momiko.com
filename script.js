@@ -625,6 +625,11 @@ document.addEventListener('DOMContentLoaded', function () {
     myth: '06'
   };
 
+  const factionCounts = {
+    dark: '15体',
+    human: '12体'
+  };
+
   document.querySelectorAll('[data-gq-build-db]').forEach(function (database) {
     const factionButtons = database.querySelectorAll('[data-gq-faction-button]');
     const panels = database.querySelectorAll('[data-gq-panel]');
@@ -650,9 +655,9 @@ document.addEventListener('DOMContentLoaded', function () {
         button.setAttribute('aria-selected', String(isActive));
       });
 
-      const requestedPanel = faction === 'dark'
-        ? database.querySelector('[data-gq-panel="dark-builds"]')
-        : database.querySelector('[data-gq-panel="coming"]');
+      const publishedPanel = database.querySelector(`[data-gq-panel="${faction}-builds"]`);
+      const requestedPanel = publishedPanel ||
+        database.querySelector('[data-gq-panel="coming"]');
 
       panels.forEach(function (panel) {
         panel.hidden = panel !== requestedPanel;
@@ -663,15 +668,14 @@ document.addEventListener('DOMContentLoaded', function () {
       }
 
       if (currentCount) {
-        currentCount.textContent = faction === 'dark' ? '15体' : 'COMING SOON';
+        currentCount.textContent = factionCounts[faction] || 'COMING SOON';
       }
 
       if (comingFaction) comingFaction.textContent = factionNames[faction];
       if (comingIndex) comingIndex.textContent = factionIndexes[faction];
       if (releaseText) {
-        releaseText.textContent = faction === 'dark'
-          ? '闇夜 公開中'
-          : factionNames[faction] + ' 準備中';
+        releaseText.textContent = factionNames[faction] +
+          (publishedPanel ? ' 公開中' : ' 準備中');
       }
     }
 
