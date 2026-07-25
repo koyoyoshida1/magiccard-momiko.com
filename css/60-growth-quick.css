@@ -1763,15 +1763,26 @@
   border: 0;
 }
 
+.hero-build-page .gq-db-panel {
+  padding: 4px 14px 18px;
+}
+
 .hero-build-page .gq-mode-note {
   border: 0;
+  margin-top: 6px;
+  padding: 8px 11px;
   background:
     linear-gradient(135deg, rgba(169, 140, 255, 0.09), rgba(255, 255, 255, 0.018)),
     #181a22;
   box-shadow: none;
 }
 
+.hero-build-page .gq-build-tier {
+  padding: 8px 0 0;
+}
+
 .hero-build-page .gq-build-tier + .gq-build-tier {
+  margin-top: 4px;
   border: 0;
 }
 
@@ -1781,12 +1792,12 @@
 
 .hero-build-page .gq-build-tier-head {
   grid-template-columns: 86px minmax(0, 1fr);
-  gap: 14px;
-  margin-bottom: 14px;
+  gap: 10px;
+  margin-bottom: 5px;
 }
 
 .hero-build-page .gq-build-tier-rank {
-  min-height: 44px;
+  min-height: 38px;
   border: 0;
   border-radius: 9px;
   background:
@@ -1798,13 +1809,18 @@
 }
 
 .hero-build-page .gq-build-tier-head h3 {
-  font-size: 1.16rem;
+  font-size: 1.08rem;
+}
+
+.hero-build-page .gq-build-tier-head p {
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .hero-build-page .gq-build-grid,
 .hero-build-page .gq-build-grid.is-single {
   grid-template-columns: minmax(0, 1fr);
-  gap: 9px;
+  gap: 3px;
 }
 
 .hero-build-page .gq-build-grid.is-single .gq-build-card {
@@ -1813,17 +1829,17 @@
 
 .hero-build-page .gq-build-card {
   display: grid;
-  grid-template-columns: minmax(144px, 190px) minmax(408px, 1fr) 136px;
-  gap: 8px;
+  grid-template-columns: minmax(144px, 190px) minmax(481px, 1fr) 136px;
+  gap: 3px;
   align-items: stretch;
-  min-height: 96px;
-  padding: 8px;
+  min-height: 76px;
+  padding: 4px;
   border: 0;
   border-radius: 12px;
   background:
     radial-gradient(circle at 16% 0%, color-mix(in srgb, var(--gq-tier-color) 11%, transparent), transparent 31%),
     linear-gradient(145deg, #252833, #1b1d25 68%);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.26);
 }
 
 .hero-build-page .gq-build-card-head {
@@ -1834,7 +1850,7 @@
   align-content: center;
   min-width: 0;
   min-height: 100%;
-  padding: 8px;
+  padding: 5px;
   border: 0;
   border-radius: 9px;
   background:
@@ -1882,8 +1898,12 @@
 
 .hero-build-page .gq-build-specs {
   display: grid;
-  grid-template-columns: 48px 100px 132px minmax(110px, 1fr);
-  gap: 6px;
+  grid-template-columns:
+    minmax(82px, 0.65fr)
+    minmax(132px, 1fr)
+    minmax(162px, 1.35fr)
+    minmax(96px, 0.35fr);
+  gap: 3px;
   align-items: stretch;
   min-width: 0;
   padding: 0;
@@ -1891,13 +1911,13 @@
 
 .hero-build-page .gq-build-specs > div {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  gap: 3px;
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: 80px;
-  padding: 5px;
+  min-height: 64px;
+  padding: 3px;
   border: 0;
   border-radius: 9px;
   background:
@@ -1988,12 +2008,14 @@
 
 .hero-build-page .gq-build-specs > div:nth-child(3) {
   align-items: center;
-  align-self: center;
-  min-height: 0;
-  padding: 4px;
+  align-self: stretch;
+  min-height: 64px;
+  padding: 3px;
   border: 0;
   border-radius: 8px;
-  background: transparent;
+  background:
+    linear-gradient(150deg, rgba(255, 255, 255, 0.035), transparent 68%),
+    rgba(10, 12, 17, 0.42);
   text-align: center;
 }
 
@@ -2022,7 +2044,7 @@
 .hero-build-page .gq-build-talents {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4px;
+  gap: 2px;
   align-self: stretch;
   margin: 0;
   padding: 0;
@@ -2033,8 +2055,8 @@
 }
 
 .hero-build-page .gq-build-talents span {
-  min-height: 38px;
-  padding: 6px 8px;
+  min-height: 30px;
+  padding: 3px 6px;
   border: 0;
   border-radius: 8px;
   background:
@@ -2053,18 +2075,18 @@
   font-size: 0.82rem;
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1150px) {
   .hero-build-page .gq-build-card {
-    grid-template-columns: 160px minmax(408px, 1fr);
+    grid-template-columns: 160px minmax(481px, 1fr);
   }
 
   .hero-build-page .gq-build-talents {
     grid-column: 1 / -1;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 4px;
-    width: min(100%, 280px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3px;
+    width: 100%;
     margin: 0;
-    justify-self: end;
+    justify-self: stretch;
   }
 
   .hero-build-page .gq-build-talents span + span {
@@ -2072,7 +2094,7 @@
   }
 }
 
-@media (max-width: 940px) {
+@media (max-width: 1025px) {
   .hero-build-page .gq-build-card {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -2083,8 +2105,15 @@
 
   .hero-build-page .gq-build-talents {
     grid-column: 1;
-    grid-template-columns: minmax(0, 1fr);
-    justify-self: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+
+@media (max-width: 840px) {
+  .hero-build-page .gq-build-specs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -2103,13 +2132,13 @@
   }
 
   .hero-build-page .gq-build-specs {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: 6px;
   }
 
   .hero-build-page .gq-build-specs > div:nth-child(3),
   .hero-build-page .gq-build-specs > div:nth-child(4) {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
   .hero-build-page .gq-build-specs > div:nth-child(4) dd {
@@ -2117,7 +2146,7 @@
   }
 
   .hero-build-page .gq-build-talents {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: 0;
   }
 
