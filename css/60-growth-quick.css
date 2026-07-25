@@ -1829,7 +1829,7 @@
 
 .hero-build-page .gq-build-card {
   display: grid;
-  grid-template-columns: minmax(144px, 190px) minmax(481px, 1fr) 136px;
+  grid-template-columns: minmax(144px, 190px) minmax(501px, 1fr) 136px;
   gap: 3px;
   align-items: stretch;
   min-height: 76px;
@@ -1899,9 +1899,9 @@
 .hero-build-page .gq-build-specs {
   display: grid;
   grid-template-columns:
-    minmax(82px, 0.65fr)
-    minmax(132px, 1fr)
-    minmax(162px, 1.35fr)
+    minmax(110px, 0.72fr)
+    minmax(130px, 1fr)
+    minmax(156px, 1.3fr)
     minmax(96px, 0.35fr);
   gap: 3px;
   align-items: stretch;
@@ -1911,7 +1911,7 @@
 
 .hero-build-page .gq-build-specs > div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 3px;
   align-items: center;
   justify-content: center;
@@ -1955,8 +1955,8 @@
 
 .hero-build-page .gq-build-specs > div:nth-child(1) dd {
   display: grid;
-  grid-template-columns: 38px;
-  gap: 0;
+  grid-template-columns: repeat(2, 38px);
+  gap: 3px;
   width: 100%;
   place-content: center;
 }
@@ -1971,6 +1971,7 @@
 
 .hero-build-page .gq-build-item {
   justify-content: center;
+  box-sizing: border-box;
   width: 38px;
   height: 38px;
   min-height: 38px;
@@ -2075,9 +2076,9 @@
   font-size: 0.82rem;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
   .hero-build-page .gq-build-card {
-    grid-template-columns: 160px minmax(481px, 1fr);
+    grid-template-columns: 160px minmax(501px, 1fr);
   }
 
   .hero-build-page .gq-build-talents {
@@ -2094,7 +2095,7 @@
   }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1075px) {
   .hero-build-page .gq-build-card {
     grid-template-columns: minmax(0, 1fr);
   }
@@ -2111,7 +2112,7 @@
   }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 910px) {
   .hero-build-page .gq-build-specs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
