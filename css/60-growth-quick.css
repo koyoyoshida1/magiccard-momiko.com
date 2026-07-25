@@ -2017,6 +2017,22 @@
   border-radius: 6px;
 }
 
+.hero-build-page .gq-build-specs > div:nth-child(1) .gq-build-item,
+.hero-build-page .gq-build-specs > div:nth-child(2) .gq-build-item {
+  width: 36px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 6px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-build-page .gq-build-specs > div:nth-child(1) .gq-build-item img,
+.hero-build-page .gq-build-specs > div:nth-child(2) .gq-build-item img {
+  display: block;
+}
+
 .hero-build-page .gq-build-pair {
   gap: 3px;
 }
