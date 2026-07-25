@@ -1958,11 +1958,24 @@
 }
 
 .hero-build-page .gq-build-specs > div:nth-child(1) dd {
-  display: grid;
-  grid-template-columns: repeat(2, 38px);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
   gap: 3px;
   width: 100%;
-  place-content: center;
+  margin-inline: auto;
+}
+
+.hero-build-page .gq-build-specs > div:nth-child(2) dd {
+  width: 100%;
+  margin-inline: auto;
+  justify-content: center;
+}
+
+.hero-build-page .gq-build-specs > div:nth-child(2) .gq-build-pair {
+  justify-content: center;
+  margin-inline: auto;
 }
 
 .hero-build-page .gq-build-specs > div:nth-child(4) dd {
