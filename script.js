@@ -630,7 +630,8 @@ document.addEventListener('DOMContentLoaded', function () {
     human: '12体',
     beast: '14体',
     spirit: '12体',
-    void: '13体'
+    void: '13体',
+    myth: '13体'
   };
 
   document.querySelectorAll('[data-gq-build-db]').forEach(function (database) {
