@@ -628,7 +628,8 @@ document.addEventListener('DOMContentLoaded', function () {
   const factionCounts = {
     dark: '15体',
     human: '12体',
-    beast: '14体'
+    beast: '14体',
+    spirit: '12体'
   };
 
   document.querySelectorAll('[data-gq-build-db]').forEach(function (database) {
