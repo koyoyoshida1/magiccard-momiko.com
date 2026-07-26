@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="style.css?v=260725-10">
   <link rel="stylesheet" href="css/25-pve-invincible.css?v=260519-1">
   <link rel="stylesheet" href="css/26-member-decia-trial.css?v=260523-2">
+  <link rel="stylesheet" href="css/27-member-ancient-bankoku.css?v=260726-1">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -141,6 +142,11 @@
           <div class="channel-item channel-pve-ancient" onclick="switchPage('page-pve-ancient-tier', this)">
             <span class="channel-icon"><i class="fa-solid fa-ranking-star" style="color:#ffcc66;"></i></span>
             <span class="channel-text">上古の地Tier表</span>
+          </div>
+          <div class="channel-item channel-member-ancient-bankoku" onclick="switchPage('page-member-ancient-bankoku', this)">
+            <span class="channel-icon"><i class="fa-solid fa-bolt" style="color:#ffbd59;"></i></span>
+            <span class="channel-text">上古の地：蛮刻編</span>
+            <span class="channel-badge">限定</span>
           </div>
           <div class="channel-item channel-pve-defense" onclick="switchPage('page-pve-defense', this)">
             <span class="channel-icon"><i class="fa-solid fa-shield-halved" style="color:#8bd5ff;"></i></span>
@@ -9562,6 +9568,450 @@
 
           <div class="tier-container pve-ancient-tier-board" aria-label="上古の地ヒーローTier表"></div>
         </section>
+      </div>
+
+      <!-- =========================================================
+            メンバーシップ限定：上古の地・蛮刻編
+          ========================================================= -->
+      <div id="page-member-ancient-bankoku" class="page-section ancient-bankoku-page">
+        <div class="abk-layout">
+          <main class="abk-main">
+            <section class="abk-hero" id="ancient-bankoku-overview">
+              <div class="abk-hero-copy">
+                <div class="abk-meta">
+                  <span class="abk-member-label"><i class="fa-solid fa-lock"></i> MEMBERS ONLY</span>
+                  <span>最終更新 2026.07.26</span>
+                </div>
+                <p class="abk-series">ANCIENT LAND <span>PARTY 06</span></p>
+                <h1>上古の地 <em>蛮刻編</em></h1>
+                <p class="abk-hero-lead">
+                  敵の通常攻撃を減らすため、蛮刻に毎ターンスキルを撃たせる。
+                  6体全員の会心攻撃で成立させる、上古の地専用チームです。
+                </p>
+                <div class="abk-keywords" aria-label="編成の要点">
+                  <span>戦闘時会心率 100％超</span>
+                  <span>6体すべて会心</span>
+                  <span>蛮刻エネルギー 100pt</span>
+                </div>
+              </div>
+
+              <aside class="abk-result-card" aria-label="検証結果">
+                <span class="abk-result-label">TEST RESULT</span>
+                <strong>674,185<small>M</small></strong>
+                <p>検証時の総合ダメージ例</p>
+                <small>育成状況や戦闘展開により結果は変動します。</small>
+              </aside>
+            </section>
+
+            <section class="abk-party-panel" id="ancient-bankoku-lineup" aria-labelledby="abk-party-title">
+              <div class="abk-section-heading">
+                <div>
+                  <span class="abk-section-number">01</span>
+                  <p>TEAM LINEUP</p>
+                  <h2 id="abk-party-title">蛮刻編の6体</h2>
+                </div>
+                <p>6体全員が会心攻撃を行うことが、この編成の前提です。</p>
+              </div>
+
+              <div class="abk-party-grid">
+                <article>
+                  <img src="image/hero/derigol.webp" alt="デリゴール" loading="lazy">
+                  <strong>デリゴール</strong>
+                </article>
+                <article>
+                  <img src="image/hero/spalta.webp" alt="スパルタ" loading="lazy">
+                  <strong>スパルタ</strong>
+                </article>
+                <article>
+                  <img src="image/hero/shinfi.webp" alt="心蕙" loading="lazy">
+                  <strong>心蕙</strong>
+                </article>
+                <article>
+                  <img src="image/hero/riddle.webp" alt="リドル" loading="lazy">
+                  <strong>リドル</strong>
+                </article>
+                <article>
+                  <img src="image/hero/satomi.webp" alt="サとミ" loading="lazy">
+                  <strong>サとミ</strong>
+                </article>
+                <article>
+                  <img src="image/hero/serina.webp" alt="セリーナ" loading="lazy">
+                  <strong>セリーナ</strong>
+                </article>
+              </div>
+            </section>
+
+            <section class="abk-section" id="ancient-bankoku-mechanism" aria-labelledby="abk-mechanism-title">
+              <div class="abk-section-heading">
+                <div>
+                  <span class="abk-section-number">02</span>
+                  <p>CORE MECHANISM</p>
+                  <h2 id="abk-mechanism-title">通常攻撃を、あえてスキルに変える</h2>
+                </div>
+              </div>
+
+              <div class="abk-critical-callout">
+                <span>最重要</span>
+                <div>
+                  <strong>全員の戦闘時会心率を100％より上へ</strong>
+                  <p>編成画面で会心率70％以上を目安にし、マニアルーン込みで戦闘時100％超えを狙います。</p>
+                </div>
+              </div>
+
+              <div class="abk-flow" aria-label="蛮刻に毎ターンスキルを撃たせる流れ">
+                <article>
+                  <span>STEP 1</span>
+                  <strong>6体全員が会心</strong>
+                  <p>攻撃役だけではなく、6体すべての会心を安定させます。</p>
+                </article>
+                <article>
+                  <span>STEP 2</span>
+                  <strong>会心ごとに20pt</strong>
+                  <p>6体の会心攻撃で、相手蛮刻のエネルギーを毎ターン100ptへ。</p>
+                </article>
+                <article class="is-goal">
+                  <span>STEP 3</span>
+                  <strong>蛮刻が毎ターンスキル</strong>
+                  <p>通常攻撃を減らし、こちらが不利になる展開を避けます。</p>
+                </article>
+              </div>
+
+              <div class="abk-explanation">
+                <i class="fa-solid fa-lightbulb"></i>
+                <p>
+                  今回の上古の地は、敵が通常攻撃を重ねるほど味方が不利になります。
+                  そこで蛮刻のエネルギーを毎ターン満たし、危険な通常攻撃ではなく
+                  <strong>スキル攻撃をあえて撃たせる</strong>のが攻略の軸です。
+                </p>
+              </div>
+
+              <div class="abk-control-warning">
+                <div class="abk-warning-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <div>
+                  <span>CONTROL WARNING</span>
+                  <h3>制御抵抗率も忘れずに確保</h3>
+                  <p>
+                    蛮刻のスキル攻撃は、味方を約20％で制御してくるのが難点です。
+                    心蕙は制御を解除できますが、1ターンに2回まで。
+                    3体以上が同時に制御されると立て直しが難しくなります。
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section class="abk-section" id="ancient-bankoku-defense" aria-labelledby="abk-defense-title">
+              <div class="abk-section-heading">
+                <div>
+                  <span class="abk-section-number">03</span>
+                  <p>SURVIVAL TARGET</p>
+                  <h2 id="abk-defense-title">耐久できない時の育成順</h2>
+                </div>
+                <p>スパルタは除外し、耐久役5体を次の順番で調整します。</p>
+              </div>
+
+              <div class="abk-survival-grid">
+                <article>
+                  <span>FIRST</span>
+                  <strong>防御力 11,000</strong>
+                  <p>まずは11,000を確保。12,000で上限を目指します。</p>
+                </article>
+                <article>
+                  <span>NEXT</span>
+                  <strong>体力 4,000万</strong>
+                  <p>防御力を整えたあと、スパルタ以外の基準にします。</p>
+                </article>
+                <article class="is-priority">
+                  <span>IDEAL</span>
+                  <strong>体力 5,000万以上</strong>
+                  <p>デリゴールとリドルは、さらに高くできると理想です。</p>
+                </article>
+              </div>
+            </section>
+
+            <section class="abk-section" id="ancient-bankoku-builds" aria-labelledby="abk-builds-title">
+              <div class="abk-section-heading">
+                <div>
+                  <span class="abk-section-number">04</span>
+                  <p>HERO BUILDS</p>
+                  <h2 id="abk-builds-title">6体の推奨育成</h2>
+                </div>
+                <p>会心率100％超えを最優先にしつつ、制御抵抗と耐久を整えます。</p>
+              </div>
+
+              <div class="abk-build-list">
+                <article class="abk-build-row">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/derigol.webp" alt="デリゴール" loading="lazy">
+                    <div><span>SUPPORT</span><h3>デリゴール</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/holly/short_horn.webp" alt="聖なる角笛" loading="lazy"><figcaption>聖なる角笛</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kirikizu.webp" alt="切傷" loading="lazy"><figcaption>切傷</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>体力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/gekkou.webp" alt="月光石" loading="lazy"><figcaption>月光石</figcaption></figure>
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/kiryu.webp" alt="輝龍石" loading="lazy"><figcaption>輝龍石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>4-4-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>1-1</strong></div>
+                  </div>
+                </article>
+
+                <article class="abk-build-row is-damage">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/spalta.webp" alt="スパルタ" loading="lazy">
+                    <div><span>DAMAGE</span><h3>スパルタ</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/abyss/uroko.webp" alt="古代龍の逆鱗" loading="lazy"><figcaption>古代龍の逆鱗</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kyoshu.webp" alt="強襲" loading="lazy"><figcaption>強襲</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>攻撃力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/kyusei.webp" alt="窮星石" loading="lazy"><figcaption>窮星石</figcaption></figure>
+                      <figure><img src="image/gem/kessei.webp" alt="血精石" loading="lazy"><figcaption>血精石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>1-3-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>3-3</strong></div>
+                  </div>
+                </article>
+
+                <article class="abk-build-row">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/shinfi.webp" alt="心蕙" loading="lazy">
+                    <div><span>CLEANSE</span><h3>心蕙</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/abyss/born_ring.webp" alt="魔王の指輪" loading="lazy"><figcaption>魔王の指輪</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kussetsu.webp" alt="屈折" loading="lazy"><figcaption>屈折</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>体力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/shiran.webp" alt="紫蘭石" loading="lazy"><figcaption>紫蘭石</figcaption></figure>
+                      <figure><img src="image/gem/kiryu.webp" alt="輝龍石" loading="lazy"><figcaption>輝龍石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>4-4-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>3-1</strong></div>
+                  </div>
+                </article>
+
+                <article class="abk-build-row">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/riddle.webp" alt="リドル" loading="lazy">
+                    <div><span>FRONT</span><h3>リドル</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/esper/genrai.webp" alt="玄雷護符" loading="lazy"><figcaption>玄雷護符</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kirikizu.webp" alt="切傷" loading="lazy"><figcaption>切傷</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>体力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/shiran.webp" alt="紫蘭石" loading="lazy"><figcaption>紫蘭石</figcaption></figure>
+                      <figure><img src="image/gem/kiryu.webp" alt="輝龍石" loading="lazy"><figcaption>輝龍石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>4-4-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>1-1</strong></div>
+                  </div>
+                </article>
+
+                <article class="abk-build-row">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/satomi.webp" alt="サとミ" loading="lazy">
+                    <div><span>SUPPORT</span><h3>サとミ</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/abyss/book.webp" alt="呪いの書" loading="lazy"><figcaption>呪いの書</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kenja.webp" alt="賢者" loading="lazy"><figcaption>賢者</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>体力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/shiran.webp" alt="紫蘭石" loading="lazy"><figcaption>紫蘭石</figcaption></figure>
+                      <figure><img src="image/gem/kiryu.webp" alt="輝龍石" loading="lazy"><figcaption>輝龍石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>4-4-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>3-1</strong></div>
+                  </div>
+                </article>
+
+                <article class="abk-build-row">
+                  <header class="abk-build-hero">
+                    <img src="image/hero/serina.webp" alt="セリーナ" loading="lazy">
+                    <div><span>SUPPORT</span><h3>セリーナ</h3></div>
+                  </header>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">神器</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/artifact/esper/energy.webp" alt="エネ護符" loading="lazy"><figcaption>エネ護符</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">ルーン</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/rune/kirikizu.webp" alt="切傷" loading="lazy"><figcaption>切傷</figcaption></figure>
+                      <b class="abk-plus">＋</b>
+                      <figure><img src="image/rune/mania.webp" alt="マニア" loading="lazy"><figcaption>マニア</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-t2"><span>T2</span><strong>体力</strong></div>
+                  <div class="abk-build-cell">
+                    <span class="abk-build-label">宝石</span>
+                    <div class="abk-icon-list">
+                      <figure><img src="image/gem/murasakibortaru.webp" alt="紫蛍石" loading="lazy"><figcaption>紫蛍石</figcaption></figure>
+                      <figure><img src="image/gem/shiran.webp" alt="紫蘭石" loading="lazy"><figcaption>紫蘭石</figcaption></figure>
+                      <figure><img src="image/gem/kiryu.webp" alt="輝龍石" loading="lazy"><figcaption>輝龍石</figcaption></figure>
+                    </div>
+                  </div>
+                  <div class="abk-talents">
+                    <div><span>天賦</span><strong>4-4-3-2</strong></div>
+                    <div><span>宝石天賦</span><strong>3-1</strong></div>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section class="abk-section" id="ancient-bankoku-support" aria-labelledby="abk-support-title">
+              <div class="abk-section-heading">
+                <div>
+                  <span class="abk-section-number">05</span>
+                  <p>SUMMON &amp; PROTOS</p>
+                  <h2 id="abk-support-title">召喚獣・星霊</h2>
+                </div>
+              </div>
+
+              <div class="abk-support-combo" aria-label="召喚獣と星霊の推奨構成">
+                <article>
+                  <span>召喚獣</span>
+                  <img src="image/pet/tiamat.webp" alt="ティアマト" loading="lazy">
+                  <strong>ティアマト</strong>
+                </article>
+                <div class="abk-combo-mark">＋</div>
+                <div class="abk-spirit-choice">
+                  <span>星霊 1</span>
+                  <div>
+                    <article>
+                      <img src="image/protos/ookami.webp" alt="狼" loading="lazy">
+                      <strong>狼</strong>
+                    </article>
+                    <b>OR</b>
+                    <article>
+                      <img src="image/protos/houou.webp" alt="鳳凰" loading="lazy">
+                      <strong>鳳凰</strong>
+                    </article>
+                  </div>
+                </div>
+                <div class="abk-combo-mark">＋</div>
+                <article>
+                  <span>星霊 2</span>
+                  <img src="image/protos/Kerberos.webp" alt="ケルベロス" loading="lazy">
+                  <strong>ケルベロス</strong>
+                </article>
+              </div>
+            </section>
+
+            <section class="abk-final-check" id="ancient-bankoku-result">
+              <div>
+                <span>FINAL CHECK</span>
+                <h2>出撃前に確認</h2>
+              </div>
+              <ul>
+                <li><i class="fa-solid fa-check"></i><span>6体全員が戦闘時会心率100％超え</span></li>
+                <li><i class="fa-solid fa-check"></i><span>制御抵抗率を確保</span></li>
+                <li><i class="fa-solid fa-check"></i><span>耐久不足なら防御力から調整</span></li>
+              </ul>
+            </section>
+          </main>
+
+          <aside class="abk-toc" aria-label="蛮刻編の目次">
+            <div>
+              <span>PARTY 06</span>
+              <strong>蛮刻編</strong>
+              <nav>
+                <a href="#ancient-bankoku-overview" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-overview').scrollIntoView({ behavior: 'smooth', block: 'start' });">攻略概要</a>
+                <a href="#ancient-bankoku-lineup" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-lineup').scrollIntoView({ behavior: 'smooth', block: 'start' });">6体編成</a>
+                <a href="#ancient-bankoku-mechanism" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-mechanism').scrollIntoView({ behavior: 'smooth', block: 'start' });">重要ギミック</a>
+                <a href="#ancient-bankoku-defense" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-defense').scrollIntoView({ behavior: 'smooth', block: 'start' });">耐久ライン</a>
+                <a href="#ancient-bankoku-builds" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-builds').scrollIntoView({ behavior: 'smooth', block: 'start' });">推奨育成</a>
+                <a href="#ancient-bankoku-support" onclick="event.preventDefault(); document.getElementById('ancient-bankoku-support').scrollIntoView({ behavior: 'smooth', block: 'start' });">召喚獣・星霊</a>
+              </nav>
+            </div>
+          </aside>
+        </div>
       </div>
 
       <!-- =========================================================
