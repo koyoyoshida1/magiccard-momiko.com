@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css?v=260725-1">
   <link rel="stylesheet" href="css/25-pve-invincible.css?v=260519-1">
+  <link rel="stylesheet" href="css/33-exclusive-equipment.css?v=260726-1">
 
   <link rel="icon" href="image/momiko/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="image/momiko/favicon.ico">
@@ -178,6 +179,10 @@
           <div class="channel-item" onclick="switchPage('page-t2-equip', this)">
             <span class="channel-icon"><i class="fa-solid fa-hammer"></i></span>
             T2装備
+          </div>
+          <div class="channel-item channel-exclusive-equipment" onclick="switchPage('page-exclusive-equipment', this)">
+            <span class="channel-icon"><i class="fa-solid fa-shield-halved"></i></span>
+            専用装備
           </div>
 
         </div>
@@ -13331,6 +13336,282 @@
             </div>
           </aside>
         </div>
+      </div>
+
+      <!-- 専用装備 -->
+      <div id="page-exclusive-equipment" class="page-section exclusive-page">
+        <section class="xe-hero" aria-labelledby="xe-title">
+          <div class="xe-hero-copy">
+            <p class="xe-kicker">EXCLUSIVE EQUIPMENT GUIDE</p>
+            <h1 id="xe-title">専用装備<br>Lv40優先順位</h1>
+            <p class="xe-hero-lead">
+              専用装備はLv1〜40まで育成可能。Lv10・20・30・40でヒーロー固有の効果が追加され、
+              編成の完成度を大きく左右します。
+            </p>
+            <div class="xe-hero-tags">
+              <span>一般公開</span>
+              <span>Lv31でサブステ最大</span>
+              <span>Lv30効果が最重要</span>
+            </div>
+          </div>
+          <div class="xe-hero-visual" aria-hidden="true">
+            <figure class="xe-portrait is-left"><img src="image/hero/skylie.webp" alt=""></figure>
+            <figure class="xe-portrait is-main"><img src="image/hero/nyx.webp" alt=""></figure>
+            <figure class="xe-portrait is-right"><img src="image/hero/renato.webp" alt=""></figure>
+            <div class="xe-level-orbit"><span>MAX LEVEL</span><strong>40</strong></div>
+          </div>
+        </section>
+
+        <section class="xe-block" aria-labelledby="xe-basics-title">
+          <header class="xe-section-head">
+            <p class="xe-section-kicker">01 / SYSTEM</p>
+            <h2 id="xe-basics-title">まず知っておきたい4つの基準</h2>
+            <p>基本はLv30効果を取り切ること。Lv40効果が特に強いヒーローだけ、優先して最後まで育てます。</p>
+          </header>
+          <div class="xe-core-grid">
+            <article class="xe-core-card">
+              <span>LEVEL 01—40</span>
+              <strong>最大Lv40まで育成</strong>
+              <p>専用装備は段階的に固有能力とサブステータスを強化します。</p>
+            </article>
+            <article class="xe-core-card">
+              <span>SKILL UNLOCK</span>
+              <strong>Lv10・20・30・40</strong>
+              <p>10レベルごとに新しいヒーロー効果が追加されます。</p>
+            </article>
+            <article class="xe-core-card">
+              <span>POWER SPIKE</span>
+              <strong>最重要はLv30効果</strong>
+              <p>多くのヒーローはLv30で専用装備の強みが完成します。</p>
+            </article>
+            <article class="xe-core-card">
+              <span>EXCEPTION</span>
+              <strong>Lv40が強い英雄も存在</strong>
+              <p>一部の主力はLv40効果まで取ることで評価が一段階上がります。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="xe-block" aria-labelledby="xe-material-title">
+          <header class="xe-section-head">
+            <p class="xe-section-kicker">02 / MATERIALS</p>
+            <h2 id="xe-material-title">Lv40までに必要な育成素材</h2>
+            <p>Lv帯によって使う素材と必要数が変わります。Lv31以降は専用原石宝箱の消費が一気に重くなります。</p>
+          </header>
+          <div class="xe-material-grid">
+            <article class="xe-material-card is-mithril">
+              <i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i>
+              <small>Lv1〜10</small>
+              <strong>ミスリル鉱石</strong>
+              <b>300個</b>
+            </article>
+            <article class="xe-material-card is-gold">
+              <i class="fa-solid fa-gem" aria-hidden="true"></i>
+              <small>Lv11〜20</small>
+              <strong>黄金原石</strong>
+              <b>300個</b>
+            </article>
+            <article class="xe-material-card is-chest">
+              <i class="fa-solid fa-box-open" aria-hidden="true"></i>
+              <small>Lv21〜30</small>
+              <strong>専用原石宝箱</strong>
+              <b>300個</b>
+            </article>
+            <article class="xe-material-card is-final">
+              <i class="fa-solid fa-crown" aria-hidden="true"></i>
+              <small>Lv31〜40</small>
+              <strong>専用原石宝箱</strong>
+              <b>800個</b>
+            </article>
+          </div>
+
+          <div class="xe-cost-track" aria-label="2レベルごとの必要数">
+            <span>10</span><span>20</span><span>30</span><span>40</span><span>50</span>
+            <span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+          </div>
+          <p class="xe-cost-caption">2Lv上がるごとの必要数目安。10個から始まり、最終段階は100個まで増加します。</p>
+
+          <div class="xe-stop-card">
+            <div class="xe-stop-level"><span>STOP LINE</span><strong>31</strong></div>
+            <div>
+              <h3>コスパ重視ならLv31で打ち止め</h3>
+              <p>
+                サブステータスはLv31で最大になります。そのためLv40効果を急がないヒーローは、
+                Lv30ではなく<strong>Lv31まで上げて止める</strong>育成が定番です。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="xe-tier is-t0plus" aria-labelledby="xe-t0plus-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">T0+</div>
+            <div>
+              <p class="xe-tier-label">TOP PRIORITY</p>
+              <h2 id="xe-t0plus-title">Lv40必須</h2>
+              <p>完成形を目指すならLv40を前提に考えたい、環境最上位の専用装備です。</p>
+            </div>
+          </header>
+          <div class="xe-hero-grid">
+            <article class="xe-hero-card"><img src="image/hero/nyx.webp" alt="ニックス"><div><strong>ニックス</strong><small>無課金でも必須</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/skylie.webp" alt="スカイリー"><div><strong>スカイリー</strong><small>微課金から優先</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/renato.webp" alt="レナート"><div><strong>レナート</strong><small>イルカ勢以上</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/nira.webp" alt="ニーラ"><div><strong>ニーラ</strong><small>高投資枠</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/flas.webp" alt="フラス"><div><strong>フラス</strong><small>高投資枠</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/shinri.webp" alt="真理の女神"><div><strong>真理の女神</strong><small>クジラ向け</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/abel.webp" alt="エーベル"><div><strong>エーベル</strong><small>Lv40前提</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/saiyaku.webp" alt="災厄"><div><strong>災厄</strong><small>Lv40前提</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/sora.webp" alt="ソラ"><div><strong>ソラ</strong><small>Lv40前提</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/anubis.webp" alt="アヌビス"><div><strong>アヌビス</strong><small>Lv40前提</small></div></article>
+          </div>
+          <div class="xe-editorial">
+            <article>
+              <h3>ニックスは無課金でもLv40必須</h3>
+              <p>編成の再行動性能を支えるため、課金額に関係なく最優先。中途半端に止めずLv40まで育てたいヒーローです。</p>
+            </article>
+            <article>
+              <h3>スカイリーLv40は四系ヒーローより価値が高い</h3>
+              <p>スカイリーを使うなら、四系ヒーローを先にLv40へ上げるより優先する価値があります。</p>
+            </article>
+            <article>
+              <h3>レナート以降は編成全体の完成度も必要</h3>
+              <p>
+                レナートはフラスまたはニーラ護衛隊を作るイルカ勢以上向け。
+                <strong>フラスまたはニーラ・スカイリー・心蕙・シーア・モジー</strong>に加え、
+                一定数の魔王神器がなければ真価を出しにくい点に注意してください。
+              </p>
+            </article>
+            <article>
+              <h3>神話・虚空アタッカーの最低ライン</h3>
+              <p>
+                ニーラかフラスまでがイルカ勢の育成上限目安。真理の女神以降を含む神話・虚空アタッカーは、
+                <strong>永劫＋専用装備Lv40＋聖物9</strong>が最低ラインです。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="xe-tier is-t0" aria-labelledby="xe-t0-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">T0</div>
+            <div>
+              <p class="xe-tier-label">TEAM CORE</p>
+              <h2 id="xe-t0-title">Lv40推奨</h2>
+              <p>微課金以上はLv40必須。全ユーザーの編成方針を決める5つの主軸です。</p>
+            </div>
+          </header>
+          <div class="xe-hero-grid">
+            <article class="xe-hero-card"><img src="image/hero/vorian.webp" alt="ヴォリアン"><div><strong>ヴォリアン</strong><small>新状態異常</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/decia.webp" alt="デシア"><div><strong>デシア</strong><small>怒気</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/sonia.webp" alt="ソニア"><div><strong>ソニア</strong><small>献祭</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/seiji.webp" alt="青瓷"><div><strong>青瓷</strong><small>協同</small></div></article>
+            <article class="xe-hero-card"><img src="image/hero/katras.webp" alt="カトラス"><div><strong>カトラス</strong><small>旧状態異常</small></div></article>
+          </div>
+          <div class="xe-editorial">
+            <article>
+              <h3>公式激推しの編成軸</h3>
+              <p>
+                どれも強力で、マジカユーザーの主力チームを決めるヒーローです。
+                聖物18の優先順位でも、この5体を積極的に育てるのがおすすめです。
+              </p>
+            </article>
+            <article>
+              <h3>Lv31は必須、Lv40なら明確な差になる</h3>
+              <p>最低でもサブステータスが完成するLv31まで。特に微課金帯では、Lv40まで上げることで同帯へ大きな差をつけられます。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="xe-tier is-dolphin" aria-labelledby="xe-dolphin-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">02</div>
+            <div>
+              <p class="xe-tier-label">DOLPHIN</p>
+              <h2 id="xe-dolphin-title">イルカ勢 Lv40推奨</h2>
+              <p>主力チームが完成した後、耐久と編成の再現性を引き上げたいヒーロー。</p>
+            </div>
+          </header>
+          <div class="xe-hero-grid">
+            <article class="xe-hero-card"><img src="image/hero/mosey.webp" alt="モジー"><div><strong>モジー</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/tea.webp" alt="シーア"><div><strong>シーア</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/rozalind.webp" alt="ロザリンデ"><div><strong>ロザリンデ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/riddle.webp" alt="リドル"><div><strong>リドル</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/derigol.webp" alt="デリゴール"><div><strong>デリゴール</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/shinfi.webp" alt="心蕙"><div><strong>心蕙</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/banko.webp" alt="蛮古"><div><strong>蛮古</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/fenix.webp" alt="フェニックス"><div><strong>フェニックス</strong></div></article>
+          </div>
+        </section>
+
+        <section class="xe-tier is-whale" aria-labelledby="xe-whale-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">03</div>
+            <div>
+              <p class="xe-tier-label">WHALE</p>
+              <h2 id="xe-whale-title">クジラ勢 Lv40推奨</h2>
+              <p>複数チームの完成度を詰める段階で、Lv40効果まで伸ばしたいヒーロー。</p>
+            </div>
+          </header>
+          <div class="xe-hero-grid">
+            <article class="xe-hero-card"><img src="image/hero/saul.webp" alt="サウール"><div><strong>サウール</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/kein.webp" alt="ケイン"><div><strong>ケイン</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/jodo.webp" alt="ジョード"><div><strong>ジョード</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/dafne.webp" alt="ダフネ"><div><strong>ダフネ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/fillis.webp" alt="フィリス"><div><strong>フィリス</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/bankoku.webp" alt="蛮刻"><div><strong>蛮刻</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/katorinu.webp" alt="カトリーヌ"><div><strong>カトリーヌ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/avi.webp" alt="アヴィ"><div><strong>アヴィ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/sofia.webp" alt="ソフィア"><div><strong>ソフィア</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/elnriny.webp" alt="エルリニー"><div><strong>エルリニー</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/serina.webp" alt="セリーナ"><div><strong>セリーナ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/spalta.webp" alt="スパルタ"><div><strong>スパルタ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/beril.webp" alt="ベリル"><div><strong>ベリル</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/isolde.webp" alt="イソルド"><div><strong>イソルド</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/seinomegami.webp" alt="生の女神"><div><strong>生の女神</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/banshin.webp" alt="大荒蛮神"><div><strong>大荒蛮神</strong></div></article>
+          </div>
+        </section>
+
+        <section class="xe-tier is-mega" aria-labelledby="xe-mega-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">04</div>
+            <div>
+              <p class="xe-tier-label">MEGA WHALE</p>
+              <h2 id="xe-mega-title">メガクジラ勢 Lv40</h2>
+              <p>主力・サブ編成の育成が終わり、局所的な強みまで最大化したい方向け。</p>
+            </div>
+          </header>
+          <div class="xe-hero-grid">
+            <article class="xe-hero-card"><img src="image/hero/beril.webp" alt="ベリル"><div><strong>ベリル</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/rairandoll.webp" alt="ライランドール"><div><strong>ライランドール</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/rinenokami.webp" alt="輪廻の神"><div><strong>輪廻の神</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/dragonic.webp" alt="ドラゴニック"><div><strong>ドラゴニック</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/valkyrie.webp" alt="ヴァルキリー"><div><strong>ヴァルキリー</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/sirai.webp" alt="司雷の神"><div><strong>司雷の神</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/satomi.webp" alt="サとミ"><div><strong>サとミ</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/fuki.webp" alt="伏羲"><div><strong>伏羲</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/rexcer.webp" alt="レクサー"><div><strong>レクサー</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/reikon.webp" alt="霊魂の神"><div><strong>霊魂の神</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/kaiyounohime.webp" alt="海洋の姫"><div><strong>海洋の姫</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/natari.webp" alt="ナタリー"><div><strong>ナタリー</strong></div></article>
+            <article class="xe-hero-card"><img src="image/hero/pedhia.webp" alt="ペディア"><div><strong>ペディア</strong></div></article>
+          </div>
+        </section>
+
+        <section class="xe-tier is-other" aria-labelledby="xe-other-title">
+          <header class="xe-tier-head">
+            <div class="xe-tier-rank">05</div>
+            <div>
+              <p class="xe-tier-label">OTHER S+</p>
+              <h2 id="xe-other-title">その他のS+ヒーロー</h2>
+              <p>Lv40効果を急がず、まずは主力の完成を優先。必要になったヒーローからLv31を目安に育てます。</p>
+            </div>
+          </header>
+          <div class="xe-final-note">
+            <strong>迷ったらLv31で止める。</strong>
+            専用原石宝箱800個を使うLv31〜40は、上位の必須ヒーローへ集中させるのが安全です。
+          </div>
+        </section>
       </div>
 
       <!-- T2装備 -->
