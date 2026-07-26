@@ -31,6 +31,7 @@
   --abk-blue-soft: rgba(109, 201, 255, 0.12);
   color: var(--abk-text);
   font-size: 16px;
+  padding-bottom: 76px;
 }
 
 #page-member-ancient-bankoku,
@@ -51,10 +52,7 @@
 }
 
 #page-member-ancient-bankoku .abk-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 220px;
-  gap: 22px;
-  width: min(1680px, 100%);
+  width: min(1240px, 100%);
   margin: 0 auto;
 }
 
@@ -67,13 +65,13 @@
   isolation: isolate;
   overflow: hidden;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 250px;
-  gap: 24px;
-  align-items: end;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 30px;
+  align-items: center;
   min-height: 380px;
   padding: clamp(28px, 4vw, 58px);
   border: 1px solid rgba(109, 201, 255, 0.24);
-  border-radius: 22px;
+  border-radius: 12px;
   background:
     radial-gradient(circle at 78% 22%, rgba(109, 201, 255, 0.21), transparent 28%),
     radial-gradient(circle at 92% 82%, rgba(255, 103, 170, 0.13), transparent 30%),
@@ -183,54 +181,67 @@
   font-weight: 800;
 }
 
-#page-member-ancient-bankoku .abk-result-card {
+#page-member-ancient-bankoku .abk-result-shot {
   position: relative;
   z-index: 1;
-  padding: 22px;
+  overflow: hidden;
+  width: min(280px, 100%);
+  justify-self: end;
+  padding: 8px;
   border: 1px solid rgba(255, 189, 89, 0.28);
-  border-radius: 16px;
+  border-radius: 11px;
   background: rgba(10, 14, 21, 0.78);
   box-shadow: 0 15px 34px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(8px);
 }
 
-#page-member-ancient-bankoku .abk-result-label {
+#page-member-ancient-bankoku .abk-result-shot a {
   display: block;
-  color: var(--abk-gold);
-  font-size: 0.7rem;
-  font-weight: 900;
-  letter-spacing: 0.18em;
+  overflow: hidden;
+  border-radius: 7px;
+  background: #dbe8ec;
 }
 
-#page-member-ancient-bankoku .abk-result-card > strong {
+#page-member-ancient-bankoku .abk-result-shot img {
   display: block;
-  margin-top: 7px;
-  color: #fff;
-  font-size: clamp(2.15rem, 3.4vw, 3.15rem);
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+#page-member-ancient-bankoku .abk-result-shot a:hover img {
+  transform: scale(1.015);
+}
+
+#page-member-ancient-bankoku .abk-result-shot figcaption {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3px 12px;
+  align-items: end;
+  padding: 12px 7px 7px;
+}
+
+#page-member-ancient-bankoku .abk-result-shot figcaption span {
+  color: var(--abk-pink);
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+#page-member-ancient-bankoku .abk-result-shot figcaption strong {
+  grid-row: 1 / 3;
+  grid-column: 2;
+  color: var(--abk-gold);
+  font-size: 1.4rem;
+  font-weight: 950;
   font-variant-numeric: tabular-nums;
   line-height: 1;
-  letter-spacing: -0.055em;
 }
 
-#page-member-ancient-bankoku .abk-result-card > strong small {
-  margin-left: 4px;
-  color: var(--abk-pink);
-  font-size: 0.46em;
-  letter-spacing: 0;
-}
-
-#page-member-ancient-bankoku .abk-result-card p {
-  margin: 11px 0 4px;
-  color: #eef1f6;
-  font-size: 0.86rem;
-  font-weight: 800;
-}
-
-#page-member-ancient-bankoku .abk-result-card > small {
-  display: block;
+#page-member-ancient-bankoku .abk-result-shot figcaption small {
   color: var(--abk-muted);
-  font-size: 0.7rem;
-  line-height: 1.55;
+  font-size: 0.68rem;
+  line-height: 1.4;
 }
 
 #page-member-ancient-bankoku .abk-party-panel,
@@ -238,7 +249,7 @@
 #page-member-ancient-bankoku .abk-final-check {
   margin-top: 18px;
   border: 1px solid var(--abk-border);
-  border-radius: 18px;
+  border-radius: 10px;
   background:
     radial-gradient(circle at 100% 0%, rgba(109, 201, 255, 0.055), transparent 27%),
     linear-gradient(145deg, rgba(27, 32, 41, 0.99), rgba(17, 20, 27, 0.99));
@@ -546,7 +557,7 @@
   min-width: 0;
   padding: 10px;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  border-radius: 8px;
   background: rgba(11, 15, 22, 0.7);
 }
 
@@ -859,67 +870,6 @@
   color: var(--abk-gold);
 }
 
-#page-member-ancient-bankoku .abk-toc {
-  position: relative;
-}
-
-#page-member-ancient-bankoku .abk-toc > div {
-  position: sticky;
-  top: 18px;
-  overflow: hidden;
-  padding: 17px;
-  border: 1px solid var(--abk-border);
-  border-radius: 15px;
-  background: rgba(14, 18, 25, 0.92);
-  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.22);
-  backdrop-filter: blur(8px);
-}
-
-#page-member-ancient-bankoku .abk-toc > div > span {
-  color: var(--abk-pink);
-  font-size: 0.65rem;
-  font-weight: 900;
-  letter-spacing: 0.16em;
-}
-
-#page-member-ancient-bankoku .abk-toc > div > strong {
-  display: block;
-  margin-top: 4px;
-  color: #fff;
-  font-size: 1.14rem;
-}
-
-#page-member-ancient-bankoku .abk-toc nav {
-  display: grid;
-  gap: 5px;
-  margin-top: 14px;
-}
-
-#page-member-ancient-bankoku .abk-toc a {
-  padding: 9px 10px;
-  border-radius: 8px;
-  color: #b9c1ce;
-  font-size: 0.79rem;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-
-#page-member-ancient-bankoku .abk-toc a:hover {
-  background: rgba(109, 201, 255, 0.09);
-  color: var(--abk-blue);
-}
-
-@media (max-width: 1420px) {
-  #page-member-ancient-bankoku .abk-layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  #page-member-ancient-bankoku .abk-toc {
-    display: none;
-  }
-}
-
 @media (max-width: 1280px) {
   #page-member-ancient-bankoku .abk-build-row {
     grid-template-columns: minmax(170px, 1fr) repeat(2, minmax(140px, 1fr));
@@ -945,8 +895,10 @@
     min-height: 0;
   }
 
-  #page-member-ancient-bankoku .abk-result-card {
+  #page-member-ancient-bankoku .abk-result-shot {
+    width: min(360px, 100%);
     max-width: 360px;
+    justify-self: start;
   }
 
   #page-member-ancient-bankoku .abk-final-check {
@@ -957,11 +909,12 @@
 @media (max-width: 760px) {
   #page-member-ancient-bankoku {
     font-size: 15px;
+    padding-bottom: 52px;
   }
 
   #page-member-ancient-bankoku .abk-hero {
     padding: 25px 20px;
-    border-radius: 16px;
+    border-radius: 10px;
   }
 
   #page-member-ancient-bankoku .abk-meta {
@@ -971,7 +924,7 @@
   #page-member-ancient-bankoku .abk-party-panel,
   #page-member-ancient-bankoku .abk-section {
     padding: 19px 15px;
-    border-radius: 15px;
+    border-radius: 9px;
   }
 
   #page-member-ancient-bankoku .abk-section-heading {
@@ -1043,8 +996,10 @@
     line-height: 1.7;
   }
 
-  #page-member-ancient-bankoku .abk-result-card {
-    padding: 18px;
+  #page-member-ancient-bankoku .abk-result-shot {
+    width: 100%;
+    max-width: 300px;
+    padding: 6px;
   }
 
   #page-member-ancient-bankoku .abk-critical-callout,
