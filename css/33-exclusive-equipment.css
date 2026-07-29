@@ -34,6 +34,10 @@
   --xe-rank-prefix: "RELIC RANK ";
 }
 
+.relic-ranking-page .xe-tier-board-block[hidden] {
+  display: none !important;
+}
+
 .relic-ranking-page .xe-hero {
   background:
     radial-gradient(circle at 82% 22%, rgba(255, 207, 102, 0.2), transparent 34%),
