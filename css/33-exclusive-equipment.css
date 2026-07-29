@@ -8,15 +8,37 @@
   background: linear-gradient(90deg, rgba(255, 184, 76, 0.15), rgba(104, 196, 255, 0.08));
 }
 
+.channel-item.channel-relic-18 .channel-icon {
+  color: #ffcf66;
+}
+
+.channel-item.channel-relic-18:hover,
+.channel-item.channel-relic-18.active {
+  color: #fff4cf;
+  background: linear-gradient(90deg, rgba(255, 207, 102, 0.16), rgba(191, 130, 255, 0.08));
+}
+
 .exclusive-page {
   --xe-gold: #ffbd59;
   --xe-blue: #66c7ff;
   --xe-pink: #ff5aa7;
   --xe-panel: #1c1f28;
   --xe-panel-soft: #232630;
+  --xe-rank-prefix: "LV40 RANK ";
   max-width: 1500px;
   margin: 0 auto;
   color: #f7f8fb;
+}
+
+.relic-ranking-page {
+  --xe-rank-prefix: "RELIC RANK ";
+}
+
+.relic-ranking-page .xe-hero {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(255, 207, 102, 0.2), transparent 34%),
+    radial-gradient(circle at 60% 100%, rgba(191, 130, 255, 0.14), transparent 39%),
+    linear-gradient(135deg, #11141c 0%, #191b25 58%, #171a24 100%);
 }
 
 .exclusive-page * {
@@ -510,7 +532,7 @@
 }
 
 .xe-board-number::before {
-  content: "LV40 RANK ";
+  content: var(--xe-rank-prefix);
 }
 
 .xe-board-label strong {
