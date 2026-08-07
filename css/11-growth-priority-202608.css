@@ -129,6 +129,7 @@
 
 .gp26-hero-visual {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   min-height: 300px;
@@ -196,6 +197,17 @@
 .gp26-cover-card.is-third {
   z-index: 2;
   transform: translate(-24px, 18px) rotate(7deg);
+}
+
+.gp26-release-note {
+  flex: 0 0 100%;
+  max-width: 510px;
+  margin: 24px auto 0;
+  color: #aeb6c2;
+  font-size: 0.7rem;
+  font-weight: 750;
+  line-height: 1.65;
+  text-align: center;
 }
 
 .gp26-rarity-guide {
@@ -498,6 +510,7 @@
 .gp26-step.is-steady > header > span { background: var(--gp-green); }
 .gp26-step.is-upgrade > header > span { color: #fff; background: var(--gp-purple); }
 .gp26-step.is-replace > header > span { color: #fff; background: var(--gp-pink); }
+.gp26-step.is-option > header > span { color: #101218; background: #8dd7ff; }
 
 .gp26-step h3 {
   margin: 9px 0 0;
